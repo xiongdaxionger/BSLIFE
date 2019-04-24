@@ -1,0 +1,18 @@
+<view>
+    <view class='item' wx:for="{{article_data.articles}}" wx:for-item="info" wx:for-index="idx" wx:key="idx"  catchtap='to_article' data-id="{{info.article_id}}">
+      <image class=' flat_pattern' src='{{info.url}}'></image>
+      <view class='title'>
+        <text class="oplist">{{info.title}}</text>
+        <view class='praise clear'>
+          <text>{{info.uptime}} {{info.author}}</text>
+          <view class="praise-action in em" catchtap='doLike' data-id="{{info.article_id}}">
+                <image class="praise-icon-off  i"     src='http://zj.qianseit.com/wap_themes/1490856785/images/article/article_icon2.png' wx:if='{{info.ifpraise==false}}'  data-id="{{info.article_id}}">
+                </image>
+                <image class="praise-icon-off  i"     src='http://zj.qianseit.com/wap_themes/1490856785/images/article/article_icon3.png' wx:if='{{info.ifpraise==true}}'  data-id="{{info.article_id}}">
+                </image>
+            {{info.praise_nums}}
+          </view>  
+        </view>
+      </view>
+    </view>
+</view>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background_color" >
+
+    <View
+        android:id="@+id/base_fragment_top_divide"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/base_fragment_listview_top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/base_fragment_top_divide"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <View
+        android:id="@+id/base_fragment_top_divide1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/base_fragment_listview_top_ll"
+        android:background="@color/westore_divider_bgcolor"
+        android:visibility="gone" />
+
+    <com.qianseit.westore.ui.pull.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/base_fragment_listview_bottom_ll"
+        android:layout_below="@+id/base_fragment_top_divide1"
+        android:background="@color/white" >
+
+        <include layout="@layout/allview_refresh_head" />
+
+        <com.qianseit.westore.ui.pull.PullableScrollView
+            android:id="@+id/base_pull_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/base_fragment_header_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bar_list_view_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/base_fragment_header_ll"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <View
+                        android:id="@+id/base_fragment_top_divide_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/westore_divider_bgcolor" />
+
+                    <com.qianseit.westore.ui.HorizontalListView
+                        android:id="@+id/bar_list_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:background="@color/white"
+                        android:cacheColorHint="@color/white"
+                        android:divider="@null"
+                        android:dividerHeight="0.5dip"
+                        android:drawSelectorOnTop="false"
+                        android:fadingEdgeLength="0sp"
+                        android:groupIndicator="@null"
+                        android:listSelector="@color/white"
+                        android:scrollbars="none" />
+
+                    <View
+                        android:id="@+id/base_fragment_bottom_divide_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/westore_divider_bgcolor" />
+                </LinearLayout>
+
+                <com.qianseit.westore.ui.MyGridView
+                    android:id="@+id/base_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/bar_list_view_ll"
+                    android:cacheColorHint="@color/white"
+                    android:dividerHeight="1dip"
+                    android:drawSelectorOnTop="false"
+                    android:fadingEdgeLength="0sp"
+                    android:listSelector="@color/white"
+                    android:padding="5dp"
+                    android:scrollbars="@null" />
+
+                <RelativeLayout
+                    android:id="@+id/base_error_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/base_fragment_header_ll"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/transparent"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/base_error_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/base_error_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/base_error_iv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/PaddingLarge"
+                        android:text="没有数据~"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/TextSizeBigSmall" />
+
+                    <TextView
+                        android:id="@+id/base_reload_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/base_error_tv"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="点击重新获取"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/TextSizeBigSmall" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </com.qianseit.westore.ui.pull.PullableScrollView>
+
+        <include layout="@layout/allview_load_more" />
+    </com.qianseit.westore.ui.pull.PullToRefreshLayout>
+
+    <!-- </RelativeLayout> -->
+
+    <LinearLayout
+        android:id="@+id/tools_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/base_fragment_listview_bottom_ll"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_solid_round5_graydark"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/shopcar_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <FrameLayout
+                android:id="@+id/shopcar_fl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/shopcar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/shopcar" />
+
+                <TextView
+                    android:id="@+id/shopcar_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_car_num"
+                    android:gravity="center"
+                    android:minWidth="20dp"
+                    android:textColor="@color/white" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:layout_alignLeft="@+id/shopcar_fl"
+                android:layout_alignRight="@+id/shopcar_fl"
+                android:layout_below="@+id/shopcar_fl"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/to_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:src="@drawable/to_top"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/animation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/base_fragment_listview_bottom_ll"
+        android:layout_below="@+id/base_fragment_top_divide1" />
+
+    <LinearLayout
+        android:id="@+id/base_fragment_listview_bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/base_pinned_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/base_fragment_top_divide1"
+        android:orientation="vertical" >
+    </LinearLayout>
+    
+</RelativeLayout>

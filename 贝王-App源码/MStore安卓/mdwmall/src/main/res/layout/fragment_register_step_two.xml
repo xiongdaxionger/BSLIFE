@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/fragment_background_color"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/register_step_two_phone"
+            android:textColor="@color/text_goods_name_color"
+            android:text="请输入"
+            android:gravity="center|left"
+            android:textSize="@dimen/TextSizeLarge"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:id="@+id/register_step_two_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginLeft="8dp"
+                android:inputType="number"
+                android:hint="请输入验证码"
+                android:maxLength="6"
+                android:textColor="@color/text_goods_6_color"
+                android:textSize="@dimen/TextSizeLarge" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/register_step_two_getcode"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/app_button_selector"
+            android:text="重新获取(117)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextSizeMedium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/register_step_two_imagecode_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="visible" >
+
+        <EditText
+            android:id="@+id/register_step_two_imagecode_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:layout_marginLeft="8dp"
+            android:hint="请输入图片验证码"
+            android:maxLength="4"
+            android:textColor="@color/text_goods_6_color"
+            android:textSize="@dimen/TextSizeLarge" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:background="@color/acco_login_bgcolor"
+            />
+
+        <ImageView
+            android:id="@+id/register_step_two_imagecode"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="1dp"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="vertical"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        >
+        <Button
+            android:id="@+id/register_step_two_commit"
+            style="@style/app_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="下一步"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left|center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="visible" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="遇到问题？您可以"
+            android:textColor="@color/westore_primary_textcolor"
+            android:textSize="@dimen/TextSizeMedium"
+            />
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/register_step_two_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系客服"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeMedium"
+                />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/westore_dark_textcolor"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

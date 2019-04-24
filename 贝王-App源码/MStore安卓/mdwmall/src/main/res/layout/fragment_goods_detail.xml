@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.qianseit.westore.ui.viewpager.GoodsDetailViewPager
+        android:id="@+id/fragment_goods_detail_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/goods_detail_toolbar" />
+    
+    <LinearLayout
+        android:id="@id/goods_detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_goods_detail_toolbar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.14"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/goods_detail_service"
+                style="@style/goods_detail_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/service" />
+
+            <TextView
+                android:id="@+id/goods_detail_service_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="客服"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.14"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/goods_detail_like"
+                style="@style/goods_detail_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/selector_goods_collect" />
+
+            <TextView
+                android:id="@+id/goods_detail_like_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="收藏"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <RelativeLayout
+            android:id="@+id/goods_detail_shoppingcar_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.14"
+            android:paddingBottom="5dp"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/goods_detail_shoppingcar"
+                style="@style/goods_detail_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/goods_detail_shopcar"/>
+
+            <TextView
+                android:id="@+id/shopcar_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_car_num"
+                android:gravity="center"
+                android:minWidth="15dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:textSize="@dimen/TextSizeSmaller"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goods_detail_shoppingcar"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="购物车"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.58"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/goods_detail_addto_shopcar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/addcar_button_selector"
+                android:padding="8dp"
+                android:text="加入购物车"
+                android:textColor="@color/app_button_textcolor"
+                android:textSize="@dimen/TextSizeMedium"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/goods_detail_buy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/buy_button_selector"
+                android:text="立即购买"
+                android:textColor="@color/app_button_textcolor"
+                android:textSize="@dimen/TextSizeMedium" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/translucent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucent"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/fragment_shopp_goods_detail_buy"
+        android:visibility="gone" />
+
+    <com.qianseit.westore.ui.ShareView
+        android:id="@+id/share_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/fragment_goods_detail_select_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#414141"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp" >
+
+            <TextView
+                android:id="@+id/fragment_goods_detail_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button_pink_small_radius"
+                android:padding="10dp"
+                android:text="@string/cancel"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/fragment_goods_detail_comfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_pink_small_radius"
+                android:padding="10dp"
+                android:text="@string/exchange_complete"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <com.qianseit.westore.ui.wheelview.WheelView
+            android:id="@+id/fragment_goods_detail_wheelview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

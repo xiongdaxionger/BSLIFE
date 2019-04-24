@@ -1,0 +1,68 @@
+/* pages/addresslist/address_edit.wxss */
+@import "/views/network/bad_network.wxss";
+@import "/views/widget/area_selected.wxss";
+
+/*地址容器*/
+.address-container{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*section*/
+.section{
+    border-top: 1px #e5e5e5 solid;
+    border-bottom: 1px #e5e5e5 solid;
+    color: #666666;
+    background: white;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/*行*/
+.row{
+    display: flex;
+    width: calc(100vw - 30px);
+    flex-flow: row nowrap;
+    min-height: 45px;
+    align-items: center;
+    padding: 0 15px 0 15px;
+    border-bottom: 1px #f7f7f7 solid;
+}
+
+/*标题*/
+.title{
+    margin-right: 10px;
+    flex: 0 0 auto;
+}
+
+/*内容*/
+.content{
+    flex: 1 1 auto;
+}
+
+/*输入框*/
+.section input{
+    flex: 1 1 auto;
+}
+
+/*删除*/
+.section text{
+    color: #f73030;
+}
+
+/*详细地址*/
+.section textarea{
+    flex: 1 1 auto;
+}
+
+/*打钩*/
+.section image{
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+/*确定按钮*/
+.confirm-btn{
+    margin-top: 20px;
+}

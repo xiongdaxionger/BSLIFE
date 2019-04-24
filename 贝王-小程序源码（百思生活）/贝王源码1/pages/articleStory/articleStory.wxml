@@ -1,0 +1,61 @@
+ <!--轮播广告-->
+    <swiper circular  class="banner"  autoplay indicator-dots="true" interval="5000">
+      <block wx:for="{{article_data.slideBox[0].params.pic}}" wx:for-item="info" wx:for-index="idx" wx:key="idx">
+        <swiper-item>
+          <image src="{{info.link}}"  ></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="full-screen article_index blo">
+      <view class='article_index_content blo' >
+        <text class='blo h4'>
+          <text class='in span'>靓贴推荐</text>
+        </text>
+        <block class='blo' wx:for="{{article_data.hots}}" wx:for-item="info" wx:for-index="idx" wx:key="idx">
+          <view class="c-fix blo li clear" catchtap='to_article' data-id="{{info.article_id}}">
+            <navigator >
+              <view  class="art-img-box blo">
+                <image src="{{info.s_url}}"></image>
+              </view>
+            </navigator>
+            <view class="art-content-box blo">
+              <navigator>
+                <text class="content-title">{{info.title}}</text>
+                <text class="content-node blo">{{info.node_name}}</text>
+              </navigator>
+              <view class="praise-action in em" catchtap='doLike' data-id="{{info.article_id}}" >
+                <image class="praise-icon-off  i"     src='http://zj.qianseit.com/wap_themes/1490856785/images/article/article_icon2.png' wx:if='{{info.ifpraise==false}}'  data-id="{{info.article_id}}">
+                </image>
+                <image class="praise-icon-off  i"     src='http://zj.qianseit.com/wap_themes/1490856785/images/article/article_icon3.png' wx:if='{{info.ifpraise==true}}'  data-id="{{info.article_id}}">
+                </image>
+                {{info.praise_nums}}
+              </view>
+            </view>
+          </view>
+        </block>
+        <view class="all li">
+          <navigator style="color:#666" url = "/pages/articleStory/articleTheme/articleTheme">戳进更多靓贴 ></navigator>
+        </view>
+        <view class='groove'></view>
+        <view class='blo node'>
+          <view class="h4"><text class="span">社区板块</text></view>
+           <block class='blo' wx:for="{{article_data.nodes}}" wx:for-item="info" wx:for-index="idx" wx:key="idx">
+            <view class="border node_list" >
+              <navigator class="a" url = "{{'/pages/articleStory/articleTheme/articleTheme?node_id='+info.node_id}}">
+                <view class="node_logo p">
+                  <image src="{{info.image}}"></image>
+                </view>
+                <view class="node_content">
+                  <view class="p">
+                      <text class="span">{{info.node_name}}</text>
+                  </view>
+                  <view class="desc p">{{info.node_desc}}</view>
+                </view>
+                <view class="clear"></view>
+              </navigator>
+	          </view>
+          </block>
+        </view>
+        <view class='groove'></view>
+      </view>
+    </view>

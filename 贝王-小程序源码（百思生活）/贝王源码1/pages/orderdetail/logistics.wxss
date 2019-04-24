@@ -1,0 +1,78 @@
+@import "../../views/network/bad_network.wxss";
+
+/**物流详情视图**/
+.logistics_content_view{
+    background-color: white;
+    color: #000000;
+    height: 100vh;
+    width: 100vw;
+}
+/**物流信息头部**/
+.logistics_header_view{
+    width: 100%;
+    height: 66px;
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray
+}
+/*物流信息显示**/
+.logistics_info{
+    margin: 8px 8px;
+    height: 21px;
+    font-size: 14px;
+    color: gray;
+}
+/**物流详情**/
+.logistics_detail{
+    width: 100%;
+    height: 20px;
+    padding: 8px 8px;
+    font-size: 14px;
+    border-bottom: 1px solid lightgray
+}
+/**物流跟踪信息显示**/
+.logistics_cell_view{
+    position: relative;
+    font-size: 13px;
+    color: lightgray;
+}
+/**竖线**/
+.line_view{
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    bottom: 0px;
+    width: 1px;
+    background-color: lightgray;
+}
+/**图标**/
+.logistics_image{
+    position: absolute;
+    left: 13px;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+}
+/**标题**/
+.content{
+    margin-left: 41px;
+    padding-top: 4px;
+    margin-right: 8px;
+}
+/**时间**/
+.time{
+    margin-left: 41px;
+    margin-top: 4px;
+    margin-right: 8px;
+    padding-bottom: 4px;
+}
+/**底部线条**/
+.bottom_line_view{
+    position: absolute;
+    left: 40px;
+    bottom: 0px;
+    right: 0px;
+    background-color: lightgray;
+    height: 1px;
+}
+
+

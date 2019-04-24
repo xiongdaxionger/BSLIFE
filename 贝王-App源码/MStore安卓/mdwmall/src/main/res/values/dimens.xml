@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">5dp</dimen>
+    <dimen name="activity_vertical_margin">5dp</dimen>
+    <dimen name="TextSizeSmaller">10sp</dimen>
+    <dimen name="TextSizeSmall">12sp</dimen>
+    <dimen name="TextSizeBigSmall">13sp</dimen>
+    <dimen name="TextSizeMedium">15sp</dimen>
+    <dimen name="TextSizeLarge">18sp</dimen>
+    <dimen name="TextSizeXLarge">20sp</dimen>
+    <dimen name="TextSizeMXLarge">25sp</dimen>
+    <dimen name="TextSizeXXLarge">30sp</dimen>
+    <dimen name="TextSizeMXXLarge">35sp</dimen>
+    <dimen name="TextSizeXXXLarge">40sp</dimen>
+    <dimen name="PaddingSmall">3dip</dimen>
+    <dimen name="PaddingXSmall">2dip</dimen>
+    <dimen name="PaddingMedium">5dip</dimen>
+    <dimen name="PaddingXMedium">8dip</dimen>
+    <dimen name="PaddingLarge">10dip</dimen>
+    <dimen name="PaddingXLarge">15dip</dimen>
+    <dimen name="PaddingXXLarge">20dip</dimen>
+    <dimen name="PaddingXXXLarge">25dip</dimen>
+    <dimen name="MarginSmall">3dip</dimen>
+    <dimen name="MarginXSmall">2dip</dimen>
+    <dimen name="MarginMedium">5dip</dimen>
+    <dimen name="MarginXMedium">8dip</dimen>
+    <dimen name="MarginLarge">10dip</dimen>
+    <dimen name="MarginXLarge">15dip</dimen>
+    <dimen name="MarginXXLarge">20dip</dimen>
+    <dimen name="MarginXXXLarge">25dip</dimen>
+
+    <!-- ActionBar -->
+    <dimen name="action_titlebar_button_width">60dip</dimen>
+    <dimen name="action_toolbar_height">46dip</dimen>
+    <dimen name="action_titlebar_height">46dip</dimen>
+
+    <!-- AlertDialog Holo -->
+    <dimen name="alert_dialog_title_height">48dip</dimen>
+    <dimen name="alert_dialog_button_bar_height">48dip</dimen>
+    <dimen name="alert_dialog_button_bar_width">64dip</dimen>
+	<dimen name="alert_dialog_button_bar_widthss">70dip</dimen>
+	<!--camera 360  -->
+	<dimen name="effect_select_img_size">28dp</dimen>
+    <dimen name="dnd_effect_item_delete_container_width">76dp</dimen>
+    <!-- 主画面布局参数 -->
+    <dimen name="main_titlebar_height">90dip</dimen>
+    <dimen name="function_padding">14dip</dimen>
+    
+    
+</resources>

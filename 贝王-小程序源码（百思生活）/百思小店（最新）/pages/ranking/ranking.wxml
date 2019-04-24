@@ -1,0 +1,43 @@
+<view>
+  <view class='rank-top'>
+    <view class='rank-top-box'>
+      <view class='rank-box-iteml {{itemid == "1" ? "selected-item" : ""}}' data-id='1' bindtap='selecteditem'>日榜</view>
+      <view class='rank-box-iteml {{itemid == "2" ? "selected-item" : ""}}' data-id='2' bindtap='selecteditem'>周榜</view>
+      <view class='rank-box-iteml {{itemid == "3" ? "selected-item" : ""}}' data-id='3' bindtap='selecteditem'>月榜</view>
+      <view class='rank-box-item {{itemid == "4" ? "selected-item" : ""}}' data-id='4' bindtap='selecteditem'>总榜</view>
+    </view>
+  </view>
+  <view class='list-box'>
+    <scroll-view scroll-y class='scroll-height' bindscrolltolower="scrolltolower">
+      <view class='ranking-item'>
+        <view class='ranking-item-l' style='color:#ccc;border-right:0px;'>排名</view>
+        <view class='ranking-item-c' style='color:#ccc;'>用户名</view>
+        <view class='ranking-item-r' style='color:#ccc;font-size:14px;'>会员数/有效率</view>
+      </view>
+      <block wx:for="{{memberList}}" wx:index="index" wx:key="key" wx:for-item="itemName">
+        <view class='ranking-item'>
+          <block wx:if="{{index == 0}}">
+            <view class='ranking-item-l'><image src='../../image/rank_list_icon_1.png' class='lv-img'></image></view>
+          </block>
+          <block wx:if="{{index == 1}}">
+            <view class='ranking-item-l'><image src='../../image/rank_list_icon_2.png' class='lv-img'></image></view>
+          </block>
+          <block wx:if="{{index == 2}}">
+            <view class='ranking-item-l'><image src='../../image/rank_list_icon_3.png' class='lv-img'></image></view>
+          </block>
+          <block wx:if="{{index > 2}}">
+            <view class='ranking-item-l'>{{index + 1}}</view>
+          </block>
+          <view class='ranking-item-c'>
+            <image src='{{itemName.avatar != null ? itemName.avatar : "../../image/avatar.gif"}}' class='avatar-img'></image>
+            {{itemName.login_account}}
+          </view>
+          <view class='ranking-item-r'>{{itemName.nums}}/{{itemName.ratio}}</view>
+        </view>
+      </block>
+      <view class='rank-remoke'>
+        {{rankremoke}}
+      </view>
+    </scroll-view>
+  </view>
+</view>

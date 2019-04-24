@@ -1,0 +1,52 @@
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+<!--支付页面-->
+<view class="pay_info_container" wx:if="{{!showFailNetWork}}">
+    <view class="bland"></view>
+    <!--支付信息,订单号,金额等等-->
+    <view class="order_detail_id bottom_line order_padding">
+        <text style="color:black">{{isCombinationPay ? '已用余额支付:' : '订单编号:'}}</text>
+        <text style="color:#f73030">{{isCombinationPay ? payMessageInfo.formatDepositMoeny : payMessageInfo.orderID}}</text>
+    </view>
+    <view class="order_detail_id order_padding">
+        <text style="color:black">{{isCombinationPay ? '您可以选择其他支付方式支付剩余金额:' : '订单金额:'}}</text>
+        <text style="color:#f73030">{{isCombinationPay ? payMessageInfo.formatCombinationMoney : payMessageInfo.formatTotalMoney}}</text>      
+    </view>
+    
+    <view class="bland"></view>
+
+    <!--支付方式-->
+    <block wx:for="{{payMessageInfo.paymentsArr}}" wx:key="{{index}}" wx:for-item="payInfo" wx:if="{{payInfo.infoID!='wapupacp'}}">
+        <view class="pay_select_container" bindtap="changeSelectPay" data-info-id="{{payInfo.infoID}}">
+            <image class="pay_icon" src="{{payInfo.infoIcon}}" data-info-id="{{payInfo.infoID}}"></image>
+            <text class="pay_name" data-info-id="{{payInfo.infoID}}">{{payInfo.infoName}}</text>
+            <text wx:if="{{payInfo.infoID == 'deposit'}}" style="color:#f73030;font-size:13px" data-info-id="{{payInfo.infoID}}">(余额){{payMessageInfo.formatDepositMoeny}}</text>
+            <image class="select_view" data-info-id="{{payInfo.infoID}}" src="{{payInfo.isSelect ? imgURL + '/images/shopcart/shop_Car_Select.png' : imgURL + '/images/shopcart/shop_Car_UnSelect.png'}}"></image>
+        </view>
+    </block>
+
+     <!--支付按钮-->
+    <view class="pay_bottom_view" style="background-color:#F7F7F7" wx:if="{{!showFailNetWork}}">
+        <button class="{{canButtonClick ? 'long-btn normal add_address_button' : 'long-btn disable add_address_button'}}" bindtap="payButtonCommit" wx:if="{{!showFailNetWork}}">{{buttonTitle}}</button>
+    </view>
+</view>
+<!--支付密码输入-->
+<view wx:if="{{isShowPayPassWord}}" class="shipping-container">
+
+  <view animation="{{backgroundOpacityAnimation}}" class="shipping_black_transparent_bg" bindtap="closeShippingMethod"></view>
+
+  <view animation="{{payPassWordTranslateAnimation}}" class="pay_password_container">
+    <view class="header">
+        <view class="title">请输入支付密码</view>
+        <icon class="close" type="clear" bindtap="closeShippingMethod"></icon>
+    </view>
+    <view class="pay_content">预存款支付</view>
+    <view class="pay_money">{{isCombinationPay ? payMessageInfo.formatDepositMoeny:payMessageInfo.formatTotalMoney}}</view>
+    <view class="pay_password_input_container">
+        <input class="input" type="number" password="true" bindinput="passwordInput" maxlength="6"></input>
+    </view>
+  </view>
+</view>
+
+

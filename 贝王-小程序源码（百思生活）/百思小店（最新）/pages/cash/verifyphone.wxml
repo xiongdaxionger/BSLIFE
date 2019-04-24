@@ -1,0 +1,78 @@
+<view>
+  <view class='verify-top'>
+    <view class='circl-box'>
+      <view class='verify-circle circle-border'>1</view>
+      <view class='verify-transverse {{stepTows ? "write-bg" : ""}}'></view>
+      <view class='verify-circle {{stepTows ? "circle-border" : ""}}'>2</view>
+      <view class='verify-transverse {{stepThrees ? "write-bg" : ""}}'></view>
+      <view class='verify-circle {{stepThrees ? "circle-border" : ""}}'>3</view>
+    </view>
+    <view class='circle-remoke'>
+      <view class='write-words'>验证手机号</view>
+      <view class='combo-center {{stepTow ? "write-words" : ""}}'>选择套餐</view>
+      <view class='combo-right'>完成支付</view>
+    </view>
+  </view>
+  <view style='display:{{stepFirst ? "" : "none"}}'>
+    <view class='add-item'>
+      <view class='add-item-l'>手机号码</view>
+      <view class='add-item-c'>
+        <input type='number' placeholder='请输入手机号码' bindinput='setPhone'></input>
+      </view>
+    </view>
+    <!--图形验证码输入框-->
+    <view class="add-item" style='position:relative' wx:if="{{showImageCode}}">
+        <view class='add-item-l'>图形验证码</view>
+        <input class='image_code_input' placeholder-class="placeholder" placeholder="图形验证码" bindinput="imageCodeChange" maxlength='4'></input>
+        <image bindtap="tapImageCode" src="{{imageCodeURL}}" mode="aspectFit" class="image_code" />
+    </view>
+    <view class='add-item'>
+      <view class='add-item-l'>验证码</view>
+      <view class='add-item-c'>
+        <input type='number' placeholder='请输入验证码' bindinput='setVcode'></input>
+      </view>
+      <view class='add-item-right'>
+        <view class="get-code {{count_down ? 'disable' : 'normal'}}" bindtap='verifyMobile'>{{count_down ? second + 's': '获取验证码'}}</view>
+      </view>
+    </view>
+    <view class='add-bottom'>
+      <button class='add-btn {{confirm ? "normal" : "disabled-btn"}}' bindtap='confirm'>下一步</button>
+    </view>
+  </view>
+  <view style='display:{{stepTow ? "" : "none"}};'>
+    <scroll-view scroll-x class='scroll-view-h'>
+      <block wx:for="{{partner}}" wx:key="key" wx:for-item="itemName">
+        <view class='scroll-view-item {{partnerId == itemName.partner_id ? "scroll-view-choose" : ""}}' data-id='{{itemName.partner_id}}' data-price='{{itemName.price}}' bindtap='choosePartner'>{{itemName.name}}</view>
+      </block>
+    </scroll-view>
+    <view class='paycash-top'>套餐金额： <text class='red-words'>￥{{price}}</text></view>
+    <view class='paycash-top'>
+      <text>手机号码：</text>  <text>{{phone}}</text>
+    </view>
+    <view class='pay-box'>
+      <view class='pay-box-l'>￥{{price}}</view>
+      <view class='pay-box-r' data-price='{{price}}' bindtap='wxpay'>去支付</view>
+    </view>
+  </view>
+  <view style='display:{{stepThree ? "" : "none"}};'>
+    <view class='re-login'>
+      <image src='../../image/053.png' class='pay-succ-img'></image>
+    </view>
+    <block wx:if="{{btns == '1'}}">
+      <view class='pay-succ-remoke'>您已成功支付 <text class='red-words'>{{price}}</text> 元</view>
+      <view class='pay-succ'>会员等级升级成功</view>
+    </block>
+    <block wx:if="{{btns != '1'}}">
+      <view class='pay-succ-remoke'>您已成功支付 <text class='red-words'>{{price}}</text> 元</view>
+      <view class='pay-succ'>合伙人升级成功，祝您使用愉快!</view>
+    </block>
+    <view class='re-login'>
+      <block wx:if="{{btns == '1'}}">
+        <view bindtap='reBack' class='re-login-btn partner'>继续选择套餐</view>
+      </block>
+      <block wx:if="{{btns != '1'}}">
+        <view bindtap='reLogin' class='re-login-btn'>返回登录页</view>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+/* 收钱分享 */
+
+@import "/views/network/bad_network.wxss";
+
+/*内容*/
+.content-container{
+    background: white;
+    width: 100%;
+    border-bottom: 1px #e5e5e5 solid;
+    font-size: 17px;
+}
+
+.title{
+    color: #f73030;
+    margin: 35px 10px 0 10px;
+}
+
+.name{
+    margin: 3px 10px 0 10px;
+}
+
+.amount{
+    margin: 3px;
+}
+
+.amount-value{
+    color: #f73030;
+}
+
+.line{
+    width: calc(100vw - 20px);
+    background: #e5e5e5;
+    margin: 5px 10px 0 10px;
+    height: 1px;
+}
+
+.qrcode{
+    margin: 20px 30px 20px 30px;
+    width: calc(100vw - 60px);
+    height: calc(100vw - 60px);
+}

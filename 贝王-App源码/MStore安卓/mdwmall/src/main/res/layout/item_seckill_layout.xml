@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/seckill_bar_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f9f9f9"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor" />
+
+    <com.qianseit.westore.ui.HorizontalListView
+        android:id="@+id/seckill_bar_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:cacheColorHint="@color/white"
+        android:divider="@null"
+        android:dividerHeight="0.5dip"
+        android:drawSelectorOnTop="false"
+        android:fadingEdgeLength="0sp"
+        android:groupIndicator="@null"
+        android:listSelector="@color/white"
+        android:scrollbars="none" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f9f9f9"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" >
+
+        <View
+            android:layout_width="2.5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/seckill_item_title"
+            android:layout_alignTop="@+id/seckill_item_title"
+            android:background="@color/westore_red" />
+
+        <TextView
+            android:id="@+id/seckill_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:maxLength="12"
+            android:text="限时秒杀"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeMedium" />
+
+        <LinearLayout
+            android:id="@+id/fragment_goods_item_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/seckill_item_countdown_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:drawableLeft="@drawable/goods_item_time"
+                android:drawablePadding="3dp"
+                android:padding="2dp"
+                android:text="倒计时"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <com.qianseit.westore.ui.RushBuyCountDownTimerView
+                android:id="@+id/seckill_item_countdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

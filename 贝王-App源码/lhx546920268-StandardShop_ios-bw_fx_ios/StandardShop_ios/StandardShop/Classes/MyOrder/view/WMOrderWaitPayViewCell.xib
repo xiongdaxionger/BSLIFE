@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="WMOrderWaitPayViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="40"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rq6-MI-KCD">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="74" id="SJe-gu-Hqu"/>
+                            <constraint firstAttribute="height" constant="26" id="sgj-vH-hun"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="取消订单">
+                            <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4N-f9-bfG">
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="74" id="iHK-zg-Kcn"/>
+                            <constraint firstAttribute="height" constant="26" id="uc2-1O-NKP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="再次购买">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="php-xD-bNc">
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="74" id="VhP-h2-Inv"/>
+                            <constraint firstAttribute="height" constant="26" id="lQh-qW-oH8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="付款">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="php-xD-bNc" firstAttribute="leading" secondItem="c4N-f9-bfG" secondAttribute="trailing" constant="8" id="7VE-Hp-xZt"/>
+                    <constraint firstAttribute="bottom" secondItem="php-xD-bNc" secondAttribute="bottom" constant="6" id="ArX-Jd-uhX"/>
+                    <constraint firstAttribute="trailing" secondItem="php-xD-bNc" secondAttribute="trailing" constant="8" id="gbd-5e-HNk"/>
+                    <constraint firstAttribute="bottom" secondItem="c4N-f9-bfG" secondAttribute="bottom" constant="6" id="qnE-2V-IcV"/>
+                    <constraint firstItem="php-xD-bNc" firstAttribute="leading" secondItem="rq6-MI-KCD" secondAttribute="trailing" constant="8" id="rn3-od-f6l"/>
+                    <constraint firstAttribute="bottom" secondItem="rq6-MI-KCD" secondAttribute="bottom" constant="6" id="vQL-bW-1k4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="buyAgainButton" destination="c4N-f9-bfG" id="jDq-VH-vpH"/>
+                <outlet property="cancelButton" destination="rq6-MI-KCD" id="V7E-K2-RIj"/>
+                <outlet property="payButton" destination="php-xD-bNc" id="KaP-sO-73h"/>
+                <outlet property="payButtonRight" destination="gbd-5e-HNk" id="165-CU-P2F"/>
+                <outlet property="payButtonWidth" destination="VhP-h2-Inv" id="5MT-UM-nWQ"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

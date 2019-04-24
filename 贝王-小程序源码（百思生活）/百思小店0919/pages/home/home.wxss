@@ -1,0 +1,35 @@
+page{
+  font-size: 14px;
+}
+.home-header{
+  background: #ee5606;
+  padding: 50rpx;
+  display: flex;
+  color: #fff;
+}
+.home-header-item{
+  width: 50%;
+  text-align: center;
+  padding: 50rpx 0rpx;
+}
+.my-store-img{
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10rpx;
+}
+.home-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.home-item{
+  width: 33%;
+  text-align: center;
+  padding: 40rpx 0rpx;
+  border-right:1px solid #eee;
+  border-bottom:1px solid #eee;
+}
+.home-item-img{
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 10rpx;
+}

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/shape_solid_white_stroke_gray"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp" >
+
+    <LinearLayout
+        android:id="@+id/menu_deposit_balance_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/menu_deposit_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeMedium" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:text="@string/menu_deposit_balance"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_deposit_coupon_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/menu_deposit_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeMedium" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:text="@string/menu_deposit_coupon"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_deposit_score_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/menu_deposit_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeMedium" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:text="@string/menu_deposit_score"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_deposit_income_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/menu_deposit_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeMedium" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:text="@string/menu_deposit_income"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+</LinearLayout>

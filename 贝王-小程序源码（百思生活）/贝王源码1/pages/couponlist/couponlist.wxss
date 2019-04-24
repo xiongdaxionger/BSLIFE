@@ -1,0 +1,114 @@
+@import "../../views/network/bad_network.wxss";
+/**领券中心容器视图**/
+.coupon_receive_container{
+    background-color: #F7F7F7;
+    padding-top: 5px;
+    height: 100vh;
+    width: 100vw;
+}
+/**优惠券视图**/
+.coupon_view{
+    border-radius: 3.0px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+/**优惠券头部**/
+.coupon_header_view{
+    border-top-left-radius: 3.0px;
+    border-top-right-radius: 3.0px;
+    min-height: 55px;
+    max-height: 55px;
+    width: 100%;
+    background-color: #FF5D45;
+    color: white;
+    position: relative;
+}
+/**优惠券无效头部**/
+.coupon_header_view.disable{
+    background-color: #C9C9C9;
+}
+/**优惠券名称**/
+.coupon_name{
+    position: absolute;
+    font-size: 18px;
+    top: 5px;
+    left: 5px;
+    right: 73px;
+    height: 23px;
+    line-height: 23px;
+    overflow: hidden;
+}
+/**优惠券标题**/
+.coupon_title{
+    position: absolute;
+    font-size: 13px;
+    top: 34px;
+    left: 5px;
+    right: 73px;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+}
+/**优惠券操作按钮**/
+.coupon_button{
+    position: absolute;
+    color: white;
+    background:none;
+    font-size: 15px;
+    top: 13px;
+    right: 5px;
+    max-height: 30px;
+    border: 1px white solid;
+    padding: 0px 1px;
+    display: flex;
+    align-items: center;
+}
+/**优惠券有效期**/
+.coupon_time{
+    font-size: 13px;
+    color: #FF5D45;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 105px;
+    max-height: 30px;
+    line-height: 16px;
+    overflow: hidden;
+}
+/**可用/不可用提示**/
+.use_tip{
+    font-size: 14px;
+    color: white;
+    background-color: #FF5D45;
+    max-width: 100px;
+    text-align: center;
+    line-height: 22px;
+    overflow: hidden;
+    position: absolute;
+    top: 60px;
+    right: 5px;
+    padding: 0px 3px
+}
+/**提示不可用时背景颜色**/
+.use_tip.cant_use{
+    background-color: #C9C9C9
+}
+/**灰色**/
+.coupon_time.disable{
+    color: #C9C9C9
+}
+/**优惠券使用说明**/
+.coupon_info{
+    font-size: 13px;
+    color: #FF5D45;
+    margin: 8px 5px;
+    line-height: 18px;
+}
+/**灰色**/
+.coupon_info.disable{
+    color: #C9C9C9;
+}

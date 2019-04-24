@@ -1,0 +1,1 @@
+<web-view src="{{'https://www.ibwang.cn/index.php/wap2/article-'+article_id+'.html?is_wx=1'}}"></web-view>

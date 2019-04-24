@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/PaddingLarge"
+        android:background="@drawable/confimr_order_item_bgimage"
+        android:orientation="vertical"
+        android:padding="@dimen/PaddingLarge" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/invoice_type"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeLarge" />
+
+        <RadioGroup
+            android:id="@+id/express_picker_radios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/PaddingLarge"
+            android:paddingTop="@dimen/PaddingLarge" >
+
+            <RadioButton
+                android:id="@+id/invoice_null_radio"
+                style="@style/CustomCheckboxTheme"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/invoice_type_null"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <RadioButton
+                android:id="@+id/invoice_person_radio"
+                style="@style/CustomCheckboxTheme"
+                android:layout_marginLeft="@dimen/PaddingLarge"
+                android:gravity="center"
+                android:tag="personal"
+                android:text="@string/invoice_type_personal"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <RadioButton
+                android:id="@+id/invoice_company_radio"
+                style="@style/CustomCheckboxTheme"
+                android:layout_marginLeft="@dimen/PaddingLarge"
+                android:gravity="center"
+                android:tag="company"
+                android:text="@string/invoice_type_company"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeMedium" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/invoice_title_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/PaddingLarge"
+        android:layout_marginTop="@dimen/PaddingLarge"
+        android:background="@drawable/confimr_order_item_bgimage"
+        android:orientation="vertical"
+        android:padding="@dimen/PaddingLarge"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/invoice_title"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeLarge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/PaddingMedium"
+                android:text="@string/invoice_title_summary"
+                android:textColor="@color/westore_primary_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/invoice_title"
+            android:layout_width="match_parent"
+            android:layout_height="32dip"
+            android:layout_marginTop="@dimen/PaddingLarge"
+            android:background="@drawable/invoice_edittext_bgimage"
+            android:padding="@dimen/PaddingMedium"
+            android:inputType="text"
+            android:textColor="@color/westore_primary_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/invoice_content_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/PaddingLarge"
+        android:layout_marginTop="@dimen/PaddingLarge"
+        android:background="@drawable/confimr_order_item_bgimage"
+        android:orientation="vertical"
+        android:padding="@dimen/PaddingLarge"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/invoice_content"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeLarge" />
+
+        <Button
+            android:id="@+id/invoice_content"
+            android:layout_width="match_parent"
+            android:layout_height="32dip"
+            android:layout_marginTop="@dimen/PaddingLarge"
+            android:background="@drawable/invoice_spinner_bgimage"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/westore_primary_textcolor"
+            android:textSize="@dimen/TextSizeMedium" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/invoice_submit"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/PaddingLarge"
+        android:background="@drawable/app_button_selector"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:text="@string/ok" />
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="WMIntegralUseHistoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYN-i6-xIQ" userLabel="separatorline">
+                        <rect key="frame" x="0.0" y="73" width="320" height="1"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="aGh-Wf-Mf9"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxx购买了您推荐的xxx" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uz2-Bf-tQ0" userLabel="content_label">
+                        <rect key="frame" x="10" y="41" width="300" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="VjO-VD-8yy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-09-20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3o-Hn-Mhz" userLabel="time_label">
+                        <rect key="frame" x="220" y="15" width="90" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="59V-xx-Bx4"/>
+                            <constraint firstAttribute="width" constant="90" id="5Rb-pI-YHQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgq-C6-t8f" userLabel="integral_btn">
+                        <rect key="frame" x="10" y="15" width="61" height="18"/>
+                        <color key="backgroundColor" red="1" green="0.36542492170000002" blue="0.27247244230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="61" id="XJd-Gc-W0a"/>
+                            <constraint firstAttribute="height" constant="18" id="Zrm-V9-veD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title=" +67分" image="integral_use_icon">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YYN-i6-xIQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Bhu-KA-1F3"/>
+                    <constraint firstItem="H3o-Hn-Mhz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="DfG-q4-1ld"/>
+                    <constraint firstItem="bgq-C6-t8f" firstAttribute="top" secondItem="H3o-Hn-Mhz" secondAttribute="top" id="NJc-ch-AoF"/>
+                    <constraint firstAttribute="bottom" secondItem="YYN-i6-xIQ" secondAttribute="bottom" id="NT0-8x-ee6"/>
+                    <constraint firstItem="YYN-i6-xIQ" firstAttribute="leading" secondItem="bgq-C6-t8f" secondAttribute="trailing" id="OaK-w0-ylj"/>
+                    <constraint firstItem="H3o-Hn-Mhz" firstAttribute="leading" secondItem="YYN-i6-xIQ" secondAttribute="trailing" id="P2d-RL-p60"/>
+                    <constraint firstAttribute="trailing" secondItem="YYN-i6-xIQ" secondAttribute="trailing" id="SYy-bR-HuT"/>
+                    <constraint firstAttribute="trailing" secondItem="uz2-Bf-tQ0" secondAttribute="trailing" constant="10" id="Vcc-10-bWy"/>
+                    <constraint firstItem="uz2-Bf-tQ0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="nnd-ar-61Q"/>
+                    <constraint firstAttribute="trailing" secondItem="H3o-Hn-Mhz" secondAttribute="trailing" constant="10" id="pY4-E6-3fh"/>
+                    <constraint firstItem="bgq-C6-t8f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qjR-rZ-FWH"/>
+                    <constraint firstAttribute="bottom" secondItem="uz2-Bf-tQ0" secondAttribute="bottom" constant="15" id="urW-BK-UXH"/>
+                    <constraint firstItem="bgq-C6-t8f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="ymL-NU-YBn"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="OaK-w0-ylj"/>
+                        <exclude reference="DfG-q4-1ld"/>
+                        <exclude reference="P2d-RL-p60"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="content_label" destination="uz2-Bf-tQ0" id="YgF-W1-Pck"/>
+                <outlet property="integral_btn" destination="bgq-C6-t8f" id="hB8-cK-LUL"/>
+                <outlet property="integral_btn_widthConstraint" destination="XJd-Gc-W0a" id="MoX-kC-49e"/>
+                <outlet property="line" destination="YYN-i6-xIQ" id="SqF-Yg-pHc"/>
+                <outlet property="lineHeightConstraint" destination="aGh-Wf-Mf9" id="Mc1-yX-DZG"/>
+                <outlet property="time_label" destination="H3o-Hn-Mhz" id="c2I-ak-UQd"/>
+            </connections>
+            <point key="canvasLocation" x="210" y="318.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="integral_use_icon" width="13" height="13"/>
+    </resources>
+</document>

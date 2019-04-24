@@ -1,0 +1,15 @@
+
+<!--个人信息修改-->
+<view class="container modify_container">
+<text wx:if="{{showErrMsg}}" class="err-text">{{errMsg}}</text>
+<!--输入框-->
+<input class="input" value="{{input_content}}" placeholder="{{placeholder}}" auto-focus bindinput="textDidChange" placeholder-class="placeholder" type="{{input_type}}"/>
+
+<!--提示信息-->
+<view wx:if="{{msg != null}}" class="msg-container">
+<text class="left-text">*</text>
+<text>{{msg}}</text>
+</view>
+<!--保存按钮-->
+<button class="login-btn long-btn {{saveEnable ? 'normal' : 'disable'}}" catchtap="save">保存</button>
+</view>

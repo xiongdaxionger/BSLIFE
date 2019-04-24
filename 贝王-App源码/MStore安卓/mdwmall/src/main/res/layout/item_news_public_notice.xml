@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="left|center"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/PaddingMedium"
+    android:paddingLeft="@dimen/PaddingXLarge"
+    android:paddingRight="@dimen/PaddingXLarge"
+    android:paddingTop="@dimen/PaddingMedium" >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/MarginLarge"
+        android:paddingRight="@dimen/MarginLarge" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关于我们"
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeMedium" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="关于我们"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeMedium"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/base_arrow_right_pink_n" />
+
+</LinearLayout>

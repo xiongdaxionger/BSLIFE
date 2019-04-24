@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_address_book_item_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:background="@color/fragment_background_color"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="10dp"
+        android:background="@color/westore_divider_bgcolor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/PaddingLarge" 
+        android:paddingBottom="@dimen/PaddingLarge" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/my_address_book_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/PaddingLarge"
+                android:singleLine="true"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <TextView
+                android:id="@+id/my_address_book_item_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/PaddingLarge"
+                android:text="430521******5220"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/my_address_book_item_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <TextView
+                android:id="@+id/my_address_book_item_edit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:paddingRight="@dimen/PaddingLarge"
+                android:text="编辑"
+                android:textColor="@color/base_top_color"
+                android:textSize="@dimen/TextSizeMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/my_address_book_item_default_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/PaddingMedium"
+                android:background="@color/transparent"
+                android:paddingLeft="@dimen/PaddingLarge"
+                android:paddingTop="@dimen/PaddingSmall"
+                android:text="[默认]"
+                android:textColor="@color/text_goods_3_color"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <TextView
+                android:id="@+id/my_address_book_item_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/PaddingMedium"
+                android:paddingLeft="@dimen/PaddingLarge"
+                android:paddingTop="@dimen/PaddingSmall"
+                android:textColor="@color/text_goods_3_color"
+                android:textSize="@dimen/TextSizeMedium" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="@dimen/PaddingXMedium"
+            android:background="@color/westore_divider_bgcolor"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/PaddingLarge"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/my_address_book_item_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transparent"
+                android:drawableLeft="@drawable/qianse_item_status_selected"
+                android:drawablePadding="@dimen/PaddingMedium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/my_address_book_item_edit"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_address_edit" />
+
+                    <ImageView
+                        android:id="@+id/my_address_book_item_delete"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_address_delete" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:gravity="center_vertical" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <ImageView -->
+    <!-- android:id="@+id/my_address_book_item_default" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:gravity="center" -->
+    <!-- android:padding="@dimen/PaddingXLarge" -->
+    <!-- android:src="@drawable/my_address_book_default" /> -->
+
+
+    <!-- <RelativeLayout -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:paddingBottom="@dimen/PaddingLarge" -->
+    <!-- android:paddingTop="@dimen/PaddingXLarge" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/my_address_book_item_name" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:textColor="@color/westore_dark_textcolor" -->
+    <!-- android:textSize="@dimen/TextSizeBigSmall" /> -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/my_address_book_item_phone" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignBottom="@+id/my_address_book_item_name" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:paddingLeft="@dimen/PaddingLarge" -->
+    <!-- android:textColor="@color/text_textcolor_gray1" -->
+    <!-- android:textSize="@dimen/TextSizeBigSmall" /> -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/my_address_book_item_address" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_below="@+id/my_address_book_item_name" -->
+    <!-- android:layout_marginTop="@dimen/PaddingMedium" -->
+    <!-- android:paddingTop="@dimen/PaddingSmall" -->
+    <!-- android:textColor="@color/text_textcolor_gray1" -->
+    <!-- android:textSize="11sp" /> -->
+    <!-- </RelativeLayout> -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/my_address_book_item_edit" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:gravity="center" -->
+    <!-- android:padding="@dimen/PaddingXLarge" -->
+    <!-- android:text="@string/edit" -->
+    <!-- android:textColor="@color/fragment_top_bg" -->
+    <!-- android:textSize="13sp" /> -->
+    <!-- </LinearLayout> -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/westore_divider_bgcolor" />
+
+</LinearLayout>

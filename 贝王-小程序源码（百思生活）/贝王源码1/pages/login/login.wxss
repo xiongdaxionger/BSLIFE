@@ -1,0 +1,98 @@
+
+
+/*背景*/
+.background{
+    background: white;
+}
+
+/*输入框ul*/
+.input-ul{
+    margin-top: 45px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+/*输入框li*/
+.input-ul li{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    height: 45px;
+    margin: 0 23px 0 23px;
+    width: calc(100vw - 46px);
+    border-bottom: 1px solid #F5F5F5;
+    position: relative;
+}
+
+/*输入框标题*/
+.input-ul text{
+    display: block;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+/*输入框*/
+.input-ul input{
+    flex: 1 1 auto;
+    font-size: 15px;
+}
+
+/*眼睛*/
+.eye-image{
+    width: 23px;
+    height: 15px;
+}
+
+/*图形验证码*/
+.image-code{
+    width: 64px;
+    height: 20px;
+}
+
+/*登录按钮*/
+.login-btn{
+    margin-top: 30px;
+    position: relative;
+}
+
+/*注册按钮*/
+.register-btn{
+    font-size: 14px;
+    color: darkgray;
+    position: absolute;
+    left: 23px;
+    margin-top: 20px;
+}
+
+/*找回密码*/
+.find-password-btn{
+    font-size: 14px;
+    color: darkgray;
+    position: absolute;
+    right: 23px;
+    margin-top: 20px;
+}
+
+/*微信登录*/
+.weixin{
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.weixin-image{
+    width: 43px;
+    height: 43px;
+}
+
+.weixin-text{
+    margin-top: 5px;
+    color: darkgray;
+    font-size: 13px;
+}
+

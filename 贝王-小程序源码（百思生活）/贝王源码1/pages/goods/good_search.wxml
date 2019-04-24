@@ -1,0 +1,56 @@
+
+
+<!--商品搜索 热门搜索 搜索记录-->
+<view wx:if="{{searching}}" class="search-hot-history-associate-container">
+<!--搜索栏-->
+<view class="search-page-header">
+
+<!--返回按钮-->
+<image class="search-back" mode="aspectFit" catchtap="searchDidEnd" src="{{imgURL + '/images/icon/back_dark.png'}}"></image>
+  <!--搜索栏-->
+  <view class="search-page-container">
+
+    <!--搜索图标-->
+    <image class="search" src="{{imgURL + '/images/icon/search_icon_dark.png'}}" />
+
+    <!--搜索输入框-->
+    <input focus value="{{search_text != null ? search_text : ''}}" bindinput="searchDidChange" class="search-input" placeholder="请输入关键词" placeholder-class="placeholder" />
+  </view>
+ 
+ <!--搜索按钮-->
+  <view catchtap="doSearch" class="do-search">搜索</view>
+</view>
+
+  <scroll-view scroll-y class="search-hot-history-associate-scroll-view">
+    <view wx:if="{{!show_associate}}" class="search-history-hot-container">
+
+      <!--热门搜索-->
+      <view wx:if="{{search_hot_infos != null}}" class="search-history-hot-header">
+        <image class="search-history-hot-header-icon" src="{{imgURL + '/images/goodList/search_hot.png'}}" />
+        <text>热门搜索</text>
+      </view>
+      <block wx:if="{{search_hot_infos != null}}" wx:for="{{search_hot_infos}}" wx:key="{{index}}">
+        <view catchtap="clickSearchItem" data-value="{{item}}" class="search-history-item">{{item}}</view>
+      </block>
+
+      <!--搜索历史-->
+      <view class="search-history-hot-header">
+        <image class="search-history-hot-header-icon" src="{{imgURL + '/images/icon/search_icon_dark.png'}}" />
+        <text>最近搜索</text>
+        <image catchtap="clearSearchHistory" wx:if="{{search_history_infos != null && search_history_infos.length > 0}}" class="search-history-header-delete" src="{{imgURL + '/images/goodList/search_delete.png'}}" />
+      </view>
+      <block wx:if="{{search_history_infos != null}}" wx:for="{{search_history_infos}}" wx:key="{{index}}">
+        <view catchtap="clickSearchItem" data-value="{{item}}" class="search-history-item">{{item}}</view>
+      </block>
+      <view wx:if="{{search_history_infos == null || search_history_infos.length == 0}}" class="search-history-none">暂无搜索历史</view>
+    </view>
+
+    <!--搜索联想-->
+    <view wx:if="{{show_associate}}" class="search-associate-container">
+      <block wx:if="{{search_associate_infos != null}}" wx:for="{{search_associate_infos}}" wx:key="{{index}}">
+        <view catchtap="clickSearchItem" data-value="{{item}}" class="search-associate-title">{{item}}</view>
+        <view class="search-associate-line" />
+      </block>
+    </view>
+  </scroll-view>
+</view>

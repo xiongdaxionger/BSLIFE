@@ -1,0 +1,90 @@
+/* 充值有礼*/
+
+/*头部*/
+.header{
+    width: 100vw;
+    height: 45px;
+    border-bottom: 1px #e5e5e5 solid;
+    background: white;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 15px;
+    align-items: center;
+}
+
+.header text{
+    margin: 0 10px 0 10px;
+    flex: 0 0 auto;
+}
+
+.header input{
+    flex: 1 1 auto;
+}
+
+.topup-immediately{
+    line-height: 30px;
+    background: #f73030;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    padding: 0 8px 0 8px;
+    border-radius: 3px;
+     margin: 0 10px 0 10px;
+     flex: 0 0 auto;
+}
+
+/*活动列表*/
+.activity-item{
+    background: white;
+    border-bottom: 1px #e5e5e5 solid;
+    border-top: 1px #e5e5e5 solid;
+    margin-top: 8px;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 90px;
+}
+
+.activity-left-container{
+    background: rgba(144, 144, 144, 0.1);
+    color: #f73030;
+    font-size: 17px;
+    margin: 10px;
+    height: 70px;
+    width: 85px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.activity-title{
+    font-size: 12px;
+    text-align: center;
+}
+
+.activity-subtitle{
+    margin-top: 3px;
+    text-align: center;
+}
+
+.activity-right-container{
+    flex: 1 1 auto;
+    height: 70px;
+    margin: 10px 10px 10px 0;
+    font-size: 14px;
+    position: relative;
+}
+
+.activity-topup-btn{
+    flex: 0 0 auto;
+    background: #f73030;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    padding: 0 8px 0 8px;
+    line-height: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 3px;
+}

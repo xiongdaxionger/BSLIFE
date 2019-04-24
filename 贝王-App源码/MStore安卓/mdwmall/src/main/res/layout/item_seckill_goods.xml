@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp" >
+
+    <FrameLayout
+        android:id="@+id/icon_item_shopping_good_list_fl"
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/icon_item_shopping_good_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter" 
+            android:background="@drawable/shape_solid_white_stroke_gray"/>
+
+        <ImageView
+            android:id="@+id/soldout_icon_item_shopping_good_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/goods_item_seckil_sold_out"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/item_goods_tag_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/title_item_shopping_good_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/PaddingMedium"
+        android:layout_marginTop="@dimen/PaddingXMedium"
+        android:layout_toRightOf="@+id/icon_item_shopping_good_list_fl"
+        android:lines="2"
+        android:textColor="@color/westore_dark_textcolor"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/price_item_shopping_good_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/title_item_shopping_good_list"
+        android:layout_below="@+id/title_item_shopping_good_list"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/title_item_shopping_good_list"
+        android:singleLine="true"
+        android:textColor="@color/westore_red"
+        android:textSize="@dimen/TextSizeXLarge" />
+
+    <TextView
+        android:id="@+id/market_price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/price_item_shopping_good_list"
+        android:layout_below="@+id/price_item_shopping_good_list"
+        android:singleLine="true"
+        android:textColor="@color/westore_gray_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <TextView
+        android:id="@+id/partake_count_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/price_item_shopping_good_list"
+        android:layout_below="@+id/price_item_shopping_good_list"
+        android:layout_marginTop="@dimen/MarginLarge"
+        android:drawableLeft="@drawable/partake_count"
+        android:drawablePadding="3dp"
+        android:singleLine="true"
+        android:text="参与人数:"
+        android:textColor="@color/text_goods_9_color"
+        android:textSize="@dimen/TextSizeSmall" 
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/partake_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/partake_count_tip"
+        android:layout_marginLeft="@dimen/MarginMedium"
+        android:layout_toRightOf="@+id/partake_count_tip"
+        android:singleLine="true"
+        android:text="2558人"
+        android:textColor="@color/westore_red"
+        android:textSize="@dimen/TextSizeSmall"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/just_buy"
+        style="@style/app_button_round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/market_price_text"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text="立即抢购"
+        android:textSize="15sp" />
+
+</RelativeLayout>

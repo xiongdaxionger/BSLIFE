@@ -1,0 +1,145 @@
+/*会员列表*/
+
+/*搜索头部*/
+.search-header{
+    background: white;
+    height: 40px;
+    display: flex;
+    flex-flow: row nowrap;   
+    align-items: center;
+    position: fixed;
+    width:100%;
+}
+
+/*搜索容器*/
+.search-container{
+    background: #f7f7f7;
+    border-radius: 3px;
+    height: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    flex: 1 1 auto;
+    margin-left: 10px;
+}
+
+/*搜索图标*/
+.search-icon{
+    width: 15px;
+    height: 15px;
+    margin: 8px 8px;
+}
+
+/*搜索输入框*/
+.search-input{
+    font-size: 14px;
+    flex: 1 1 auto;
+}
+
+/*添加会员*/
+.add-icon{
+    width: 30px;
+    padding: 5px;
+    color: 9fa0a0;
+    font-size: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+/*搜索*/
+.do-search{
+    color: #666666;
+    font-size: 15px;
+    padding: 10px;
+    flex: 0 0 auto;
+}
+
+.partner-list-container{
+    width: 100%;
+    position: fixed;
+    margin-top: 40px;
+}
+
+
+/*会员列表滚动视图*/
+.scroll-view{
+    width: 100vw;
+    height: calc(100vh - 40px);
+    background: #f7f7f7;
+}
+
+/*内容*/
+.content-container{
+    
+    width: 100vw;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*列表 row item*/
+.partner-list-item{
+    border-bottom: 1px #e5e5e5 solid;
+    display: flex;
+    flex-flow: row nowrap;
+    background: white;
+}
+
+/*头像*/
+.head-image{
+    margin: 10px 10px 10px 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 35px;
+    flex: 0 0 auto;
+}
+
+/*中间容器*/
+.middle-container{
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 1 auto;
+    margin: 15px 0 10px 0;
+    justify-content: space-between;
+}
+
+
+
+/*昵称*/
+.user-name{
+    font-size: 17px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*下线人数*/
+.referral-num{
+    margin-top: 5px;
+    font-size: 13px;
+    color: gray;
+}
+
+/*右边容器*/
+.right-container{
+    margin: 0 10px 10px 10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/*收益金额*/
+.amount{
+    font-size: 15px;
+}
+
+/*收益标题*/
+.amount-title{
+    color: gray;
+    font-size: 14px;
+    margin: 3px 0 3px 0;
+}
+
+
+
+

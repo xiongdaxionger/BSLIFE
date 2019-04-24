@@ -1,0 +1,48 @@
+/* pages/user/userInfo_modify.wxss */
+
+/*修改信息容器*/
+.modify_container{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*错误提示*/
+.err-text{
+    margin: 20px 10px 0 10px;
+    color: #f73030;
+    font-size: 15px;
+}
+
+/*输入框*/
+.input{
+    margin-top: 20px;
+    background: white;
+    width: calc(100vw - 20px);
+    height: 45px;
+    padding: 0 10px 0 10px;
+    border-top: 1px #e5e5e5 solid;
+    border-bottom: 1px #e5e5e5 solid;
+    font-size: 15px;
+}
+
+/*提示信息*/
+.msg-container{
+    display: flex;
+    align-items: center;
+    margin: 15px 10px 0 10px;
+    font-size: 14px;
+    color: gray;
+}
+
+.left-text{
+    color: #f73030;
+    margin-right: 3px;
+    float: left;
+    margin-top: 6px;
+}
+
+/*保存按钮*/
+.login-btn{
+    margin-top: 25px;
+    position: relative;
+}

@@ -1,0 +1,8 @@
+F:\WEBPOS生成安装包源码\WriteKey\bin\Debug\WriteKey.exe
+F:\WEBPOS生成安装包源码\WriteKey\bin\Debug\WriteKey.pdb
+F:\WEBPOS生成安装包源码\WriteKey\obj\Debug\ResolveAssemblyReference.cache
+F:\WEBPOS生成安装包源码\WriteKey\obj\Debug\WriteKey.MainForm.resources
+F:\WEBPOS生成安装包源码\WriteKey\obj\Debug\WriteKey.Properties.Resources.resources
+F:\WEBPOS生成安装包源码\WriteKey\obj\Debug\WriteKey.csproj.GenerateResource.Cache
+F:\WEBPOS生成安装包源码\WriteKey\obj\Debug\WriteKey.exe
+F:\WEBPOS生成安装包源码\WriteKey\obj\Debug\WriteKey.pdb

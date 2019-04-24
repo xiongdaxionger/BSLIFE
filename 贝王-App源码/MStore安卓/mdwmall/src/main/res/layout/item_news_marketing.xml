@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background_color"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/PaddingLarge"
+        android:textColor="@color/westore_second_gray_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/PaddingXMedium"
+        android:layout_marginRight="@dimen/PaddingXMedium"
+        android:background="@drawable/shape_solid_white_stroke_round5_gray"
+        android:orientation="vertical"
+        android:padding="@dimen/PaddingLarge" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textColor="@color/westore_second_gray_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <ImageView
+            android:id="@+id/marketing_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/PaddingLarge"
+            android:background="@color/white"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/PaddingLarge"
+            android:gravity="left"
+            android:textColor="@color/westore_second_gray_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/PaddingLarge"
+            android:gravity="left|center"
+            android:text="查看详情"
+            android:drawableRight="@drawable/base_arrow_right_pink_n"
+            android:textColor="@color/westore_second_gray_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+</LinearLayout>

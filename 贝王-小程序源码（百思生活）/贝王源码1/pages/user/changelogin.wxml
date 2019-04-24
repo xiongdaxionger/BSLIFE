@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="content_view">
+  <view class="bland"></view>
+    <!--旧密码-->
+    <view class="section section-extension">
+      <input maxlength="20" placeholder="请输入原登录密码" id="oldpass" bindinput="textDidChange" style="font-size:15px" />
+    </view>
+    <!--新密码-->
+    <view class="section section-extension">
+      <input maxlength="20" placeholder="请输入新密码，必须为6-20个字符" id="newpass" password bindinput="textDidChange" style="font-size:15px"/>
+    </view>
+
+    <!--确认密码-->
+    <view class="section section-extension">
+      <input maxlength="20" placeholder="重新输入新密码" id="confirmpass" password bindinput="textDidChange" style="font-size:15px"/>
+    </view>
+  </view>
+
+    <view class="bottom_view" style="margin-top:20px">
+        <button class="long-btn normal add_address_button" bindtap="commitChange">确认修改</button>
+    </view>
+</view>

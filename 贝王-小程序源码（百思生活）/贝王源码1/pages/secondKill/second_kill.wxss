@@ -1,0 +1,233 @@
+/* pages/secondKill/second_kill.wxss */
+
+@import "/views/network/bad_network.wxss";
+
+/*滚动容器*/
+.scroll-view-container{
+    height: 100vh;
+    background:#f7f7f7;
+}
+
+
+/*轮播广告*/
+.banner{
+    width: 100%;
+}
+
+.banner image{
+    width: 100%;
+    height:100%;
+}
+
+/*秒杀场次滚动视图*/
+.secondKill-section-scroll-view{
+    width: 100vw;
+    height: 50px;
+}
+
+/*秒杀场次头部*/
+.secondKill-section-header{
+    height: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/*秒杀场次item*/
+.secondKill-section-header-item{
+    width: 25vw;
+    height: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+/*item标题*/
+.secondKill-section-header-item-title{
+    font-size: 12px;
+}
+
+/*item副标题*/
+.secondKill-section-header-item-subtitle{
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.good-scroll-view{
+    height: calc(100vh - 50px);
+}
+
+/*场次头部*/
+.section-header{
+    height: 39px;
+    border-top: 1px #e5e5e5 solid;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/*红线*/
+.section-header--red-line{
+    background: #f73030;
+    width: 2px;
+    height: 20px;
+    margin: 0 5px 0 5px;
+}
+
+/*标题*/
+.section-header-title{
+    flex: 1 1 auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 15px;
+    color: #666666;
+}
+
+/*秒杀倒计时*/
+.timer-container{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    font-size: 11px;
+    margin-right: 3px;
+}
+
+/*秒杀倒计时*/
+.timer-container view{
+    color: white;
+    min-width: 16px;
+    text-align: center;
+    line-height: 16px;
+    margin: 0 3px 0 3px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/*倒计时标题*/
+.timer-container text{
+    color: #666666;
+    font-size: 13px;
+    margin-right: 3px;
+}
+
+/*倒计时图标*/
+.timer-container image{
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+}
+
+/*活动已结束了*/
+.good-secondKill-end{
+    font-size:13px;
+    color: lightgray;
+}
+
+/*商品容器*/
+.good-container{
+    width: 100vw;
+}
+
+/*商品列表  item*/
+.good-list-item{
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    background: white;
+    position: relative;
+    height: 120px;
+}
+
+/*商品图片*/
+.good-image{
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border: 1px #f7f7f7 solid;
+    flex: 1 0 auto;
+}
+
+/*售罄图标*/
+.sold-out-image{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin: auto;
+}
+
+/*右边容器*/
+.good-list-right-container{
+    margin: 10px 10px 10px 0px;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    align-items: flex-start;
+}
+
+/*商品名称*/
+.good-name{
+    width: 100%;
+    word-spacing: 1px;
+    line-height: 18px;
+    height: 36px;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+/*底部容器*/
+.good-list-bottom-container{
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+/*列表价格容器*/
+.good-price-container{
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 1 auto;
+}
+
+/*价格*/
+.good-price{
+    font-size: 17px;
+    color: #E54646;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+}
+
+/*市场价格*/
+.good-market-price{
+    margin-left: 5px;
+    font-size: 12px;
+    color: gray;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: line-through;
+}
+
+/*按钮*/
+.good-list-btn{
+    min-width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+}
+

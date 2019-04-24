@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/fragment_background_color"/>
+    
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:background="@color/fragment_background_color"
+        android:textSize="@dimen/TextSizeBigSmall"
+        android:text="女装" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_solid_white_stroke_gray"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <com.qianseit.westore.ui.MyGridView
+        android:id="@+id/child_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/white"
+        android:drawSelectorOnTop="false"
+        android:fadingEdgeLength="0sp"
+        android:horizontalSpacing="2dp"
+        android:listSelector="@color/white"
+        android:background="@color/white"
+        android:scrollbars="@null"
+        android:numColumns="3"
+        android:verticalSpacing="2dp" 
+        android:padding="2dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

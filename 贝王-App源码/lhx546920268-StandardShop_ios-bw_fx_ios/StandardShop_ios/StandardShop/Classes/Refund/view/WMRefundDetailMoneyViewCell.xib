@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="WMRefundDetailMoneyViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="84"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VII-Sa-SQA">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="1xn-zl-kni"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBw-4z-NaE">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="s8e-E3-w1l"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vl-3n-pfW">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="C8c-1M-JVg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VII-Sa-SQA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="JTA-Fc-Qsr"/>
+                    <constraint firstAttribute="trailing" secondItem="VII-Sa-SQA" secondAttribute="trailing" constant="8" id="ZoD-Kg-vSK"/>
+                    <constraint firstAttribute="bottom" secondItem="2vl-3n-pfW" secondAttribute="bottom" constant="8" id="cNL-cJ-6EM"/>
+                    <constraint firstItem="uBw-4z-NaE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="gAM-9Z-WI5"/>
+                    <constraint firstItem="VII-Sa-SQA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="hbU-jy-TLx"/>
+                    <constraint firstItem="uBw-4z-NaE" firstAttribute="top" secondItem="VII-Sa-SQA" secondAttribute="bottom" id="njd-js-Aic"/>
+                    <constraint firstAttribute="trailing" secondItem="uBw-4z-NaE" secondAttribute="trailing" constant="8" id="obq-Mi-VU7"/>
+                    <constraint firstItem="2vl-3n-pfW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="wak-cC-VNt"/>
+                    <constraint firstAttribute="trailing" secondItem="2vl-3n-pfW" secondAttribute="trailing" constant="8" id="xiy-Z1-Kcf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="2vl-3n-pfW" id="WGj-hk-R1b"/>
+                <outlet property="subTitleLabel" destination="uBw-4z-NaE" id="XzC-cU-nrK"/>
+                <outlet property="titleLabel" destination="VII-Sa-SQA" id="3S7-ge-TfB"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_solid_white_stroke_gray"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/menu_order_wait_payment_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/menu_order_wait_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/order_wait_payment"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:text="@string/menu_order_wait_payment"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_order_wait_deliver_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/menu_order_wait_deliver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/order_wait_deliver"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:text="@string/menu_order_wait_deliver"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_order_wait_receipt_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/menu_order_wait_receipt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/order_wait_receipt"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:text="@string/menu_order_wait_receipt"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_order_wait_recommend_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/menu_order_wait_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/order_wait_recommend"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:text="@string/menu_order_wait_recommend"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/menu_order_divider" />
+
+    <LinearLayout
+        android:id="@+id/menu_order_all_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/order_all" />
+
+        <TextView
+            android:id="@+id/menu_order_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="2dp"
+            android:drawableRight="@drawable/order_to_all"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:text="@string/menu_order_all"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+</TableRow>

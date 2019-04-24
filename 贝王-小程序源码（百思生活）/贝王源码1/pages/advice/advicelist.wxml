@@ -1,0 +1,65 @@
+    <import src="../../views/network/bad_network.wxml"/>
+    <template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+    <!--咨询发布-->
+    <view class="advice_add_view" bindtap="addAdvice" wx:if="{{!showFailNetWork}}">
+        <view class="add_action_button">发布咨询</view>
+    </view>
+
+    <!--咨询类型栏-->
+    <scroll-view class="type_scroll_view" scroll-x>
+        <view class="type_bar" wx:if="{{!showFailNetWork}}">
+            <block wx:for="{{adviceTypeInfosArr}}" wx:for-item="typeInfo" wx:key="index">
+                <view class="type_item" bindtap="changeType" data-index="{{index}}">
+                    <view wx:if="{{index < adviceTypeInfosArr.length - 1}}" class="right_line"></view>
+                    <text class="{{index == selectIndex ? 'text select' : 'text'}}" data-index="{{index}}">{{typeInfo.name + '(' + typeInfo.typeNumber +  ')'}}</text>
+                </view>
+            </block>
+        </view>    
+    </scroll-view>
+
+    <!--空视图-->
+    <view wx:if="{{adviceInfosArr.length == 0}}" class="empty-container">
+        <image class="empty-container-icon" mode="center" src="" />
+        <text class="empty-container-title">如果您对本商品有什么问题,请提问咨询!</text>
+        <text class="empty-container-subtitle"></text>
+    </view>
+
+    <!--内容显示-->
+    <scroll-view class="advice_list" scroll-y wx:if="{{adviceInfosArr.length != 0 && !showFailNetWork}}" bindscrolltolower="loadMore" scroll-top="{{scroll_top}}" bindscroll="containerScroll">
+        
+        <!--回到顶部按钮-->
+        <include src="/views/widget/scroll_to_top.wxml" />
+
+        <block wx:for="{{adviceInfosArr}}" wx:key="index" wx:for-item="info">
+            <view class="advice_list_view">
+                <!--用户名和时间-->
+                <view class="advice_name_view">
+                    <view class="author_name">{{info.authorName}}</view>
+                    <view class="time">{{info.time}}</view>
+                </view> 
+                <!--提问问题-->
+                <view class="advice_content_view">
+                    <view class="type_view" style="background-color:#f73030">Q</view>
+                    <text class="content_text">{{info.content}}</text>
+                    <view class="reply_button" bindtap="replyAction" data-index="{{index}}" wx:if="{{adviceSettingInfo.canReplyAdvice}}">回复</view>
+                </view>
+                <!--问题回复-->
+                <block wx:for="{{info.items}}" wx:key="index">
+                    <view class="advice_content_view" wx:if="{{index < (info.showMoreOpen ? info.items.length : 2)}}">
+                        <view class="type_view" style="background-color:#FF9800">A</view>
+                        <view class="content_text">{{item.authorName}}</view>
+                    </view>
+                    <text class="reply_content" wx:if="{{index < (info.showMoreOpen ? info.items.length : 2)}}">{{item.content}}</text>
+                </block>
+                <!--查看更多/点击收起-->
+                <view class="show_more_view" bindtap="changeShowMore" data-index="{{index}}" wx:if="{{info.items.length >= 3}}">{{info.showMoreOpen ? '点击收起' : '点击查看更多'}}</view>
+            </view>
+        </block>
+
+            <!--加载更多-->
+    <import src="/views/widget/load_more.wxml" />
+    <template wx:if="{{load_more}}" is="load_more" />
+    </scroll-view>
+
+

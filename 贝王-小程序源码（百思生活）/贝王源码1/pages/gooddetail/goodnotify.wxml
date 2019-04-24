@@ -1,0 +1,15 @@
+<view class="notify_container">
+    <form bindsubmit="submitNotify">
+    <!--提示语-->
+    <text class="tip">一旦此商品在1个月到货，您将收到手机短信提醒或邮件通知</text>
+    <view class="bland"></view>
+    <!--手机输入框框-->
+    <input id="mobile" class="line_input" placeholder="请填写您的手机号码" placeholder-style="color:gray" maxlength="11" bindinput="inputChange"/>
+    <view class="bland"></view>
+    <!--邮箱输入-->
+    <input id="email" class="line_input" placeholder="请填写您的邮箱" placeholder-style="color:gray" maxlength="25" bindinput="inputChange"/>
+    <view class="bland"></view>
+    <!--提交按钮-->
+    <button class="submit_button" formType="submit">提交</button>
+    </form>
+</view>

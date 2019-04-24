@@ -1,0 +1,95 @@
+@import "../../views/network/bad_network.wxss";
+/**视图容器**/
+.feedback_container{
+    background-color: #F7F7F7;
+    font-size: 15px;
+    color: #000000;
+    min-height: 100vh;
+}
+/**单内容输入框**/
+.line_input{
+    background-color: #FFFFFF;
+    height: 40px;
+    line-height: 20px;
+    padding-left: 8px;
+    border-radius: 3px;
+}
+/**多内容输入框**/
+.area_input{
+    background-color: #FFFFFF;
+    height: 160px;
+    line-height: 20px;
+    border-radius: 3px;
+    width: calc(100% - 16px);
+}
+/**内容边距**/
+.padding_content{
+    padding-left: 8px;
+    padding-top: 10px;
+    padding-right: 8px;
+}
+/**边距**/
+.margin_content{
+    margin-top: 10px;
+}
+/**反馈类型视图**/
+.feedback_type_container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+/**反馈类型容器**/
+.feedback_type_view{
+    position: relative;
+    box-sizing: border-box;
+    width: calc((100% - 16px) / 3);
+}
+/**反馈类型**/
+.feedback_type{
+    background-color: #FFFFFF;
+    text-align: center;
+    min-height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px #FFFFFF solid
+}
+/**左间距**/
+.margin_left_content{
+    margin-left: 8px;
+}
+/**选中反馈类型**/
+.feedback_type.select{
+    border-color: #F73030
+}
+/**选中的图标**/
+.select_image{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 26px;
+    height: 18px;
+    z-index: 10;
+}
+/**客服电话**/
+.call_phone{
+    height: 20px;
+    line-height: 20px;
+}
+/**提交按钮**/
+.submit_button{
+    background-color: #F73030;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 16px;
+    left: 16px;
+    border-radius: 3.0;
+    font-size: 17px;
+    height: 40px;
+    line-height: 20px;
+    padding-top: 10px;
+}
+

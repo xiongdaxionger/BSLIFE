@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WMHomeGoodListCell">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="198"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="198"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CCv-GW-fRB" userLabel="good_imageView">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="CCv-GW-fRB" secondAttribute="height" multiplier="1:1" id="I4e-NN-DQ2"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="wkx-8W-rbZ" userLabel="name_label">
+                        <rect key="frame" x="5" y="125" width="110" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="HMG-Qx-dun"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bm4-sh-psp" userLabel="price_label">
+                        <rect key="frame" x="5" y="165" width="110" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="ugu-o7-GLT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="wkx-8W-rbZ" firstAttribute="top" secondItem="CCv-GW-fRB" secondAttribute="bottom" constant="5" id="7O8-16-pni"/>
+                <constraint firstItem="Bm4-sh-psp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8yc-l4-B0a"/>
+                <constraint firstItem="wkx-8W-rbZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="NcS-8e-kKe"/>
+                <constraint firstAttribute="trailing" secondItem="Bm4-sh-psp" secondAttribute="trailing" id="Prc-8f-MNk"/>
+                <constraint firstItem="Bm4-sh-psp" firstAttribute="top" secondItem="wkx-8W-rbZ" secondAttribute="bottom" id="afY-Cm-eSq"/>
+                <constraint firstItem="Bm4-sh-psp" firstAttribute="trailing" secondItem="wkx-8W-rbZ" secondAttribute="trailing" id="d5r-IK-MXt"/>
+                <constraint firstAttribute="trailing" secondItem="wkx-8W-rbZ" secondAttribute="trailing" constant="5" id="eB8-BS-8cn"/>
+                <constraint firstItem="CCv-GW-fRB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="l3U-zk-vwY"/>
+                <constraint firstItem="CCv-GW-fRB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mUw-q1-QjC"/>
+                <constraint firstAttribute="trailing" secondItem="CCv-GW-fRB" secondAttribute="trailing" id="nW7-Aa-N9S"/>
+                <constraint firstItem="Bm4-sh-psp" firstAttribute="leading" secondItem="wkx-8W-rbZ" secondAttribute="leading" id="r3Z-p0-B3j"/>
+            </constraints>
+            <size key="customSize" width="120" height="198"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="8yc-l4-B0a"/>
+                    <exclude reference="Prc-8f-MNk"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="good_imageView" destination="CCv-GW-fRB" id="Ppb-Yh-ATp"/>
+                <outlet property="name_label" destination="wkx-8W-rbZ" id="fP6-Ux-nwz"/>
+                <outlet property="price_label" destination="Bm4-sh-psp" id="OvA-Px-WM3"/>
+            </connections>
+            <point key="canvasLocation" x="381" y="337"/>
+        </collectionViewCell>
+    </objects>
+</document>

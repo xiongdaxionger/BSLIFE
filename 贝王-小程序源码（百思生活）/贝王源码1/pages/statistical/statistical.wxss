@@ -1,0 +1,168 @@
+/* 统计*/
+
+@import "/views/network/bad_network.wxss";
+/**菜单条**/
+.bar{
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px #f7f7f7 solid;
+}
+/**状态选择栏选项**/
+.bar .item{
+    font-size: 15px;
+    text-align: center;
+    width: 50%;
+    position: relative;
+}
+/**选项栏的右侧横线**/
+.bar .item .right_line{
+    width: 1px;
+    background-color: #F5F5F5;
+    position: absolute;
+    right: 0px;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    height: 15px;
+}
+/**选择栏文本**/
+.bar .item .text{
+    color: black;
+    font-size: 16px;
+}
+/**选择项选中**/
+.bar .item .text.select{
+    line-height: 40px;
+    color: black;
+    border-bottom: 2px black solid;
+    padding-bottom: 7px;
+}
+
+/*图标容器*/
+.char-container{
+    background: #F2F7FB;
+    position: relative;
+    width: 100vw;
+    height: 260px;
+}
+
+.canvas-container{
+width: 100vw;
+    height: 260px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*图表画板*/
+.chart-canvas{
+    width: 100vw;
+    height: 230px;
+}
+
+.axis-container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    border-bottom: 1px white solid;
+}
+
+.yAxis-item{
+    height: 224px;
+    width: 1px;
+}
+
+.xAxis-container{
+    height: 30px;
+    font-size: 11px;
+    color: #666666;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.xAxis-item{
+    margin-right: 3.5px;
+}
+
+.bottom-container{
+    background: white;
+    height: 65px;
+    width: 100vw;
+    justify-content:center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-bottom: 1px #e5e5e5 solid;
+    border-top: 1px #e5e5e5 solid;
+}
+
+
+
+.amount{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.title-container{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.point{
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+    background: #f73030;
+}
+
+.title{
+    color: gray;
+    font-size: 14px;
+}
+
+.bubble-container{
+    width: 100vw;
+    height: 60px;
+    background: white;
+    border-bottom: 1px #e5e5e5 solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.bubble{
+     width: 100vw;
+    height: 60px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble-title{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.bubble-subtitle-container{
+    color: gray;
+    font-size: 13px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.bubble-subtitle-date{
+    margin-right: 8px;
+}
+
+.bubble-canvas{
+    width: 100vw;
+    height: 70px;
+}

@@ -1,0 +1,54 @@
+<!--会员列表-->
+
+<!--搜索栏-->
+<view class="search-header">
+
+  <!--搜索栏-->
+  <view class="search-container" catchtap="searchDidBegin">
+    <!--搜索图标-->
+    <image class="search-icon" src="{{imgURL + '/images/icon/search_icon_dark.png'}}" />
+    <!--搜索输入框-->
+    <input bindinput="searchDidChange" class="search-input" placeholder="手机号、账号、姓名" placeholder-class="placeholder" bindfocus="searchDidBegin" bindblur="searchDidEnd"/>
+  </view>
+  
+  <!--添加会员-->
+  <view wx:if="{{!searching}}" catchtap="addPartner" class="add-icon">+</view>
+  <!--搜索按钮-->
+  <view wx:if="{{searching}}" catchtap="doSearch" class="do-search">搜索</view>
+</view>
+
+<view class="container partner-list-container">
+<!--加载失败-->
+<import src="/views/network/bad_network.wxml" />
+<template wx:if="{{fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+
+<scroll-view scroll-top="{{scroll_top}}" bindscroll="containerScroll" scroll-y class="scroll-view" bindscrolltolower="loadMore" wx:if="{{!fail && partner_infos != null && partner_infos.length > 0}}">
+<view class="content-container">
+    <!--回到顶部按钮-->
+  <include src="/views/widget/scroll_to_top.wxml"/>
+  <view data-index="{{index}}" catchtap="tapPartner" class="partner-list-item" wx:for="{{partner_infos}}" wx:key="{{index}}">
+
+    <!--头像-->
+    <image class="head-image" src="{{item.img}}" mode="aspectFit" />
+    <!--中间容器-->
+    <view class="middle-container">
+    <!--昵称-->
+    <view class="user-name">{{item.name}}</view>
+    <view class="referral-num">下线 {{item.referral_num}} 人</view>
+    </view>
+    <!--右边容器-->
+    <view class="right-container">
+    <!--收益金额-->
+      <text class="price amount">{{item.amount}}</text>
+      <text class="amount-title">带来收益</text>
+    </view>
+  </view>
+   <!--加载更多-->
+      <import src="/views/widget/load_more.wxml" />
+      <template wx:if="{{load_more}}" is="load_more" />
+</view>
+</scroll-view>
+
+<!--空-->
+<view wx:if="{{partner_infos != null && partner_infos.length == 0}}" class="empty">暂无会员信息</view>
+</view>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background_color"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/base_lv"
+        style="@style/listview"
+        android:layout_height="match_parent"
+        android:divider="@color/westore_divider_bgcolor"
+        android:dividerHeight="0.5dp" />
+
+    <RelativeLayout
+        android:id="@+id/base_error_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fragment_background_color"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/base_error_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/base_error_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/base_error_iv"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/PaddingLarge"
+            android:text="没有数据~"
+            android:textColor="#666666"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/base_reload_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/base_error_tv"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:text="点击重新获取"
+            android:textColor="#666666"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </RelativeLayout>
+
+</LinearLayout>

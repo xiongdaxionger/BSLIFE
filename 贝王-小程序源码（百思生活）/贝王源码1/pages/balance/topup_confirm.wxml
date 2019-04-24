@@ -1,0 +1,42 @@
+
+<!--充值确认-->
+<view class="container">
+
+  <!--头部输入框-->
+  <view class="header">
+    <text>充值有礼</text>
+    <input placeholder="请输入充值金额" placeholder-class="placeholder" type="digit" bindinput="inputDidChange" maxlength="10" value="{{cur_input_amount}}" disabled="{{join_activity}}" placeholder-style="color:{{join_activity ? '#f73030' : '#DCDCDC'}}"/>
+  </view>
+
+  <!--充值活动-->
+  <block wx:if="{{activity != null}}">
+    <view class="section-header">您将获得以下赠品</view>
+    <view class="activity-item">
+      <view class="activity-left-container">
+        <view class="activity-title">{{activity.name}}</view>
+        <view class="activity-subtitle">{{activity.giving}}</view>
+      </view>
+      <view class="activity-right-container">
+        <view>{{activity.desc}}</view>
+      </view>
+    </view>
+  </block>
+
+  <!--支付方式-->
+  <view style="border-bottom: 1px #e5e5e5 solid;" class="section-header">支付方式</view>
+  <view class="pay-item" wx:for="{{payInfos}}" wx:key="{{index}}" wx:if="{{item.app_display_name!='银联支付'}}">
+    <image mode="aspectFit" class="pay-icon" src="{{item.icon_src}}" />
+    <view class="pay-text">
+    <view class="pay-title">{{(item.app_name == null || item.app_name.length == 0) ? item.app_display_name : item.app_name}}</view>
+    <view class="pay-subtitle">{{item.app_pay_brief}}</view>
+    </view>
+    <image class="pay-selected" data-index="{{index}}" catchtap="tapSelected" src="{{imgURL + '/images/shopcart/' + (index == cur_selected_payInfo ? 'shop_Car_Select.png' : 'shop_Car_UnSelect.png')}}" />
+  </view>
+
+  <!--支付-->
+  <view class="footer">
+    <text>实付：</text>
+    <view class="footer-amount">{{amount_symbol + cur_input_amount}}</view>
+    <view class="pay-btn" catchtap="pay">立即支付</view>
+  </view>
+</view>

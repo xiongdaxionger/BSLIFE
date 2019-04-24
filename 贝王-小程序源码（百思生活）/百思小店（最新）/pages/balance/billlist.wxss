@@ -1,0 +1,115 @@
+@import "/views/network/bad_network.wxss";
+
+/**订单状态选择栏**/
+.order_status_bar{
+    height: 44px;
+    line-height: 44px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 10;
+    border-top: 1px #f7f7f7 solid;
+}
+/**订单状态选择栏选项**/
+.order_status_item{
+    font-size: 15px;
+    text-align: center;
+    width: 50%;
+    position: relative;
+}
+/**选项栏的右侧横线**/
+.right_line{
+    width: 1px;
+    background-color: #F5F5F5;
+    position: absolute;
+    right: 0px;
+    top:12px;
+    min-height: 20px;
+}
+/**选择栏文本**/
+.text{
+    color: #000000;
+}
+/**选择项选中**/
+.text.select{
+    color: #FF0022;
+    padding-bottom: 9px;
+}
+/**账单背景图**/
+.bill_list_container_view{
+    height: calc(100vh - 44px);
+    width: 100vw;
+    margin-top: 44px;
+    background-color: #f7f7f7;
+}
+/**空白视图**/
+.bland{
+    height: 10px;
+    width: 100vw;
+    background-color: #f7f7f7
+}
+/**账单视图**/
+.bill_cell{
+    width: 100vw;
+    height: 80px;
+    position: relative;
+    background-color: white;
+    font-size: 15px;
+    border-bottom: 1px solid #f7f7f7
+}
+/**图片**/
+.image{
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    width: 55px;
+    height: 55px;
+}
+/**账单信息**/
+.info{
+    position: absolute;
+    left: 71px;
+    top: 6px;
+    right: 50px;
+    height: 39px;
+    line-height: 21px;
+}
+/**金额**/
+.money{
+    position: absolute;
+    top: 16px;
+    right: 8px;
+    height: 21px;
+    line-height: 21px;
+    color: #f73030
+}
+/**时间**/
+.time{
+    position: absolute;
+    left: 71px;
+    bottom: 13px;
+    right: 8px;
+    font-size: 13px;
+}
+/*空视图容器*/
+.empty-container{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F7F7;
+    height: 100vh;
+    margin-top: 0px
+}
+
+/*空视图标题*/
+.empty-container-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}

@@ -1,0 +1,17 @@
+<view>
+  <canvas style='width:{{imageWidth}}px;height:{{imageHeight}}px;' canvas-id="firstCanvas"></canvas>
+  <view class='group-btns'>
+    <view class='invite-item' bindtap='saveImgToPhoto'>
+      <image src='../../image/040.png' class='invite-img'></image>
+      <view>保存到本地</view>
+    </view>
+    <!-- <view class='invite-item'>
+      <image src='../../image/041.png' class='invite-img'></image>
+      <view>朋友圈</view>
+    </view> -->
+    <!-- <view class='invite-item'>
+      <button class='btn-hover' hover-class="button-hover" open-type="share" bindtap='share_friend'><image src='../../image/042.png' class='invite-img'></image></button>
+      <view>微信</view>
+    </view> -->
+  </view>
+</view>

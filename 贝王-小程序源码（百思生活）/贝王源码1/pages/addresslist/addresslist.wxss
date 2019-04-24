@@ -1,0 +1,83 @@
+@import "../../views/network/bad_network.wxss";
+/**地址视图容器**/
+.address_list_container{
+    height: calc(100vh - 50px);
+    background-color: #F7F7F7;
+    font-size: 15px;
+    color: black;
+}
+/**地址信息容器**/
+.address_info_container{
+    background-color: white;
+    position: relative;
+}
+/**编辑按钮**/
+.edit_button{
+    color: #f73030;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 44px;
+    text-align: center;
+}
+/**电话**/
+.mobile{
+    position: absolute;
+    top: 8px;
+    right: 55px;
+    line-height: 21px;
+    width: 106px;
+    text-align: center;
+}
+/**收货人**/
+.person{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 170px;
+    line-height: 21px;
+    text-align: left;
+}
+/**地址**/
+.address{
+    padding-top: 30px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    line-height: 21px;
+}
+/**添加地址**/
+.add_address_button{
+    bottom: 0px;
+    left: 0px;
+}
+/**空白视图**/
+.bland{
+    min-height: 10px;
+    width: 100%;
+    background-color: #F7F7F7;
+}
+/**底部视图**/
+.bottom_view{
+    min-height: 50px;
+    position: fixed;
+    z-index: 999;
+    background-color: #F7F7F7;
+    width: 100%
+}
+/*长按钮通用*/
+.long-btn{
+  border-radius: 3.0;
+  font-size: 16px;
+  height: 40px;
+  margin-left: 23px;
+  margin-right: 23px;
+  width: calc(100vw - 46px);
+  border: none;
+}
+
+/*正常样式*/
+.long-btn.normal{
+  background-color: #f73030;
+  color: white;
+}

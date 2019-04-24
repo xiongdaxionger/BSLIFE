@@ -1,0 +1,38 @@
+<view class="background">
+  <form bindsubmit="login">
+
+    <!--输入框-->
+    <ul class="input-ul">
+
+      <!--账号-->
+      <li>
+        <text>账号</text>
+        <input value="{{account}}" id="account" placeholder="用户名/邮箱/手机号" placeholder-class="placeholder" bindinput="inputDidChange" />
+      </li>
+
+      <!--密码-->
+      <li>
+        <text>密码</text>
+        <input id="password" maxlength="20" placeholder="请输入密码" placeholder-class="placeholder" password="{{!passwordOpen}}" bindinput="inputDidChange" />
+        <image catchtap="openPassword" src="{{imgURL + '/images/login/' + (passwordOpen ? 'eye_open.png' : 'eye_close.png')}}" class="eye-image"></image>
+      </li>
+    </ul>
+
+    <!--登录按钮 disabled="{{!canLogin}}" 有bug-->
+    <button class="login-btn long-btn {{canLogin ? 'normal' : 'disable'}}" catchtap="login">登录</button>
+  </form>
+
+  <!--注册-->
+  <text class="register-btn" catchtap="register">手机快速注册</text>
+
+  <!--找回密码-->
+  <text class="find-password-btn" catchtap="resetPassword">找回密码</text>
+
+  <!--微信登录按钮-->
+  <block wx:if="{{canWeixin}}" animation="{{weixinAnimation}}">
+    <view class="weixin" catchtap="weixinLogin">
+      <image src="{{imgURL + '/images/login/weixin.png'}}" class="weixin-image"></image>
+      <text class="weixin-text">微信登录</text>
+    </view>
+  </block>
+</view>

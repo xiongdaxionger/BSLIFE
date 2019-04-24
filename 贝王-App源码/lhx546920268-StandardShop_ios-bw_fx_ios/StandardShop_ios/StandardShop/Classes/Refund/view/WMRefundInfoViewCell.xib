@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="KGk-i7-Jjw" customClass="WMRefundInfoViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="76" translatesAutoresizingMaskIntoConstraints="NO" id="P76-zn-MHz">
+                        <rect key="frame" x="8" y="6" width="304" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="PH4-n8-tC8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="GDu-GA-MAN">
+                        <rect key="frame" x="8" y="39" width="304" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="P76-zn-MHz" secondAttribute="trailing" constant="8" id="D3A-hx-lyB"/>
+                    <constraint firstItem="GDu-GA-MAN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Kfr-8u-YvN"/>
+                    <constraint firstItem="P76-zn-MHz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="LLp-IH-Kdn"/>
+                    <constraint firstItem="P76-zn-MHz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="cNJ-60-oi3"/>
+                    <constraint firstItem="GDu-GA-MAN" firstAttribute="top" secondItem="P76-zn-MHz" secondAttribute="bottom" constant="12" id="gws-8t-S6L"/>
+                    <constraint firstAttribute="bottom" secondItem="GDu-GA-MAN" secondAttribute="bottom" constant="8" id="kmC-7o-PRc"/>
+                    <constraint firstAttribute="trailing" secondItem="GDu-GA-MAN" secondAttribute="trailing" constant="8" id="qWY-wz-raC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="infoContent" destination="GDu-GA-MAN" id="NDY-Ta-KxC"/>
+                <outlet property="infoTittle" destination="P76-zn-MHz" id="8He-RQ-Xvm"/>
+            </connections>
+            <point key="canvasLocation" x="432" y="188.5"/>
+        </tableViewCell>
+    </objects>
+</document>

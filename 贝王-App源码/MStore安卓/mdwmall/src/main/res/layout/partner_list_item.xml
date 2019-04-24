@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+                android:padding="10dp"
+              android:layout_height="70dp">
+
+    <!--会员列表-->
+
+    <!--头像-->
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/header"/>
+
+    <!--昵称-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:id="@id/name"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/header"
+        android:layout_alignTop="@+id/header"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <!--下线人数-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/name"
+        android:id="@+id/referral_num"
+        android:textSize="14sp"
+        android:textColor="@color/westore_gray_textcolor"
+        android:lines="1"
+        android:layout_alignBottom="@id/header"/>
+
+    <!--收益金额-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amount"
+        android:textSize="14sp"
+        android:gravity="right"
+        android:textColor="@color/customer_price_color"
+        android:lines="1"
+        android:text="￥99.0"
+        android:layout_toRightOf="@id/header"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"/>
+
+    <!--带来收益标题-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amount_title"
+        android:textSize="15sp"
+        android:layout_toRightOf="@id/referral_num"
+        android:gravity="right"
+        android:layout_alignParentRight="true"
+        android:text="带来收益"
+        android:textColor="@color/westore_gray_textcolor"
+        android:lines="1"
+        android:layout_alignBottom="@id/referral_num"/>
+</RelativeLayout>

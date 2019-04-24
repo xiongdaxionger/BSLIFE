@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp" >
+
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.35"
+        android:text="买家昵称"
+        android:textColor="@color/westore_gray_textcolor"
+        android:textSize="@dimen/TextSizeMedium" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:text="购买价"
+        android:textColor="@color/westore_gray_textcolor"
+        android:textSize="@dimen/TextSizeMedium" />
+
+    <TextView
+        android:id="@+id/qty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.15"
+        android:text="数量"
+        android:textColor="@color/westore_gray_textcolor"
+        android:textSize="@dimen/TextSizeMedium" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:gravity="right"
+        android:text="时间"
+        android:textColor="@color/westore_gray_textcolor"
+        android:textSize="@dimen/TextSizeMedium" />
+
+</LinearLayout>

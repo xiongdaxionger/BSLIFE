@@ -1,0 +1,88 @@
+
+<!--会员详情-->
+
+<!--头部-->
+<view  class="header">
+
+  <!--头部用户信息-->
+  <view style="background-image: url({{imgURL + '/images/partner/partner_detail_bg.png'}})" class="header-user-info-container">
+    <image src="{{userInfo.img}}" class="header-user-img" />
+    <view class="header-user-name">{{userInfo.name}}</view>
+  </view>
+
+  <!--菜单-->
+  <view class="bar">
+    <block wx:for="{{barInfo}}" wx:key="{{index}}">
+      <view data-index="{{index}}" class="item" catchtap="barItemDidChange">
+        <view class="right_line" wx:if="{{index < barInfo.length - 1}}"></view>
+        <text class="{{index == selectedIndex ? 'text select' : 'text'}}">{{item}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!--列表-->
+<scroll-view scroll-top="{{scroll_top}}" bindscroll="containerScroll" scroll-y class="scroll-view" bindscrolltolower="loadMore">
+  <view class="list-container">
+
+    <!--简介-->
+    <block wx:if="{{selectedIndex == 0}}">
+      <view wx:for="{{intros}}" wx:key="{{index}}" class="intro-item">
+        <text class="intro-title">{{item.title}}</text>
+        <view class="intro-content">{{item.content}}</view>
+      </view>
+    </block>
+
+    <!--团队-->
+    <block wx:if="{{selectedIndex == 1 && hierarchy > 1}}">
+      <view data-index="{{index}}" catchtap="tapPartner" class="partner-item" wx:for="{{partner_infos}}" wx:key="{{index}}">
+
+        <!--头像-->
+        <image class="partner-head-image" src="{{item.img}}" mode="aspectFit" />
+
+        <!--右边容器-->
+        <view class="partner-right-container">
+
+          <!--昵称-->
+          <view class="partner-user-name">{{item.name}}</view>
+
+          <!--订单数量-->
+          <view class="partner-order-count">共
+            <text class="price">{{item.order_count}}</text>笔订单</view>
+
+          <!--收益金额-->
+          <view class="partner-amount">累计带来收益
+            <text class="price">{{item.amount}}</text>元</view>
+        </view>
+      </view>
+    </block>
+
+    <!--订单-->
+    <block wx:if="{{selectedIndex == 2 || (selectedIndex == 1 && hierarchy <= 1)}}">
+      <view wx:for="{{order_infos}}" wx:key="{{index}}" class="order-item">
+
+        <!--订单时间 状态-->
+        <view class="order-top-container">
+          <text class="order-time">{{item.time}}</text>
+          <text class="order-status">{{item.status}}</text>
+        </view>
+
+        <view class="order-bottom-container">
+        <!--商品图片-->
+        <image src="{{item.img}}" class="order-img" />
+        <view class="order-right-container">
+          <view class="order-name">{{item.name}}</view>
+          <view class="order-amount">实付款：{{item.amount}}</view>
+        </view>
+        </view>
+      </view>
+    </block>
+
+    <!--加载更多-->
+    <import src="/views/widget/load_more.wxml" />
+    <template wx:if="{{((selectedIndex == 2 || (selectedIndex == 1 && hierarchy <= 1)) && order_load_more) || ((selectedIndex == 1 && hierarchy > 1) && partner_load_more)}}" is="load_more" />
+
+    <!--空-->
+<view wx:if="{{((selectedIndex == 2 || (selectedIndex == 1 && hierarchy <= 1)) && order_infos != null && order_infos.length == 0) || ((selectedIndex == 1 && hierarchy > 1) && partner_infos != null && partner_infos.length == 0)}}" class="empty">暂无{{(selectedIndex == 1 && hierarchy > 1) ? '团队' : '订单'}}信息</view>
+  </view>
+</scroll-view>

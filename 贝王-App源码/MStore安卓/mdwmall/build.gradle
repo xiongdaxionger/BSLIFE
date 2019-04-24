@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+    defaultConfig {
+        applicationId "com.beiwangfx"
+        minSdkVersion 14
+        targetSdkVersion 23
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+//    配置keystore签名
+    signingConfigs {
+        releaseConfig {
+            storeFile file ("keystore.jks")
+            storePassword "bw000000"
+            keyAlias "bw_fx"
+            keyPassword "000000"
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            debuggable true
+            signingConfig signingConfigs.releaseConfig
+        }
+        debug {
+            signingConfig signingConfigs.releaseConfig
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    productFlavors {
+    }
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4096m"
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-annotations:23.1.1'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile project(':multiImageSelector')
+    compile project(':cropper')
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile files('libs/alipaySDK-20150818.jar')
+    compile files('libs/AMap_3DMap_V3.3.1_20160419.jar')
+    compile files('libs/AMap_Location_V2.4.1_20160414.jar')
+    compile files('libs/AMap_Search_V3.2.1_20160308.jar')
+    compile files('libs/Bughd_android_sdk_v1.3.7.jar')
+    compile files('libs/core-3.1.0.jar')
+    compile files('libs/javase-3.1.0.jar')
+    compile files('libs/jg_filter_sdk_1.1.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/mid-sdk-2.20.jar')
+    compile files('libs/MobCommons-2016.0816.1507.jar')
+    compile files('libs/MobTools-2016.0816.1507.jar')
+    compile files('libs/MPChartLib.jar')
+    compile files('libs/PG_Edit_Base_SDK.jar')
+    compile files('libs/ShareSDK-Core-2.7.6.jar')
+    compile files('libs/ShareSDK-QQ-2.7.6.jar')
+    compile files('libs/ShareSDK-QZone-2.7.6.jar')
+    compile files('libs/ShareSDK-SinaWeibo-2.7.6.jar')
+    compile files('libs/ShareSDK-Wechat-2.7.6.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.7.6.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.7.6.jar')
+    compile files('libs/SwipeMenuLib.jar')
+    compile files('libs/umeng-analytics-v5.5.3.jar')
+    compile files('libs/universal-image-loader-1.9.3.jar')
+    compile files('libs/UPPayAssistEx.jar')
+    compile files('libs/UPPayPluginExPro.jar')
+    compile files('libs/volley.jar')
+    compile files('libs/wup-1.0.0.E-SNAPSHOT.jar')
+    compile files('libs/Xg_sdk_v2.42_20160111_1539.jar')
+}

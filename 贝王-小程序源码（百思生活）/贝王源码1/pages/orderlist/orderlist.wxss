@@ -1,0 +1,326 @@
+@import "../../views/network/bad_network.wxss";
+/*@import "../goods/good_list.wxss";*/
+
+/**订单类型切换**/
+.type_contain_view{
+  position: fixed;
+    height: 35px;
+    line-height: 35px;
+    display: flex;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    font-size: 15px;
+    background: white;
+}
+/**订单状态选择栏**/
+.order_status_bar{
+    height: 44px;
+    line-height: 44px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    z-index: 10;
+    border-top: 1px #f7f7f7 solid;
+}
+.top_zero{
+    top: 0px;
+}
+.top_count{
+    top: 35px;
+}
+/**订单状态选择栏选项**/
+.order_status_item{
+    font-size: 15px;
+    text-align: center;
+    width: 20%;
+    position: relative;
+}
+/**选项栏的右侧横线**/
+.right_line{
+    width: 1px;
+    background-color: #F5F5F5;
+    position: absolute;
+    right: 0px;
+    top:12px;
+    min-height: 20px;
+}
+/**选择栏文本**/
+.text{
+    color: #000000;
+}
+.order_status_item.full_width{
+    width: 100%
+}
+.order_status_item.half_width{
+    width: 50%
+}
+.order_status_item.three_width{
+    width: 33%
+}
+.order_status_item.four_width{
+    width: 25%
+}
+/**选择项选中**/
+.text.select{
+    color: #FF0022;
+    border-bottom: 2px #f73030 solid;
+    padding-bottom: 9px;
+}
+/**订单列表**/
+.order_list{
+    background-color: #F5F5F5;
+    height: 100vh;
+}
+/**订单列表偏移值,普通订单有偏移值，预售订单没有偏移值**/
+.order_list.margin_content{
+    margin-top: 44px;
+    height: calc(100vh - 44px);
+}
+/**带分销类型切换的订单样式**/
+.order_list.fenxiao_margin_content{
+    margin-top: 80px;
+    height: calc(100vh - 79px);
+}
+/**订单视图容器**/
+.order_list_view{
+    background-color: #FFFFFF;
+    padding:0px 8px;
+}
+/**顶部边距**/
+.order_list_view.have_margin{
+    margin-top: 15px;
+}
+/**订单ID视图**/
+.order_list_id{
+    position: relative;
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+}
+/**订单文本**/
+.order_id_text{
+    position: absolute;
+    top: 8px;
+    height: 24px;
+    line-height: 24px;
+    width: 60%;
+    color: #000000;
+    text-align: left;
+}
+/**订单状态**/
+.order_status_text{
+    position: absolute;
+    top: 8px;
+    right: 11px;
+    height: 24px;
+    line-height: 24px;
+    text-align: right;
+    color: #f73030;
+}
+/**订单箭头**/
+.order_arrow{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 0px;
+    top: 15px;
+}
+/**价格**/
+.order_list_price{
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    color: #000000;
+}
+/**总数**/
+.order_list_total_quantity{
+    position: absolute;
+    top: 8px;
+    right: 70px;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    text-align: right;
+}
+/**总价**/
+.order_list_total_price{
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    color: #FF0022;
+}
+/**商品视图**/
+.order_list_good{
+    position: relative;
+    font-size: 15px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #FFFFFF;
+}
+/**商品图片**/
+.order_good_image{
+    position: absolute;
+    height: 68px;
+    width: 68px;
+    top: 16px;
+    left: 8px;
+}
+/**商品名称**/
+.order_good_name{
+    position: absolute;
+    top: 8px;
+    left: 78px;
+    right: 25px;
+    line-height: 20px;
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/**缩进**/
+.order_good_name.have_tag{
+    text-indent: 33px;
+    display: inline-block;
+}
+/**预售/赠品/配件标志**/
+.order_type_tag{
+    position: absolute;
+    top: 9px;
+    left: 78px;
+    width: 30px;
+    color: white;
+    background-color: #f73030;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 3.0px;
+    font-size: 14px;
+    padding-left: 1px;
+    padding-right: 1px;
+    text-align: center;
+}
+/**数量**/
+.order_good_quantity{
+    position: absolute;
+    line-height: 10px;
+    width: 35px;
+    top: 10px;
+    right: 2px;
+    text-align: right;
+    font-size: 13px;
+}
+/**评论按钮**/
+.order_comment_button{
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    color: #f73030;
+    background-color: #FEEEEE;
+    font-size: 14px;
+    border: 1px solid #f73030;
+}
+/**价格**/
+.order_good_price{
+    position: absolute;
+    line-height: 20px;
+    top: 50px;
+    left: 78px;
+    right: 82px;
+    text-align: left;
+    color: #f73030;
+}
+/**商品的规格属性**/
+.order_specInfo{
+    text-align: left;
+    position: absolute;
+    line-height: 20px;
+    font-size: 12px;
+    left: 78px;
+    top: 71px;
+    right: 8px;
+    overflow: hidden;
+}
+/**底部线条**/
+.bottom_line{
+    border-bottom: 1px solid #F5F5F5;
+    box-sizing: border-box;
+}
+/**订单按钮共用样式**/
+.order_button{
+    height: 26px;
+    line-height: 26px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 74px;
+}
+/**右侧间距**/
+.order_button.right_margin{
+    margin-right: 10px;
+}
+/**操作视图布局**/
+.action_view_flex{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+}
+/**主按钮样式**/
+.main_action_button{
+    color: #f73030;
+	border: 1px solid #f73030;
+    background-color: #FEEEEE
+}
+/**取消支付/删除订单按钮样式**/
+.sub_action_button{
+    color: #CCCCCC;
+    border: 1px solid #CCCCCC;
+}
+/*空视图容器*/
+.empty-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F7F7;
+}
+
+/*空视图标题*/
+.empty-container-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
+
+/**选项卡**/
+.type_view{
+    width: calc(50vw - 60px);
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+/**选中的选项**/
+.type_view.select_view{
+    background-color: #f73030;
+    color: white;
+}
+/**未选中**/
+.type_view.un_select_view{
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+    border-top: 1px solid #f73030;
+    border-bottom: 1px solid #f73030;
+    border-right: 1px solid #f73030
+}

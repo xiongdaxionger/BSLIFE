@@ -1,0 +1,151 @@
+
+/*地区视图容器*/
+.area-container{
+     width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+/*地区视图半透明背景*/
+.area-black-transparent-bg{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+/*地区信息内容容器*/
+.area-content-container{
+    margin-top: 100vh;
+    width: 100vw;
+    height: 70vh;
+    position: absolute;
+    background-color: white;
+}
+
+/*地区顶部工具条*/
+.area-top-container{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: relative;
+}
+
+/*关闭*/
+.area-top-close{
+    right: 10px;
+    top: 15px;
+    position: absolute;
+}
+
+/*地区标题*/
+.area-title{
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    flex: 1 1 auto;
+}
+
+/*加载中*/
+.area-loading{
+     width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+/*选中的地区滚动视图*/
+.selected-area-scroll-view{
+    width: 100vw;
+    height: 40px;
+    border-bottom: 1px #f7f7f7 solid;
+}
+
+/**选中的地区菜单条**/
+.selected-area-bar{
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+/**状态选择栏选项**/
+.selected-area-bar-item{
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/**选择栏文本**/
+.selected-area-bar-item .text{
+    color: #666666;
+    font-size: 14px;
+}
+/**选择项选中**/
+.selected-area-bar-item .text.select{
+    line-height: 40px;
+    color: #f73030;
+    border-bottom-width: 2px;
+    border-bottom-color: #f73030;
+    border-bottom-style: solid;
+    padding-bottom: 7px;
+}
+
+/*地区信息滑动栏*/
+.area-swiper{
+    width: 100vw;
+    height: calc(70vh - 81px);
+}
+
+/*地区信息内容滑动视图*/
+.area-scroll-view{
+    width: 100%;
+    height: calc(70vh - 81px);
+}
+
+/*地区信息内容*/
+.area-content{
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 15px;
+}
+
+/*地区行*/
+.area-list{
+     display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    min-height: 40px;
+    position: relative;
+}
+
+/*地区行标题*/
+.area-list-title{
+     margin-left: 10px;
+    color: black;
+    flex: 1 1 auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/*地区行图标*/
+.area-list icon{
+    margin-right: 10px;
+}

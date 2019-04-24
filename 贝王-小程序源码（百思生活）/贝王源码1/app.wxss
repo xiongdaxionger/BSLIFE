@@ -1,0 +1,170 @@
+/**app.wxss**/
+/*容器*/
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color:#f7f7f7;
+} 
+/*分割线颜色#e5e5e5*/
+.separator{
+  border-bottom: 1px #e5e5e5 solid;
+}
+/*箭头*/
+.arrow{
+    width: 10px;
+    height:10px;
+}
+/*长按钮通用*/
+.long-btn{
+  border-radius: 3.0;
+  font-size: 16px;
+  height: 40px;
+  margin-left: 23px;
+  margin-right: 23px;
+  width: calc(100vw - 46px);
+  border: none;
+}
+/*正常样式*/
+.long-btn.normal{
+  background-color: #f73030;
+  color: white;
+}
+/*禁用样式*/
+.long-btn.disable{
+  background-color: #DCDCDC;
+  color: gray;
+}
+
+/*获取短信验证码倒计时按钮*/
+.count-down-btn{
+    width: 80px;
+    font-size: 13px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 28px;
+}
+/*正常*/
+.count-down-btn.normal{
+    background-color: #f73030;
+    color: white;
+}
+/*不能点*/
+.count-down-btn.disable{
+    background-color: #DCDCDC;
+    color: gray;
+}
+/*placeholder*/
+.placeholder{
+  font-size: 14px;
+  color: #DCDCDC;
+  font-weight: normal;
+  /*color: #e1dddc;*/
+}
+/*价格*/
+.price{
+  color: #E54646;
+}
+/*空视图*/
+.empty{
+    color: gray;
+    font-size: 15px;
+    line-height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+/*公共样式*/
+/*display*/
+.flex{display: flex}
+.justify{justify-content: space-around}
+.block{display: block}
+.inline{display: inline}
+.in-blo{display: inline-block}
+/*paddig*/
+.padding-20{padding: 20px}
+.padding-15{padding: 15px}
+.padding-10{padding: 10px}
+.padding-ud-15{padding:15px 0 }
+.padding-lr-15{padding:0 15px}
+.padding-ud-10{padding:10px 0 }
+.padding-lr-10{padding:0 10px}
+/*margin*/
+.margin-20{margin: 20px}
+.margin-15{margin: 15px}
+.margin-10{margin: 10px}
+.margin-ud-15{margin:15px 0 }
+.margin-lr-15{margin:0 15px}
+.margin-ud-10{margin:10px 0 }
+.margin-lr-10{margin:0 10px}
+/*position*/
+.relative{position: relative}
+.absolute{position: absolute}
+/*float*/
+.rt{float:right}
+.lf{float:left}
+.clean::after{content: "";display: block;clear: both}
+/*bland*/
+.bland{background:#efeff4;width: 100%;height: 10px}
+/*font-size */ 
+.font-size-18{font-size: 18px}
+.font-size-16{font-size: 16px}
+.font-size-14{font-size: 14px}
+.font-size-12{font-size: 12px}
+.bold{font-weight: 600}
+/*color*/
+.red{color: #f73030}
+.red_bg{color: #f73030}
+.txt_border{/*边框文字*/
+  padding:2px 4px;
+  color:#f73030;
+  border:1px solid #f73030;
+  font-size:14px;
+  margin-right:8px;
+}
+.badge{/*徽章文字*/
+  padding:2px 5px;
+  color:#fff;
+  background:#f73030;
+}
+.tip{/*小标签*/
+  background:#ff0090;
+  width:41px;
+  text-align:center;
+  height:39px;
+  line-height:20px;
+  position:absolute;
+  left:3px;
+  color:#fff;
+  font-size:11px;
+}
+.tip::before,.tip::after{
+  content:"";
+  display:block;
+  width:0;
+  height:0;
+  position:absolute;
+}
+.tip::before{
+  border-left:20px solid transparent;
+  border-top:9px solid #ff0090;
+  top:39px;
+  left:21px;
+}
+.tip::after{
+  border-right:20px solid transparent;
+  border-top:9px solid #ff0090;
+  top:39px;
+  left:0px;
+}
+/*其他功能样式   */
+.time_out>text{/*倒计时*/
+  font-size:15px;
+  background:#4d4d4d;
+  height:40px;
+  padding:0 3px;
+  text-align:center;
+  line-height:40px;
+  border-radius:2px;
+  margin:2px;
+  color:#fff;
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp" >
+
+            <TextView
+                style="@style/content_text"
+                android:text="配送方式" />
+
+            <TextView
+                android:id="@+id/cancel"
+                style="@style/content_text"
+                android:layout_alignParentRight="true"
+                android:text="取消"
+                android:textColor="@color/westore_red" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <com.qianseit.westore.ui.MyListView
+            android:id="@+id/express_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/text_goods_e_color"
+            android:dividerHeight="0.5dp"
+            android:listSelector="@color/white"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:id="@+id/action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/confimr_order_item_bgimage"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/PaddingXLarge"
+            android:paddingRight="@dimen/PaddingXLarge"
+            android:paddingTop="10dp"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/action_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="门店自提"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <TextView
+                android:id="@+id/action_message"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:paddingLeft="@dimen/PaddingMedium"
+                android:paddingRight="@dimen/PaddingMedium"
+                android:textColor="@color/text_goods_6_color"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/base_arrow_right_pink_n"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

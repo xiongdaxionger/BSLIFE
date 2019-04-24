@@ -1,0 +1,40 @@
+
+<!--余额首页 钱包-->
+
+<!--加载失败-->
+<import src="/views/network/bad_network.wxml" />
+<template wx:if="{{fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+
+<!--钱包内容-->
+<view wx:if="{{!fail && !loading}}" class="container" style="background:white;">
+
+  <!--头部-->
+  <view class="header">
+    <text class="balance-title">账户余额（{{money_symbol}}）</text>
+    <view class="balance-amount">{{balance}}</view>
+    <text wx:if="{{show_commission}}" class="commission">当前佣金：{{commission}}</text>
+    <view catchtap="tapBill" class="bill-container">
+      <text>账单</text>
+    <image src="{{imgURL + '/images/icon/arrow_white.png'}}" mode="aspectFit" />
+  </view>
+</view>
+
+<!--佣金和提现信息-->
+<view class="list-container" wx:if="{{show_commission || withdraw_enable}}">
+  <block wx:for="{{infos}}" wx:key="{{index}}">
+    <view class="list-item">
+      <view class="list-title-container">
+        <text>{{item.name}}</text>
+        <image catchtap="tapMask" data-index="{{index}}" src="{{imgURL + '/images/balance/question_mask.png'}}" />
+      </view>
+      <view class="list-amount">{{item.amount}}</view>
+    </view>
+  </block>
+</view>
+
+<!--按钮信息-->
+<view class="btn-container">
+  <view catchtap="tapWidthdraw" class="withdraw-btn" wx:if="{{withdraw_enable}}">提现</view>
+  <view catchtap="tapTopup" class="topup-btn">充值</view>
+</view>
+</view>

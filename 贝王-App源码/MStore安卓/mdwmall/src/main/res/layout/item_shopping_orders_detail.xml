@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/PaddingXMedium" >
+
+    <RelativeLayout
+        android:id="@+id/acco_orders_layout_onegood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/PaddingLarge"
+        android:paddingLeft="@dimen/PaddingXMedium"
+        android:paddingRight="@dimen/PaddingXMedium"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/acco_orders_item_thumb"
+            android:layout_width="65dip"
+            android:layout_height="65dip"
+            android:layout_marginRight="@dimen/PaddingMedium"
+            android:scaleType="fitCenter" 
+            android:background="@drawable/shape_solid_white_stroke_gray"/>
+
+        <TextView
+            android:id="@+id/acco_orders_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/acco_orders_item_thumb"
+            android:paddingLeft="@dimen/PaddingMedium"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/TextSizeMedium" />
+
+        <TextView
+            android:id="@+id/acco_orders_item_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/acco_orders_item_price"
+            android:textColor="@color/text_textcolor_gray2"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/shopping_orders_group_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/acco_orders_item_thumb"
+            android:layout_toLeftOf="@id/acco_orders_item_price"
+            android:layout_toRightOf="@id/acco_orders_item_thumb"
+            android:maxLines="3"
+            android:textColor="@color/default_scanner_bgcolor"
+            android:textSize="@dimen/TextSizeMedium" />
+
+        <TextView
+            android:id="@+id/sacco_orders_skue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/shopping_orders_group_title"
+            android:layout_below="@+id/shopping_orders_group_title"
+            android:layout_toLeftOf="@+id/acco_orders_item_price"
+            android:textColor="@color/text_goods_6_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/acco_orders_item_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/shopping_orders_group_title"
+            android:layout_below="@id/shopping_orders_group_title"
+            android:layout_toLeftOf="@id/acco_orders_item_price"
+            android:textColor="@color/goods_detail_secondary_textcolor"
+            android:textSize="@dimen/TextSizeSmall"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/acco_orders_item_recommend_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor"
+        android:paddingLeft="@dimen/PaddingXMedium"
+        android:paddingRight="@dimen/PaddingXMedium" />
+
+    <LinearLayout
+        android:id="@+id/acco_orders_item_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/PaddingXMedium"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/acco_orders_goods_ratings"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/PaddingLarge"
+            android:background="@drawable/bg_orders"
+            android:gravity="center"
+            android:paddingBottom="@dimen/PaddingMedium"
+            android:paddingLeft="@dimen/PaddingXLarge"
+            android:paddingRight="@dimen/PaddingXLarge"
+            android:paddingTop="@dimen/PaddingMedium"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="@dimen/PaddingMedium"
+                android:src="@drawable/acco_orders_rating" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/orders_goods_rating"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/acco_orders_goods_rating_comple"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/PaddingLarge"
+            android:background="@drawable/bg_orders"
+            android:gravity="center"
+            android:paddingBottom="@dimen/PaddingMedium"
+            android:paddingLeft="@dimen/PaddingXLarge"
+            android:paddingRight="@dimen/PaddingXLarge"
+            android:paddingTop="@dimen/PaddingMedium"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="@dimen/PaddingMedium"
+                android:src="@drawable/acco_orders_rating"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/orders_goods_rating_complete"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/acco_orders_goods_recommend"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_address_add"
+            android:gravity="center"
+            android:paddingBottom="@dimen/PaddingMedium"
+            android:paddingLeft="@dimen/PaddingXLarge"
+            android:paddingRight="@dimen/PaddingXLarge"
+            android:paddingTop="@dimen/PaddingMedium" >
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="@dimen/PaddingMedium"
+                android:src="@drawable/acco_orders_recommend" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/orders_goods_recommend"
+                android:textColor="@color/white"
+                android:textSize="@dimen/TextSizeMedium" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shopping_orders_group_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/PaddingXMedium"
+        android:paddingRight="@dimen/PaddingXMedium"
+        android:visibility="visible" >
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor" />
+
+</LinearLayout>

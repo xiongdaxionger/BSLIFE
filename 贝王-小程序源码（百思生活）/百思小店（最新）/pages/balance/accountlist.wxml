@@ -1,0 +1,19 @@
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+<scroll-view class="account_container_view" wx:if="{{!showFailNetWork}}">
+    <block wx:for="{{accountListsArr}}" wx:key="{{index}}">
+        <view class="bland"></view>
+        <!--账户信息-->
+        <view class="account_cell_view" bindtap="selectAccount" data-index="{{index}}">
+            <image class="account_icon" mode="aspectFit" src="{{item.icon}}" data-index="{{index}}"></image>
+            <view class="account_info" data-index="{{index}}">{{item.num}}</view>
+            <view class="line_view" data-index="{{index}}"></view>
+            <view class="delete_button" data-index="{{index}}" catchtap="deleteAccount">删除</view>
+            <view class="account_name" data-index="{{index}}">{{item.realName + ' ' +  item.typeName}}</view>
+        </view>
+    </block>
+    <view class="bland"></view>
+    <!--添加账户-->
+    <view class="add_account_view" bindtap="addAccount">添加账号</view>
+</scroll-view>

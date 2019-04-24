@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/goods_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/default_img_square" />
+
+            <TextView
+                android:id="@+id/goods_rat_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="商品评价"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <RatingBar
+                android:id="@+id/goods_rat"
+                style="@style/MidRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:numStars="5"
+                android:rating="5"
+                android:stepSize="0.1" />
+
+            <TextView
+                android:id="@+id/comment_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="（差评）"
+                android:textColor="@color/westore_red"
+                android:textSize="@dimen/TextSizeBigSmall"
+                android:visibility="gone" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/qianseit_bg_enter_view"
+                android:gravity="top|left"
+                android:hint="请输入您的评价"
+                android:inputType="textMultiLine"
+                android:maxLength="1000"
+                android:singleLine="false"
+                android:textColor="@color/westore_primary_textcolor"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <TextView
+                android:id="@+id/input_len"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="@dimen/MarginMedium"
+                android:layout_marginTop="@dimen/MarginMedium"
+                android:text="0"
+                android:textColor="@color/westore_second_gray_textcolor"
+                android:textSize="@dimen/TextSizeMedium" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <TableRow
+            android:id="@+id/vcode_tr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center" >
+
+            <EditText
+                android:id="@+id/vcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/qianseit_bg_enter_view"
+                android:gravity="top|left"
+                android:hint="请输入图形验证码"
+                android:inputType="text"
+                android:singleLine="false"
+                android:textColor="@color/westore_primary_textcolor"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <ImageView
+                android:id="@+id/vcode_ib"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter" />
+        </TableRow>
+
+        <com.qianseit.westore.ui.MyGridView
+            android:id="@+id/imgs_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fragment_background_color"
+            android:numColumns="5"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp" />
+
+        <com.qianseit.westore.ui.MyListView
+            android:id="@+id/other_comment_list"
+            style="@style/listview"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:dividerHeight="0dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="匿名评价"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <CheckBox
+                android:id="@+id/anonymous_comment"
+                style="@style/checkbox"
+                android:checked="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/PaddingXLarge"
+                android:focusableInTouchMode="true" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="38dip"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/app_button_selector"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextSizeMedium" />
+    </LinearLayout>
+
+</ScrollView>

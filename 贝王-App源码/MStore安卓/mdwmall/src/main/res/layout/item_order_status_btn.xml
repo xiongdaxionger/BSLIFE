@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/PaddingXLarge"
+    android:background="@drawable/shape_order_action"
+    android:paddingBottom="@dimen/PaddingMedium"
+    android:paddingLeft="@dimen/PaddingXLarge"
+    android:paddingRight="@dimen/PaddingXLarge"
+    android:paddingTop="@dimen/PaddingMedium"
+    android:singleLine="false"
+    android:text="待付款"
+    android:textColor="@color/westore_red"
+    android:textSize="@dimen/TextSizeBigSmall" >
+
+</TextView>

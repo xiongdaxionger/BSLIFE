@@ -1,0 +1,67 @@
+page{
+  font-size: 14px;
+  color: #c1c1c1;
+}
+.login-top-bg{
+  color: #fff;
+  background-image: url('https://www.go-bslife.com/public/xcxfiles/001.png');
+  background-size:100% 100%;
+  height: 200px;
+  width: 100%;
+  font-size: 16px;
+  text-align:center;
+}
+.login-logo-img{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 90rpx 0rpx 10rpx 0rpx;
+}
+.login-main{
+  padding: 20rpx;
+}
+.input-item{
+  display: flex;
+  margin:20rpx 0rpx;
+}
+.input-item-l{
+  width: 10%;
+  text-align:center;
+}
+.input-item-r{
+  width: 90%;
+}
+.phone-img{
+  width: 40rpx;
+  height: 50rpx;
+}
+.set-uname{
+  border-bottom: 1px solid #f3f3f3;
+}
+.forgot-pass{
+  padding: 0rpx 20rpx 20rpx 20rpx;
+  text-align: right;
+}
+.login-btn-group{
+  padding: 20rpx;
+  margin-top: 20rpx;
+}
+.login-btn{
+  background: #ff6316;
+  color: #fff;
+}
+.partner-btn{
+  background: #ffffff;
+  color: #ff6316;
+  margin-top: 40rpx; 
+}
+.partner-btn::after{
+  border: 1px solid #ff6316;
+}
+.login-bottom{
+  text-align: center;
+  padding: 20rpx;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}

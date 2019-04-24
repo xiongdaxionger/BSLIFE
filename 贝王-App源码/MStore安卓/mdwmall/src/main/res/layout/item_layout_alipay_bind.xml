@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fragment_background_color"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#f5f5f5"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/PaddingLarge"
+        android:text="请输入正确的卡号、持卡人、发卡银行,以免打款失败"
+        android:textSize="@dimen/TextSizeSmall"
+        android:visibility="gone" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.25"
+                android:text="支付宝"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <EditText
+                android:id="@+id/et_account"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:background="@null"
+                android:hint="请输入支付宝帐号"
+                android:paddingBottom="@dimen/PaddingLarge"
+                android:paddingTop="@dimen/PaddingLarge"
+                android:textSize="@dimen/TextSizeBigSmall" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.25"
+                android:text="帐号名字"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <EditText
+                android:id="@+id/et_real_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:background="@null"
+                android:hint="请输入支付宝名字"
+                android:paddingBottom="@dimen/PaddingLarge"
+                android:paddingTop="@dimen/PaddingLarge"
+                android:textSize="@dimen/TextSizeBigSmall" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.25"
+                android:text="手机号码"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75" >
+
+                <EditText
+                    android:id="@+id/et_alipay_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/btn_get_Code"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:hint="请输入手机号码"
+                    android:inputType="number"
+                    android:paddingBottom="@dimen/PaddingLarge"
+                    android:paddingTop="@dimen/PaddingLarge"
+                    android:text="1111"
+                    android:textColor="@color/westore_dark_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <Button
+                    android:id="@+id/btn_get_Code"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/app_button_selector"
+                    android:gravity="center"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:text="获取验证码"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </RelativeLayout>
+        </TableRow>
+
+        <View
+            android:id="@+id/register_vcode_divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/text_goods_e_color"
+            android:visibility="visible" />
+
+        <TableRow
+            android:id="@+id/register_vcode_tr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:visibility="visible" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.25"
+                android:text="图形验证码"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75" >
+
+                <EditText
+                    android:id="@+id/vcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/vcode_ib"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="@string/acco_register_imagevcode_tip"
+                    android:inputType="text"
+                    android:paddingBottom="@dimen/PaddingLarge"
+                    android:paddingTop="@dimen/PaddingLarge"
+                    android:singleLine="false"
+                    android:textColor="@color/westore_primary_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <ImageView
+                    android:id="@+id/vcode_ib"
+                    android:layout_width="75dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:scaleType="fitCenter" />
+            </RelativeLayout>
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.25"
+                android:text="验证码"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75" >
+
+                <EditText
+                    android:id="@+id/et_vcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="请输入短信中的验证码"
+                    android:paddingBottom="@dimen/PaddingLarge"
+                    android:paddingTop="@dimen/PaddingLarge"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </RelativeLayout>
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+    </TableLayout>
+
+</LinearLayout>

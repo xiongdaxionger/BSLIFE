@@ -1,0 +1,271 @@
+/* pages/user/me.wxss */
+/*section*/
+
+.section {
+  background: white;
+  font-size: 13px;
+}
+
+/*头部背景*/
+
+.header {
+  color: white;
+  height: 300rpx;
+  width: 100%;
+  position: relative;
+}
+
+/*头部用户信息容器*/
+.userInfo-container{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*头像样式*/
+
+.headImage {
+  width: 160rpx;
+  height: 160rpx;
+  border: 3px solid #ff8f8f;
+  border-radius: 90rpx;
+  margin-left: 15px;
+}
+
+/*登录按钮*/
+
+.login-btn {
+  font-size: 16px;
+  margin-left: 20px;
+  padding: 10px 10px 10px 0;
+}
+
+/*昵称、等级内容*/
+.header-content{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+/*昵称*/
+.name{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/*等级*/
+.level{
+  padding: 2px 8px 2px 8px;
+  border-radius: 4px;
+  background: #d43522;
+  font-size: 13px;
+}
+
+/*设置按钮*/
+.setting{
+  width:25px;
+  height:25px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+/*消息按钮*/
+.message{
+  width:25px;
+  height:25px;
+  position: absolute;
+   top: 15px;
+  right: 15px;
+}
+
+/*账户管理*/
+.account{
+  right: 15px;
+  top: 50%;
+  bottom: 50%;
+  position: absolute;
+}
+.account-text{
+  font-size: 13px;
+}
+
+/*账户管理箭头*/
+.account-image{
+  width:10px;
+  height:10px;
+}
+
+/*绑定手机号*/
+
+.bind-phone {
+  position: relative;
+  height: 40px;
+}
+
+/*绑定手机号文本*/
+
+.bind-phone-text {
+  color: darkgray;
+  font-size: 14px;
+  left: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  line-height: 40px;
+}
+
+/*绑定手机号箭头*/
+
+.bind-phone-arrow {
+  right: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/*订单按钮*/
+
+.order-item {
+  padding: 10px 0 10px 0;
+  width: 19%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/*我的订单*/
+.order-item-me{
+  padding: 10px 0 10px 0;
+  width: 24%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/*我的订单分割线*/
+.order-item-me-line{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width:3px;
+  bottom: 0px;
+}
+
+/*我的订单箭头*/
+.order-item-me-arrow{
+  width: 10px;
+  height: 10px;
+}
+
+/*按钮列表*/
+ul{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/*订单图标*/
+
+.order-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+/*角标*/
+.badge-value{
+    background: #f73030;
+    color: white;
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 13px;
+    border-radius: 9px;
+    text-align: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    margin: auto;
+}
+
+/*金额模块*/
+.amount-section{
+  margin: 10px 0 10px 0;
+  border-top: 1px #e5e5e5 solid;
+}
+/*金额按钮*/
+
+.amount-item{
+  margin: 10px 0 10px 0;
+  width: 33%;
+  flex-flow: column wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*金额文字*/
+.amount-text{
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+/*功能func*/
+.func-section{
+  border-top: 1px #e5e5e5 solid;
+}
+
+/*功能func按钮列表*/
+.func-section ul{
+  justify-content: flex-start;
+}
+
+/*功能按钮 收藏等*/
+.func-item{
+padding-top: 10px;
+  padding-bottom: 10px;
+  width: 25%;
+  flex-flow: column wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*功能按钮图标*/
+.func-icon{
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+/*收藏、足迹字体颜色*/
+.func-item-text{
+  color:#f73030;
+  font-size: 18px;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 5px;
+}
+
+/*功能按钮 分割线*/
+.func-line{
+  margin: 0 30rpx 0 30rpx;
+  background: #e5e5e5;
+  height: 1px;
+  width: 690rpx;
+}

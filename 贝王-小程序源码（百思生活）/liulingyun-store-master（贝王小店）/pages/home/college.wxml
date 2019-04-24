@@ -1,0 +1,247 @@
+<view class='college-nav'>
+  <text class='nav-item {{typeId == "1" ? "choose-nav" : ""}}' bindtap='chooseType' data-id='1'>精选</text>
+  <text class='nav-item {{typeId == "2" ? "choose-nav" : ""}}' bindtap='chooseType' data-id='2'>视频</text>
+  <text class='nav-item {{typeId == "3" ? "choose-nav" : ""}}' bindtap='chooseType' data-id='3'>音频</text>
+</view>
+
+<view class='black-bg'></view>
+<!--精选列表  -->
+<view style='display:{{typeId == "1" ? "block" : "none"}}'>
+  <block wx:for="{{mediaList}}" wx:key="key" wx:for-item="itemName">
+    <block wx:if="{{itemName.media_type == 'video'}}">
+      <view class='media-list'>
+        <view class='media-list-l'>
+          <image src='{{itemName.url}}' class='head-img'></image>
+        </view>
+        <view class='media-list-r'>
+          <view class='video-title'>{{itemName.title}}</view>
+          <!-- <video id="" src="{{itemName.video_path}}" controls="true" class='video-width' poster="{{itemName.video_poster}}"></video> -->
+          <view class='video-width' bindtap='jumpVideo' data-id='{{itemName.article_id}}' style="background-image: url('{{itemName.video_poster}}');">
+            <image src='../../image/048.png' class='video-play'></image> 
+          </view>
+          <view class='comments'>
+            <view class='comments-l'>
+              {{itemName.pubtime}}
+            </view>
+            <view class='comments-r'>
+              <view style='padding-left:14rpx;'>
+                <view class='give-like' style='display:{{articleBox == itemName.article_id ? "flex" : "none"}}'>
+                  <view class='give-like-l' bindtap='givelike' data-id='{{itemName.article_id}}'>{{itemName.ifpraise ? "取消" : "点赞"}}</view>
+                  <view class='give-like-r' bindtap='jumpVideo'  data-id='{{itemName.article_id}}'>评论</view>
+                </view>
+              </view>
+              <view>
+                <image src='../../image/046.png' class='comments-img' bindtap='givealike' data-id='{{itemName.article_id}}'></image>
+              </view>
+            </view>
+          </view>
+          <view>
+            <block wx:if="{{itemName.praise_list.length > 0 || itemName.comment_list.length > 0}}">
+              <view class='oval'></view>
+            </block>
+            <block wx:if="{{itemName.praise_list.length > 0}}">
+              <view class='ifpraise'>
+                <image src='../../image/047.png' class='zan-img'></image>
+                <block wx:for="{{itemName.praise_list}}" wx:key="key" wx:for-item="val">
+                  <text class='member-name'>{{val.name}}</text>
+                </block>
+              </view>
+            </block>
+            <block wx:if="{{itemName.comment_list.length > 0}}">
+              <block wx:for="{{itemName.comment_list}}" wx:key="key" wx:for-item="val">
+                <view class='comment-item' bindtap='actioncnt' data-id='{{val.comment_id}}' data-mid='{{val.member_id}}'>
+                  <text>{{val.name}}：</text>
+                  <text class='block-words'>{{val.content}}</text>
+                </view>
+              </block>
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{itemName.media_type == 'audio'}}">
+      <view class='audio-border'>
+        <view class='audio-list'>
+          <view class='media-list-l'>
+            <image src='{{itemName.url}}' class='head-img'></image>
+          </view>
+          <view class='media-list-r'>
+            <view class='video-title'>{{itemName.title}}</view>
+          </view>
+        </view>
+        <view class='audio-style'>
+          <audio poster="{{itemName.audio_poster}}" name="{{itemName.title}}" author="{{itemName.author}}" src="{{itemName.audio_path}}" id="myAudio{{itemName.article_id}}" controls loop bindplay="audioPlay"></audio>
+        </view>
+        <view class='audio-list'>
+          <view class='media-list-l'></view>
+          <view class='media-list-r'>
+            <view class='comments'>
+            <view class='comments-l'>
+              {{itemName.pubtime}}
+            </view>
+            <view class='comments-r'>
+             <view style='padding-left:14rpx;'>
+                <view class='give-like' style='display:{{articleBox == itemName.article_id ? "flex" : "none"}}'>
+                  <view class='give-like-l' bindtap='givelike' data-id='{{itemName.article_id}}'>{{itemName.ifpraise ? "取消" : "点赞"}}</view>
+                  <view class='give-like-r' bindtap='comments'  data-id='{{itemName.article_id}}'>评论</view>
+                </view>
+              </view>
+              <view>
+                <image src='../../image/046.png' class='comments-img' bindtap='givealike' data-id='{{itemName.article_id}}'></image>
+              </view>
+            </view>
+          </view>
+          </view>
+        </view>
+        <view class='audio-list'>
+          <view class='media-list-l'></view>
+          <view class='media-list-r'>
+            
+            <block wx:if="{{itemName.praise_list.length > 0 || itemName.comment_list.length > 0}}">
+              <view class='oval'></view>
+            </block>
+            <block wx:if="{{itemName.praise_list.length > 0}}">
+              <view class='ifpraise'>
+                <image src='../../image/047.png' class='zan-img'></image>
+                <block wx:for="{{itemName.praise_list}}" wx:key="key" wx:for-item="val">
+                <text class='member-name'>{{val.name}}</text>
+                </block>
+              </view>
+            </block>
+            <block wx:if="{{itemName.comment_list.length > 0}}">
+              <block wx:for="{{itemName.comment_list}}" wx:key="key" wx:for-item="val">
+                <view class='comment-item' bindtap='actioncnt' data-id='{{val.comment_id}}'  data-mid='{{val.member_id}}'>
+                  <text>{{val.name}}：</text>
+                  <text class='block-words'>{{val.content}}</text>
+                </view>
+              </block>
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+  </block>
+</view>
+<!--视频列表  -->
+<view  style='display:{{typeId == "2" ? "block" : "none"}}'>
+  <block wx:for="{{videoList}}" wx:key="key" wx:for-item="item">
+    <block wx:if="{{item.media_type == 'video'}}">
+      <view class='media-list'>
+        <view class='media-list-l'>
+          <image src='{{item.url}}' class='head-img'></image>
+        </view>
+        <view class='media-list-r'>
+          <view class='video-title'>{{item.title}}</view>
+          <view class='video-width' bindtap='jumpVideo' data-id='{{item.article_id}}' style="background-image: url('{{item.video_poster}}');">
+            <image src='../../image/048.png' class='video-play'></image> 
+          </view>
+          <view class='comments'>
+            <view class='comments-l'>
+               {{item.pubtime}}
+            </view>
+            <view class='comments-r'>
+              <view style='padding-left:14rpx;'>
+                <view class='give-like' style='display:{{articleBox == item.article_id ? "flex" : "none"}}'>
+                  <view class='give-like-l' bindtap='givelike' data-id='{{item.article_id}}'>{{item.ifpraise ? "取消" : "点赞"}}</view>
+                  <view class='give-like-r' bindtap='jumpVideo'  data-id='{{item.article_id}}'>评论</view>
+                </view>
+              </view>
+              <view>
+                <image src='../../image/046.png' class='comments-img' bindtap='givealike' data-id='{{item.article_id}}'></image>
+              </view>
+            </view>
+          </view>
+          <view>
+            <block wx:if="{{item.praise_list.length > 0 || item.comment_list.length > 0}}">
+              <view class='oval'></view>
+            </block>
+            <block wx:if="{{item.praise_list.length > 0}}">
+              <view class='ifpraise'>
+                <image src='../../image/047.png' class='zan-img'></image>
+                <block wx:for="{{item.praise_list}}" wx:key="key" wx:for-item="val">
+                  <text class='member-name'>{{val.name}}</text>
+                </block>
+              </view>
+            </block>
+            <block wx:if="{{item.comment_list.length > 0}}">
+              <block wx:for="{{item.comment_list}}" wx:key="key" wx:for-item="val">
+                <view class='comment-item' bindtap='actioncnt' data-id='{{val.comment_id}}' data-mid='{{val.member_id}}'>
+                  <text>{{val.name}}：</text>
+                  <text class='block-words'>{{val.content}}</text>
+                </view>
+              </block>
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+  </block>
+</view>
+<!--音频列表  -->
+<view  style='display:{{typeId == "3" ? "block" : "none"}}'>
+  <block wx:for="{{audioList}}" wx:key="key" wx:for-item="items">
+    <block wx:if="{{items.media_type == 'audio'}}">
+      <view class='audio-border'>
+        <view class='audio-list'>
+          <view class='media-list-l'>
+            <image src='{{items.url}}' class='head-img'></image>
+          </view>
+          <view class='media-list-r'>
+            <view class='video-title'>{{items.title}}</view>
+          </view>
+        </view>
+        <view class='audio-style'>
+          <audio poster="{{items.audio_poster}}" name="{{items.title}}" author="{{items.author}}" src="{{items.audio_path}}" id="myAudio{{items.article_id}}" controls loop bindplay="audioPlay"></audio>
+        </view>
+        <view class='audio-list'>
+          <view class='media-list-l'></view>
+          <view class='media-list-r'>
+            <view class='comments'>
+            <view class='comments-l'>
+              {{items.pubtime}}
+            </view>
+            <view class='comments-r'>
+              <view style='padding-left:14rpx;'>
+                <view class='give-like' style='display:{{articleBox == items.article_id ? "flex" : "none"}}'>
+                  <view class='give-like-l' bindtap='givelike' data-id='{{items.article_id}}'>{{items.ifpraise ? "取消" : "点赞"}}</view>
+                  <view class='give-like-r' bindtap='comments'  data-id='{{items.article_id}}'>评论</view>
+                </view>
+              </view>
+              <view>
+                <image src='../../image/046.png' class='comments-img' bindtap='givealike' data-id='{{items.article_id}}'></image>
+              </view>
+            </view>
+          </view>
+          </view>
+        </view>
+        <view class='audio-list'>
+          <view class='media-list-l'></view>
+          <view class='media-list-r'>
+            <block wx:if="{{items.praise_list.length > 0 || items.comment_list.length > 0}}">
+              <view class='oval'></view>
+            </block>
+            <block wx:if="{{items.praise_list.length > 0}}">
+              <view class='ifpraise'>
+                <image src='../../image/047.png' class='zan-img'></image>
+                <block wx:for="{{items.praise_list}}" wx:key="key" wx:for-item="val">
+                  <text class='member-name'>{{val.name}}</text>
+                </block>
+              </view>
+            </block>
+            <block wx:if="{{items.comment_list.length > 0}}">
+              <block wx:for="{{items.comment_list}}" wx:key="key" wx:for-item="val">
+                <view class='comment-item' bindtap='actioncnt' data-id='{{val.comment_id}}' data-mid='{{val.member_id}}'>
+                  <text>{{val.name}}：</text>
+                  <text class='block-words'>{{val.content}}</text>
+                </view>
+              </block>
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+  </block>
+</view>
+<modal hidden="{{hiddenmodalput}}" title="评论" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+    <input type='text' placeholder="评论..." value='{{memberRemoke}}' bindinput='setRemoke'/>
+</modal>  

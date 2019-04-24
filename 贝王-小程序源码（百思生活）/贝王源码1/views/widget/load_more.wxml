@@ -1,0 +1,12 @@
+
+<!--样列
+<import src="/views/widget/load_more.wxml"/>
+<template wx:if="{{}}" is="load_more"/>
+-->
+
+<template name="load_more">
+  <view style="width:100vw; display:flex; flex-flow:row nowrap; justify-content:center; align-items:center;">
+    <image style="width:20px; height:20px;" src="/images/loading/loading.gif"></image>
+    <view style="margin-left:8px;font-size:14px; color:#666666; text-align:center; line-height:50px;">正在获取数据...</view>
+  </view>
+</template>

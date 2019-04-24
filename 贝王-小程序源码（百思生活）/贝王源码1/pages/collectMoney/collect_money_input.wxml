@@ -1,0 +1,27 @@
+
+<!--收钱-->
+<view class="container">
+
+  <!--头部-->
+  <view class="header">
+    <text class="header-title">收款金额</text>
+    <view class="header-input-container">
+      <text class="money-symbol">￥</text>
+
+      <!--金额-->
+      <input focus="true" id="amount" placeholder="输入收款金额" placeholder-class="placeholder" bindinput="textDidChange" type="digit" maxlength="10"/>
+    </view>
+    </view>
+
+    <!--收款名称-->
+    <text class="collect-money-name">收款名称</text>
+
+    <!--收款名称输入框-->
+    <input class="name-input" id="name" value="{{name}}" placeholder="请输入收款名称" placeholder-class="placeholder" maxlength="30" bindinput="textDidChange"/>
+
+    <!--下一步按钮-->
+    <button class="next-btn long-btn {{canNext ? 'normal' : 'disable'}}" catchtap="next">下一步</button>
+
+    <!--提示信息-->
+    <view class="msg">*{{appName}}配合银行共同打击虚假交易、转账套现、洗钱等被禁止的交易行为，请进行真实交易，否则款项将不能提现!</view>
+  </view>

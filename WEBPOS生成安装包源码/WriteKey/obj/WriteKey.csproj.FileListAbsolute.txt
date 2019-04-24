@@ -1,0 +1,8 @@
+D:\Work\Soft\freshpac\WriteKey\bin\Debug\WriteKey.exe
+D:\Work\Soft\freshpac\WriteKey\bin\Debug\WriteKey.pdb
+D:\Work\Soft\freshpac\WriteKey\obj\Debug\ResolveAssemblyReference.cache
+D:\Work\Soft\freshpac\WriteKey\obj\Debug\WriteKey.MainForm.resources
+D:\Work\Soft\freshpac\WriteKey\obj\Debug\WriteKey.Properties.Resources.resources
+D:\Work\Soft\freshpac\WriteKey\obj\Debug\WriteKey.csproj.GenerateResource.Cache
+D:\Work\Soft\freshpac\WriteKey\obj\Debug\WriteKey.exe
+D:\Work\Soft\freshpac\WriteKey\obj\Debug\WriteKey.pdb

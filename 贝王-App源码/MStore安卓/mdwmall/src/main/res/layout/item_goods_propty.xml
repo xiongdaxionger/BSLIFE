@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/goods_propty_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:gravity="left"
+        android:text="功效"
+        android:textColor="@color/westore_dark_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <TextView
+        android:id="@+id/goods_propty_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:gravity="left"
+        android:text="强韧防断发 滋润"
+        android:textColor="@color/westore_gray_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+</LinearLayout>

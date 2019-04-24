@@ -1,0 +1,19 @@
+<!--二维码邀请-->
+
+<view class="container">
+
+<!--内容-->
+<view class="container">
+  <view class="content-container">
+    <text class="title">{{name}}邀请您成为会员</text>
+    <text class="subtitle">截屏保存二维码或者直接扫码进入哦~</text>
+
+    <!--分割线-->
+    <view class="line" />
+
+    <!--二维码-->
+    <image class="qrcode" src="{{qrCodeURL}}" />
+  </view>
+</view>
+
+</view>

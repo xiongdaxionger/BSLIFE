@@ -1,0 +1,25 @@
+<!--背景图-->
+<view class="reply_advice_content_view">
+    <form bindsubmit="submitAction">
+
+    <!--用户名和时间-->
+    <view class="advice_name_view">
+        <view class="author_name">{{info.authorName}}</view>
+        <view class="time">{{info.time}}</view>
+    </view> 
+    <!--提问信息-->
+    <view class="advice_content_view">
+        <view class="type_view" style="background-color:#f73030">Q</view>
+        <text class="content_text">{{info.content}}</text>
+    </view>
+    <!--回复输入框-->
+    <view class="area_input_view">
+        <textarea class="area_input" name="content" id="content" placeholder="请输入回复内容(100字以内)" placeholder-style="color:gray" maxlength="100" bindblur="inputChange"/>
+    </view>
+    <!--客服电话-->
+    <view class="call_phone" bindtap="callPhone">{{'如果有更多问题，您可以拨打客服电话:' + settingInfo.phone}}</view>
+    <!--提交按钮-->
+    <button class="submit_button" formType="submit">提交</button>
+
+    </form>
+</view>

@@ -1,0 +1,17 @@
+
+<!--网络出错显示的内容-->
+
+<!--样列
+<import src="/views/network/bad_network.wxml"/>
+<template is="fail_to_load" data="{{reloadData:'reloadData'}}">
+要在对应的js文件里面实现reloadData方法
+在对应的wxss文件中@import "/views/network/bad_network.wxss";
+-->
+
+<template name="fail_to_load">
+  <view class="background" catchtap="{{reloadData}}">
+    <image class="image" src="/image/network/load_fail.png" mode="aspectFill"></image>
+    <view class="text">页面加载失败，请稍后再试</view>
+    <view class="text">点击屏幕刷新</view>
+  </view>
+</template>

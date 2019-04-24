@@ -1,0 +1,20 @@
+
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+<view class="customer_service_container" wx:if="{{!showFailNetWork}}">
+    <view class="service_type_container">
+        <block wx:for="{{customerServiceData.serviceInfoArr}}" wx:for-item="serviceInfo">
+            <view class="{{index <= 1 ? 'service_type right_separator' : 'service_type'}}" bindtap="serviceAction" data-index="{{index}}">
+                <image bindtap="serviceAction" data-index="{{index}}" class="icon" src="{{serviceInfo.image}}" mode="aspectFit"></image>
+                <text class="title">{{serviceInfo.name}}</text>
+            </view>
+        </block>
+    </view>
+
+    <view class="service_info_container">
+        <view class="service_info_title">服务说明:</view>
+        <text class="service_info_content">{{customerServiceData.serviceInfo}}</text>
+    </view>
+</view>
+

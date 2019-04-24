@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="recommend_attention">关注</string>
+    <string name="recommend_collect">收藏</string>
+    <string name="recommend_recommend">评价</string>
+    <string name="recommend_liked">被赞</string>
+    <string name="recommend_fans">粉丝</string>
+    <string name="recommend_person_title">个人主页</string>
+    <string name="recommend_person_attention">关注</string>
+    <string name="recommend_attention_add_title">添加关注</string>
+    <string name="recommend_attention_add_search">搜索用户</string>
+    <string name="recommend_attention_add_web">微博好友</string>
+    <string name="recommend_attention_add_book">通信录好友</string>
+</resources>

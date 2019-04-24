@@ -1,0 +1,44 @@
+<view>
+  <view class='login-top-bg'>
+    <view>
+      <image src='{{logo}}' class='login-logo-img'></image>
+    </view>
+    <view>百思小店</view>
+  </view>
+  <view>
+    <view class='input-item'>
+      <view class='input-item-l'>
+        <image src='/image/003.png' class='phone-img'></image>
+      </view>
+      <view class='input-item-r'>
+        <input placeholder='请输入帐号（手机号）' type='number' class='set-uname' bindinput='setUname' value='{{uname}}'></input>
+      </view>
+    </view>
+    <view class='input-item'>
+      <view class='input-item-l'>
+        <image src='/image/004.png' class='phone-img'></image>
+      </view>
+      <view class='input-item-r'>
+        <input placeholder='请输入密码' type='password' class='set-uname' bindinput='setPass'></input>
+      </view>
+    </view>
+    <view class='login-btn-group'>
+      <button class='login-btn' bindtap='memberLogin'>立即登录</button>
+      <button class='partner-btn' bindtap='paycash'>申请开店</button>
+    </view>
+    <view class='forgot-pass'>
+      <text catchtap="resetPassword">忘记密码</text>
+    </view>
+  </view>
+
+  <view class="weixin" catchtap="weixinLogin">
+     <button open-type="getUserInfo" class='get-user-info' bindgetuserinfo="bindGetUserInfo">
+      <image src="{{imgURL + '/image/weixin.png'}}" class="weixin-image"></image>
+      <text class="weixin-text">微信登录</text>
+    </button>
+  </view>
+
+  <view class='login-bottom'>
+    <text>BSLIFE百思生活crm会员系统</text>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+
+<!--收钱分享-->
+
+<!--加载失败-->
+<import src="/views/network/bad_network.wxml" />
+<template wx:if="{{fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+
+<!--内容-->
+<view wx:if="{{!fail && !loading}}" class="container">
+  <view class="content-container">
+    <view class="title">好友直接扫码收款</view>
+    <view class="name">收款名称：{{name}}</view>
+    <view class="amount">金额(元)：
+      <text class="amount-value">{{amount}}</text>
+    </view>
+
+    <!--分割线-->
+    <view class="line"/>
+
+    <!--二维码-->
+    <image class="qrcode" src="{{qrCodeURL}}" />
+  </view>
+</view>

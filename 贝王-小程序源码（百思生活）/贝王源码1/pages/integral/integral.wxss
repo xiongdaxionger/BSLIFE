@@ -1,0 +1,121 @@
+/* pages/integral/integral.wxss */
+@import "/views/network/bad_network.wxss";
+
+/*滚动视图*/
+.scroll-view{
+    height: 100vh;
+    background: #f7f7f7;
+}
+
+/*头部*/
+.header{
+    background: #f73030;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+
+/*头部标题*/
+.header-title{
+    font-size: 17px;
+    margin: 25px 15px 10px 15px;
+}
+
+/*积分*/
+.header-integral{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0px 15px 0px 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+/*使用按钮*/
+.header-use-btn{
+    font-size: 15px;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+}
+
+/*积分详情*/
+.header-integral-detail{
+    font-size: 15px;
+    margin: 10px 15px 25px 15px;
+}
+
+/*积分记录头部*/
+.record-header{
+    width: calc(100vw - 15px);
+    padding-left: 15px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #666666;
+    border-bottom: 1px #f7f7f7 solid;
+}
+
+/*空*/
+.record-empty{
+    line-height: calc(100vh - 183px);
+    background: white;
+}
+
+/*积分记录*/
+.record{
+    border-bottom: 1px #f7f7f7 solid;
+    width: 100vw;
+    display: flex;
+    flex-flow: column wrap;
+    min-height: 75px;
+    position: relative;
+    background: white;
+}
+
+/*积分使用数量*/
+.record-use-container{
+    height: 20px;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    margin: 15px 10px 10px 10px;
+    background: #f73030;
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+/*图标*/
+.record-use-container image{
+    width: 12px;
+    height: 12px;
+    margin: 0 5px 0 5px;
+}
+
+/*积分数量*/
+.record-use-container text{
+    font-size: 14px;
+    margin-right: 5px;
+    color: white;
+}
+
+/*积分使用详情*/
+.record-msg{
+    color: #666666;
+    font-size: 14px;
+    margin: 0 10px 15px 10px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+/*积分时间*/
+.record-time{
+    font-size: 13px;
+    color: #666666;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}

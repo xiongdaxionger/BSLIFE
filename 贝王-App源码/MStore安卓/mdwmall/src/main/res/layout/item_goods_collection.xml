@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <FrameLayout
+        android:id="@+id/goods_icon_fl"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:padding="0.5dp" >
+
+        <ImageView
+            android:id="@+id/goods_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter" 
+            android:background="@drawable/shape_solid_white_stroke_gray"/>
+
+        <ImageView
+            android:id="@+id/goods_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/goods_item_sold_out"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/goods_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/PaddingMedium"
+        android:layout_marginTop="@dimen/PaddingXMedium"
+        android:layout_toRightOf="@+id/goods_icon_fl"
+        android:lines="2"
+        android:textColor="@color/westore_dark_textcolor"
+        android:textSize="@dimen/TextSizeMedium" />
+
+    <TableRow
+        android:id="@+id/goods_price_tr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/goods_name"
+        android:layout_below="@+id/goods_name"
+        android:layout_marginBottom="@dimen/PaddingXSmall"
+        android:layout_marginTop="10dp"
+        android:gravity="left|center" >
+
+        <TextView
+            android:id="@+id/goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/westore_red"
+            android:textSize="@dimen/TextSizeLarge" />
+
+        <TextView
+            android:id="@+id/goods_market_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/PaddingMedium"
+            android:singleLine="true"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeSmall" />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/goods_price_tr"
+        android:layout_below="@+id/goods_price_tr"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/goods_status_selector"
+        android:paddingBottom="@dimen/MarginMedium"
+        android:paddingLeft="@dimen/MarginLarge"
+        android:paddingRight="@dimen/MarginLarge"
+        android:paddingTop="@dimen/MarginMedium"
+        android:textColor="@color/goods_status"
+        android:textSize="@dimen/TextSizeSmall" />
+
+    <TextView
+        android:id="@+id/notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_button_selector"
+        android:text="到货通知"
+        android:layout_marginLeft="@dimen/MarginXXLarge"
+        android:layout_toRightOf="@+id/status"
+        android:layout_alignBottom="@+id/status"
+        android:paddingBottom="@dimen/MarginMedium"
+        android:paddingLeft="@dimen/MarginLarge"
+        android:paddingRight="@dimen/MarginLarge"
+        android:paddingTop="@dimen/MarginMedium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSizeSmall"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/goods_addcar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/status"
+        android:layout_gravity="bottom|right"
+        android:layout_marginLeft="@dimen/MarginXXLarge"
+        android:layout_toRightOf="@+id/status"
+        android:src="@drawable/add_car" />
+
+</RelativeLayout>

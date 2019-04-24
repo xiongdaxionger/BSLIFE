@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="zm3-2B-0oT" customClass="WMTopupTableHeader">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4i-Iq-02Y" userLabel="top_bgView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充值金额" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjp-Ag-wOB" userLabel="account_title_label">
+                            <rect key="frame" x="10" y="0.0" width="70" height="45"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="nZO-sh-vHL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入充值金额" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zS9-nA-YvE" userLabel="account_textField">
+                            <rect key="frame" x="95" y="0.0" width="215" height="45"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="zS9-nA-YvE" firstAttribute="leading" secondItem="rjp-Ag-wOB" secondAttribute="trailing" constant="15" id="71k-eR-IgY"/>
+                        <constraint firstAttribute="trailing" secondItem="zS9-nA-YvE" secondAttribute="trailing" constant="10" id="B6N-4T-lZu"/>
+                        <constraint firstAttribute="height" constant="45" id="EoZ-ZF-0nm"/>
+                        <constraint firstAttribute="bottom" secondItem="rjp-Ag-wOB" secondAttribute="bottom" id="J4p-4H-dfA"/>
+                        <constraint firstItem="rjp-Ag-wOB" firstAttribute="leading" secondItem="O4i-Iq-02Y" secondAttribute="leading" constant="10" id="Qja-DG-PG5"/>
+                        <constraint firstAttribute="bottom" secondItem="zS9-nA-YvE" secondAttribute="bottom" id="Z3N-aW-y3O"/>
+                        <constraint firstItem="zS9-nA-YvE" firstAttribute="top" secondItem="O4i-Iq-02Y" secondAttribute="top" id="j8R-XJ-Jmw"/>
+                        <constraint firstItem="rjp-Ag-wOB" firstAttribute="top" secondItem="O4i-Iq-02Y" secondAttribute="top" id="lXN-i4-yPY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="O4i-Iq-02Y" firstAttribute="leading" secondItem="zm3-2B-0oT" secondAttribute="leading" id="60Y-8V-kyl"/>
+                <constraint firstItem="O4i-Iq-02Y" firstAttribute="top" secondItem="zm3-2B-0oT" secondAttribute="top" id="or7-qU-vcy"/>
+                <constraint firstAttribute="trailing" secondItem="O4i-Iq-02Y" secondAttribute="trailing" id="xA1-xT-HsS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="account_textField" destination="zS9-nA-YvE" id="kFY-Ny-WWK"/>
+                <outlet property="account_title_label" destination="rjp-Ag-wOB" id="KCJ-qM-X9G"/>
+            </connections>
+            <point key="canvasLocation" x="180" y="349"/>
+        </view>
+    </objects>
+</document>

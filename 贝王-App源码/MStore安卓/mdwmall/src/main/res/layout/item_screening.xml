@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/screeing_type_Relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/screeing_type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/PaddingLarge"
+            android:text="类型"
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeMedium" />
+
+        <ImageView
+            android:id="@+id/screeing_more_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/PaddingLarge"
+            android:src="@drawable/screening_more_icon" />
+    </RelativeLayout>
+
+    <com.qianseit.westore.ui.MyGridView
+        android:id="@+id/screeing_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:listSelector="@color/transparent"
+        android:verticalSpacing="@dimen/PaddingXLarge"
+        android:horizontalSpacing="@dimen/PaddingXLarge"
+        />
+</LinearLayout>

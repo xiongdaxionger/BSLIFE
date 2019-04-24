@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="WMSelectMemberViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="63"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select_member" translatesAutoresizingMaskIntoConstraints="NO" id="3PB-g2-eQ2">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="53" id="aSR-VU-DQ3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIM-Dd-apU">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="uBm-iC-vb0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_gray" translatesAutoresizingMaskIntoConstraints="NO" id="4dx-II-kbL">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="bK7-4w-OJt"/>
+                            <constraint firstAttribute="width" constant="12" id="vQt-A8-BeA"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="bIM-Dd-apU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="7ly-7w-pNZ"/>
+                    <constraint firstAttribute="trailing" secondItem="3PB-g2-eQ2" secondAttribute="trailing" id="NNI-Oh-4P8"/>
+                    <constraint firstAttribute="trailing" secondItem="bIM-Dd-apU" secondAttribute="trailing" constant="25" id="TeP-X5-Gc9"/>
+                    <constraint firstItem="3PB-g2-eQ2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="W9w-YB-2IE"/>
+                    <constraint firstItem="3PB-g2-eQ2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jDf-QD-mdA"/>
+                    <constraint firstAttribute="trailing" secondItem="4dx-II-kbL" secondAttribute="trailing" constant="8" id="nR6-yN-EmU"/>
+                    <constraint firstItem="4dx-II-kbL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="tbB-Ja-PET"/>
+                    <constraint firstItem="bIM-Dd-apU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="ucW-fF-eq8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="memberNameLabel" destination="bIM-Dd-apU" id="dkJ-db-nit"/>
+            </connections>
+            <point key="canvasLocation" x="312" y="233.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow_gray" width="12" height="12"/>
+        <image name="select_member" width="500" height="72"/>
+    </resources>
+</document>

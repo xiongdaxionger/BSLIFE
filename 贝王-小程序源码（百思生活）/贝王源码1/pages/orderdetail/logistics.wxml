@@ -1,0 +1,25 @@
+<!--网络错误视图-->
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+<!--物流信息显示-->
+<scroll-view class="logistics_content_view" scroll-y wx:if="{{!showFailNetWork}}">
+    <!--头部-->
+    <view class="logistics_header_view">
+        <view class="logistics_info">{{'快递公司:' + logisticsCompany}}</view>
+        <view class="logistics_info">{{'运单编号:' + logisticsNumber}}</view>
+    </view>
+    <!--物流详情-->
+    <view class="logistics_detail">物流详情</view>
+    <!--物流信息显示-->
+    <block wx:for="{{logisticsInfosArr}}" wx:key="index">
+        <view class="logistics_cell_view">
+            <view class="line_view"></view>
+            <image class="logistics_image" mode="aspectFill" 
+        src="{{index == 0 ? (imgURL + '/images/icon/redbtn.png') : (imgURL + '/images/icon/graybtn.png')}}"></image>
+            <view class="content">{{item.message}}</view>
+            <view class="time">{{item.time}}</view>
+            <view class="bottom_line_view"></view>
+        </view>
+    </block>
+</scroll-view>

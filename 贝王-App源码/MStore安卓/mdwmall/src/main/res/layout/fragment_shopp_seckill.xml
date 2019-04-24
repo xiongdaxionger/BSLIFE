@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background_color" >
+
+    <com.qianseit.westore.ui.pull.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <include layout="@layout/allview_refresh_head" />
+
+        <com.qianseit.westore.ui.pull.PullableScrollView
+            android:id="@+id/seckill_pull_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarSize="0dp"
+            android:scrollbars="@null" >
+
+            <LinearLayout
+                android:id="@+id/seckill_list_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <com.qianseit.westore.ui.ImageCycleView
+                    android:id="@+id/seckill_ad_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include layout="@layout/item_seckill_layout" />
+
+                <com.qianseit.westore.ui.MyListView
+                    android:id="@+id/seckill_list"
+                    style="@style/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/westore_divider_bgcolor"
+                    android:dividerHeight="0.5dp" />
+            </LinearLayout>
+        </com.qianseit.westore.ui.pull.PullableScrollView>
+
+        <include layout="@layout/allview_load_more" />
+    </com.qianseit.westore.ui.pull.PullToRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/seckill_pinned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</RelativeLayout>

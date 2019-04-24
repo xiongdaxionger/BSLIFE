@@ -1,0 +1,6 @@
+@import './list.wxss';
+@import './detail.wxss';
+.detail-nav-item{
+  width: 50%;
+  border-right: 1px solid #f3f3f3;
+}

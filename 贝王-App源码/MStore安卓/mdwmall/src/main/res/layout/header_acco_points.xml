@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/westore_red"
+        android:paddingBottom="@dimen/PaddingXXLarge"
+        android:paddingLeft="@dimen/PaddingLarge"
+        android:paddingRight="@dimen/PaddingLarge"
+        android:paddingTop="@dimen/PaddingXXLarge" >
+
+        <LinearLayout
+            android:id="@+id/points_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可用积分"
+                android:textColor="@color/white"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <TextView
+                android:id="@+id/tv_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="50sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/frozen_points_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/points_linear"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/frozen_points_tv_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消费冻结："
+                android:textColor="@color/white"
+                android:textSize="@dimen/TextSizeSmall" />
+
+            <TextView
+                android:id="@+id/frozen_points_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-0积分"
+                android:textColor="@color/white"
+                android:textSize="@dimen/TextSizeSmall" />
+
+            <TextView
+                android:id="@+id/frozen_income_points_tv_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="获取冻结："
+                android:textColor="@color/white"
+                android:textSize="@dimen/TextSizeSmall" />
+
+            <TextView
+                android:id="@+id/frozen_income_points_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0积分"
+                android:textColor="@color/white"
+                android:textSize="@dimen/TextSizeSmall" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="兑换赠品"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextSizeSmall"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

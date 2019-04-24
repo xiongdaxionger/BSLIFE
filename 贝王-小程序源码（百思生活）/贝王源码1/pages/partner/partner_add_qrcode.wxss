@@ -1,0 +1,36 @@
+/* 二维码邀请*/
+/*内容*/
+.content-container{
+    background: white;
+    width: 100%;
+    font-size: 17px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-top: 1px #e5e5e5 solid;
+    border-bottom: 1px #e5e5e5 solid;
+}
+
+.title{
+    color: black;
+    margin: 35px 10px 0 10px;
+}
+
+.subtitle{
+    color: gray;
+    font-size: 14px;
+    margin: 5px 10px 0 10px;
+}
+
+.line{
+    width: calc(100vw - 20px);
+    background: #e5e5e5;
+    margin: 20px 10px 0 10px;
+    height: 1px;
+}
+
+.qrcode{
+    margin: 20px 30px 20px 30px;
+    width: calc(100vw - 60px);
+    height: calc(100vw - 60px);
+}

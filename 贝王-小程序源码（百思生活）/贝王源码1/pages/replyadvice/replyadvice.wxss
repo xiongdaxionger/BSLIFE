@@ -1,0 +1,106 @@
+
+/**背景视图**/
+.reply_advice_content_view{
+    background-color: #F7F7F7;
+    height: 100vh;
+    font-size: 15px;
+}
+/**咨询发布者视图**/
+.advice_name_view{
+    background-color: #F7F7F7;
+    position: relative;
+    color: black;
+    height: 35px;
+    line-height: 35px;
+}
+/**名称**/
+.author_name{
+    position: absolute;
+    height: 21px;
+    line-height: 21px;
+    left: 8px;
+    top: 7px;
+    width: 50%
+}
+/**时间**/
+.time{
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    width: 50%;
+    height: 21px;
+    line-height: 21px;
+    text-align: right
+}
+/**问题或者回复者姓名视图**/
+.advice_content_view{
+    position: relative;
+    background-color: #F7F7F7;
+    min-height: 38px;
+}
+/**类型标志**/
+.type_view{
+    position: absolute;
+    color: white;
+    width: 21px;
+    min-height: 21px;
+    max-height: 21px;
+    text-align: center;
+    border-radius: 3px;
+    top: 8px;
+    left: 8px;
+}
+/**提问内容或者回复者姓名**/
+.content_text{
+    color: black;
+    margin-left: 33px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-right: 8px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    word-wrap:break-word;
+    word-break:break-all;
+}
+/**多内容输入视图**/
+.area_input_view{
+    background-color: #F7F7F7;
+    height: 180px;
+    width: calc(100% - 16px);
+    padding-left: 8px;
+    padding-right: 8px;
+}
+/**多内容输入框**/
+.area_input{
+    background-color: #FFFFFF;
+    height: 160px;
+    line-height: 20px;
+    border-radius: 3px;
+    width: calc(100% - 16px);
+    margin-top: 10px;
+    padding-left: 8px;
+    padding-top: 10px;
+    padding-right: 8px;
+}
+/**客服电话**/
+.call_phone{
+    height: 20px;
+    line-height: 20px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+/**提交按钮**/
+.submit_button{
+    background-color: #F73030;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 16px;
+    left: 16px;
+    border-radius: 3.0;
+    font-size: 17px;
+    height: 40px;
+    line-height: 20px;
+    padding-top: 10px;
+}

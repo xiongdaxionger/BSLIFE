@@ -1,0 +1,229 @@
+
+
+<!--搜索栏-->
+<view class="search-header">
+
+  <!--搜索栏-->
+  <view class="search-container" catchtap="searchDidBegin">
+    <!--搜索图标-->
+    <image class="search-icon" src="{{imgURL + '/images/icon/search_icon_dark.png'}}" />
+    <view style="color:{{(search_text == null || search_text.length == 0) ? 'e1dddc' : 'black'}}" class="search-text">{{(search_text == null || search_text.length == 0) ? '请输入关键字' : search_text}}</view>
+  </view>
+  
+  <!--列表样式切换-->
+  <image catchtap="tapListStyle" mode="aspectFit" class="list-style-icon" src="{{imgURL + '/images/goodList/' + (list_style == 0 ? 'good_list_grid' : 'good_list_row')}}.png" />
+</view>
+
+<include src="/pages/goods/good_search.wxml"/>
+
+<!--筛选 排序菜单栏-->
+<view class="bar">
+
+  <!--默认排序有下拉框-->
+  <view class="bar-item" catchtap="tapDefaultSort">
+    <text style="color:{{selectedIndex == 0 ? '#f73030' : '#666666'}};">{{sort_title}}</text>
+    <image wx:if="{{sorts != null && sorts.length > 1}}" src="{{imgURL + '/images/icon/mark_' + (selectedIndex == 0 ? 'selected' : 'normal')}}.png" mode="aspectFit" />
+    <view class="bar-item-right-line" />
+  </view>
+
+  <!--价格排序-->
+  <view class="bar-item" catchtap="tapPriceSort">
+    <text style="color:{{selectedIndex == 1 ? '#f73030' : '#666666'}};">价格</text>
+    <image src="{{imgURL + '/images/icon/d_mark_' + (selectedIndex == 1 ? (cur_sort == 'price asc' ? 'asc' : 'desc') : 'normal')}}.png" mode="aspectFit" />
+    <view class="bar-item-right-line" />
+  </view>
+
+  <!--销量-->
+  <view class="bar-item" catchtap="tapBuycountSort">
+    <text style="color:{{selectedIndex == 2 ? '#f73030' : '#666666'}};">销量</text>
+    <view wx:if="{{screening_enable}}" class="bar-item-right-line" />
+  </view>
+
+  <!--筛选-->
+  <view catchtap="tapScreening" wx:if="{{screening_enable}}" class="bar-item">
+    <text>筛选</text>
+    <image style="width:15px;" src="{{imgURL + '/images/goodList/good_list_screening.png'}}" />
+  </view>
+</view>
+
+<!--商品列表-->
+<view class="container good-container">
+
+  <!--加载失败-->
+  <import src="/views/network/bad_network.wxml" />
+  <template wx:if="{{fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+
+  <!--没有商品信息时显示-->
+  <view wx:if="{{good_infos != null && good_infos.length == 0}}" class="empty-container">
+    <image class="empty-container-icon" mode="center" src="{{imgURL + '/images/goodList/good_list_empty.png'}}" />
+    <text class="empty-container-title">没有找到任何相关信息</text>
+    <text class="empty-container-subtitle">选择或搜索其他商品分类/名称</text>
+  </view>
+
+  <!--商品信息-->
+  <scroll-view scroll-top="{{scroll_top}}" bindscroll="containerScroll" scroll-y class="scroll-view" bindscrolltolower="loadMore" wx:if="{{!fail && good_infos != null && good_infos.length > 0}}">
+    <view class="good-list-container">
+     <!--回到顶部 购物车按钮-->
+       <view class="scroll_to_top_btn" catchtap="scrollToTop">
+  <image src="/images/icon/scroll_to_top.png" style="margin:10px 10px;width: 20px;height: 20px;"/>
+  </view>
+  <view class="bottom_shopcart_btn" catchtap="openShopcart">
+  <image src="/images/goodList/good_list_shopcart.png" style="margin:10px 10px;width: 20px;height: 20px;"/>
+   <view class="badge-value" wx:if="{{shopcartCount > 0}}">{{shopcartCount}}</view>
+  </view>
+
+  
+      <!--列表样式-->
+      <block wx:if="{{list_style == 0}}" wx:for="{{good_infos}}" wx:key="{{item.good_id}}">
+        <view style="margin-top:{{index < 1 ? 10 : 0}}px;" catchtap="tapGood" data-index="{{index}}" class="good-list-item">
+
+          <!--左边容器-->
+          <view class="good-list-left-container">
+            <image class="good-image" src="{{item.img}}" mode="aspectFit" />
+
+            <!--图片标签-->
+            <view class="image-tag-container" wx:if="{{item.image_tags != null}}">
+              <block wx:for="{{item.image_tags}}" wx:key="{{index}}">
+                <image wx:if="{{item.img != null}}" style="{{item.position}}" src="{{item.img}}" mode="aspectFit" />
+                <view wx:if="{{item.img == null}}" style="{{item.position}}color:{{item.textColor}};background-color:{{item.backgroundColor}};">
+                  <text>{{item.text}}</text>
+                </view>
+              </block>
+            </view>
+            <image wx:if="{{item.inventory == 0}}" class="sold-out-image" src="{{imgURL + '/images/goodList/sold_out.png'}}" />
+          </view>
+
+          <!--右边容器-->
+          <view class="good-list-right-container">
+            <text class="good-name">{{item.name}}</text>
+
+            <!--价格容器-->
+            <view class="good-price-container">
+              <view class="good-price">{{item.price}}</view>
+              <view wx:if="{{item.market_price != null}}" class="good-market-price">{{item.market_price}}</view>
+            </view>
+
+            <!--销量-->
+            <view class="good-buy-count" wx:if="{{item.buy_count > 0}}">销量 {{item.buy_count}}</view>
+
+            <!--底部容器-->
+            <view class="good-list-bottom-container">
+
+              <!--促销标签容器-->
+              <view class="promotion-tag-container" wx:if="{{item.promotion_tags != null}}">
+                <view class="promotion-tag-container-text" wx:for="{{item.promotion_tags}}" wx:key="{{index}}">{{item}}</view>
+              </view>
+              <text class="good-comment-count" wx:if="{{show_comment_count}}">{{item.comment_count}}人评论</text>
+
+              <!--购物车按钮-->
+              <image wx:if="{{item.inventory > 0}}" src="{{imgURL + '/images/goodList/shopcart_add.png'}}" class="shopcart-image" catchtap="addShopCarAction" data-is-prepare="{{item.is_presell}}" data-good-id="{{item.good_id}}" data-product-id="{{item.product_id}}"/>
+            </view>
+          </view>
+        </view>
+      </block>
+
+      <!--网格样式-->
+      <block wx:if="{{list_style == 1}}" wx:for="{{good_infos}}" wx:key="{{item.good_id}}">
+        <view style="margin-top:{{index < 2 ? 10 : 0}}rpx;" catchtap="tapGood" data-index="{{index}}" class="good-grid-item">
+
+          <!--上面容器-->
+          <view class="good-grid-top-container">
+            <image class="good-grid-image" src="{{item.img}}" mode="aspectFit" />
+
+            <!--图片标签-->
+            <view class="image-tag-container" wx:if="{{item.image_tags != null}}">
+              <block wx:for="{{item.image_tags}}" wx:key="{{index}}">
+                <image wx:if="{{item.img != null}}" style="{{item.position}}" src="{{item.img}}" mode="aspectFit" />
+                <view wx:if="{{item.img == null}}" style="{{item.position}}color:{{item.textColor}};background-color:{{item.backgroundColor}};">
+                  <text>{{item.text}}</text>
+                </view>
+              </block>
+            </view>
+            <image wx:if="{{item.inventory == 0}}" class="sold-out-image" src="{{imgURL + '/images/goodList/sold_out.png'}}" />
+          </view>
+          <text class="good-grid-name">{{item.name}}</text>
+
+          <!--价格容器-->
+          <view class="good-grid-price-container">
+            <view class="good-grid-price">{{item.price}}</view>
+
+            <!--购物车按钮-->
+              <image wx:if="{{item.inventory > 0}}" src="{{imgURL + '/images/goodList/shopcart_add.png'}}" class="shopcart-image" catchtap="addShopCarAction" data-is-prepare="{{item.is_presell}}" data-good-id="{{item.good_id}}" data-product-id="{{item.product_id}}"/>
+          </view>
+
+          <!--底部容器-->
+          <view class="good-grid-bottom-container">
+
+            <!--促销标签容器-->
+            <view class="promotion-tag-container" wx:if="{{item.promotion_tags != null}}">
+              <view class="promotion-tag-container-text" wx:for="{{item.promotion_tags}}" wx:key="{{index}}">{{item}}</view>
+            </view>
+            <text class="good-comment-count" wx:if="{{show_comment_count}}">{{item.comment_count}}人评论</text>
+          </view>
+        </view>
+      </block>
+
+      <!--加载更多-->
+      <import src="/views/widget/load_more.wxml" />
+      <template wx:if="{{load_more}}" is="load_more" />
+      <view wx:if="{{good_infos.length >= good_total_size && good_infos.length != 0}}" style="width:100%;height:90px"/>
+    </view>
+  </scroll-view>
+</view>
+
+<!--默认排序下拉列表-->
+<view wx:if="{{show_sort_list}}" class="sort-list-container" catchtap="tapSortTransparent">
+  <view wx:for="{{sorts}}" wx:key="{{index}}" data-index="{{index}}" catchtap="tapSortItem" class="sort-list-item">
+    <view style="color:{{sort_selectedIndex == index ? '#fe3030' : '#666666'}};" class="sort-list-item-text">{{item.label}}</view>
+    <icon wx:if="{{sort_selectedIndex == index}}" type="success_no_circle" class="sort-list-item-icon" color="#f73030" size="15"/>
+    <view class="sort-list-item-line" />
+  </view>
+</view>
+
+<!--筛选信息列表-->
+<view wx:if="{{show_screening}}" class="screening-container">
+
+  <!--黑色半透明背景-->
+  <view animation="{{screeningOpacityAnimation}}" class="screening-black-transparent-bg" catchtap="closeScreening"></view>
+  <view animation="{{screeningTranslateAnimation}}" class="screening-content-container">
+
+    <!--内容滚动视图-->
+    <scroll-view scroll-y class="screening-scroll-view">
+
+      <!--加载指示器-->
+      <image wx:if="{{is_load_screening}}" class="screening-loading" src="{{imgURL + '/images/loading/loading.gif'}}" />
+
+      <!--内容-->
+      <view class="screening-content">
+        <block wx:if="{{screening_infos != null && !is_load_screening}}" wx:for="{{screening_infos}}" wx:key="{{index}}">
+
+          <!--筛选类型标题-->
+          <view catchtap="screeningExpand" data-index="{{index}}" class="screening-header">
+            <view class="screening-header-text">{{item.name}}</view>
+            <image wx:if="{{item.infos.length >= 4}}" class="screening-header-arrow" src="{{imgURL + '/images/icon/arrow_dark_' + (item.expand ? 'up' : 'down')}}.png" mode="aspectFit" />
+          </view>
+
+          <!--可点击的筛选信息按钮-->
+          <view class="screening-item" style="background-color:{{info.selected ? '#f73030' : '#e5e5e5;'}};color:{{info.selected ? 'white' : 'black'}};" wx:for="{{item.infos}}" wx:if="{{item.expand || idx < 4}}" wx:for-index="idx" wx:for-item="info" wx:key="{{idx}}"
+          data-section="{{index}}" data-index="{{idx}}" catchtap="tapScreeningItem">{{info.name}}</view>
+        </block>
+      </view>
+    </scroll-view>
+
+    <!--底部工具条-->
+    <view class="screening-bottom-container">
+
+      <!--商品总数-->
+      <view class="screening-bottom-good-count">
+        共
+        <view class="screening-bottom-good-count-red">{{good_total_size}}</view>件商品
+      </view>
+
+      <!--重置按钮-->
+      <view catchtap="screeningReset" class="screening-bottom-reset">重置</view>
+
+      <!--完成按钮-->
+      <view catchtap="screeningDone" class="screening-bottom-done">完成</view>
+    </view>
+  </view>
+</view>

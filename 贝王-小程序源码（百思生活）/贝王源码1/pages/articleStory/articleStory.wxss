@@ -1,0 +1,126 @@
+image{width: 100%;height: 100%}
+swiper {display:block;height:50vw;width:100vw;}
+.blo{display: block}
+.in{display: inline}
+.in-blo{display: inline-block}
+.clear::after{content: '';display: block;clear: both}
+.groove{display:block;background:#f7f7f7;padding:10px;width:100%;margin-left:-11px;}
+/*故事首页*/
+.article_index_content {
+    background-color: #fff;
+    padding: 0 2%;
+}
+.article_index .h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #666;
+}
+.article_index .h4 .span {
+    border-left: 2px solid #FFE109;
+    padding-left: 0.4rem;
+}
+.article_index_content .li {
+    margin-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+.article_index_content .all {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+.art-img-box {
+  width:67px;
+  height:64px;
+  float:left;
+  position:relative;
+}
+.art-img-box image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.art-content-box {
+    width: calc(97% - 76px);
+    margin-left: 3%;
+    float: left;
+    position: relative;
+}
+.li .content-title {
+    font-size: 14px;
+    height: 2.5rem;
+    overflow: hidden;
+}
+.article_index_content .li .content-node {
+  font-size:0.8rem;
+  color:#fff;
+  padding:0.1rem 0.3rem;
+  border-radius:5px;
+  text-align:center;
+  display:inline-block;
+  background-color:#cecece;
+  position:absolute;
+  bottom:0;
+  left:0;
+  top:36px;
+  height:23px;
+}
+.article_index_content .li .art-content-box .em {
+  float:right;
+  margin-right:6px;
+  margin-top:4px;
+  font-size:12px;
+}
+.i.praise-icon-off{
+  width:16px;
+  height:18px;
+  margin-right:5px;
+  margin-top:18px;
+}
+.article_index .node {
+    background: #fff;
+    margin-top: 10px;
+}
+.article_index .h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #666;
+}
+.node view:nth-child(2) {
+    border: none;
+}
+.article_index .node_logo {
+  float:left;
+  width:60px;
+  text-align:center;
+  height:60px;
+}
+.article_index .node_logo image {
+    width: 100%;
+    margin-right: 10px;
+}
+.article_index .node_list .p .span {
+    font-size: 15px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+.article_index .node_content {
+  float:left;
+  padding-top:5px;
+  width:80%;
+  font-size:14px;
+  line-height:26px;
+  margin-left:10px;
+  color:#333;
+}
+.article_index .node_list {
+    padding: 5px 0px;
+}
+.article_index .border {
+    border-top: 1px solid #f0f0f0;
+}

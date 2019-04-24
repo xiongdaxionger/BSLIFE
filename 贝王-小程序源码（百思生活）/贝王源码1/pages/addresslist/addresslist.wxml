@@ -1,0 +1,18 @@
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+
+<view class="address_list_container" wx:if="{{!showFailNetWork}}">
+    <block wx:for="{{addressListInfoArr}}" wx:key="{{index}}" wx:for-item="addressInfo">
+        <view class="bland"></view>
+        <view class="address_info_container" bindtap="selectAddressAction" data-area-id="{{addressInfo.areaID}}" data-value="{{addressInfo.value}}" data-address-id="{{addressInfo.addressID}}" data-name="{{addressInfo.personName}}" data-mobile="{{addressInfo.mobile}}" data-addr="{{addressInfo.detailAddr}}">
+            <view class="person" bindtap="selectAddressAction" data-area-id="{{addressInfo.areaID}}" data-value="{{addressInfo.value}}" data-address-id="{{addressInfo.addressID}}" data-name="{{addressInfo.personName}}" data-mobile="{{addressInfo.mobile}}" data-addr="{{addressInfo.detailAddr}}">{{addressInfo.personName}} </view>
+            <view class="mobile" bindtap="selectAddressAction" data-area-id="{{addressInfo.areaID}}" data-value="{{addressInfo.value}}" data-address-id="{{addressInfo.addressID}}" data-name="{{addressInfo.personName}}" data-mobile="{{addressInfo.mobile}}" data-addr="{{addressInfo.detailAddr}}">{{addressInfo.mobile}}</view>
+            <view class="edit_button" catchtap="editButtonAction" data-addr_id="{{addressInfo.addressID}}" data-index="{{index}}">编辑</view>
+            <view class="address" bindtap="selectAddressAction" data-area-id="{{addressInfo.areaID}}" data-value="{{addressInfo.value}}" data-address-id="{{addressInfo.addressID}}" data-name="{{addressInfo.personName}}" data-mobile="{{addressInfo.mobile}}" data-addr="{{addressInfo.detailAddr}}">{{addressInfo.isDefault ? '[默认]' + addressInfo.detailAddr : addressInfo.detailAddr}}</view>
+        </view>
+    </block>
+</view>
+<view class="bottom_view">
+    <button class="long-btn normal add_address_button" bindtap="addAddressAction" wx:if="{{!showFailNetWork}}">添加收货地址</button>
+</view>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- 订单 -->
+    <string name="acco_orders_title">我的订单</string>
+    <string name="acco_orders_rebate_title">返利订单</string>
+    <string name="acco_orders_latest_month">近一个月的订单</string>
+    <string name="acco_orders_before_month">一个月前的订单</string>
+    <string name="acco_orders_order_number">订单号:</string>
+    <string name="acco_orders_order_sum_label">实付:</string>
+    <string name="acco_orders_order_sum_quantity">共%s件商品</string>
+    <string name="acco_orders_order_pay">支付</string>
+    <string name="acco_orders_order_cancel">取消</string>
+    <string name="acco_orders_order_delete">删除订单</string>
+    <string name="acco_orders_order_rate_again">评论</string>
+    <string name="acco_orders_order_receive_cofirm">确认收货</string>
+    <string name="acco_orders_state_complete">交易完成</string>
+    <string name="acco_orders_state_tuotou">已妥投</string>
+    <string name="acco_orders_state_cancel">交易取消</string>
+    <string name="acco_orders_state_paying">待付款</string>
+    <string name="acco_orders_state_shipping">待发货</string>
+    <string name="acco_orders_state_receive">待收货</string>
+    <string name="acco_orders_state_fin_receive">已收货</string>
+    <string name="acco_orders_state_part_shipping">部分发货</string>
+    <string name="acco_orders_state_part_refund">部分退款</string>
+    <string name="acco_orders_state_refund">已退货</string>
+    <string name="acco_orders_cancel_order_confirm">"确定取消该订单吗？"</string>
+    <string name="acco_orders_delete_order_confirm">"确定删除该订单吗？"</string>
+    <string name="acco_orders_canceled_order_ok">"该订单已取消"</string>
+    <string name="acco_orders_complete_order_ok">"该订单已确认收货"</string>
+    <string name="acco_orders_rebuy_succeed">再次购买成功</string>
+    <string name="acco_orders_rebuy_part">成功购买%1$d件商品</string>
+    <string name="acco_orders_rebuy_fail">再次购买失败</string>
+    <string name="acco_orders_send_type">配送方式  : %1$s</string>
+    
+    <string name="orders_goods_rating">评价</string>
+    <string name="orders_goods_rating_complete">已评价</string>
+    <string name="orders_goods_recommend">评价</string>
+    <string name="orders_orders_cancel">已取消</string>
+    <string name="orders_orders_info">结算信息</string>
+    <string name="orders_orders_pay">支付方式</string>
+    <string name="orders_orders_price">商品金额</string>
+    <string name="orders_orders_deduction">积分抵扣：</string>
+    <string name="orders_orders_cope_money">应付总额：</string>
+    <string name="orders_orders_pay_type">支付方式：</string>
+    <string name="orders_orders_total_money">订单总额：</string>
+    <string name="orders_orders_ticket_price">促销金额：</string>
+    <string name="orders_all">全部</string>
+    <string name="orders_recommend">待评价</string>
+    <string name="orders_complete">已完成</string>
+    <string name="orders_freight_title">运费： </string>
+    <string name="orders_total_price">合计： </string>
+    <string name="orders_pay">支付： </string>
+    <string name="orders_affirm">确认收货</string>
+    <string name="orders_cancel">取消</string>
+    <string name="orders_del">删除</string>
+    <string name="orders_cancel_complete">已取消</string>
+    <string name="orders_logistics">查看物流</string>
+    <string name="orders_pay_but">支付</string>
+    <string name="acco_trade_paying">待付款</string>
+    <string name="acco_trade_shipping">待发货</string>
+    <string name="acco_trade_receiving">待收货</string>
+    <string name="acco_trade_return">退款/售后</string>
+    <string name="acco_trade_rating">待评论</string>
+    <string name="shopp_orders_rebate_type">返利类型：%1$s</string>
+    
+    <!-- 订单详情 -->
+    <string name="shopping_order_detail_title">订单详情</string>
+    <string name="change_pay_type">修改付款方式</string>
+    <string name="order_detail_goods_total_price">商品总价:</string>
+    <string name="order_detail_discount_amount">优惠金额:</string>
+    <string name="order_detail_express_fee">运费:</string>
+    <string name="order_detail_payment_money">实付金额:</string>
+    <string name="order_detail_verify">审核中...</string>
+    <string name="order_detail_rating">评价</string>
+    <string name="order_detail_service_rating">服务评价</string>
+    <string name="order_detail_rating_hint">长度在5-150字之间</string>
+    <string name="order_detail_state">订单状态: </string>
+    <string name="order_detail_create_time">下单时间: </string>
+    <string name="order_detail_order_no">订单编号: </string>
+    <string name="order_detail_payinfo">支付方式: </string>
+    <string name="order_detail_payed_fee">实付款(含运费): </string>
+    <string name="order_detail_address">收货地址</string>
+    <string name="order_detail_buy_again">再次购买</string>
+    <string name="order_detail_apply_return">申请退换货</string>
+    <string name="order_all_manager">订单管理</string>
+    <string name="order_detail_rebate_amount">返利金额:</string>
+    <string name="order_detail_wait_rebate_amount">待返金额:</string>
+    <string name="order_detail_rebate_type">返利类型:</string>
+    <string name="order_detail_rebate_rule_day">每日返利规则:</string>
+    <string name="order_detail_rebate_amount_today">今日返利:</string>
+    <string name="order_detail_rebated_amount">已返金额:</string>
+    
+    <string name="acco_logitics_info_title">物流详情</string>
+    <string name="shopp_seckill_titile">04-08\n08:00\n抢购中</string>
+</resources>

@@ -1,0 +1,66 @@
+
+<!--积分签到-->
+
+<!--加载失败-->
+<import src="/views/network/bad_network.wxml" />
+<template wx:if="{{fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+
+<!--内容-->
+<scroll-view scroll-top="{{scroll_top}}" bindscroll="containerScroll" scroll-y class="scroll-view" bindscrolltolower="loadMore" wx:if="{{!fail && !loading}}">
+  <view>
+
+    <!--回到顶部按钮-->
+    <include src="/views/widget/scroll_to_top.wxml" />
+
+    <!--头部-->
+    <image src="{{top_bg_image_url}}" class="header">
+
+    <view class="info-container">
+    <image src="{{imgURL + '/images/integral/integral_calendar.png'}}" />
+      <view class="continuous-sigin-day">{{continuousSignInDay}}</view>
+      <view class="near-signin-day">
+        连续签到
+        <text>{{signInNearDay}}</text>天+
+        <text>{{signInNearIntegral}}</text>
+      </view>
+    </view>
+      
+    </image>
+
+    <!--积分规则-->
+    <view class="rule-container">
+      <view class="rule-title">签到送积分规则:
+        <text class="rule-content">\n{{rule}}</text>
+      </view>
+      <image mode="aspectFit" class="money" src="{{money_image_url}}" />
+      <text class="my-integral" catchtap="myIntegral">我的积分</text>
+      <image mode="aspectFit" class="wallet" src="{{wallet_image_url}}" />
+      <image mode="aspectFit" class="pig" catchtap="myIntegral" src="{{pig_image_url}}" />
+    </view>
+
+    <!--积分商品头部-->
+    <view wx:if="{{good_infos != null && good_infos.length > 0}}" class="good-header">
+      <view class="good-header-line" />
+      <view class="good-header-new">NEW</view>
+      <text class="good-header-title">积分换购</text>
+      <view class="good-header-line" />
+    </view>
+
+    <!--商品容器-->
+    <view class="good-container">
+      <view catchtap="tapGood" data-index="{{index}}" class="good-item" wx:for="{{good_infos}}" wx:key="{{index}}">
+
+        <!--商品-->
+        <image src="{{item.img}}" />
+        <view class="good-name">{{item.name}}</view>
+        <view class="good-integral">{{item.integral}}
+          <view class="good-integral-name">积分</view>
+        </view>
+      </view>
+    </view>
+
+    <!--加载更多-->
+    <import src="/views/widget/load_more.wxml" />
+    <template wx:if="{{load_more}}" is="load_more" />
+  </view>
+</scroll-view>

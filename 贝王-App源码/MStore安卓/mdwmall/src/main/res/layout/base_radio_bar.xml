@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="36dp"
+    android:orientation="vertical" >
+
+    <com.qianseit.westore.ui.HorizontalListView
+        android:id="@+id/bar_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:background="@color/white"
+        android:cacheColorHint="@color/white"
+        android:divider="@null"
+        android:dividerHeight="0.5dip"
+        android:drawSelectorOnTop="false"
+        android:fadingEdgeLength="0sp"
+        android:groupIndicator="@null"
+        android:listSelector="@color/white"
+        android:scrollbars="none" />
+
+</LinearLayout>

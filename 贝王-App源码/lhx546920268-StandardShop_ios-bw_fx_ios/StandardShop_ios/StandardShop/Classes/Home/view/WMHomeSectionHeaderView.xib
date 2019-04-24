@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="WMHomeSectionHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouh-za-g4d" userLabel="title_label">
+                    <rect key="frame" x="139" y="13" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddb-f0-MUE" userLabel="right_line">
+                    <rect key="frame" x="196" y="23" width="94" height="2"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="nXS-Ck-ebk"/>
+                        <constraint firstAttribute="width" constant="50" id="sn7-O3-mk6"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="sn7-O3-mk6"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="273-U0-8VM" userLabel="left_line">
+                    <rect key="frame" x="30" y="23" width="94" height="2"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="xi5-Gc-MOa"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBN-hD-u2a" userLabel="bottom_line">
+                    <rect key="frame" x="10" y="45" width="300" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="hUC-RO-b60"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrg-QF-Eo5" userLabel="align_title_label">
+                    <rect key="frame" x="10" y="13" width="300" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="CBN-hD-u2a" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="7ND-xC-XA1"/>
+                <constraint firstItem="273-U0-8VM" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="30" id="7gV-K2-CT8"/>
+                <constraint firstItem="273-U0-8VM" firstAttribute="top" secondItem="Ddb-f0-MUE" secondAttribute="top" id="A2i-0p-FGY"/>
+                <constraint firstItem="273-U0-8VM" firstAttribute="height" secondItem="Ddb-f0-MUE" secondAttribute="height" id="BVp-aZ-9OS"/>
+                <constraint firstItem="Ddb-f0-MUE" firstAttribute="centerY" secondItem="ouh-za-g4d" secondAttribute="centerY" id="Mhd-ZP-ZeB"/>
+                <constraint firstAttribute="trailing" secondItem="CBN-hD-u2a" secondAttribute="trailing" constant="10" id="SDn-Sy-T6l"/>
+                <constraint firstItem="ouh-za-g4d" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="SnG-ej-7yM"/>
+                <constraint firstItem="ouh-za-g4d" firstAttribute="leading" secondItem="273-U0-8VM" secondAttribute="trailing" constant="15" id="dr9-Xd-T1g"/>
+                <constraint firstAttribute="trailing" secondItem="Ddb-f0-MUE" secondAttribute="trailing" constant="30" id="ew7-XR-VHF"/>
+                <constraint firstAttribute="bottom" secondItem="CBN-hD-u2a" secondAttribute="bottom" id="fYQ-3B-FUz"/>
+                <constraint firstItem="273-U0-8VM" firstAttribute="width" secondItem="Ddb-f0-MUE" secondAttribute="width" id="jUB-ah-O5i"/>
+                <constraint firstItem="ouh-za-g4d" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="jhg-R6-sSG"/>
+                <constraint firstItem="Qrg-QF-Eo5" firstAttribute="leading" secondItem="CBN-hD-u2a" secondAttribute="leading" id="kJC-FI-Kpb"/>
+                <constraint firstItem="Qrg-QF-Eo5" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="lfb-sa-6UX"/>
+                <constraint firstItem="Ddb-f0-MUE" firstAttribute="leading" secondItem="ouh-za-g4d" secondAttribute="trailing" constant="15" id="xft-ym-Nek"/>
+                <constraint firstItem="Qrg-QF-Eo5" firstAttribute="width" secondItem="CBN-hD-u2a" secondAttribute="width" id="zCb-pt-2t5"/>
+            </constraints>
+            <connections>
+                <outlet property="align_title_label" destination="Qrg-QF-Eo5" id="bkk-JE-Ex2"/>
+                <outlet property="bottom_line" destination="CBN-hD-u2a" id="Unx-jX-wlB"/>
+                <outlet property="left_line" destination="273-U0-8VM" id="ou1-kW-jYo"/>
+                <outlet property="right_line" destination="Ddb-f0-MUE" id="R51-94-nzb"/>
+                <outlet property="title_label" destination="ouh-za-g4d" id="T4U-9p-Ala"/>
+            </connections>
+            <point key="canvasLocation" x="375" y="283"/>
+        </collectionReusableView>
+    </objects>
+</document>

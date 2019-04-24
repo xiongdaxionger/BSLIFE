@@ -1,0 +1,187 @@
+page{
+  font-size: 14px;
+}
+.add-item{
+  border-bottom: 1px solid #ccc;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.add-item-l{
+  width: 20%;
+}
+.add-item-r{
+  width: 80%;
+}
+.add-item-right{
+  width: 25%;
+}
+.get-code{
+  color: #fff;
+  background: #dc4c00;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  text-align: center;
+}
+.disable{
+  background-color: #DCDCDC;
+  color: gray;
+}
+.normal{
+  background-color: #dc4c00;
+  color: white !important;
+}
+.add-item-l{
+  width: 20%;
+}
+.add-item-r{
+  width: 80%;
+}
+.add-item-c{
+  width: 55%;
+}
+.add-bottom{
+  padding: 20rpx;
+  margin-top: 20rpx;
+}
+.add-btn{
+  color: gray;
+}
+.verify-top{
+  background-image: url('https://www.ibwang.cn/public/xcxfiles/037.jpg');
+  background-size:100% 100%;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.verify-circle{
+  width: 80rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  color: #fff;
+  border: 1px solid #565756;
+}
+.circl-box{
+  padding: 250rpx 100rpx 0rpx 100rpx;
+  display: flex;
+  align-items: center;
+}
+.verify-transverse{
+  width: 140rpx;
+  height: 10rpx;
+  background: rgba(0, 0, 0, 0.6);
+}
+.circle-border{
+  border: 1px solid #fff;
+}
+.circle-remoke{
+  padding: 10rpx 70rpx 0rpx;
+  display: flex;
+  color: #bebdb7;
+  justify-content: space-between;
+}
+.write-words{
+  color: #fff;
+}
+.write-bg{
+  background: #fff;
+}
+.combo-center{
+  width: 130rpx;
+}
+.combo-right{
+  width: 142rpx;
+}
+.paycash-top{
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc;
+}
+.scroll-view-h{
+  display: flex;
+  white-space: nowrap;
+  padding-top: 10px;
+  border-bottom: 1px solid #ccc;
+  background: #ededed;
+  height: 50px;
+}
+.scroll-view-item{
+  width: 220rpx;
+  height: 40rpx;
+  display:inline-block;
+  margin-left: 10px;
+  border-radius: 10rpx 10rpx 0rpx 0rpx;
+  text-align: center;
+  padding: 30rpx 0rpx;
+  background: #fff;
+  color: red;
+}
+.scroll-view-choose{
+ background: #1cb8b0;
+  color: #fff;
+}
+.pay-box{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-top: 1px solid #ccc;
+  display: flex;
+}
+.pay-box-l{
+  width: 70%;
+  color: red;
+  padding: 20rpx 0rpx 20rpx 20rpx;
+}
+.pay-box-r{
+  width: 30%;
+  background: red;
+  color: #fff;
+  text-align: center;
+  padding: 20rpx 0rpx;
+}
+.pay-succ{
+  text-align: center;
+  padding: 20rpx;
+}
+.re-login{
+  display: flex;
+  justify-content: center;
+}
+.pay-succ-img{
+  width: 200px;
+  height: 169px;
+}
+.red-words{
+  color: red;
+}
+.re-login-btn{
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10rpx 20rpx;
+  width: 100px;
+  border-radius: 10rpx;
+  text-align: center;
+}
+.partner{
+  background: red;
+  color: #fff;
+  border: none;
+}
+.pay-succ-remoke{
+  text-align: center;
+}
+.image_code_input {
+  position: absolute;
+  left: 85px;
+  right: 100px
+}
+/**图形验证码**/
+.image_code{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 100px;
+    height: 34px;
+}

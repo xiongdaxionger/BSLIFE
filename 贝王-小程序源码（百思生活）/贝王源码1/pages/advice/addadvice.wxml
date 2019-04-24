@@ -1,0 +1,30 @@
+
+<!--背景视图-->
+<view class="feedback_container padding_content" wx:if="{{!showFailNetWork}}">
+    
+    <form bindsubmit="submitAction">
+
+    <!--咨询内容输入-->        
+    <textarea name="content" id="content" class="area_input margin_content padding_content" placeholder="请输入咨询内容(100字以内)" placeholder-style="color:gray" maxlength="100" bindblur="inputChange"/>
+
+    <!--咨询类型类型-->
+    <view class="margin_content">咨询类型</view>
+    <view class="feedback_type_container">
+        <block wx:for="{{typesArr}}">
+            <view class="{{index % 3 != 0 ? 'feedback_type_view margin_left_content margin_content' : 'feedback_type_view margin_content'}}">
+                <view data-index="{{index}}" bindtap="selectTypeAction" class="{{item.isSelect ? 'feedback_type select' : 'feedback_type'}}">{{item.name}}</view>
+                <image class="select_image" src="{{imgURL + '/images/customerservice/type_select.png'}}" mode="aspectFit" wx:if="{{item.isSelect}}"></image>
+            </view>
+        </block>
+    </view>
+
+    <!--匿名开关-->
+    <text class="margin_content">匿名咨询</text>
+    <switch class="hidden_name_switch" bindchange="switchChange"></switch>
+    <!--客服电话-->
+    <view class="margin_content call_phone" bindtap="callPhone">如果有更多问题,您可拨打客服电话:{{settingInfo.phone}}</view>
+
+    <!--提交按钮-->
+    <button class="submit_button" formType="submit">提交</button>
+    </form>
+</view>

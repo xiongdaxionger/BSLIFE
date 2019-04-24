@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/subtotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="@dimen/PaddingXMedium"
+        android:singleLine="false"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <View
+        android:id="@+id/prepare_remark_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/PaddingXMedium"
+        android:background="@color/westore_divider_bgcolor" />
+
+    <TextView
+        android:id="@+id/prepare_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="@dimen/PaddingXMedium"
+        android:singleLine="false"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/PaddingXMedium" >
+
+        <View
+            android:id="@+id/subtotal_divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/PaddingXMedium"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/PaddingXMedium"
+            android:gravity="right"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor" />
+
+</LinearLayout>

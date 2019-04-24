@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="freshpac">
+</Property><Property Name="Solution File" Value="F:\WEBPOS生成安装包源码\freshpac.sln">
+</Property><Property Name="Date" Value="2018年9月5日">
+</Property><Property Name="Time" Value="10:36">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="freshpac.sln" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac.sln">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\freshpac.csproj" Description="Project file successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\freshpac.csproj">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\freshpac.csproj.user" Description="Project user file successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\freshpac.csproj.user">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\MainForm.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\MainForm.cs">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\MainForm.Designer.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\MainForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\Program.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\Program.cs">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\Properties\AssemblyInfo.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\Properties\Resources.Designer.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\Properties\Settings.Designer.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\SoftKeyPWD.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\SoftKeyPWD.cs">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\CusForm.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\CusForm.cs">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\CusForm.Designer.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\CusForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\cwber.dll.config" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\cwber.dll.config">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\libfuncs.exp" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\libfuncs.exp">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\libfuncs.ilk" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\libfuncs.ilk">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\libfuncs.lib" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\libfuncs.lib">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\am.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\am.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\ar.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\ar.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\bg.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\bg.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\bn.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\bn.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\ca.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\ca.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\cs.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\cs.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\da.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\da.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\de.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\de.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\el.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\el.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\en-GB.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\en-GB.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\en-US.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\en-US.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\es-419.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\es-419.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\es.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\es.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\et.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\et.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\fa.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\fa.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\fi.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\fi.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\fil.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\fil.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\fr.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\fr.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\gu.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\gu.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\he.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\he.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\hi.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\hi.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\hr.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\hr.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\hu.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\hu.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\id.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\id.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\it.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\it.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\ja.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\ja.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\kn.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\kn.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\ko.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\ko.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\lt.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\lt.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\lv.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\lv.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\ml.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\ml.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\mr.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\mr.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\ms.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\ms.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\nb.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\nb.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\nl.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\nl.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\pl.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\pl.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\pt-BR.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\pt-BR.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\pt-PT.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\pt-PT.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\ro.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\ro.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\ru.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\ru.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\sk.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\sk.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\sl.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\sl.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\sr.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\sr.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\sv.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\sv.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\sw.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\sw.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\ta.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\ta.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\te.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\te.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\th.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\th.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\tr.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\tr.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\uk.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\uk.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\vi.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\vi.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\zh-CN.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\zh-CN.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\locales\zh-TW.pak" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\locales\zh-TW.pak">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\Properties\Settings.settings" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\testdb.db" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\testdb.db">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\avcodec-54.dll" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\avcodec-54.dll">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\avformat-54.dll" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\avformat-54.dll">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\avutil-51.dll" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\avutil-51.dll">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\cwber.dll" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\cwber.dll">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\D3DCompiler_43.dll" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\D3DCompiler_43.dll">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\D3DX9_43.dll" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\D3DX9_43.dll">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\icudt.dll" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\icudt.dll">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\libcef.dll" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\libcef.dll">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\libEGL.dll" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\libEGL.dll">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\libfuncs.dll" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\libfuncs.dll">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\libGLESv2.dll" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\libGLESv2.dll">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\logo.ico" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\logo.ico">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\System.Data.SQLite.dll" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\System.Data.SQLite.dll">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\System.Data.SQLite.Linq.dll" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\System.Data.SQLite.Linq.dll">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\MainForm.resx" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\MainForm.resx">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\Properties\Resources.resx" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\CusForm.resx" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\freshpac\CusForm.resx">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\freshpac.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="freshpac" Source="freshpac\freshpac.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="WriteKey" Source="WriteKey\WriteKey.csproj" Description="Project file successfully backed up as F:\WEBPOS生成安装包源码\Backup\WriteKey\WriteKey.csproj">
+</Event><Event ErrorLevel="0" Project="WriteKey" Source="WriteKey\MainForm.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\WriteKey\MainForm.cs">
+</Event><Event ErrorLevel="0" Project="WriteKey" Source="WriteKey\MainForm.Designer.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\WriteKey\MainForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="WriteKey" Source="WriteKey\Program.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\WriteKey\Program.cs">
+</Event><Event ErrorLevel="0" Project="WriteKey" Source="WriteKey\Properties\AssemblyInfo.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\WriteKey\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="WriteKey" Source="WriteKey\Properties\Resources.Designer.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\WriteKey\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="WriteKey" Source="WriteKey\Properties\Settings.Designer.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\WriteKey\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="WriteKey" Source="WriteKey\SoftKeyPWD.cs" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\WriteKey\SoftKeyPWD.cs">
+</Event><Event ErrorLevel="0" Project="WriteKey" Source="WriteKey\Properties\Settings.settings" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\WriteKey\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="WriteKey" Source="WriteKey\MainForm.resx" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\WriteKey\MainForm.resx">
+</Event><Event ErrorLevel="0" Project="WriteKey" Source="WriteKey\Properties\Resources.resx" Description="File successfully backed up as F:\WEBPOS生成安装包源码\Backup\WriteKey\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="WriteKey" Source="WriteKey\WriteKey.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="WriteKey" Source="WriteKey\WriteKey.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Install.vdproj" Source="Install\Install.vdproj" Description="Project file successfully backed up as F:\WEBPOS生成安装包源码\Backup\Install\Install.vdproj">
+</Event><Event ErrorLevel="0" Project="" Source="freshpac.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="freshpac.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="freshpac" Source="freshpac\freshpac.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="WriteKey" Source="WriteKey\WriteKey.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

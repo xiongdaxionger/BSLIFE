@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/action_bar_topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:id="@+id/action_bar_titlebar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/action_titlebar_height"
+            android:background="@drawable/action_bar_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/fragment_search_cancel"
+                android:layout_width="@dimen/action_titlebar_height"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:gravity="center"
+                android:src="@drawable/comm_button_back"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_search_bar"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+
+                <EditText
+                    android:id="@android:id/edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/actionbar_search_keywords"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/goods_list_secondary_textcolor"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/fragment_search_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:gravity="center"
+                android:minWidth="@dimen/action_titlebar_height"
+                android:text="@string/search"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeMedium" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/TextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/action_bar_topbar"
+        android:layout_marginBottom="@dimen/PaddingMedium"
+        android:layout_marginLeft="@dimen/PaddingLarge"
+        android:layout_marginRight="@dimen/PaddingLarge"
+        android:layout_marginTop="@dimen/PaddingMedium"
+        android:drawableLeft="@drawable/hot_search"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="热门搜索"
+        android:textColor="@color/westore_gray_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <com.qianseit.westore.ui.FlowLayout
+        android:id="@+id/hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/TextView1"
+        android:layout_marginLeft="@dimen/PaddingLarge"
+        android:layout_marginRight="@dimen/PaddingLarge"
+        android:padding="@dimen/MarginMedium"
+        custom:horizontal_spacing="@dimen/MarginLarge"
+        custom:vertical_spacing="@dimen/MarginLarge" >
+    </com.qianseit.westore.ui.FlowLayout>
+
+    <include
+        android:id="@+id/empty_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/hot"
+        layout="@layout/empty_goods_search" />
+
+    <TableRow
+        android:id="@+id/TableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/empty_hot"
+        android:layout_marginLeft="@dimen/PaddingLarge"
+        android:layout_marginRight="@dimen/PaddingLarge"
+        android:layout_marginTop="@dimen/MarginXXLarge"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/PaddingMedium"
+            android:layout_marginTop="@dimen/PaddingMedium"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/shopping_home_bar_search"
+            android:drawablePadding="5dp"
+            android:text="最近搜索"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <ImageButton
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:paddingLeft="@dimen/MarginMedium"
+            android:paddingRight="@dimen/MarginMedium"
+            android:src="@drawable/del" />
+    </TableRow>
+
+    <com.qianseit.westore.ui.FlowLayout
+        android:id="@+id/near"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/TableRow1"
+        android:layout_marginLeft="@dimen/PaddingLarge"
+        android:layout_marginRight="@dimen/PaddingLarge"
+        android:padding="@dimen/MarginMedium"
+        custom:horizontal_spacing="@dimen/MarginLarge"
+        custom:vertical_spacing="@dimen/MarginLarge" >
+    </com.qianseit.westore.ui.FlowLayout>
+
+    <include
+        android:id="@+id/empty_near"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/near"
+        layout="@layout/empty_goods_search" />
+
+    <LinearLayout
+        android:id="@+id/associate_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_bar_topbar"
+        android:orientation="vertical" 
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/associate_list"
+            style="@style/listview"
+            android:layout_height="wrap_content"
+            android:divider="@color/westore_divider_bgcolor"
+            android:background="@color/white"
+            android:dividerHeight="0.5dp" >
+        </ListView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+    </LinearLayout>
+
+</RelativeLayout>

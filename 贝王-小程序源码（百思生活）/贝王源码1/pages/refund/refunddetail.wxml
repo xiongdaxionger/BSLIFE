@@ -1,0 +1,91 @@
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+<form bindsubmit="submitRefund" wx:if="{{!showFailNetWork}}">
+
+<!--退款/售后视图-->
+<scroll-view class="refund_content_view" scroll-y>
+
+    <!--商品模块-->
+    <block wx:for="{{goodsArr}}" wx:for-item="goodInfo" wx:key="{{index}}">
+      <view class="shop_cart_good_view">
+        <!--勾选视图-->
+        <view class="shop_cart_choose_view" bindtap="selectGood"         data-index="{{index}}">
+          <image mode="aspectFit" data-index="{{index}}" class="shop_cart_choose_image" src="{{goodInfo.isSelect ? selectImage : unselectImage}}"></image>
+        </view>
+        <!--商品图片-->
+        <image mode="aspectFit" class="good_image" src="{{goodInfo.imageURL}}"></image>
+        <!--商品名称-->
+        <view class="good_name">{{goodInfo.name}}</view>
+        <!--商品价格-->
+        <view class="good_price_container">
+            <text class="good_price">{{goodInfo.formatPrice}}</text>
+        </view>
+        <!--数量视图-->
+        <view class="quantity_view">
+          <image mode="aspectFit" bindtap="minusGoodAction" class="minus_image" src="{{imgURL + '/images/shopcart/minus_new.png'}}" data-index="{{index}}"></image>
+          <view class="quantity_text">{{goodInfo.finalQuantiy}}</view>
+          <image mode="aspectFit" bindtap="addGoodAction" class="add_image" src="{{imgURL + '/images/shopcart/add_new.png'}}" data-index="{{index}}"></image>
+        </view>
+      </view>
+    </block>
+
+    <view class="bland"></view>
+
+    <!--类型选择-->
+    <block wx:for="{{refundTypesArr}}" wx:key="{{index}}">
+      <view class="refund_type_select_view" bindtap="typeChange" data-index="{{index}}">
+        <view class="refund_type_name" data-index="{{index}}">{{item.name}}</view>
+        <image mode="aspectFit" data-index="{{index}}" class="type_choose_image" src="{{item.isSelect ? selectImage : unselectImage}}"></image>
+      </view>
+    </block>
+
+    <view class="bland" wx:if="{{!isMoneyRefund}}"></view>
+
+    <!--退款金额-->
+    <view class="refund_money_view" wx:if="{{isMoneyRefund}}">
+      <view class="money_main_title">预计退款总计</view>
+      <view class="money_sub_title">实际退款金额以与商家协商一致及实际到账为准</view>
+      <view class="line_view"></view>
+      <view class="money_title">{{refundMoney}}</view>
+    </view>
+
+    <!--理由输入-->
+    <view class="line_input_view">
+      <view class="title_content">{{isMoneyRefund ? '退款理由' : '退换理由'}}
+      </view>
+      <input id="reason" class="line_input" placeholder="请输入申请理由(必填)" placeholder-style="color:gray" maxlength="20" bindinput="inputChange"/>
+    </view>
+
+    <!--详细输入-->
+    <view class="area_input_view">
+        <view class="title_content">详细描述</view>
+        <textarea id="content" class="area_input" placeholder="请尽量详细描述遇到的问题(不超过150字)" placeholder-style="color:gray" maxlength="150" bindblur="inputChange"/>
+    </view>
+
+    <view class="bland" wx:if="{{!isMoneyRefund}}"></view>
+      <!--晒图-->
+  <view class="img-container" wx:if="{{!isMoneyRefund}}">
+    <block wx:for="{{images}}" wx:key="{{index}}">
+      <view class="img">
+        <image class="comment-img" src="{{item.file_url}}" />
+        <image catchtap="deleteImg" data-index="{{index}}" class="delete-img" src="{{imgURL + '/images/comment/comment_img_delete.png'}}" />
+        <image wx:if="{{item.uploading}}" class="img-loading" src="{{imgURL + '/images/loading/loading.gif'}}"/>
+        <view wx:if="{{item.uploadFail}}" class="upload-fail" catchtap="tapUploadFail" data-index="{{index}}">
+        <text>上传\n失败</text>
+        </view>
+      </view>
+    </block>
+    <view catchtap="tapCamera" style="background:#f73030;" wx:if="{{images.length < 3}}" class="img">
+      <image class="comment-add-img" src="{{imgURL + '/images/comment/comment_img_add.png'}}" />
+    </view>
+  </view>
+  <view wx:if="{{!isMoneyRefund}}" style="font-size:14px;background-color:white;border-bottom: 1px solid #F7F7F7;padding-left:8px;padding-bottom:4px">最多上传3张，图片不超过2M,格式为jpg、jpeg、png</view>
+
+
+</scroll-view>
+
+    <!--提交按钮-->
+<button class="submit_button" formType="submit">提交</button>
+</form>
+

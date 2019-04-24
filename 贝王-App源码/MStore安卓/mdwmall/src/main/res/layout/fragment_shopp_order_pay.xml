@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_goods_e_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/pay_mothod_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/pay_orderid_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/confimr_order_item_bgimage"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="订单编号："
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <TextView
+                android:id="@+id/orderid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/westore_red"
+                android:textSize="@dimen/TextSizeLarge" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/pay_title_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/confimr_order_item_bgimage"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="订单金额："
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="￥ 0.000"
+                android:textColor="@color/westore_red"
+                android:textSize="@dimen/TextSizeLarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/combination_pay_title_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" 
+            android:visibility="gone">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/confimr_order_item_bgimage"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="已用余额支付："
+                    android:textColor="@color/westore_dark_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <TextView
+                    android:id="@+id/paied_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="￥ 0.000"
+                    android:textColor="@color/westore_red"
+                    android:textSize="@dimen/TextSizeLarge" />
+            </TableRow>
+
+            <TextView
+                android:id="@+id/wait_pay_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/confimr_order_item_bgimage"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="您可以选择其他支付方式支付剩余金额："
+                android:textColor="@color/text_textcolor_gray2"
+                android:textSize="@dimen/TextSizeBigSmall" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/payments"
+            style="@style/listview"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:divider="@color/westore_divider_bgcolor"
+            android:dividerHeight="0dp" />
+        
+        <Button
+            android:id="@+id/confirm_order_submit"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/app_button_selector"
+            android:gravity="center"
+            android:text="确认支付"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextSizeLarge" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/confirm_order_paystate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/invoice_bgimage"
+        android:padding="@dimen/PaddingXLarge"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/invoice_content_bgimage"
+            android:padding="@dimen/PaddingXLarge" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" >
+
+                <ImageView
+                    android:id="@+id/confirm_order_pay_state_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pay_success_face"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/confirm_order_pay_state_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/PaddingXLarge"
+                    android:layout_marginTop="@dimen/PaddingMedium"
+                    android:layout_toRightOf="@id/confirm_order_pay_state_icon"
+                    android:text="@string/confirm_order_pay_success"
+                    android:textColor="@color/goods_detail_primary_textcolor"
+                    android:textSize="@dimen/TextSizeLarge" />
+
+                <Button
+                    android:id="@+id/confirm_order_pay_state_ok"
+                    style="@style/button_pink_small_radius"
+                    android:layout_width="100dip"
+                    android:layout_below="@id/confirm_order_pay_state_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/PaddingMedium"
+                    android:text="点击返回" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

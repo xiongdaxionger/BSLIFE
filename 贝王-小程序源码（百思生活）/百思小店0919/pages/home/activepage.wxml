@@ -1,0 +1,18 @@
+<scroll-view scroll-x class='scroll-view-h'>
+  <block wx:for="{{articleType}}" wx:key="key" wx:for-item="item">
+    <view class='scroll-view-item {{nodeId == item.node_id ? "scroll-view-selected" : ""}}' bindtap='chooseNodeId' data-id='{{item.node_id}}'>{{item.node_name}}</view>
+  </block>
+</scroll-view>
+<block wx:for="{{articleList}}" wx:key="key" wx:for-item="itemName">
+  <view class='active-item' bindtap='jumpCustom' data-id='{{itemName.article_id}}'>
+    <view class='article-item' style="background-image: url('{{itemName.url}}');">
+      <view class='article-title'>{{itemName.title}}</view>
+    </view>
+    <view class='article-time'>
+      <view class='article-time-l'>
+        <text>{{itemName.pubtime}}</text>
+        <text class='article-author'>{{itemName.author}}</text>
+      </view>
+    </view>
+  </view>
+</block>

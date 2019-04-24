@@ -1,0 +1,57 @@
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+<scroll-view scroll-y class="order_detail_container" wx:if="{{!showFailNetWork}}">
+	<image src="/images/me/top_bj.png" class="my_photo">
+		<image src="{{info.avatar}}" class="my_img"></image>		
+		<view class="info" style="top:95px">用户名：{{info.name}}</view>
+		<view class="info" style="top:130px">会员类型：{{info.member_type}}</view>
+		<view class="info" style="top:162px">上级：{{info.parent_name}}</view>
+	</image>
+	<view class="xs_price">
+		<span><em><i class="price">￥{{info.advance}}</i><i>账户余额</i></em></span>
+		<span><i class="price">￥{{info.commision.sum}}</i><i>累计佣金</i></span>
+	</view>
+	<view class="per_icon_list">
+		<view class="per_list tab_per">
+			<image src="/images/me/my1.png" class="icon"></image>
+				<span>分销中心</span>
+				<image src="/images/me/right_one.png" class="right_img"></image>
+		</view>
+		<view>
+			<view class="line_info dashed" catchtap="tapMemberCenter"><a>会员中心</a></view>
+			<view class="line_info" catchtap="tapQrCode"><a>推广二维码</a></view>
+		</view>
+	 </view>	
+	<div class="per_icon_list">
+		<a class="per_list tab_per" catchtap="tapMyTeam">
+			<image src="/images/me/my2.png" class="icon"></image>
+			<span>我的团队</span>
+			<image src="/images/me/right_one.png" class="right_img"></image>
+		</a>
+		<view>
+		<view class="line_info dashed"><a>一级会员{{info.direct_count}}人</a></view>
+		<view class="line_info"><a>二级会员{{info.second_count}}人</a></view> 
+		</view>
+	</div>
+	<div class="per_icon_list">
+		<a class="per_list tab_per" catchtap="tapMyCommision">
+			<image src="/images/me/my3.png" class="icon"></image>
+			<span>我的佣金</span>
+			<image src="/images/me/right_one.png" class="right_img"></image>
+		</a>
+		<view>
+        <view class="line_info dashed"><a>冻结佣金￥{{info.commision.freeze}}</a></view>
+        <view class="line_info dashed"><a>正在提现佣金￥{{info.txing}}</a></view>
+        <view class="line_info dashed"><a>累计提现佣金￥{{info.tixian}}</a></view>
+		<view class="line_info"><a>当前可提现佣金￥{{info.commision.total}}</a></view>
+      </view>
+	</div>
+	<div class="per_icon_list" catchtap="tapWithDraw">
+		<a class="per_list" href="/wap/tmpl/wallet/withdraw.html" id="withdraw_action">
+			<image src="/images/me/my5.png" class="icon"></image>
+			<span>申请提现</span>
+			<image src="/images/me/right_one.png" class="right_img"></image>
+		</a>
+	</div>
+</scroll-view>

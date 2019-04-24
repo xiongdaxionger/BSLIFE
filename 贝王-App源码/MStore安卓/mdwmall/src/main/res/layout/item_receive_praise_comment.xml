@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="15dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp" >
+
+    <ImageView
+        android:id="@+id/item_receive_pc_title_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:id="@+id/item_receive_pc_user_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp" 
+        android:layout_centerVertical="true"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/item_receive_pc_title_img"
+        android:layout_toRightOf="@id/item_receive_pc_user_img"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/item_receive_pc_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="komie"
+            android:textColor="@color/text_textcolor_gray2"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/member_personal_lv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_semicircle_norm"
+            android:paddingBottom="1dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="1dp"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/item_receive_pc_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="komie"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/item_receive_pc_praise"
+            android:layout_width="15dp"
+            android:layout_height="13dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/my_new_fans"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/item_receive_pc_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="komie"
+            android:textColor="@color/text_textcolor_gray2"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+
+<view class="groupBooking">
+  <view class="banner">
+    <view class='timeout'>
+      <text>拼团进行中</text>
+      <view> 
+          <view>
+            剩余 
+            <text>{{time[0]}}</text>:
+            <text>{{time[1]}}</text>:
+            <text>{{time[2]}}</text>
+            结束
+          </view>
+       </view>
+       <text  style='font-size: 16px;margin-top: -19px;'>
+        1人团/<text style='color:#fae100'>还差1人</text>
+       </text>
+    </view>
+  </view>
+  <view class='detail'>
+    <view ></view>
+    <view>
+    精选输够大家发快乐发飞机大师傅 抽数丝柔
+    </view>
+    <text> ¥ 278 <text style='color:#f73030;margin-left:5px'>团长返: ¥ 5</text></text>
+  </view>
+  <view class='bland'></view>
+  <scroll-view class='team_people' scroll-x>
+  
+      <image class='headImage leader' src='/images/me/default_avatar.png'></image>
+      <image class='headImage' src='/images/me/default_avatar.png'></image>
+
+  </scroll-view>
+  <view class='bland'></view>
+  <view class="title_line_info">
+    <view class="title">拼团玩法</view>
+    <view class="comment_content"style="color:gray">详细规则</view>
+    <image class="arrow"mode="aspectFit"src="/images/icon/arrow_gray.png"></image>
+  </view>
+  <view class="group_flow">
+    <view>
+      <image src='../../../images/groupBooking/initiate.png'></image>
+      <text>发起拼团</text>
+    </view>
+    <image class="group_arrow"mode="aspectFit"src="/images/icon/arrow_gray.png"></image>
+    <view>
+      <image src='../../../images/groupBooking/invite.png'></image>
+      <text>邀请参团</text>
+    </view>
+    <image class="group_arrow"mode="aspectFit"src="/images/icon/arrow_gray.png"></image>
+    <view>
+      <image src='../../../images/groupBooking/sendOut.png'></image>
+      <text>成团发货</text>
+    </view>
+    <image class="group_arrow"mode="aspectFit"src="/images/icon/arrow_gray.png"></image>
+    <view>
+      <image src='../../../images/groupBooking/award.png'></image>
+      <text>团长奖励</text>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='content_title'>
+        为您推荐
+    </view >
+    <view class="content_mian">
+    <navigator url="groupBooking_detail/gooddetail?productID=133" hover-class="navigator-hover">
+        <view class='content_item'>
+        <view class='pro_banner'>
+          <view>
+            团长返¥3
+          </view>
+        </view>
+        <view class='pro_drc'>
+          <text class='pro_txt'>
+            <text>1人团</text><text>包邮</text><text>精选输够大家发快乐发飞机大师傅 抽数丝柔</text>
+          </text>
+          <text class='price'>
+            <text class='price_l'>¥12.8 <text>38.00</text></text>
+            <text class='Open_group'>去开团</text>
+          </text>
+        </view>
+      </view>
+    </navigator>
+    </view>
+  </view>
+</view>

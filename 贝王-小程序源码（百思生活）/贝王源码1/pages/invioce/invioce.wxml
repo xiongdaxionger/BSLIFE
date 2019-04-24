@@ -1,0 +1,31 @@
+<view class="invioce_container">
+    <view class="bland"></view>
+    <!--发票类型-->
+    <view class="invioce_type_container">
+        <view class="type_title">发票类型</view>
+        <block wx:for="{{invioceTypeArr}}" wx:key="{{index}}">
+            <view class="invioce_type_select_container" bindtap="typeChange" data-value="{{item.tax_value}}">
+                <image class="select_view" data-value="{{item.tax_value}}" src="{{item.tax_value == invioceInfo.invioceType ? imgURL + '/images/shopcart/shop_Car_Select.png' : imgURL + '/images/shopcart/shop_Car_UnSelect.png'}}" mode="aspectFit"></image>
+                <view class="{{item.tax_value == invioceInfo.invioceType ? 'type_text select' : 'type_text'}}" data-value="{{item.tax_value}}">{{item.tax_type}}</view>
+            </view>
+        </block>
+    </view>
+
+    <!--发票抬头-->
+    <view class="invioce_header_container" wx:if="{{isOpenInvioce}}">
+        <view class="header_title">发票抬头</view>
+        <input class="header_input" maxlength="30" bindinput="headerInput" value="{{invioceInfo.invioceHeader}}" placeholder="可输入个人或单位名称"></input>
+    </view>
+    <view class="bland"></view>
+    <!--发票内容-->
+    <view class="invioce_content_container" wx:if="{{isOpenInvioce}}">
+        <view class="content_title">发票内容</view>
+        <block wx:for="{{invioceContentArr}}" wx:key="{{index}}">
+            <view class="{{invioceInfo.invioceContent == item ? 'content select' : 'content'}}" bindtap="selectContent" data-content="{{item}}">{{item}}</view>
+        </block>
+    </view>
+</view>
+
+<view class="bottom_view">
+    <button class="long-btn normal add_address_button" bindtap="invioceCommit" wx:if="{{!showFailNetWork}}">确定</button>
+</view>

@@ -1,0 +1,51 @@
+
+<!--pages/goods/good_collect.wxml-->
+<!--商品收藏-->
+<!--加载失败-->
+<import src="/views/network/bad_network.wxml" />
+<template wx:if="{{fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+
+<scroll-view scroll-top="{{scroll_top}}" bindscroll="containerScroll" scroll-y class="scroll-view" bindscrolltolower="loadMore" wx:if="{{!fail && good_infos != null && good_infos.length > 0}}">
+<view class="content-container">
+    <!--回到顶部按钮-->
+  <include src="/views/widget/scroll_to_top.wxml"/>
+  <view data-index="{{index}}" catchtap="tapGood" class="good-list-item" wx:for="{{good_infos}}" wx:key="{{index}}">
+
+    <!--商品图片-->
+    <image class="good-image" src="{{item.img}}" mode="aspectFit" />
+
+    <!--右边容器-->
+    <view class="good-list-right-container">
+      <text class="good-name">{{item.name}}</text>
+
+      <!--价格容器-->
+      <view class="good-price-container">
+        <view class="good-price">{{item.price}}</view>
+        <!--<view class="good-market-price">{{item.market_price}}</view>-->
+      </view>
+
+      <!--删除按钮-->
+      <view catchtap="deleteGood" data-index="{{index}}" class="delete-btn">删除</view>
+
+      <!--底部容器-->
+      <view class="good-list-bottom-container">
+
+        <!--状态-->
+        <view style="{{item.isMarket && item.inventory ? 'color: #f73030;border:1px #f73030 solid;' : 'color: gray;border:1px gray solid;'}}" class="good-status">{{item.isMarket ? (item.inventory > 0 ? '有货' : '无货') : '已下架'}}</view>
+
+        <!--到货通知按钮-->
+        <view wx:if="{{item.isMarket && item.inventory == 0}}" catchtap="tapNotice" data-index="{{index}}" class="notice-btn">到货通知</view>
+
+        <!--购物车按钮-->
+        <image wx:if="{{item.isMarket && item.inventory > 0}}" src="{{imgURL + '/images/goodList/shopcart_add.png'}}" class="shopcart-image" catchtap="addShopCarAction" data-index="{{index}}" />
+      </view>
+    </view>
+  </view>
+   <!--加载更多-->
+      <import src="/views/widget/load_more.wxml" />
+      <template wx:if="{{load_more}}" is="load_more" />
+</view>
+</scroll-view>
+
+<!--空-->
+<view wx:if="{{good_infos != null && good_infos.length == 0}}" class="empty">暂无商品收藏信息</view>

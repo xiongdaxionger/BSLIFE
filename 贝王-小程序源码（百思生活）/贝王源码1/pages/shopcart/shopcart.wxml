@@ -1,0 +1,84 @@
+
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+<view class="shop_edit_view" bindtap="editStatusChange" wx:if="{{!isShopCarEmpty && !showFailNetWork}}">
+  <view class="edit_action_button">{{isEditStatus ? '完成' : '编辑'}}</view>
+</view>
+
+  <view wx:if="{{isShopCarEmpty}}" class="empty-container">
+    <image class="empty-container-icon" mode="center" src="{{imgURL + '/images/shopcart/cart_empty.png'}}" />
+    <text class="empty-container-title">您的购物车还是空的</text>
+    <text class="empty-container-subtitle">去挑一下中意的商品吧</text>
+  </view>
+
+<scroll-view  class="shop_cart_container" scroll-y="true" wx:if="{{!showFailNetWork && !isShopCarEmpty}}">
+  <block wx:for="{{shopCartInfo.groupGoodInfoArr}}" wx:for-item="groupGoodInfo" wx:key="{{index}}">
+    <view class="bland" wx:if="{{groupGoodInfo.groupType == 0}}"></view>
+    <view class="group_name" wx:if="{{groupGoodInfo.groupType == 1 || groupGoodInfo.groupType == 2}}">{{groupGoodInfo.groupName}}</view>
+    <block wx:for="{{groupGoodInfo.groupGoodInfosArr}}" wx:for-item="goodInfo" wx:key="{{index}}">
+      <view class="shop_cart_good_view">
+        <view class="shop_cart_choose_view" wx:if="{{goodInfo.goodType == 0 || goodInfo.goodType == 3}}" bindtap="selectGood" data-edit-select="{{goodInfo.goodEditIsSelect}}" data-network-select="{{goodInfo.goodIsSelect}}" data-obj-ident="{{goodInfo.objIdent}}">
+          <image mode="aspectFit" data-edit-select="{{goodInfo.goodEditIsSelect}}" data-network-select="{{goodInfo.goodIsSelect}}" data-obj-ident="{{goodInfo.objIdent}}" class="shop_cart_choose_image" src="{{isEditStatus ? (goodInfo.goodEditIsSelect ? selectImage : unselectImage) : (goodInfo.goodIsSelect ? selectImage : unselectImage)}}"></image>
+        </view>
+        <image mode="aspectFit" class="good_image" src="{{goodInfo.thumbnail}}"></image>
+        <view class="good_type_tag" wx:if="{{goodInfo.goodType != 0}}">{{goodInfo.goodTag}}</view>
+        <view class="{{goodInfo.goodType != 0 ? 'good_name have_tag' : 'good_name'}}">{{goodInfo.goodName}}</view>
+        <view class="good_spec_info">{{goodInfo.specInfo}}</view>
+        <view class="good_price_container">
+                <text class="good_price">{{goodInfo.goodPrice}}</text>
+                <text class="good_market_price" wx:if="{{goodInfo.goodMarketPrice != null && goodInfo.goodMarketPrice.length > 0}}">{{goodInfo.goodMarketPrice}}</text>
+        </view>
+        <view class="good_quantity" wx:if="{{goodInfo.goodType == 1}}">x{{goodInfo.quantity}}</view>
+        <view class="quantity_view" wx:if="{{goodInfo.goodType != 1}}">
+          <image mode="aspectFit" bindtap="minusGoodAction" class="minus_image" src="{{imgURL + '/images/shopcart/minus_new.png'}}" data-normal-good-id="{{groupGoodInfo.groupGoodInfosArr[0].goodID}}" data-normal-product-id="{{groupGoodInfo.groupGoodInfosArr[0].productID}}" data-good-type="{{goodInfo.goodType}}" data-group-id="{{goodInfo.groupID}}" data-quantity="{{goodInfo.quantity}}" data-product-id="{{goodInfo.productID}}" data-obj-ident="{{goodInfo.objIdent}}"></image>
+          <view class="quantity_text">{{goodInfo.quantity}}</view>
+          <image mode="aspectFit" bindtap="addGoodAction" class="add_image" src="{{imgURL + '/images/shopcart/add_new.png'}}" data-normal-good-id="{{groupGoodInfo.groupGoodInfosArr[0].goodID}}" data-normal-product-id="{{groupGoodInfo.groupGoodInfosArr[0].productID}}" data-good-type="{{goodInfo.goodType}}" data-group-id="{{goodInfo.groupID}}" data-quantity="{{goodInfo.quantity}}" data-product-id="{{goodInfo.productID}}" data-max-buy-count="{{goodInfo.maxBuyCount}}" data-obj-ident="{{goodInfo.objIdent}}"></image>
+        </view>
+      </view>
+    </block>
+    <view class="order_promotion_view margin" wx:if="{{groupGoodInfo.groupType == 0 && groupGoodInfo.groupGoodInfosArr[0].goodPromotion.length > 0}}">
+        <block wx:for="{{groupGoodInfo.groupGoodInfosArr[0].goodPromotion}}" wx:for-item="goodRuleInfo" wx:key="{{index}}">
+            <view>
+              <text style="color:#f73030">{{goodRuleInfo.ruleTag}}</text>
+              {{goodRuleInfo.ruleContent}}
+            </view>
+        </block>
+    </view>
+  </block>
+  <view class="group_name" wx:if="{{shopCartInfo.usePromotionArr.length > 0}}">已享受的优惠</view>
+  <block wx:if="{{shopCartInfo.usePromotionArr.length > 0}}" wx:for="{{shopCartInfo.usePromotionArr}}" wx:for-item="usePromotionInfo" wx:key="{{index}}">
+    <view class="promotion_view">
+      <view class="tag">{{usePromotionInfo.ruleTag}}</view>
+      <view class="content">{{usePromotionInfo.ruleContent}}</view>
+    </view>
+  </block>
+  <view class="group_name" wx:if="{{shopCartInfo.showUnusePromotion && shopCartInfo.unusePromotionArr.length > 0}}">享受更多优惠</view>
+  <block wx:if="{{shopCartInfo.showUnusePromotion && shopCartInfo.unusePromotionArr.length > 0}}" wx:for="{{shopCartInfo.unusePromotionArr}}" wx:for-item="unUsePromotionInfo" wx:key="{{index}}">
+    <view class="promotion_view">
+      <view class="tag">{{unUsePromotionInfo.ruleTag}}</view>
+      <view class="content">{{unUsePromotionInfo.ruleContent}}</view>
+    </view>
+  </block>
+</scroll-view>
+
+<view class="shop_cart_bottom_view" wx:if="{{!isShopCarEmpty && !showFailNetWork}}">
+    <image mode="aspectFit" class="select_image" bindtap="selectAllGood" src="{{isEditStatus ? (editStatusIsSelectAll ? selectImage : unselectImage) : (netWorkStatusIsSelectAll ? selectImage : unselectImage)}}"></image>
+    <view class="select_all_view" bindtap="selectAllGood">全选</view>
+    <view class="price_view" wx:if="{{!isEditStatus}}">
+      <view class="total_price">
+        <text style="color:black">合计:</text>
+        {{shopCartInfo.totalPrice}}
+      </view>
+      <view class="discount_price">
+        <text style="color:#969696">节省:</text>
+        {{shopCartInfo.totalDiscountMoney}}
+      </view>
+    </view>
+    <view class="pay_button" wx:if="{{!isEditStatus}}" bindtap="payButtonAction">
+      结算({{selectQuantity}})
+    </view>
+    <view class="delete_button" wx:if="{{isEditStatus}}" bindtap="deleteGoodAction">
+      删除
+    </view>
+</view>

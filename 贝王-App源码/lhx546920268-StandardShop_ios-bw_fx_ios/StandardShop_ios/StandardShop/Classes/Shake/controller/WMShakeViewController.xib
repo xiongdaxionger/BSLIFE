@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WMShakeViewController">
+            <connections>
+                <outlet property="compass_imageView" destination="w0y-4I-S6z" id="nq5-Cb-dOg"/>
+                <outlet property="compass_imageView_widthLayoutConstraint" destination="d6a-fd-3xf" id="tBz-gq-Lip"/>
+                <outlet property="logo_btn" destination="2bT-su-Ds7" id="3jR-ln-UO9"/>
+                <outlet property="logo_btn_topLayoutConstraint" destination="U6C-gH-gcZ" id="cTe-wn-chi"/>
+                <outlet property="music_btn" destination="gtT-mJ-Ozs" id="UVH-ES-FnQ"/>
+                <outlet property="person_imageView" destination="i2T-iy-J1Z" id="pe2-CB-68z"/>
+                <outlet property="person_imageView_centerYLayoutConstraint" destination="P8m-hg-vgr" id="EzN-Tm-kZY"/>
+                <outlet property="rule_btn" destination="8el-oR-ehk" id="og7-ky-gw5"/>
+                <outlet property="status_bg_view" destination="qd7-xv-1Dm" id="CGz-DF-bcA"/>
+                <outlet property="status_label" destination="ZqZ-a2-OK8" id="VkN-yD-PiY"/>
+                <outlet property="subtitle_label" destination="pbZ-XG-Qmn" id="a0M-l2-pKJ"/>
+                <outlet property="title_label" destination="eJd-M1-hxR" id="V2Q-zf-Shq"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Sut-wR-MWV"/>
+                <outlet property="winner_view" destination="lzR-oS-dw2" id="8SW-Cv-9vr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bT-su-Ds7" userLabel="logo_btn">
+                    <rect key="frame" x="15" y="20" width="34" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="2et-8n-Fhe"/>
+                        <constraint firstAttribute="width" constant="34" id="BLB-uX-w72"/>
+                    </constraints>
+                    <state key="normal" image="shake_logo">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtT-mJ-Ozs" userLabel="music_btn">
+                    <rect key="frame" x="274" y="20" width="31" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="31" id="NpN-SH-61v"/>
+                        <constraint firstAttribute="height" constant="34" id="iWn-mk-4Ju"/>
+                    </constraints>
+                    <state key="normal" image="shake_music_open">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="shake_music_close"/>
+                    <connections>
+                        <action selector="musicAction:" destination="-1" eventType="touchUpInside" id="bfA-h1-T94"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qd7-xv-1Dm" userLabel="status_bg_view">
+                    <rect key="frame" x="83" y="22" width="155" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天还可摇一次" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqZ-a2-OK8" userLabel="status_label">
+                    <rect key="frame" x="90" y="22" width="140" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Vqn-LO-4WK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.92156862750000001" green="0.15686274510000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="shake_compass" translatesAutoresizingMaskIntoConstraints="NO" id="w0y-4I-S6z" userLabel="compass_imageView">
+                    <rect key="frame" x="-1" y="119" width="322" height="271"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="w0y-4I-S6z" secondAttribute="height" multiplier="322:271" id="2tM-yk-flh"/>
+                        <constraint firstAttribute="width" constant="322" id="d6a-fd-3xf"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8el-oR-ehk" userLabel="rule_btn">
+                    <rect key="frame" x="20" y="530" width="48" height="23"/>
+                    <state key="normal" image="shake_rule">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="ruleAction:" destination="-1" eventType="touchUpInside" id="xmQ-uD-bXH"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开心摇大奖" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJd-M1-hxR" userLabel="title_label">
+                    <rect key="frame" x="35" y="400" width="250" height="61"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                    <color key="textColor" red="1" green="1" blue="0.035294117647058823" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢乐尽在摇一摇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbZ-XG-Qmn" userLabel="subtitle_label">
+                    <rect key="frame" x="66" y="461" width="189" height="34"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shake_person" translatesAutoresizingMaskIntoConstraints="NO" id="i2T-iy-J1Z" userLabel="person_imageView">
+                    <rect key="frame" x="54" y="148" width="213" height="213"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="i2T-iy-J1Z" secondAttribute="height" multiplier="1:1" id="8iB-Sy-BlU"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzR-oS-dw2" userLabel="winner_view" customClass="WMShakeWinnerView">
+                    <rect key="frame" x="83" y="532" width="222" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Drs-Cj-jfe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.87450980392156863" green="0.16470588235294117" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="eJd-M1-hxR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2JY-BO-x3T"/>
+                <constraint firstItem="w0y-4I-S6z" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-30" id="5sV-wo-dsV"/>
+                <constraint firstItem="eJd-M1-hxR" firstAttribute="top" secondItem="w0y-4I-S6z" secondAttribute="bottom" constant="10" id="Gbi-4U-qpV"/>
+                <constraint firstAttribute="centerX" secondItem="w0y-4I-S6z" secondAttribute="centerX" id="NBD-Dw-rQw"/>
+                <constraint firstAttribute="bottom" secondItem="8el-oR-ehk" secondAttribute="bottom" constant="15" id="Onb-es-KoJ"/>
+                <constraint firstItem="i2T-iy-J1Z" firstAttribute="centerY" secondItem="w0y-4I-S6z" secondAttribute="centerY" id="P8m-hg-vgr"/>
+                <constraint firstItem="qd7-xv-1Dm" firstAttribute="centerY" secondItem="ZqZ-a2-OK8" secondAttribute="centerY" id="Q40-CD-Jek"/>
+                <constraint firstItem="qd7-xv-1Dm" firstAttribute="height" secondItem="ZqZ-a2-OK8" secondAttribute="height" id="RoS-Kf-fKr"/>
+                <constraint firstItem="2bT-su-Ds7" firstAttribute="top" secondItem="gtT-mJ-Ozs" secondAttribute="top" id="SEq-jb-0wr"/>
+                <constraint firstItem="2bT-su-Ds7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="U6C-gH-gcZ"/>
+                <constraint firstItem="i2T-iy-J1Z" firstAttribute="centerX" secondItem="w0y-4I-S6z" secondAttribute="centerX" id="Vdd-Lz-JaJ"/>
+                <constraint firstAttribute="centerX" secondItem="ZqZ-a2-OK8" secondAttribute="centerX" id="WK8-ZW-MDn"/>
+                <constraint firstItem="lzR-oS-dw2" firstAttribute="leading" secondItem="8el-oR-ehk" secondAttribute="trailing" constant="15" id="YO7-UQ-9eg"/>
+                <constraint firstItem="pbZ-XG-Qmn" firstAttribute="centerX" secondItem="eJd-M1-hxR" secondAttribute="centerX" id="YjR-9j-Egs"/>
+                <constraint firstItem="2bT-su-Ds7" firstAttribute="bottom" secondItem="gtT-mJ-Ozs" secondAttribute="bottom" id="ZrW-wg-qs7"/>
+                <constraint firstItem="pbZ-XG-Qmn" firstAttribute="top" secondItem="eJd-M1-hxR" secondAttribute="bottom" id="e3W-C8-L1j"/>
+                <constraint firstItem="2bT-su-Ds7" firstAttribute="centerY" secondItem="ZqZ-a2-OK8" secondAttribute="centerY" id="hLM-IL-5u8"/>
+                <constraint firstItem="2bT-su-Ds7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="iba-Ha-tlP"/>
+                <constraint firstItem="qd7-xv-1Dm" firstAttribute="width" secondItem="ZqZ-a2-OK8" secondAttribute="width" constant="15" id="ikD-sE-lcb"/>
+                <constraint firstItem="8el-oR-ehk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="m74-XP-z6w"/>
+                <constraint firstAttribute="trailing" secondItem="lzR-oS-dw2" secondAttribute="trailing" constant="15" id="ntV-m9-9eR"/>
+                <constraint firstAttribute="trailing" secondItem="gtT-mJ-Ozs" secondAttribute="trailing" constant="15" id="sZK-xC-GLU"/>
+                <constraint firstItem="i2T-iy-J1Z" firstAttribute="width" secondItem="w0y-4I-S6z" secondAttribute="width" multiplier="213:322" id="tbI-Nn-iie"/>
+                <constraint firstItem="qd7-xv-1Dm" firstAttribute="centerX" secondItem="ZqZ-a2-OK8" secondAttribute="centerX" id="yEE-lv-7Fb"/>
+                <constraint firstItem="lzR-oS-dw2" firstAttribute="bottom" secondItem="8el-oR-ehk" secondAttribute="bottom" constant="-1" id="yUu-QT-mVf"/>
+            </constraints>
+            <point key="canvasLocation" x="752" y="323"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="shake_compass" width="321" height="271"/>
+        <image name="shake_logo" width="34" height="34"/>
+        <image name="shake_music_close" width="31" height="31"/>
+        <image name="shake_music_open" width="31" height="31"/>
+        <image name="shake_person" width="213" height="213"/>
+        <image name="shake_rule" width="48" height="23"/>
+    </resources>
+</document>

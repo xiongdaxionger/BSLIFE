@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/shopping_car_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/MarginXMedium" >
+
+        <CheckBox
+            android:id="@+id/check_all"
+            style="@style/CustomCheckboxTheme"
+            android:layout_centerVertical="true"
+            android:checked="true"
+            android:text="全选"
+            android:textColor="@color/westore_dark_textcolor" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_stroke_round5_red"
+            android:minWidth="80dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="删除"
+            android:textColor="@color/westore_red"
+            android:textSize="@dimen/TextSizeBigSmall"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/westore_red"
+            android:minWidth="80dp"
+            android:padding="15dp"
+            android:text="去结算（0）"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <LinearLayout
+            android:id="@+id/statistics_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/action"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/total_amount"
+                style="@style/content_text"
+                android:textColor="@color/westore_red" />
+
+            <TextView
+                android:id="@+id/total_save"
+                style="@style/content_text"
+                android:textColor="@color/westore_gray_textcolor" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor" />
+    
+</RelativeLayout>

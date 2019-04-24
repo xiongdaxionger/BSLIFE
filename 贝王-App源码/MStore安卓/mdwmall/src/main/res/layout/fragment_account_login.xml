@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:id="@+id/unlogin_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/PaddingLarge" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/PaddingXXXLarge"
+            android:src="@drawable/login_top_pic"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transparent" >
+
+                <TextView
+                    android:id="@+id/acco_login_username_tip"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:text="账号"
+                    android:textColor="@color/westore_dark_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <EditText
+                    android:id="@+id/acco_login_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/acco_login_username_tip"
+                    android:background="@drawable/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/acco_login_username_hint"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:paddingBottom="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/acco_login_primary_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <ImageView
+                    android:id="@+id/acco_login_username_delete_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="15dp"
+                    android:src="@drawable/main_advertisement_delect"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/text_goods_e_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transparent" >
+
+                <CheckBox
+                    android:id="@+id/acco_login_password_visible"
+                    style="@style/checkbox"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/password_check_box_selector"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/acco_login_password_tip"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:text="密码"
+                    android:textColor="@color/westore_dark_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <EditText
+                    android:id="@+id/acco_login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/acco_login_password_visible"
+                    android:layout_toRightOf="@+id/acco_login_password_tip"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/acco_login_passwd"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:paddingBottom="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/acco_login_primary_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/text_goods_e_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/acco_login_vcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transparent"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/acco_login_vcode_text_tip"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:text="验证码"
+                    android:textColor="@color/westore_dark_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <EditText
+                    android:id="@+id/acco_login_vcode_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/acco_login_vcode_text_tip"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="输入验证码"
+                    android:maxLength="6"
+                    android:paddingBottom="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/acco_login_primary_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <ImageView
+                    android:id="@+id/acco_login_vcode_image"
+                    android:layout_width="100dip"
+                    android:layout_height="40dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/PaddingLarge" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/text_goods_e_color" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/acco_login_submit_button"
+            style="@style/app_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/acco_login_title" />
+
+        <RelativeLayout
+            android:id="@+id/login_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/acco_login_forget_passwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/transparent"
+                android:paddingBottom="@dimen/PaddingLarge"
+                android:paddingRight="@dimen/PaddingMedium"
+                android:paddingTop="@dimen/PaddingLarge"
+                android:text="@string/acco_login_forget_passwd"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <Button
+                android:id="@+id/acco_login_forget_regist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/transparent"
+                android:paddingBottom="@dimen/PaddingLarge"
+                android:paddingRight="@dimen/PaddingMedium"
+                android:paddingTop="@dimen/PaddingLarge"
+                android:text="手机快速注册"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/acco_login_fast_regist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/PaddingXLarge"
+            android:background="@drawable/but_two_click"
+            android:padding="10dp"
+            android:text="@string/acco_login_regist"
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeLarge"
+            android:visibility="gone" />
+        <!-- android:background="@drawable/login_register" -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/social_title_layout"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="24dp"
+                android:layout_weight="1"
+                android:background="@color/acco_login_thirdparty_line_bgcolor"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/PaddingSmall"
+                android:text="@string/acco_login_third_party_account"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="24dp"
+                android:layout_weight="1"
+                android:background="@color/acco_login_thirdparty_line_bgcolor"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:id="@+id/social_linear_layout"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/acco_login_user_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/PaddingXMedium"
+                android:layout_marginLeft="@dimen/PaddingXXLarge"
+                android:layout_marginRight="@dimen/PaddingXXLarge"
+                android:layout_marginTop="@dimen/PaddingXMedium"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/acco_login_use_wechat"
+                android:text="微信登录"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/acco_login_user_alipay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/PaddingXMedium"
+                android:layout_marginLeft="@dimen/PaddingXXLarge"
+                android:layout_marginRight="@dimen/PaddingXXLarge"
+                android:layout_marginTop="@dimen/PaddingXMedium"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/acco_login_use_alipay"
+                android:text="支付宝登录"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/acco_login_user_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/PaddingXMedium"
+                android:layout_marginLeft="@dimen/PaddingXXLarge"
+                android:layout_marginRight="@dimen/PaddingXXLarge"
+                android:layout_marginTop="@dimen/PaddingXMedium"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/acco_login_use_qq"
+                android:text="QQ登录"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/acco_login_user_weibo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/PaddingXMedium"
+                android:layout_marginLeft="@dimen/PaddingXXLarge"
+                android:layout_marginRight="@dimen/PaddingXXLarge"
+                android:layout_marginTop="@dimen/PaddingXMedium"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/acco_login_use_weibo"
+                android:text="微博登录"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/acco_login_third_party_message"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeMedium"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</ScrollView>

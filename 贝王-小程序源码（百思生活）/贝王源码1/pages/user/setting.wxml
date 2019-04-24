@@ -1,0 +1,17 @@
+<!--显示信息-->
+<scroll-view class="order_list" style="border-top:1px solid #F7F7F7"scroll-y="true">
+<block wx:for="{{infosArr}}" wx:key="{{index}}">
+    <view class="order_list_id bottom_line" style="background-color:white;padding:0px 8px" bindtap="settingAction" data-index="{{index}}">
+        <text class="order_id_text" data-index="{{index}}">{{item}}</text>
+        <image class="order_arrow" style="right:8px" src="{{imgURL + '/images/icon/arrow_gray.png'}}" mode="aspectFit" />
+    </view>
+    
+</block>
+<view wx:if="{{iswxtrust}}" class="order_list_id bottom_line" style="background-color:white;padding:0px 8px" bindtap="settingTrust">
+    <text class="order_id_text">微信免登解绑</text>
+    <image class="order_arrow" style="right:8px" src="{{imgURL + '/images/icon/arrow_gray.png'}}" mode="aspectFit" />
+</view>
+<view class="bottom_view" style="margin-top:20px">
+    <button class="long-btn normal add_address_button" bindtap="logoutAction">退出登录</button>
+</view>
+</scroll-view>

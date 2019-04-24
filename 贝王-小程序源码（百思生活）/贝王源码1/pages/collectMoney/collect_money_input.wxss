@@ -1,0 +1,62 @@
+/* 收钱 */
+
+/*头部*/
+.header{
+    border-bottom: 1px #e5e5e5 solid;
+    background: white;
+    width: 100%;
+}
+
+.header-title{
+    color: gray;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.header-input-container{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 10px 0px 10px;
+    align-items: center;
+}
+
+.money-symbol{
+    font-size: 30px;
+    margin-right: 10px;
+    flex: 0 0 auto;
+}
+
+.header-input-container input{
+    font-size: 15px;
+    flex: 1 1 auto;
+}
+
+.collect-money-name{
+    line-height: 35px;
+    margin: 0 10px 0 10px;
+    color: gray;
+    font-size: 14px;
+}
+
+
+.name-input{
+    font-size: 15px;
+    padding: 0 10px 0 10px;
+    width: calc(100vw - 20px);
+    border-bottom: 1px #e5e5e5 solid;
+    border-top: 1px #e5e5e5 solid;
+    background: white;
+    height: 40px;
+}
+
+.next-btn {
+    margin: 20px 15px 0 15px;
+    width: calc(100vw - 30px);
+}
+
+.msg{
+    margin: 20px 15px 0 15px;
+    font-size: 13px;
+    line-height: 14px;
+    color: gray;
+}

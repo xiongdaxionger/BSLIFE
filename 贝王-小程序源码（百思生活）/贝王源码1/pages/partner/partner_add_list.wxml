@@ -1,0 +1,9 @@
+
+<!--会员邀请方式列表-->
+<view class="item" catchtap="tapRow" data-index="{{index}}" wx:for="{{infos}}" wx:key="{{index}}">
+  <image class="icon" src="{{item.img}}" />
+  <view class="right-cotainer">
+    <view class="title">{{item.title}}</view>
+    <view class="desc">{{item.desc}}</view>
+  </view>
+</view>

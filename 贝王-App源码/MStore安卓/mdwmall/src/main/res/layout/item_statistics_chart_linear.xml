@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/PaddingLarge" >
+
+    <TextView
+        android:id="@+id/visitor_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="100"
+        android:textColor="@color/westore_dark_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <TextView
+        android:id="@+id/visitor_total_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/PaddingMedium"
+        android:drawableLeft="@drawable/chart_mark1"
+        android:drawablePadding="5dp"
+        android:text="访客人数"
+        android:textColor="@color/westore_gray_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+</LinearLayout>

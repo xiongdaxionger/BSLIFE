@@ -1,0 +1,56 @@
+
+<!--pages/addresslist/address_edit.wxml-->
+
+<!--编辑收货地址-->
+
+<!--加载失败-->
+<import src="/views/network/bad_network.wxml" />
+<template wx:if="{{fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+<view wx:if="{{!fail && !loading}}" class="container address-container">
+  <view class="section">
+
+    <!--收货人-->
+    <view class="row">
+      <view class="title">收货人</view>
+      <input maxlength="30" id="consignee" value="{{consignee}}" bindinput="textDidChange" />
+    </view>
+
+    <!--手机号码-->
+    <view class="row">
+      <view class="title">手机号码</view>
+      <input maxlength="11" type="number" id="mobile" value="{{mobile}}" bindinput="textDidChange" />
+    </view>
+
+    <!--地区-->
+    <view catchtap="areaShow" class="row">
+      <view class="title">地区</view>
+      <view class="content">{{area_content != null ? area_content : ''}}</view>
+    </view>
+
+    <!--详细地址-->
+    <view class="row">
+      <view class="title">详细地址</view>
+      <textarea id="detail_address" value="{{detail_address != null ? detail_address : ''}}" maxlength="80" auto-height bindinput="textDidChange" />
+    </view>
+  </view>
+
+  <!--默认收货地址-->
+  <view catchtap="tick" class="section">
+    <view style="border-bottom:none" class="row">
+      <image src="{{isDefault ? imgURL + '/images/shopcart/shop_Car_Select.png' : imgURL + '/images/shopcart/shop_Car_UnSelect.png'}}" /> 设为默认收货地址
+    </view>
+  </view>
+
+  <!--删除-->
+  <view catchtap="deleteAddr" wx:if="{{id != null}}" class="section">
+    <view style="border-bottom:none" class="row">
+      <text>删除收货地址</text>
+    </view>
+  </view>
+
+  <!--确定按钮 disabled="{{!confirmEnable}}" 有bug-->
+  <button class="confirm-btn long-btn {{confirmEnable ? 'normal' : 'disable'}}" catchtap="confirm">保存</button>
+</view>
+
+<!--地区选择-->
+<include src="/views/widget/area_selected.wxml" />

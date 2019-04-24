@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/PaddingXLarge"
+        android:paddingTop="30dp"
+        android:text="@string/collection_share"
+        android:textColor="@color/text_goods_color"
+        android:textSize="@dimen/TextSizeMedium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/PaddingXLarge" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/collection_name"
+            android:textColor="@color/text_goods_name_color"
+            android:textSize="@dimen/TextSizeMedium" />
+
+        <TextView
+            android:id="@+id/collection_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_goods_name_color"
+            android:textSize="@dimen/TextSizeMedium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical" 
+        android:paddingBottom="@dimen/PaddingXXLarge"
+        android:paddingLeft="@dimen/PaddingXLarge"
+        android:paddingRight="@dimen/PaddingXLarge" >
+
+        <TextView
+            android:id="@+id/collection_money_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/collection_money"
+            android:textColor="@color/text_goods_name_color"
+            android:textSize="@dimen/TextSizeMedium" />
+
+        <TextView
+            android:id="@+id/collection_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_goods_color"
+            android:textSize="@dimen/TextSizeMedium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/PaddingXLarge"
+            android:layout_marginRight="@dimen/PaddingXLarge"
+            android:background="@color/text_goods_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/PaddingXLarge"
+            android:layout_marginTop="@dimen/PaddingXLarge"
+            android:paddingLeft="@dimen/PaddingXLarge"
+            android:text="@string/collection_share_select"
+            android:textColor="@color/text_goods_9_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <com.qianseit.westore.ui.MsherdGridView
+            android:id="@+id/collection_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@color/white"
+            android:numColumns="4"
+            android:paddingBottom="@dimen/PaddingXXLarge"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/PaddingXLarge" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+/**视图容器**/
+.notify_container{
+    background-color: #F7F7F7;
+    font-size: 15px;
+    color: #000000;
+    min-height: 100vh;
+}
+/**单内容输入框**/
+.line_input{
+    background-color: #FFFFFF;
+    height: 50px;
+    line-height: 20px;
+    padding-left: 8px;
+}
+/**提示语**/
+.tip{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+/**提交按钮**/
+.submit_button{
+    background-color: #F73030;
+    color: white;
+    margin-right: 16px;
+    margin-left: 16px;
+    border-radius: 3.0;
+    font-size: 17px;
+    height: 40px;
+    line-height: 20px;
+    padding-top: 10px;
+}
+/**空白**/
+.bland{
+    height: 8px;
+    width: 100%;
+    background-color: #F7F7F7;
+}

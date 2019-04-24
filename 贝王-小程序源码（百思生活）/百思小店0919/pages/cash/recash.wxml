@@ -1,0 +1,23 @@
+<view wx:if="{{cashType == '0' || cashType == '3'}}">
+  <view class='recash-price' wx:if="{{cashType == '3'}}">
+    审核状态：审核失败
+  </view>
+  <view class='recash-price' wx:if="{{cashType == '3'}}">
+    失败原因：{{remake}}
+  </view>
+  <view class='recash-price'>
+    退款金额：<text class='gray-words'>￥{{price}}</text>
+  </view>
+  <view class='recash-item' bindtap='accountlist'>
+    <view class='recash-item-l'  wx:if="{{accountName.length == 0}}">添加账号</view>
+    <view class='recash-item-l'  wx:if="{{accountName.length != 0}}">{{accountName}}</view>
+    <view class='recash-item-r'><image src='/image/icon/arrow_gray.png' class='right-img'></image></view>
+  </view>
+  <view class='recash-buttom'>
+    <button class="{{confirm ? 'recash-btn' : 'disabled'}}" bindtap='recash'>退款</button>
+  </view>
+</view>
+<view class='return-money' wx:if="{{cashType == '1'}}">
+  <view>申请退款中</view>
+  <view class='return-time'>申请时间 {{recashTime}}</view>
+</view>

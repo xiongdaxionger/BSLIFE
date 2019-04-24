@@ -1,0 +1,71 @@
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+<form wx:if="{{!showFailNetWork}}" bindsubmit="submitWithDraw">
+<!--背景视图-->
+<scroll-view class="with_draw_container">
+    <view class="bland"></view>
+
+    <!--可提现金额-->
+    <view class="info_view">
+        <view class="title">可提现金额</view>
+        <view class="sub_title">{{canWithDrawMoeny}}</view>
+    </view>
+    <!--提现金额输入-->
+    <view class="info_view">
+        <view class="title">提现金额</view>
+        <input id="money" class="input" type="number" placeholder="{{'单笔最高提现' + maxMoney}}" placeholder-style="color:gray" maxlength="20" bindinput="inputChange"/>
+    </view>
+    <!--税金显示-->
+    <block wx:for="{{taxsArr}}" wx:key="{{index}}">
+        <view class="info_view">
+            <view class="title">提现税金</view>
+            <view class="sub_title">{{withDrawMoney == 0.0 ? item.notice : item.val * withDrawMoney}}</view>
+        </view>
+    </block>
+    <!--提现费显示-->
+    <block wx:for="{{feesArr}}" wx:key="{{index}}">
+        <view class="info_view">
+            <view class="title">提现费</view>
+            <view class="sub_title">{{withDrawMoney == 0.0 ? item.notice : item.val * withDrawMoney}}</view>
+        </view>
+    </block>
+
+    <view class="bland"></view>
+
+    <!--提现账号-->
+    <view class="info_view" bindtap="selectAccount">
+        <view class="add_account_button" bindtap="selectAccount" wx:if="{{accountName.length == 0}}">添加账号</view>
+        <view class="account_info"bindtap="selectAccount" wx:if="{{accountName.length != 0}}">{{accountName}}</view>
+        <image class="arrow" src="{{imgURL + '/image/icon/arrow_gray.png'}}" mode="aspectFit"></image>
+    </view>
+
+    <view class="bland"></view>
+    <!--确认按钮-->
+    <button class="submit_button" formType="submit">提交</button>
+
+    <view class="bland"></view>
+    <!--显示信息-->
+    <block wx:for="{{infosArr}}" wx:key="{{index}}">
+        <view class="message">{{'●' + item.notice}}</view>
+    </block>
+</scroll-view>
+</form>
+
+<!--支付密码输入-->
+<view wx:if="{{isShowPayPassWord}}" class="shipping-container">
+
+  <view animation="{{backgroundOpacityAnimation}}" class="shipping_black_transparent_bg" bindtap="closeShippingMethod"></view>
+
+  <view animation="{{payPassWordTranslateAnimation}}" class="pay_password_container">
+    <view class="header">
+        <view class="header_title">请输入支付密码</view>
+        <icon class="close" type="clear" bindtap="closeShippingMethod"></icon>
+    </view>
+    <view class="pay_content">奖励提现</view>
+    <view class="pay_money">{{withDrawMoney}}</view>
+    <view class="pay_password_input_container">
+        <input class="pay_input" type="number" password="true" bindinput="passwordInput" maxlength="6"></input>
+    </view>
+  </view>
+</view>

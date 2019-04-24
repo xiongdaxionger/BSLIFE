@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="left|center"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="商品包装"
+        android:textColor="@color/westore_primary_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <RatingBar
+        android:id="@+id/rat"
+        style="@style/RatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="4.3"
+        android:stepSize="0.1" />
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="4.9"
+        android:textColor="@color/westore_red"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+</LinearLayout>

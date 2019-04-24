@@ -1,0 +1,36 @@
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+  <!--状态栏-->
+  <view class="order_status_bar" wx:if="{{!showFailNetWork}}">
+    <block wx:for="{{typesInfo}}" wx:for-item="statusInfo" wx:for-index="index" wx:key="key">
+        <view class="order_status_item" bindtap="changeType" data-index="{{index}}">
+            <view wx:if="{{index < 1}}" class="right_line"></view>
+            <text class="{{index == selectIndex ? 'text select' : 'text'}}" data-index="{{index}}">{{statusInfo}}</text>
+        </view>
+    </block>
+  </view>
+
+  <!--空视图-->
+  <view wx:if="{{billInfosArr.length == 0 && !showFailNetWork}}" class="empty-container">
+      <text class="empty-container-title">{{selectIndex == 0 ? '暂无支出账单' : '暂无收入账单'}}</text>
+  </view>
+
+  <!--内容视图-->
+  <scroll-view wx:if="{{!showFailNetWork}}" scroll-y class="bill_list_container_view" scroll-top="{{scroll_top}}" bindscrolltolower="loadMore" bindscroll="containerScroll">
+  <view class="bland"></view>
+
+    <!--回到顶部按钮-->
+    <include src="/views/widget/scroll_to_top.wxml" />
+    <block wx:for="{{billInfosArr}}" wx:key="{{index}}">
+        <view class="bill_cell">
+            <image class="image" src="{{item.image}}" mode="aspectFit"></image>
+            <text class="info">{{item.title + '\n' + item.orderID}}</text>
+            <view class="money">{{item.money}}</view>
+            <view class="time">{{item.time}}</view>
+        </view>
+    </block>
+
+    <!--加载更多-->
+    <import src="/views/widget/load_more.wxml" />
+    <template wx:if="{{load_more}}" is="load_more" />
+  </scroll-view>

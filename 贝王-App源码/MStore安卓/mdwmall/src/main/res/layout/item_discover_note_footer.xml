@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" >
+
+    <TextView
+        android:id="@+id/discover_note_footer_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:lineSpacingExtra="5dp"
+        android:maxLines="1"
+        android:text="2016/04/05"
+        android:textColor="@color/westore_dark_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <TextView
+        android:id="@+id/discover_note_footer_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/discover_note_footer_time"
+        android:maxLines="1"
+        android:textColor="#a6a6a6"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <TextView
+        android:id="@+id/discover_note_footer_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@drawable/comment"
+        android:drawablePadding="3dp"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:maxLines="1"
+        android:text="0"
+        android:textColor="#a6a6a6"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <TextView
+        android:id="@+id/discover_note_footer_praise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/discover_note_footer_comment"
+        android:drawableLeft="@drawable/praise_button_selector"
+        android:drawablePadding="3dp"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:maxLines="1"
+        android:text="0"
+        android:textColor="@color/praise_button_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+</RelativeLayout>

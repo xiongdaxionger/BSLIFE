@@ -1,0 +1,13 @@
+
+<!--注册 输入手机号-->
+<view class="container regiser-container">
+<input type="number" class="phone-input" bindinput="textDidChange" placeholder="请输入手机号" placeholder-class="placeholder"/>
+
+<!--下一步 disabled="{{!nextEnable}}" 有bug-->
+<button class="next-btn long-btn {{nextEnable ? 'normal' : 'disable'}}" catchtap="next">下一步</button>
+
+<view class="service-container">
+遇到问题？您可以
+<text catchtap="tapService">联系客服</text>
+</view>
+</view>

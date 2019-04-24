@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background_color" >
+
+    <View
+        android:id="@+id/base_fragment_top_divide"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/fragment_background_color"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/base_fragment_content_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/base_fragment_top_divide">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/base_fragment_submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="38dip"
+        android:layout_below="@+id/base_fragment_content_ll"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/app_button_selector"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSizeMedium" />
+    
+    <TextView
+        android:id="@+id/base_fragment_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/base_fragment_submit_btn"
+        android:layout_marginBottom="@dimen/PaddingXMedium"
+        android:layout_marginRight="@dimen/PaddingXLarge"
+        android:layout_marginTop="@dimen/PaddingMedium"
+        android:paddingLeft="@dimen/PaddingXXXLarge"
+        android:text=""
+        android:textColor="@color/westore_gray_textcolor"
+        android:textSize="@dimen/TextSizeSmall" />
+    
+
+</RelativeLayout>

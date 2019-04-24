@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background_color" >
+
+    <View
+        android:id="@+id/base_fragment_top_divide"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/base_fragment_top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/base_fragment_top_divide"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <com.qianseit.westore.ui.HorizontalListView
+        android:id="@+id/bar_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_below="@+id/base_fragment_top_ll"
+        android:background="@color/white"
+        android:cacheColorHint="@color/white"
+        android:divider="@null"
+        android:dividerHeight="0.5dip"
+        android:drawSelectorOnTop="false"
+        android:fadingEdgeLength="0sp"
+        android:groupIndicator="@null"
+        android:listSelector="@color/white"
+        android:scrollbars="none" />
+
+    <View
+        android:id="@+id/base_fragment_top_divide1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/bar_list_view"
+        android:background="@color/westore_divider_bgcolor"
+        android:visibility="visible" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/base_fragment_main_pageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/base_fragment_top_divide1" />
+
+</RelativeLayout>

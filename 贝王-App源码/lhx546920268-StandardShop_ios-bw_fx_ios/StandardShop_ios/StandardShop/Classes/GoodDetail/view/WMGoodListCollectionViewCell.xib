@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WMGoodListCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="175"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="175"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="84" translatesAutoresizingMaskIntoConstraints="NO" id="zAM-DM-Bhu">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="ryA-KC-Ya2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apy-Xz-gUP">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="WT1-Hx-Buj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b9X-KK-3xg">
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="b9X-KK-3xg" secondAttribute="height" multiplier="1:1" id="pVh-Qb-RHV"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIc-ki-yfs">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="WQo-Vt-v3c"/>
+                            <constraint firstAttribute="width" constant="24" id="gd6-NT-0by"/>
+                        </constraints>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="zAM-DM-Bhu" secondAttribute="trailing" constant="8" id="9UW-Xo-eEC"/>
+                <constraint firstItem="zAM-DM-Bhu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="BbM-8P-ijC"/>
+                <constraint firstItem="apy-Xz-gUP" firstAttribute="top" secondItem="zAM-DM-Bhu" secondAttribute="bottom" id="FhW-Mf-EDm"/>
+                <constraint firstItem="fIc-ki-yfs" firstAttribute="top" secondItem="zAM-DM-Bhu" secondAttribute="bottom" id="UGg-AI-6Dw"/>
+                <constraint firstItem="fIc-ki-yfs" firstAttribute="leading" secondItem="apy-Xz-gUP" secondAttribute="trailing" constant="3" id="Wy0-g1-i8w"/>
+                <constraint firstItem="zAM-DM-Bhu" firstAttribute="top" secondItem="b9X-KK-3xg" secondAttribute="bottom" constant="5" id="Xlp-GV-Ijk"/>
+                <constraint firstAttribute="trailing" secondItem="b9X-KK-3xg" secondAttribute="trailing" constant="4" id="aXh-hR-kNc"/>
+                <constraint firstItem="apy-Xz-gUP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="gx0-Li-3VC"/>
+                <constraint firstItem="b9X-KK-3xg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="iUF-S6-BmF"/>
+                <constraint firstItem="b9X-KK-3xg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="mM0-Zh-Zq5"/>
+                <constraint firstAttribute="trailing" secondItem="fIc-ki-yfs" secondAttribute="trailing" id="t4e-Fl-SrS"/>
+            </constraints>
+            <size key="customSize" width="200" height="272"/>
+            <connections>
+                <outlet property="addShopCarButton" destination="fIc-ki-yfs" id="yp0-Eo-Utf"/>
+                <outlet property="goodImage" destination="b9X-KK-3xg" id="n9w-Zv-odw"/>
+                <outlet property="goodNameLabel" destination="zAM-DM-Bhu" id="vbk-AF-ukM"/>
+                <outlet property="goodPriceLabel" destination="apy-Xz-gUP" id="eHa-sE-h4U"/>
+            </connections>
+            <point key="canvasLocation" x="234" y="250"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,28 @@
+<view>
+  <view class='choose-goods'>
+    <text class='choose-item'>选择商品</text>
+  </view>
+  <view class='goods-main'>
+    <view class='goods-main-l'>
+      <block wx:for="{{goodsType}}" wx:key="key" wx:for-item="itemName">
+        <view class='left-item {{typeid == itemName.typeid ? "select-item" : ""}}' data-id='{{itemName.typeid}}' bindtap='chooseType'>{{itemName.name}}</view>
+      </block>
+    </view>
+    <view class='goods-main-r'>
+      <view class='goods-item'>
+        <view class='goods-item-l'>
+          <image src='/image/014.png' class='goods-img'></image>
+        </view>
+        <view class='goods-item-r'>
+          <view>bigtime防臭棉袜</view>
+          <view class='item-line'>
+            <view class='price-color'>￥99.00</view>
+            <view>
+              <image src='/image/015.png' class='add-img'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

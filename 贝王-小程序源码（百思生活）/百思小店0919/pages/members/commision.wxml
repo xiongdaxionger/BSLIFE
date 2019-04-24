@@ -1,0 +1,30 @@
+<view>
+  <view class='commision-top'>
+    <view class='commision-top-item'>
+      <view>当前奖励</view>
+      <view class='commision-price'>0.00</view>
+    </view>
+    <view class='commision-top-item'>
+      <view class='bill'>账单</view>
+    </view>
+  </view>
+  <view class='commision-box'>
+    <view class='commision-total'>
+      <view>累计奖励</view>
+      <view class='red-words'>0.00</view>
+    </view>
+    <view class='commision-total'>
+      <view>冻结奖励</view>
+      <view class='red-words'>0.00</view>
+    </view>
+    <view class='commision-total'>
+      <view>累计奖励</view>
+      <view class='red-words'>0.00</view>
+    </view>
+    <view class='commision-total'>
+      <view>冻结奖励</view>
+      <view class='red-words'>0.00</view>
+    </view>
+  </view>
+  
+</view>

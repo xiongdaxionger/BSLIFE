@@ -1,0 +1,172 @@
+@import "/views/network/bad_network.wxss";
+@import "/views/widget/area_selected.wxss";
+
+.scroll-view{
+    height: 100vh;
+}
+
+/*内容*/
+.list-container{
+    margin-top: 10px;
+    font-size: 15px;
+    padding-bottom: 45px;
+}
+
+/*行*/
+.list{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    background: white;
+    position: relative;
+}
+
+/*分割线*/
+.list-line{
+    height: 1px;
+    margin-left: 10px;
+    width: calc(100vw - 10px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #f7f7f7;
+}
+
+/*行图片*/
+.list-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 10px 0 10px 10px;
+}
+
+/*行标题*/
+.list-title{
+    margin: 15px 0 15px 10px;
+}
+
+/*行内容*/
+.list-content{
+    margin: 15px 5px 15px 10px;
+    color: #666666;
+    flex: 1 0 auto;
+    text-align: right;
+}
+
+/*行箭头*/
+.list-arrow{
+    margin-right: 10px;
+}
+
+/*时间选择器*/
+.datePicker{
+    margin-left: 10px;
+    width: calc(100vw - 30px);
+    position: absolute;
+    line-height: 45px;
+    left: 0;
+}
+
+/*选项视图容器*/
+.options-container{
+     width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+/*选项视图半透明背景*/
+.options-black-transparent-bg{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+/*选项信息内容容器*/
+.options-content-container{
+    margin-top: 100vh;
+    width: 100vw;
+    height: 70vh;
+    position: absolute;
+}
+
+/*选项顶部工具条*/
+.options-top-container{
+    width: 100%;
+    background: white;
+    height: 44px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border-bottom: 1px #f7f7f7 solid;
+}
+
+/*取消*/
+.options-top-cancel{
+    font-size: 14px;
+    line-height: 44px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+/*完成*/
+.options-top-done{
+     font-size: 14px;
+    line-height: 44px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/*选项标题*/
+.options-title{
+    font-size: 16px;
+    text-align: center;
+    flex: 1 1 auto;
+}
+
+/*选项信息内容滑动视图*/
+.options-scroll-view{
+    width: 100%;
+    height: calc(70vh - 40px);
+    background: white;
+}
+
+/*选项信息内容*/
+.options-content{
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 15px;
+}
+
+/*选项行*/
+.options-list{
+     display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    min-height: 40px;
+    background: white;
+    position: relative;
+}
+
+/*选项行标题*/
+.options-list-title{
+     margin-left: 10px;
+    flex: 1 1 auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/*选项行图标*/
+.options-list icon{
+    margin-right: 10px;
+}

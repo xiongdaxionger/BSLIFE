@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawableLeft="@drawable/bg_withd"
+    android:paddingTop="5dp"
+    android:drawablePadding="5dp"
+    android:text="你的提现金额不能少于100元"
+    android:textColor="@color/text_goods_9_color"
+    android:textSize="13sp" />
+

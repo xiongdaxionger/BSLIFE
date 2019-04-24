@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="WMAddPartnerViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kUJ-Ie-0Sm" userLabel="icon_imageView">
+                        <rect key="frame" x="20" y="35" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="Mfm-kA-weg"/>
+                            <constraint firstAttribute="width" constant="80" id="tH0-c2-lN0"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直接邀请" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXs-UE-fhX" userLabel="title_label">
+                        <rect key="frame" x="120" y="35" width="180" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="dSy-71-MLb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分享到微信/QQ等聚到，好友点击注册并登陆即可成为会员" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="180" translatesAutoresizingMaskIntoConstraints="NO" id="Ci3-Cp-acC" userLabel="intro_label">
+                        <rect key="frame" x="120" y="61" width="180" height="54"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="g7k-ur-ybe"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="lBl-PR-o7J"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="lBl-PR-o7J"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kUJ-Ie-0Sm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="2cz-Qo-keZ"/>
+                    <constraint firstAttribute="trailing" secondItem="Ci3-Cp-acC" secondAttribute="trailing" constant="36" id="6E4-xU-zOi"/>
+                    <constraint firstItem="kUJ-Ie-0Sm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="60" id="BE6-Y8-1IO"/>
+                    <constraint firstAttribute="centerY" secondItem="kUJ-Ie-0Sm" secondAttribute="centerY" id="IHo-IO-u8u"/>
+                    <constraint firstItem="lXs-UE-fhX" firstAttribute="leading" secondItem="Ci3-Cp-acC" secondAttribute="leading" id="Lra-9T-ed7"/>
+                    <constraint firstItem="lXs-UE-fhX" firstAttribute="leading" secondItem="kUJ-Ie-0Sm" secondAttribute="trailing" constant="20" id="Ora-E3-eDE"/>
+                    <constraint firstItem="kUJ-Ie-0Sm" firstAttribute="top" secondItem="lXs-UE-fhX" secondAttribute="top" id="R7P-3l-jSq"/>
+                    <constraint firstItem="Ci3-Cp-acC" firstAttribute="leading" secondItem="kUJ-Ie-0Sm" secondAttribute="trailing" constant="10" id="gvK-vZ-1gp"/>
+                    <constraint firstAttribute="trailing" secondItem="lXs-UE-fhX" secondAttribute="trailing" constant="20" id="mJy-aQ-Jay"/>
+                    <constraint firstItem="Ci3-Cp-acC" firstAttribute="top" secondItem="lXs-UE-fhX" secondAttribute="bottom" constant="5" id="p7r-6Y-82o"/>
+                    <constraint firstItem="lXs-UE-fhX" firstAttribute="width" secondItem="Ci3-Cp-acC" secondAttribute="width" id="sXP-HK-IpH"/>
+                    <constraint firstItem="lXs-UE-fhX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="wlJ-gC-2wG"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="BE6-Y8-1IO"/>
+                        <exclude reference="wlJ-gC-2wG"/>
+                        <exclude reference="6E4-xU-zOi"/>
+                        <exclude reference="gvK-vZ-1gp"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="icon_imageView" destination="kUJ-Ie-0Sm" id="02k-Mu-9Td"/>
+                <outlet property="intro_label" destination="Ci3-Cp-acC" id="lni-Tf-psD"/>
+                <outlet property="title_label" destination="lXs-UE-fhX" id="wdq-Oy-Ksa"/>
+            </connections>
+            <point key="canvasLocation" x="68" y="197"/>
+        </tableViewCell>
+    </objects>
+</document>

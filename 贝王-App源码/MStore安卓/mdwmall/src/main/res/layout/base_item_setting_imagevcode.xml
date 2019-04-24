@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <View
+        android:id="@+id/item_setting_divide_top"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/westore_divider_bgcolor" 
+        android:visibility="gone"/>
+    
+    <TextView
+        android:id="@+id/item_setting_vcode_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/PaddingXLarge"
+        android:text="验证码"
+        android:textColor="@color/westore_dark_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/item_setting_vcode_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/PaddingXLarge"
+        android:paddingRight="@dimen/PaddingXLarge"
+        android:layout_toRightOf="@+id/item_setting_vcode_title" >
+
+        <EditText
+            android:id="@+id/vcode_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/vcode_ib"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="图形验证码"
+            android:padding="@dimen/PaddingMedium"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <ImageView
+            android:id="@+id/vcode_ib"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:scaleType="fitCenter" 
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/item_setting_divide"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_below="@+id/item_setting_vcode_rl"
+        android:background="@color/westore_divider_bgcolor" />
+    
+</RelativeLayout>

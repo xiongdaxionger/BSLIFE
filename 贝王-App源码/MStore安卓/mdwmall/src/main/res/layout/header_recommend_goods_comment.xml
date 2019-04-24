@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/picturess"
+            android:layout_width="fill_parent"
+            android:layout_height="320dp" >
+
+            <RelativeLayout
+                android:id="@+id/ll_position"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:id="@+id/imgfilter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/photo_topss"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:id="@+id/sure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="25dp"
+                    android:background="#00000000" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/photo_album_linear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/PaddingMedium"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/photo_album_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="111111"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/text_goods_3_color"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/PaddingLarge" >
+
+                <com.qianseit.westore.ui.MTextView
+                    android:id="@+id/photo_album_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3dp"
+                    android:text="sadasdadasdddddddddddddddddddddddddddddddasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadasaasasdd"
+                    android:textColor="@color/text_goods_3_color"
+                    android:textSize="@dimen/TextSizeSmall" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/white"
+                    android:lineSpacingExtra="3dp"
+                    android:text="[好物评价]"
+                    android:textColor="@color/base_top_color"
+                    android:textSize="@dimen/TextSizeSmall" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/PaddingLarge"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_dianzan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_account_button"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp" >
+
+                <ImageView
+                    android:id="@+id/textview_likes_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/my_msg_praise" />
+
+                <TextView
+                    android:id="@+id/textview_likes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/PaddingMedium"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="120"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/TextSizeSmall" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textview_shareads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_account_button"
+                android:drawableLeft="@drawable/icon_share_gray"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:text="分享"
+                android:textColor="@color/westore_red"
+                android:textSize="@dimen/TextSizeBigSmall" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/PaddingLarge"
+            android:paddingRight="@dimen/PaddingLarge"
+            android:paddingTop="@dimen/PaddingLarge" />
+
+        <TextView
+            android:id="@+id/pingpai_rating_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingLeft="@dimen/PaddingXLarge"
+            android:paddingTop="@dimen/PaddingMedium"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+</LinearLayout>

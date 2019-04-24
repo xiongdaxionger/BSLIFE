@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.qianseit.westore.ui.pull.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <include layout="@layout/allview_refresh_head" />
+
+        <com.qianseit.westore.ui.pull.PullableScrollView
+            android:id="@+id/community_pull_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarSize="0dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/community_list_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <com.qianseit.westore.ui.ImageCycleView
+                    android:id="@+id/community_ad_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/community_recommend_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp" >
+
+                    <View
+                        android:layout_width="2.5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/community_item_title"
+                        android:layout_alignTop="@+id/community_item_title"
+                        android:background="@color/westore_red" />
+
+                    <TextView
+                        android:id="@+id/community_item_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="靓贴推荐"
+                        android:textColor="@color/westore_dark_textcolor"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/TextSizeMedium" />
+
+                    <com.qianseit.westore.ui.MyListView
+                        android:id="@+id/community_recommend_list"
+                        style="@style/listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/community_item_title"
+                        android:layout_marginTop="5dp"
+                        android:divider="@color/westore_divider_bgcolor"
+                        android:dividerHeight="0.5dp" />
+
+                    <TextView
+                        android:id="@+id/more"
+                        style="@style/content_text"
+                        android:layout_below="@+id/community_recommend_list"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:drawableRight="@drawable/shopping_home_secill_right"
+                        android:drawablePadding="3dp"
+                        android:text="戳进更多靓贴" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/community_module_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp" >
+
+                    <View
+                        android:layout_width="2.5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/community_module_title"
+                        android:layout_alignTop="@+id/community_module_title"
+                        android:background="@color/westore_red" />
+
+                    <TextView
+                        android:id="@+id/community_module_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="社区板块"
+                        android:textColor="@color/text_goods_3_color"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/TextSizeMedium" />
+
+                    <com.qianseit.westore.ui.MyListView
+                        android:id="@+id/community_module_list"
+                        style="@style/listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/community_module_title"
+                        android:layout_marginTop="5dp"
+                        android:divider="@color/westore_divider_bgcolor"
+                        android:dividerHeight="0.5dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/community_guru_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="2.5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/community_guru_title"
+                        android:layout_alignTop="@+id/community_guru_title"
+                        android:background="@color/westore_red" />
+
+                    <TextView
+                        android:id="@+id/community_guru_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="达人推荐"
+                        android:textColor="@color/text_goods_3_color"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/TextSizeMedium" />
+
+                    <com.qianseit.westore.ui.MyGridView
+                        android:id="@+id/community_guru_list"
+                        style="@style/listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/community_guru_title"
+                        android:divider="@color/westore_divider_bgcolor"
+                        android:dividerHeight="0.5dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </com.qianseit.westore.ui.pull.PullableScrollView>
+
+        <include layout="@layout/allview_load_more" />
+    </com.qianseit.westore.ui.pull.PullToRefreshLayout>
+
+</LinearLayout>

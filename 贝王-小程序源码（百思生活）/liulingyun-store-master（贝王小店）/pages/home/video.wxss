@@ -1,0 +1,129 @@
+page{
+  font-size: 14px;
+}
+.video-width{
+  width: 100%;
+}
+.image-list{
+  border-bottom:1px solid #ccc;
+  margin-bottom:10px;
+  padding-bottom: 10px;
+}
+.head-img{
+  width: 100rpx;
+  height: 100rpx;
+}
+.head-box{
+  display: flex;
+  padding: 20rpx;
+}
+.head-box-l{
+  width: 18%;
+}
+.head-box-r{
+  width: 82%;
+  display: flex;
+  align-items: center;
+}
+.video-title{
+  padding: 0rpx 20rpx 20rpx 20rpx;
+}
+.comments{
+  display: flex;
+  padding: 0rpx 20rpx 20rpx 20rpx;
+}
+.comments-l{
+  width: 50%;
+  color: #949494;
+}
+.comments-r{
+  width: 50%;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  height: 60rpx;
+}
+.comments-img{
+  width: 60rpx;
+  height: 36rpx;
+}
+.comments-text{
+  padding: 20rpx 20rpx  120rpx 20rpx;
+}
+.text-list{
+  background: #efefef;
+  color: #353535;
+  padding: 20rpx;
+}
+.blue-words{
+  color: #596d96;
+}
+.bottom-box{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: #fff;
+  padding: 20rpx;
+  display: flex;
+  z-index: 99;
+}
+.bottom-box-l{
+  width: 80%;
+}
+.bottom-box-r{
+  width: 20%;
+  padding-left: 20rpx;
+}
+.published{
+  border-radius: 10rpx;
+  border: 1px solid #aed0ae;
+  background: #9ed99d;
+  color: #fff;
+  padding: 15rpx;
+  text-align: center;
+}
+.bottom-box-inp{
+  border: 2px solid #dbdbdb;
+  padding: 10rpx;
+}
+.give-like{
+  display: flex;
+  background: #363940;
+  color: #fff;
+  padding: 10rpx;
+  width: 180rpx;
+  border-radius: 10rpx;
+}
+.give-like-l{
+  width: 50%;
+  text-align: center;
+}
+.give-like-r{
+  width: 50%;
+  text-align: center;
+}
+.ifpraise{
+  background: #efefef;
+  color: #244be4;
+  padding: 20rpx;
+  line-height: 30rpx;
+  border-bottom: 1px solid #e2e2e2;
+  word-wrap:break-word;
+}
+.zan-img{
+  width: 25rpx;
+  height: 23rpx;
+  vertical-align:middle;
+}
+.member-name{
+  margin: 0rpx 10rpx;
+}
+.oval{
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent; 
+  border-right: 5px solid transparent; 
+  border-bottom: 10px solid #efefef;
+  margin-left:10px;
+}

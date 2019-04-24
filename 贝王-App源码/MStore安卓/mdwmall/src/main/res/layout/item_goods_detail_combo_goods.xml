@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="5dp" >
+
+    <ImageView
+        android:id="@+id/item_goods_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/item_goods_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_goods_icon"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textColor="@color/text_goods_3_color"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <TextView
+        android:id="@+id/item_goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_goods_icon"
+        android:layout_below="@+id/item_goods_title"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/base_price"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <ImageView
+        android:id="@+id/item_goods_addcar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/item_goods_price"
+        android:layout_alignRight="@+id/item_goods_icon"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:src="@drawable/check_selector_choose" />
+
+</RelativeLayout>

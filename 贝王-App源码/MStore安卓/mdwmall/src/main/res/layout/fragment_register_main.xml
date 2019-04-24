@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/PaddingXXXLarge"
+            android:src="@drawable/login_top_pic"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/register_items_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/transparent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机号"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/westore_dark_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <EditText
+                    android:id="@+id/register_photo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/text_goods_6_color"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/register_vcode_divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/westore_divider_bgcolor"
+                android:visibility="gone" />
+
+            <TableRow
+                android:id="@+id/register_vcode_tr"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="图形验证码"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/westore_dark_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+                
+                <EditText
+                    android:id="@+id/register_vcode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/qianseit_bg_enter_view"
+                    android:gravity="top|left"
+                    android:inputType="text"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:singleLine="false"
+                    android:textColor="@color/westore_primary_textcolor"
+                    android:textSize="@dimen/TextSizeMedium" />
+
+                <ImageView
+                    android:id="@+id/register_vcode_ib"
+                    android:layout_width="75dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/westore_divider_bgcolor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/transparent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="验证码"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/westore_dark_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+                
+                <EditText
+                    android:id="@+id/register_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/text_goods_6_color"
+                    android:textSize="@dimen/TextSizeBigSmall" >
+
+                    <requestFocus />
+                </EditText>
+
+                <Button
+                    android:id="@+id/register_code_but"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/PaddingMedium"
+                    android:background="@drawable/app_button_selector"
+                    android:padding="10dp"
+                    android:text="获取验证码"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/westore_divider_bgcolor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/transparent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="密码"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/westore_dark_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+                
+                <EditText
+                    android:id="@+id/register_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:inputType="textPassword"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/text_goods_6_color"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </LinearLayout>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/westore_divider_bgcolor" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center"
+            android:visibility="visible" >
+
+            <CheckBox
+                android:id="@+id/common_regist_status"
+                style="@style/CustomCheckboxTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="同意"
+                android:enabled="true"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <TextView
+                android:id="@+id/common_regist_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/comm_agreement"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="和"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/common_regist_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comm_privacy"
+                android:textColor="@color/westore_red"
+                android:textSize="@dimen/TextSizeBigSmall" 
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/register_commit"
+            style="@style/app_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="注册"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center"
+            android:visibility="visible" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="遇到问题？您可以"
+                android:textColor="@color/westore_primary_textcolor"
+                android:textSize="@dimen/TextSizeMedium"
+                />
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/register_step_one_customer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系客服"
+                    android:textColor="@color/westore_dark_textcolor"
+                    android:textSize="@dimen/TextSizeMedium" />
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@color/westore_dark_textcolor"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

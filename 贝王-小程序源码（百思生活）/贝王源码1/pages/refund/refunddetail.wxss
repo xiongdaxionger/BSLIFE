@@ -1,0 +1,306 @@
+@import "../../views/network/bad_network.wxss";
+/**退款/售后视图**/
+.refund_content_view{
+    background-color: #F7F7F7;
+    color: #000000;
+    height: calc(100vh - 50px);
+    width: 100vw;
+}
+/**商品视图**/
+.shop_cart_good_view{
+    width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    position: relative;
+    color: black;
+    background-color: white;
+    border-top: 1px #F7F7F7 solid
+}
+/**勾选视图**/
+.shop_cart_choose_view{
+    width: 32px;
+    max-height: 100px;
+    min-height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/**勾选按钮**/
+.shop_cart_choose_image{
+    width: 21px;
+    max-height: 21px;
+}
+/**商品图片**/
+.good_image{
+    width: 74px;
+    height: 74px;
+    position: absolute;
+    top: 13px;
+    left: 34px;
+    border: 1px #F7F7F7 solid;
+    border-radius: 3.0px;
+}
+/**商品名称**/
+.good_name{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    left: 116px;
+    max-height: 38px;
+    min-height: 38px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+}
+/**商品价格容器**/
+.good_price_container{
+    position: absolute;
+    top: 73px;
+    left: 116px;
+    right: 101px;
+    line-height: 20px;
+    max-height: 20px;
+    flex-flow: row nowrap;
+    font-size: 15px;
+}
+/**商品销售价**/
+.good_price{
+    color: #f73030;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/**数量文本--用于无法更改数量的赠品商品显示数量**/
+.good_quantity{
+    position: absolute;
+    top: 70px;
+    right: 8px;
+    width: 85px;
+    line-height: 20px;
+    max-height: 20px;
+    text-align: right
+}
+/**数量视图**/
+.quantity_view{
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    right: 8px;
+    width: 85px;
+    min-height: 25px;
+    max-height: 25px;
+    border: 1px #F7F7F7 solid;
+    box-sizing: content-box
+}
+/**加按钮**/
+.add_image{
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    width: 21px;
+    max-height: 21px;
+}
+/**减按钮**/
+.minus_image{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    max-height: 21px;
+}
+/**数量视图的数量显示**/
+.quantity_text{
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    width: 35px;
+    line-height: 25px;
+    overflow: hidden;
+    border-left: 1px #F7F7F7 solid;
+    border-right: 1px #F7F7F7 solid;
+    text-align: center;
+    font-size: 14px;
+}
+/**退款类型选择视图**/
+.refund_type_select_view{
+    height: 45px;
+    background-color: white;
+    font-size: 15px;
+    position: relative;
+    border-top: 1px solid #F7F7F7
+}
+/**类型名称**/
+.refund_type_name{
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    min-height: 21px;
+    max-height: 21px;
+}
+/**选择类型**/
+.type_choose_image{
+    width: 21px;
+    min-height: 21px;
+    max-height: 21px;
+    position: absolute;
+    top: 12px;
+    right: 8px;
+}
+/**退款金额视图**/
+.refund_money_view{
+    height: 70px;
+    width: 100vw;
+    background-color: white;
+    font-size: 14px;
+}
+/**总计标题**/
+.money_main_title{
+    margin-left: 8px;
+    margin-top: 8px;
+    min-height: 21px;
+    max-height: 21px;
+}
+/**副标题**/
+.money_sub_title{
+    margin-left: 8px;
+    margin-top: 0px;
+    min-height: 21px;
+    max-height: 21px;
+    font-size: 12px;
+    color: lightgrey
+}
+/**横线**/
+.line_view{
+    height: 1px;
+    background-color: #F7F7F7;
+    margin-left: 20px;
+    margin-right: 0px;
+}
+/**金额**/
+.money_title{
+    min-height: 21px;
+    max-height: 21px;
+    margin-left: 8px;
+    margin-top: 4px;
+}
+/**单内容输入视图**/
+.line_input_view{
+    border-top: 1px solid #F7F7F7;
+    background-color: white;
+    height: 73px;
+    width: 100vw;
+    font-size: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+/**标题**/
+.title_content{
+    height: 21px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+/**单内容输入框**/
+.line_input{
+    background-color: #e6e6e6;
+    height: 40px;
+    line-height: 20px;
+    padding-left: 8px;
+    border-radius: 3px;
+    width: calc(100vw - 24px)
+}
+/**多内容输入视图**/
+.area_input_view{
+    border-top: 1px solid #F7F7F7;
+    background-color: white;
+    height: 205px;
+    width: 100vw;
+    font-size: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+/**多内容输入框**/
+.area_input{
+    background-color: #e6e6e6;
+    height: 160px;
+    line-height: 20px;
+    border-radius: 3px;
+    padding-left: 8px;
+    padding-top: 8px;
+    width: calc(100vw - 24px)
+}
+/**空白**/
+.bland{
+    height: 8px;
+    width: 100%;
+    background-color: #F7F7F7;
+}
+/*晒图*/
+.img-container{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100vw;
+    padding-top: 15px;
+    background-color: white;
+}
+
+.img{
+    width: calc((100vw - 15px * 5) / 4);
+    height: calc((100vw - 15px * 5) / 4);
+    margin: 0 0 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.comment-img{
+    width: 100%;
+    height: 100%;
+}
+.delete-img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+/*正在上传图片*/
+.img-loading{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+/*上传失败*/
+.upload-fail{
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comment-add-img{
+    width: 48px;
+    height: 40px;
+}
+/**提交按钮**/
+.submit_button{
+    background-color: #F73030;
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    right: 16px;
+    left: 16px;
+    border-radius: 3.0;
+    font-size: 17px;
+    height: 40px;
+    line-height: 20px;
+    padding-top: 10px;
+}

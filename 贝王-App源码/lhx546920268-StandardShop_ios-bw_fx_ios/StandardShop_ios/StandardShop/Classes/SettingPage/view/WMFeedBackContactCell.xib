@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="KGk-i7-Jjw" customClass="WMFeedBackContactCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系方式" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9R9-tq-8jt">
+                        <rect key="frame" x="10" y="10" width="64" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="FZG-ZM-5qV"/>
+                            <constraint firstAttribute="width" constant="68" id="U43-zO-D3w"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FZG-ZM-5qV"/>
+                                <exclude reference="U43-zO-D3w"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机/电子邮箱(选填)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hav-eu-2PV">
+                        <rect key="frame" x="10" y="40" width="300" height="30"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="5pi-hx-VO4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hav-eu-2PV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="3ml-ci-9Lx"/>
+                    <constraint firstItem="9R9-tq-8jt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="6z1-5h-2AP"/>
+                    <constraint firstAttribute="trailing" secondItem="hav-eu-2PV" secondAttribute="trailing" constant="10" id="KSZ-zN-pMT"/>
+                    <constraint firstItem="hav-eu-2PV" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="LNw-GY-RYe"/>
+                    <constraint firstItem="hav-eu-2PV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Pfh-qU-pZ0"/>
+                    <constraint firstItem="9R9-tq-8jt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="QQc-jA-KIy"/>
+                    <constraint firstItem="9R9-tq-8jt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="fAM-ef-Vet"/>
+                    <constraint firstItem="9R9-tq-8jt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="tTE-7f-Wbi"/>
+                    <constraint firstItem="hav-eu-2PV" firstAttribute="top" secondItem="9R9-tq-8jt" secondAttribute="bottom" constant="10" id="yos-w8-zD5"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="6z1-5h-2AP"/>
+                        <exclude reference="fAM-ef-Vet"/>
+                        <exclude reference="LNw-GY-RYe"/>
+                        <exclude reference="Pfh-qU-pZ0"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contactField" destination="hav-eu-2PV" id="Pzu-2u-PFz"/>
+                <outlet property="feedContactLabel" destination="9R9-tq-8jt" id="jAI-eb-8Rv"/>
+            </connections>
+            <point key="canvasLocation" x="508" y="377"/>
+        </tableViewCell>
+    </objects>
+</document>

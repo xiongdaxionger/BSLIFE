@@ -1,0 +1,39 @@
+
+<import src="../../views/network/bad_network.wxml"/>
+
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+<view class="feedback_container padding_content" wx:if="{{!showFailNetWork}}">
+    
+    <form bindsubmit="submitFeedBack">
+
+    <input id="title" class="line_input" placeholder="请输入反馈标题" placeholder-style="color:gray" maxlength="20" bindinput="inputChange"/>
+        
+    <textarea name="content" id="content" class="area_input margin_content padding_content" placeholder="请尽量详细描述反馈，我们会第一时间帮你解决" placeholder-style="color:gray" maxlength="150" bindblur="inputChange"/>
+
+    <input id="contact" class="line_input margin_content" placeholder="请留下您的邮箱、QQ或手机号" placeholder-style="color:gray" maxlength="30" bindinput="inputChange"/>
+
+    <view class="margin_content">意见反馈类型</view>
+
+    <view class="feedback_type_container">
+        
+        <block wx:for="{{feedBackData.feedBackTypeArr}}" wx:for-item="feedBackItem">
+
+            <view class="{{index % 3 != 0 ? 'feedback_type_view margin_left_content margin_content' : 'feedback_type_view margin_content'}}">
+
+                <view data-index="{{index}}" bindtap="selectTypeAction" class="{{feedBackItem.isSelect ? 'feedback_type select' : 'feedback_type'}}">{{feedBackItem.name}}</view>
+
+                <image class="select_image" src="{{imgURL + '/images/customerservice/type_select.png'}}" mode="aspectFit" wx:if="{{feedBackItem.isSelect}}"></image>
+
+            </view>
+
+        </block>
+
+    </view>
+
+    <view class="margin_content call_phone" bindtap="callPhone">客服电话:{{feedBackData.feedBackMobile}}</view>
+
+    <button class="submit_button" formType="submit">提交</button>
+
+    </form>
+</view>

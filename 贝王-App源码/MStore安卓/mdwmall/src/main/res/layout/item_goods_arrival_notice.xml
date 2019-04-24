@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:textSize="@dimen/TextSizeBigSmall" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fragment_background_color"
+        android:padding="@dimen/MarginXLarge"
+        android:text="一旦此商品一个月内到货，您将收到手机短信提醒或邮件通知（需填写）。"
+        android:textColor="@color/westore_gray_textcolor" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="请填写您的手机号"
+        android:inputType="phone"
+        android:padding="@dimen/MarginXLarge"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/MarginXLarge"
+        android:background="@color/westore_divider_bgcolor" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="请填写您的邮箱"
+        android:inputType="textEmailAddress"
+        android:padding="@dimen/MarginXLarge"
+        android:textSize="@dimen/TextSizeBigSmall" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor" />
+</LinearLayout>

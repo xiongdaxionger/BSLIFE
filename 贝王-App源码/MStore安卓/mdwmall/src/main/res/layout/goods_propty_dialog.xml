@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="商品属性"
+        android:gravity="center"
+        android:textColor="@color/westore_dark_textcolor"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/goods_propty_list"
+        style="@style/listview"
+        android:layout_height="300dp"
+        android:background="@color/white"
+        android:divider="@color/westore_divider_bgcolor"
+        android:layout_marginTop="10dp"
+        android:dividerHeight="0.5dp"/>
+
+    <Button
+        android:id="@+id/goods_propty_ok"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/westore_red"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSizeMedium" />
+
+</LinearLayout>

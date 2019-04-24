@@ -1,0 +1,29 @@
+<view>
+  <view class='add-member' bindtap='actioncnt'>
+    <view class='add-member-left'>
+      <image src='../../image/036.png' class='left-img'></image>
+    </view>
+    <view class='add-member-right'>
+      <view class='big-size'>直接邀请</view>
+      <view>分享到微信/QQ等渠道,好友点击注册并下载登录即可成为会员</view>
+    </view>
+  </view>
+  <view class='add-member' bindtap='codetoinvite'>
+    <view class='add-member-left'>
+      <image src='../../image/037.png' class='left-img'></image>
+    </view>
+    <view class='add-member-right'>
+      <view class='big-size'>二维码邀请</view>
+      <view>分享到微信等渠道,好友扫一扫或长按识别二维码后注册并下载登录即可成为会员</view>
+    </view>
+  </view>
+  <view class='add-member' bindtap='addmember'>
+    <view class='add-member-left'>
+      <image src='../../image/038.png' class='left-img'></image>
+    </view>
+    <view class='add-member-right'>
+      <view class='big-size'>添加会员</view>
+      <view>会员提供资料，代会员注册即可成为会员</view>
+    </view>
+  </view>
+</view>

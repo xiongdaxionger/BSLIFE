@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fragment_background_color" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/acco_header_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_hander_bg"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/acco_header_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/acco_header_news"
+                android:padding="5dp"
+                android:src="@drawable/acco_header_setting" />
+
+            <ImageView
+                android:id="@+id/acco_header_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:src="@drawable/news" />
+
+            <View
+                android:id="@+id/has_unread"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignRight="@+id/acco_header_news"
+                android:layout_alignTop="@+id/acco_header_news"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_news_mark"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/acco_header_loginedon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/acco_header_avatar"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/circle_solid_white_stroke_red"
+                    android:src="@drawable/base_avatar_default" />
+
+                <TextView
+                    android:id="@+id/acco_hander_lv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/acco_header_avatar"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/acco_header_avatar"
+                    android:background="@drawable/shape_acco_header_float"
+                    android:gravity="bottom"
+                    android:paddingBottom="1dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="1dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <LinearLayout
+                    android:id="@+id/acco_header_name_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/acco_header_avatar"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/acco_header_avatar"
+                    android:layout_toLeftOf="@+id/acco_info"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/acco_header_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:singleLine="true"
+                        android:textSize="@dimen/TextSizeBigSmall" />
+
+                    <ImageView
+                        android:id="@+id/acco_header_modify_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:src="@drawable/home_hander_modify_icon"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/acco_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/wealth_bill_r"
+                    android:text="管理账户"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </RelativeLayout>
+
+            <TableRow
+                android:id="@+id/acco_header_unlogined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle_solid_white_stroke_red"
+                    android:src="@drawable/base_avatar_default" />
+
+                <TextView
+                    android:id="@+id/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/PaddingMedium"
+                    android:paddingTop="@dimen/PaddingMedium"
+                    android:text="登录/注册"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/TextSizeMedium" />
+            </TableRow>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/binding_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/item_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/item_menu_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/MarginMedium"
+                    android:paddingRight="@dimen/MarginLarge"
+                    android:src="@drawable/base_arrow_right_pink_n"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/item_menu_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/item_menu_right"
+                    android:paddingBottom="@dimen/PaddingXLarge"
+                    android:paddingLeft="@dimen/MarginLarge"
+                    android:paddingTop="@dimen/PaddingXLarge"
+                    android:text="点此绑定手机号，确保账号安全"
+                    android:textColor="@color/westore_dark_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <View
+                    android:id="@+id/item_menu_divide"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_below="@+id/item_menu_title"
+                    android:background="@color/westore_divider_bgcolor" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/acco_menu_order" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            layout="@layout/acco_menu_deposit" />
+
+        <com.qianseit.westore.ui.MyListView
+            android:id="@+id/model"
+            style="@style/listview"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_solid_white_stroke_gray"
+            android:dividerHeight="0dp"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/MarginLarge"
+            android:paddingTop="@dimen/MarginLarge"
+            android:visibility="gone" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.3" />
+
+            <View
+                android:id="@+id/title_left"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.2"
+                android:background="@color/westore_gray_textcolor" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/MarginXLarge"
+                android:layout_marginRight="@dimen/MarginXLarge"
+                android:text="为你推荐"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <View
+                android:id="@+id/title_right"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.2"
+                android:background="@color/westore_gray_textcolor" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.3" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

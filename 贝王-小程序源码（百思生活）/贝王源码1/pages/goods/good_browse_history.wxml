@@ -1,0 +1,31 @@
+<!--pages/goods/good_browse_history.wxml-->
+<!--我的足迹 商品浏览历史-->
+
+<scroll-view scroll-top="{{scroll_top}}" bindscroll="containerScroll" scroll-y class="scroll-view" wx:if="{{good_infos != null && good_infos.length > 0}}">
+<view class="content-container">
+    <!--回到顶部按钮-->
+  <include src="/views/widget/scroll_to_top.wxml"/>
+  <view data-index="{{index}}" catchtap="tapGood" class="good-list-item" wx:for="{{good_infos}}" wx:key="{{index}}">
+
+    <!--商品图片-->
+    <image class="good-image" src="{{item.img}}" mode="aspectFit" />
+
+    <!--右边容器-->
+    <view class="good-list-right-container">
+      <text class="good-name">{{item.name}}</text>
+
+      <!--价格容器-->
+      <view class="good-price-container">
+        <view class="good-price">{{item.price}}</view>
+        <view class="good-market-price">{{item.market_price}}</view>
+      </view>
+
+            <!--删除按钮-->
+      <view catchtap="deleteHistory" data-index="{{index}}" class="delete-btn">删除</view>
+    </view>
+  </view>
+</view>
+</scroll-view>
+
+<!--空-->
+<view wx:if="{{good_infos != null && good_infos.length == 0}}" class="empty">暂无浏览记录</view>

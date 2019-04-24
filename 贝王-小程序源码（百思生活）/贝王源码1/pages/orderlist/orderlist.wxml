@@ -1,0 +1,93 @@
+
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+  <!--切换栏栏-->
+  <!--<view class="type_contain_view" wx:if="{{!showFailNetWork && isFenXiaoOrder}}">-->
+    <!--<view class="{{typeSelectIndex == 0 ? 'type_view select_view' : 'type_view un_select_view'}}" style="margin-left:60px;border-top-left-radius:4.0px;border-bottom-left-radius:4.0px;border-left:1px solid #f73030" bindtap="selectType" data-index="0">我的订单</view>
+    <view class="{{typeSelectIndex == 1 ? 'type_view select_view' : 'type_view un_select_view'}}" style="position:absolute;right:60px;top:0px;border-top-right-radius:4.0px;border-bottom-right-radius:4.0px;" bindtap="selectType" data-index="1">代购订单</view>
+  </view>-->
+  
+  <!--状态栏-->
+  <view class="{{isFenXiaoOrder ? 'order_status_bar top_zero' : 'order_status_bar top_zero'}}" wx:key="status_bar" wx:if="{{!showFailNetWork && showStatusBar}}">
+    <block wx:for="{{typeSelectIndex == 1 ? fenXiaoStatusInfo : orderStatusInfo}}" wx:for-item="statusInfo" wx:for-index="index">
+        <view class="{{typeSelectIndex == 1 ? 'order_status_item four_width' : 'order_status_item'}}" bindtap="changeOrderStatus" data-order-status="{{index}}">
+            <view wx:if="{{index < (typeSelectIndex == 1 ? 3 : 4)}}" class="right_line"></view>
+            <text class="{{index == selectIndex ? 'text select' : 'text'}}" data-order-status="{{index}}">{{statusInfo}}</text>
+        </view>
+    </block>
+  </view>
+
+  <!--空视图-->
+  <view wx:if="{{orderListInfo.length == 0 && !showFailNetWork}}" class="empty-container">
+      <text class="empty-container-title">{{emptyTipString}}</text>
+  </view>
+
+  <!--订单数据-->
+  <scroll-view  class="{{showStatusBar ? (isFenXiaoOrder ? 'order_list margin_content' : 'order_list margin_content') : 'order_list'}}" scroll-top="{{scroll_top}}" scroll-y="true" bindscrolltolower="loadMore" bindscroll="containerScroll" wx:if="{{orderListInfo.length != 0 && !showFailNetWork}}">
+
+    <!--回到顶部按钮-->
+    <include src="/views/widget/scroll_to_top.wxml" />
+
+    <block wx:for="{{orderListInfo}}" wx:for-item="orderInfo">
+        <view class="order_list_view have_margin">
+            <!--订单ID等信息-->
+            <view class="order_list_id bottom_line" bindtap="pustOrderDetail" data-order-id="{{orderInfo.orderID}}">
+              <text class="order_id_text" data-order-id="{{orderInfo.orderID}}">订单号:{{orderInfo.orderID}}</text>
+              <text class="order_status_text" data-order-id="{{orderInfo.orderID}}">{{orderInfo.orderStatusTxt}}</text>
+              <image class="order_arrow" src="{{imgURL + '/images/icon/arrow_black.png'}}" mode="aspectFit" />
+            </view>
+            <!--商品-->
+            <block wx:for="{{orderInfo.orderGoodInfoArr}}" wx:for-item="goodInfo" wx:for-index="good_index">
+              <view class="order_list_good bottom_line">
+                <image class="order_good_image" src="{{goodInfo.orderGoodImage}}"></image>
+                <view class="order_type_tag" wx:if="{{goodInfo.orderGoodType != 0}}">{{goodInfo.orderGoodTypeString}}</view>
+                <text class="{{goodInfo.orderGoodType != 0 ? 'order_good_name have_tag' : 'order_good_name'}}">{{goodInfo.orderGoodName}}</text>
+                <text class="order_good_quantity">x{{goodInfo.orderGoodQuantity}}</text>
+                <text class="order_good_price">{{goodInfo.orderGoodPrice}}</text>
+                <text class="order_specInfo">{{goodInfo.orderGoodSpecInfo}}</text>
+                <view class="order_comment_button order_button" wx:if="{{goodInfo.orderGoodCanComment}}" catchtap="tapComment" data-index="{{index}}" data-goodindex="{{good_index}}">评价晒单</view>
+              </view>
+            </block>
+            <view class="order_list_price bottom_line">
+              <text class="order_list_total_price">{{orderInfo.orderPriceString}}</text>
+            </view>
+            <!--预售订单的尾款时间显示-->
+            <view class="order_list_price bottom_line" wx:if="{{orderInfo.orderShowPrepareTime}}">
+              <text class="order_list_total_price">{{orderInfo.orderPrepareTimeInfo}}</text>
+            </view>
+            <view wx:if="{{orderInfo.orderShowAction}}">
+              <!--作废订单-->
+              <view class="action_view_flex" wx:if="{{orderInfo.orderStatus == 13}}">
+                <view class="sub_action_button order_button right_margin" bindtap="deleteOrderAction" data-order-id="{{orderInfo.orderID}}">删除订单</view> 
+                <view class="main_action_button order_button" bindtap="buyAgainAction" data-order-id="{{orderInfo.orderID}}">再次购买</view>
+              </view>
+              <!--待支付订单-->
+              <view class="action_view_flex" wx:if="{{(orderInfo.orderStatus == 0 || orderInfo.orderStatus == 3)}}">
+                <view class="sub_action_button order_button right_margin" bindtap="cancelOrderAction" data-order-id="{{orderInfo.orderID}}" wx:if="{{!orderInfo.orderIsPrepare && orderInfo.orderCanCancelOrder}}">取消订单</view>
+                <view class="main_action_button order_button right_margin" bindtap="buyAgainAction" data-order-id="{{orderInfo.orderID}}" wx:if="{{!orderInfo.orderIsPrepare && !orderInfo.orderCanCancelOrder}}">再次购买</view>
+                <view class="main_action_button order_button" bindtap="payOrderAction" data-order-id="{{orderInfo.orderID}}" data-info="{{orderInfo.orderMainButtonTitle}}" data-type="{{orderInfo.orderMainButtonActionType}}" wx:if="{{orderInfo.orderPayID != '-1'}}">{{orderInfo.orderMainButtonTitle}}               </view>
+              </view>
+              <!--已完成订单-->
+              <view class="action_view_flex" wx:if="{{orderInfo.orderStatus == 12 || orderInfo.orderStatus == 14}}">
+                <view class="main_action_button order_button" bindtap="buyAgainAction" data-order-id="{{orderInfo.orderID}}">再次购买</view>
+              </view>
+              <!--待发货订单-->
+              <view class="action_view_flex" wx:if="{{orderInfo.orderStatus == 6}}">
+                <view class="main_action_button order_button" bindtap="buyAgainAction" data-order-id="{{orderInfo.orderID}}">再次购买</view>
+              </view>
+              <!--待收货订单-->
+              <view class="action_view_flex" wx:if="{{orderInfo.orderStatus == 7 || orderInfo.orderStatus == 8}}">
+                <view class="main_action_button order_button right_margin" bindtap="buyAgainAction" data-order-id="{{orderInfo.orderID}}">再次购买</view>
+                <view class="main_action_button order_button right_margin" bindtap="checkExpressAction" data-order-id="{{orderInfo.orderID}}">查看物流</view>
+                <view class="main_action_button order_button" bindtap="confirmOrderAction" data-order-id="{{orderInfo.orderID}}" data-info="{{orderInfo.orderMainButtonTitle}}" data-type="{{orderInfo.orderMainButtonActionType}}" wx:if="{{orderInfo.orderPayID != '-1'}}">确认收货</view>
+              </view>
+            </view>
+        </view>
+    </block>
+
+    <!--加载更多-->
+    <import src="/views/widget/load_more.wxml" />
+    <template wx:if="{{load_more}}" is="load_more" />
+  </scroll-view>
+

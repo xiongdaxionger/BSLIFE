@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/westore_red"
+        android:padding="@dimen/PaddingLarge" >
+
+        <TextView
+            android:id="@+id/advance_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="贝壳"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_advance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/advance_tip"
+            android:text="0.00"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <TableRow
+            android:id="@+id/commission_tr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_advance"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="当前佣金："
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/commission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0.00"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/wealth_bill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/wealth_bill_r"
+            android:gravity="center"
+            android:text="账单"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelativeLayout2"
+        android:background="@color/fragment_background_color"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        <TableRow
+            android:id="@+id/commission_info_tr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/wealth_income_total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/commission_total_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/wealth_info_brief"
+                    android:text="累计佣金"
+                    android:textColor="@color/westore_second_gray_textcolor"
+                    android:textSize="@dimen/TextSizeXLarge" />
+
+                <TextView
+                    android:id="@+id/commission_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="0.00"
+                    android:textColor="@color/westore_red"
+                    android:textSize="@dimen/TextSizeMedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wealth_out_total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/commission_freeze_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/wealth_info_brief"
+                    android:text="冻结佣金"
+                    android:textColor="@color/westore_second_gray_textcolor"
+                    android:textSize="@dimen/TextSizeXLarge" />
+
+                <TextView
+                    android:id="@+id/commission_freeze"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="0.00"
+                    android:textColor="@color/westore_red"
+                    android:textSize="@dimen/TextSizeMedium" />
+            </LinearLayout>
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor"
+            android:visibility="gone" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left" >
+
+            <LinearLayout
+                android:id="@+id/wealth_withdrawing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/withdrawing_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/wealth_info_brief"
+                    android:text="正在提现"
+                    android:textColor="@color/westore_second_gray_textcolor"
+                    android:textSize="@dimen/TextSizeXLarge" />
+
+                <TextView
+                    android:id="@+id/withdrawing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="0.00"
+                    android:textColor="@color/westore_red"
+                    android:textSize="@dimen/TextSizeMedium" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/westore_divider_bgcolor"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/wealth_withdrawed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/withdrawed_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/wealth_info_brief"
+                    android:text="累计提现"
+                    android:textColor="@color/westore_second_gray_textcolor"
+                    android:textSize="@dimen/TextSizeXLarge" />
+
+                <TextView
+                    android:id="@+id/withdrawed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="0.00"
+                    android:textColor="@color/westore_red"
+                    android:textSize="@dimen/TextSizeMedium" />
+            </LinearLayout>
+        </TableRow>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_item"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:padding="20dp" >
+
+        <Button
+            android:id="@+id/wealth_withdraw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/app_button_selector"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="提现"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/wealth_recharge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/app_button_yellow_selector"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="充值"
+            android:textColor="@color/westore_dark_textcolor" />
+    </LinearLayout>
+
+</RelativeLayout>

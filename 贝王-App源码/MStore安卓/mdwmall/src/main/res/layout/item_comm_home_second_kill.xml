@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/MarginLarge"
+    android:paddingTop="@dimen/MarginLarge" >
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center"
+        android:paddingLeft="@dimen/MarginMedium"
+        android:paddingRight="@dimen/MarginMedium" >
+
+        <ImageView
+            android:id="@+id/second_kill_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter" />
+
+        <!-- <View -->
+        <!-- android:id="@+id/second_kill_left" -->
+        <!-- android:layout_width="2dp" -->
+        <!-- android:layout_height="20dp" -->
+        <!-- android:background="@color/westore_red" /> -->
+
+
+        <!-- <TextView -->
+        <!-- android:id="@+id/second_kill_name" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_marginLeft="@dimen/MarginLarge" -->
+        <!-- android:textColor="@color/westore_red" -->
+        <!-- android:textSize="@dimen/TextSizeLarge" /> -->
+
+        <com.qianseit.westore.ui.RushBuyCountDownTimerView
+            android:id="@+id/second_kill_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/second_kill_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/MarginLarge"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/home_second_kill_r"
+            android:gravity="right"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </TableRow>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:divider="@null"
+        android:dividerHeight="0.5dip"
+        android:drawSelectorOnTop="false"
+        android:fadingEdgeLength="0sp"
+        android:groupIndicator="@null"
+        android:listSelector="@color/white"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/second_kill_goods_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

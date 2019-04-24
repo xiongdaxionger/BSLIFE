@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:background="@color/transparent"
+    android:paddingTop="@dimen/PaddingLarge" >
+
+    <ImageView
+        android:id="@+id/shopping_hint_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/shop_cart_empty" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shopping_hint_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/PaddingLarge"
+        android:text="您的购物车还是空的"
+        android:textColor="#666666"
+        android:textSize="@dimen/TextSizeMedium" />
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/PaddingMedium"
+        android:text="去挑一下中意的宝贝吧"
+        android:textColor="@color/text_goods_9_color"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <Button
+        android:id="@+id/shopping_go"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/tv_hint"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/PaddingLarge"
+        android:background="@drawable/but_car_bg"
+        android:text="随便逛逛"
+        android:textColor="@color/text_goods_6_color"
+        android:textSize="@dimen/TextSizeMedium" />
+
+</RelativeLayout>

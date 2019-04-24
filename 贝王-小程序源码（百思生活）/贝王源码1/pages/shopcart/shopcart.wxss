@@ -1,0 +1,376 @@
+
+@import "../../views/network/bad_network.wxss";
+/*@import "../orderdetail/orderdetail.wxss";*/
+/*@import "../goods/good_list.wxss";*/
+/**编辑栏**/
+.shop_edit_view{
+    background-color: white;
+    font-size: 15px;
+    width: 100%;
+    min-height: 44px;
+    max-height: 44px;
+    border-top: 1px #F7F7F7 solid;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999
+}
+/**编辑按钮**/
+.edit_action_button{
+    position: absolute;
+    width: 40px;
+    min-height: 30px;
+    text-align: center;
+    top: 7px;
+    right: 8px;
+    padding-top: 4px;
+    color: #969696
+}
+/**购物车容器视图**/
+.shop_cart_container{
+    color: black;
+    font-size: 15px;
+    background-color: #F7F7F7;
+    height: calc(100vh - 44px - 49px);
+    margin-top: 44px;
+    width: 100%
+}
+/**购物车商品视图**/
+.shop_cart_good_view{
+    width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    position: relative;
+    color: black;
+    background-color: white;
+    border-bottom: 1px #F7F7F7 solid
+}
+/**勾选视图**/
+.shop_cart_choose_view{
+    width: 32px;
+    max-height: 100px;
+    min-height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/**勾选按钮**/
+.shop_cart_choose_image{
+    width: 21px;
+    max-height: 21px;
+}
+/**商品图片**/
+.good_image{
+    width: 74px;
+    height: 74px;
+    position: absolute;
+    top: 13px;
+    left: 34px;
+    border: 1px #F7F7F7 solid;
+    border-radius: 3.0px;
+}
+/**商品名称**/
+.good_name{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    left: 116px;
+    max-height: 38px;
+    min-height: 38px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/**商品规格**/
+.good_spec_info{
+    position: absolute;
+    top: 49px;
+    left: 116px;
+    line-height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/**商品价格容器**/
+.good_price_container{
+    position: absolute;
+    top: 73px;
+    left: 116px;
+    right: 101px;
+    line-height: 20px;
+    max-height: 20px;
+    flex-flow: row nowrap;
+}
+/**商品销售价**/
+.good_price{
+    color: #f73030;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/**市场价**/
+.good_market_price{
+    color:#969696;
+    font-size:13px;
+}
+/**横线**/
+.line_view{
+    width: 100%;
+    min-height: 1px;
+    max-height: 1px;
+    background-color: #969696;
+    position: absolute;
+    left: 0px;
+    top: 10px;
+}
+/**数量文本--用于无法更改数量的赠品商品显示数量**/
+.good_quantity{
+    position: absolute;
+    top: 70px;
+    right: 8px;
+    width: 85px;
+    line-height: 20px;
+    max-height: 20px;
+    text-align: right
+}
+/**数量视图**/
+.quantity_view{
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    right: 8px;
+    width: 85px;
+    min-height: 25px;
+    max-height: 25px;
+    border: 1px #e6e6e6 solid;
+    box-sizing: content-box
+}
+/**加按钮**/
+.add_image{
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    width: 15px;
+    height: 15px;
+    padding: 3px;
+}
+/**减按钮**/
+.minus_image{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 15px;
+    height: 15px;
+    padding: 3px;
+}
+/**数量视图的数量显示**/
+.quantity_text{
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    width: 35px;
+    line-height: 25px;
+    overflow: hidden;
+    border-left: 1px #e6e6e6 solid;
+    border-right: 1px #e6e6e6 solid;
+    text-align: center;
+}
+/**偏移**/
+.margin_content{
+    margin-top: 10px;
+}
+/**缩进**/
+.good_name.have_tag{
+    text-indent: 33px;
+    display: inline-block;
+}
+/**预售/赠品/配件标志**/
+.good_type_tag{
+    position: absolute;
+    top: 8px;
+    left: 116px;
+    width: 30px;
+    color: white;
+    background-color: #f73030;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 3.0px;
+    font-size: 14px;
+    padding-left: 1px;
+    padding-right: 1px;
+    text-align: center;
+}
+/**空白**/
+.bland{
+    min-height: 8px;
+    width: 100%;
+    background-color: #F7F7F7;
+}
+/**显示的组名**/
+.group_name{
+    min-height: 30px;
+    line-height: 20px;
+    padding-left: 5px;
+    width:100%;
+    background-color: #F7F7F7;
+    display: flex;
+    align-items: center;
+    color: #969696;
+}
+/**享受优惠/未享受优惠视图**/
+.promotion_view{
+    background-color: white;
+    width: 100%;
+    line-height: 21px;
+    min-height: 38px;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px #F7F7F7 solid
+}
+/**优惠标签**/
+.tag{
+    color: white;
+    border-radius: 3.0px;
+    text-align: center;
+    background-color: #f73030;
+    line-height: 21px;
+    padding: 0px 6px
+}
+/**内容**/
+.content{
+    line-height: 21px;
+    margin-left: 5px;
+}
+/**显示订单优惠视图**/
+.order_promotion_view{
+    background-color: white;
+    line-height: 22px;
+    margin-top: 10px;
+    padding: 4px 8px
+}
+/**商品优惠视图**/
+.order_promotion_view.margin{
+    margin-top: 0px;
+    font-size: 13px;
+}
+/**购物车底部视图**/
+.shop_cart_bottom_view{
+    max-height: 49px;
+    min-height: 49px;
+    width: 100%;
+    border-top: 1px #f73030 solid;
+    position: fixed;
+    box-sizing: border-box;
+    bottom: 0px;
+    left: 0px;
+    background-color: white;
+    font-size: 15px;
+}
+/**全选**/
+.select_all_view{
+    width: 40px;
+    line-height: 30px;
+    max-height: 30px;
+    position: absolute;
+    left: 34px;
+    top: 9px;
+}
+/**全选图片**/
+.select_image{
+    position: absolute;
+    top:14px;
+    left: 10px;
+    width: 21px;
+    max-height: 21px;
+}
+/**价格视图**/
+.price_view{
+    min-height: 39px;
+    max-height: 39px;
+    width: calc(100vw - 64px - 100px - 30px);
+    margin-top: 5px;
+}
+/**总计**/
+.total_price{
+    color: #f73030;
+    line-height: 22px;
+    position: absolute;
+    top: 5px;
+    left: 74px;
+    right: 105px;
+}
+/**节省**/
+.discount_price{
+    color: #969696;
+    line-height: 20px;
+    font-size: 13px;
+    position: absolute;
+    top: 25px;
+    left: 74px;
+    right: 105px;
+}
+/**结算按钮**/
+.pay_button{
+    width: 100px;
+    min-height: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #f73030;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 18px
+}
+/**删除按钮**/
+.delete_button{
+    width: 60px;
+    min-height: 35px;
+    max-height: 35px;
+    border: 1px #f73030 solid;
+    color: #f73030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3.0px;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    box-sizing: border-box
+}
+
+/*空视图容器*/
+.empty-container{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F7F7;
+    height: 100vh;
+    margin-top: 0px
+}
+
+/*空视图图标*/
+.empty-container-icon{
+    width: 70px;
+    height: 70px;
+    background: darkgrey;
+    border-radius: 35px;
+}
+
+/*空视图标题*/
+.empty-container-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
+
+/*空视图副标题*/
+.empty-container-subtitle{
+    font-size: 16px;
+    color: lightgray;
+}

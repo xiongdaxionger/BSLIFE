@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginTop="10dp"
+        android:background="@color/text_goods_c_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:weightSum="10" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="7.5"
+            android:text="收货人："
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <EditText
+            android:id="@+id/fragment_add_reciver_address_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/PaddingLarge"
+            android:paddingTop="@dimen/PaddingLarge"
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/text_goods_c_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/PaddingXLarge"
+        android:paddingRight="@dimen/PaddingXLarge"
+        android:weightSum="10" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="7.5"
+            android:text="联系电话："
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <EditText
+            android:id="@+id/fragment_add_reciver_address_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:inputType="phone"
+            android:paddingBottom="@dimen/PaddingLarge"
+            android:paddingTop="@dimen/PaddingLarge"
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeMedium" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/text_goods_c_color" 
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/PaddingXLarge"
+        android:paddingRight="@dimen/PaddingXLarge"
+        android:weightSum="10" 
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="7.5"
+            android:text="固定电话："
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <EditText
+            android:id="@+id/fragment_add_reciver_address_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:inputType="phone"
+            android:paddingBottom="@dimen/PaddingLarge"
+            android:paddingTop="@dimen/PaddingLarge"
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeMedium" />
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/text_goods_c_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/PaddingXLarge" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="7.5"
+            android:text="所在地区："
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/fragment_add_reciver_address_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/PaddingLarge"
+            android:paddingRight="@dimen/PaddingXLarge"
+            android:paddingTop="@dimen/PaddingLarge"
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/text_goods_c_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/PaddingXLarge"
+        android:paddingRight="@dimen/PaddingXLarge"
+        android:weightSum="10" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="7.5"
+            android:text="详细地址："
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <EditText
+            android:id="@+id/fragment_add_reciver_address_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:paddingBottom="@dimen/PaddingLarge"
+            android:paddingTop="@dimen/PaddingLarge"
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/text_goods_c_color" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dip"
+        android:background="@color/fragment_background_color" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/text_goods_c_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/PaddingXLarge"
+        android:paddingTop="10dp" >
+
+        <CheckBox
+            android:id="@+id/address_raid"
+            style="@style/collection_radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:button="@null"
+            android:drawablePadding="@dimen/PaddingMedium"
+            android:text="设为默认收货地址"
+            android:textColor="@color/text_goods_3_color" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/text_goods_c_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/PaddingXLarge"
+        android:paddingRight="@dimen/PaddingXLarge"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身份证号码："
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <EditText
+            android:id="@+id/fragment_add_reciver_address_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:gravity="center_vertical|right"
+            android:paddingBottom="@dimen/PaddingLarge"
+            android:paddingTop="@dimen/PaddingLarge"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeMedium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="* "
+            android:textColor="@color/text_goods_7_color" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="根据政策要求，用户必须填写收货人身份证号"
+            android:textColor="@color/text_goods_7_color" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/acco_save_address_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="@dimen/PaddingXXLarge"
+        android:background="@drawable/app_button_selector"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/acco_address_save_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSizeMedium" />
+
+</LinearLayout>

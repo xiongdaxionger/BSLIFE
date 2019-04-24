@@ -1,0 +1,145 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/secondKill/second_kill",
+    "pages/goodcat/good_cat",
+    "pages/goods/good_list",
+    "pages/goods/good_collect",
+    "pages/goods/good_browse_history",
+    "pages/gooddetail/gooddetail",
+    "pages/gooddetail/goodnotify",
+    "pages/goodcomment/comment_list",
+    "pages/goodcomment/comment_add",
+    "pages/advice/advicelist",
+    "pages/advice/addadvice",
+    "pages/replyadvice/replyadvice",
+    "pages/shopcart/shopcart",
+    "pages/user/me",
+    "pages/user/userInfo",
+    "pages/user/userInfo_modify",
+    "pages/user/bind_phone",
+    "pages/user/reset_password",
+    "pages/user/setting",
+    "pages/user/changelogin",
+    "pages/integral/integral",
+    "pages/integral/integral_sign_in",
+    "pages/customerservice/customerservice",
+    "pages/feedback/feedback",
+    "pages/activitylist/activitylist",
+    "pages/activitylist/shares",
+    "pages/couponlist/couponlist",
+    "pages/login/login",
+    "pages/login/phone_number_input",
+    "pages/login/sms_code_fetch",
+    "pages/login/register",
+    "pages/orderlist/orderlist",
+    "pages/orderdetail/orderdetail",
+    "pages/orderdetail/logistics",
+    "pages/addresslist/addresslist",
+    "pages/addresslist/address_edit",
+    "pages/confirmorder/confirmorder",
+    "pages/invioce/invioce",
+    "pages/usecouponlist/usecouponlist",
+    "pages/payinfolist/payinfolist",
+    "pages/paypassword/paypassword",
+    "pages/refund/refund",
+    "pages/refund/refunddetail",
+    "pages/cargo/cargo",
+
+    "pages/collectMoney/collect_money_input",
+    "pages/collectMoney/collect_money_share",
+
+    "pages/statistical/statistical",
+
+    "pages/user/distribution_center",
+
+    "pages/shopcart/shopcart_nav_enable",
+    "pages/custom/custom",
+    
+    "pages/tryOut/tryOut",
+    "pages/tryOut/tryOutPro/tryOutPro"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "贝王商城",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#f73030",
+    "backgroundColor": "#ffffff",
+    "color": "#000000",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/tabBar/home_normal.png",
+        "selectedIconPath": "images/tabBar/home_select.png"
+      },
+      {
+        "pagePath": "pages/goodcat/good_cat",
+        "text": "分类",
+        "iconPath": "images/tabBar/cat_normal.png",
+        "selectedIconPath": "images/tabBar/cat_select.png"
+      },
+      {
+        "pagePath": "pages/shopcart/shopcart",
+        "text": "购物车",
+        "iconPath": "images/tabBar/shopcart_normal.png",
+        "selectedIconPath": "images/tabBar/shopcart_select.png"
+      },
+      {
+        "pagePath": "pages/user/me",
+        "text": "我的",
+        "iconPath": "images/tabBar/me_normal.png",
+        "selectedIconPath": "images/tabBar/me_select.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "pages/groupBooking/",
+      "pages": [
+        "groupBooking",
+        "groupBooking_detail/gooddetail",
+        "groupBooking_state/groupBooking_state",
+        "myGroupBooking/myGroupBooking"
+      ]
+    },
+    {
+      "root": "pages/balance/",
+      "pages": [
+        "balance_home",
+        "topup_activity",
+        "topup_confirm",
+        "withdraw",
+        "accountlist",
+        "addaccount",
+        "billlist"
+      ]
+    },
+    {
+      "root": "pages/partner/",
+      "pages": [
+        "partner_list",
+        "partner_detail",
+        "partner_add_list",
+        "partner_add_directly",
+        "partner_add_qrcode",
+        "partner_join"
+      ]
+    },
+    {
+      "root": "pages/articleStory/",
+      "pages": [
+        "articleStory",
+        "articlePage/articlePage",
+        "articleTheme/articleTheme"
+      ]
+    }
+  ],
+  "debug": "true"
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/acco_login_thirdparty_line_bgcolor" />
+
+    <RelativeLayout
+        android:id="@+id/confirm_order_pay_wechat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:padding="@dimen/PaddingXMedium">
+
+        <ImageView
+            android:id="@+id/pay_icon"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/PaddingMedium" />
+
+        <CheckBox
+            android:id="@+id/pay_checkbox"
+            style="@style/checkbox"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/check_selector_pay"
+            android:clickable="false"
+            android:enabled="false"
+            android:focusable="false"
+            android:focusableInTouchMode="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/pay_checkbox"
+            android:layout_toRightOf="@+id/pay_icon"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/PaddingMedium" >
+
+            <TextView
+                android:id="@+id/pay_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_goods_3_color"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <TextView
+                android:id="@+id/pay_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/text_goods_9_color"
+                android:textSize="@dimen/TextSizeBigSmall" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <!--会员详情头部-->
+    <!--背景-->
+    <ImageView
+        android:contentDescription="背景"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/partner_detail_header_bg"/>
+
+    <!--头像-->
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:contentDescription="头像"
+        android:id="@+id/header"/>
+
+    <!--昵称-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/header"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:text="昵称"
+        android:lines="1"
+        android:layout_marginTop="5dp"
+        android:id="@+id/name_textView"/>
+</RelativeLayout>

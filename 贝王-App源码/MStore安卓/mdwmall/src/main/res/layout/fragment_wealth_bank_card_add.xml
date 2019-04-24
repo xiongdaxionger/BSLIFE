@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/radiogroup_bank_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp" >
+
+        <RadioButton
+            android:id="@+id/bank_card_bank"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/check_order_red_bg_left"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="银行卡"
+            android:textColor="@drawable/check_mychart_tv_red_white"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <RadioButton
+            android:id="@+id/bank_card_alipay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/check_order_red_bg_right"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="支付宝"
+            android:textColor="@drawable/check_mychart_tv_red_white"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/layout_bank"
+            layout="@layout/item_layout_bank_bind"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/layout_alipay_bank"
+            layout="@layout/item_layout_alipay_bind"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/PaddingMedium"
+        android:layout_marginTop="@dimen/PaddingXXLarge"
+        android:padding="@dimen/PaddingMedium"
+        android:text="*短信验证码仅发送到登录账号的手机号码中"
+        android:textColor="@color/text_goods_9_color"
+        android:textSize="@dimen/TextSizeSmall" 
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_sure"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/PaddingLarge"
+        android:layout_marginRight="@dimen/PaddingLarge"
+        android:layout_marginTop="@dimen/PaddingXXLarge"
+        android:background="@drawable/app_button_selector"
+        android:gravity="center"
+        android:text="绑定"
+        android:textColor="@color/white" />
+
+</LinearLayout>

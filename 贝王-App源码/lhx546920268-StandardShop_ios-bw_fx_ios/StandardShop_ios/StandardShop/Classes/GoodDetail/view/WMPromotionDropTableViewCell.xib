@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="WMPromotionDropTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="促销" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkP-4s-xSm">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="41" id="PrG-wy-gbO"/>
+                            <constraint firstAttribute="height" constant="21" id="gcH-XI-fTP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTt-VI-rAT" customClass="JCTagListView">
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3q-Yp-2Qi">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="hJ8-Iq-0nE"/>
+                            <constraint firstAttribute="width" constant="21" id="wOh-6a-R9J"/>
+                        </constraints>
+                        <state key="normal" image="arrow_down_gray"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Y3q-Yp-2Qi" firstAttribute="leading" secondItem="MTt-VI-rAT" secondAttribute="trailing" constant="5" id="3FO-R1-gML"/>
+                    <constraint firstItem="MTt-VI-rAT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9f7-Gj-zf5"/>
+                    <constraint firstItem="MTt-VI-rAT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="41" id="W2g-5l-gaP"/>
+                    <constraint firstItem="UkP-4s-xSm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Yoa-U5-M9H"/>
+                    <constraint firstAttribute="bottom" secondItem="MTt-VI-rAT" secondAttribute="bottom" id="YyW-nQ-sf5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Y3q-Yp-2Qi" secondAttribute="trailing" id="bXf-jI-E1I"/>
+                    <constraint firstItem="Y3q-Yp-2Qi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dmy-3j-aEf"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="UkP-4s-xSm" secondAttribute="leading" id="wcP-RP-bVk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dropDowmButton" destination="Y3q-Yp-2Qi" id="jbd-m6-Qzf"/>
+                <outlet property="promotionTagListView" destination="MTt-VI-rAT" id="fEg-FF-d5v"/>
+                <outlet property="titleLabel" destination="UkP-4s-xSm" id="Yov-n7-N56"/>
+            </connections>
+            <point key="canvasLocation" x="234" y="143"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow_down_gray" width="14" height="8"/>
+    </resources>
+</document>

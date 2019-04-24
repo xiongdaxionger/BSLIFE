@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/MarginMedium" >
+
+    <LinearLayout
+        android:id="@+id/shopping_orders_item_comment_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <TextView
+            android:id="@+id/shopping_orders_item_comment_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/PaddingMedium"
+            android:text="店主反馈"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <TextView
+            android:id="@+id/shopping_orders_item_comment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/PaddingMedium"
+            android:text="店主反馈"
+            android:textColor="@color/westore_second_gray_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shopping_orders_item_reason_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shopping_orders_item_comment_ll"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <TextView
+            android:id="@+id/shopping_orders_item_reason_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/PaddingMedium"
+            android:text="退换理由"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <TextView
+            android:id="@+id/shopping_orders_item_reason_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/PaddingMedium"
+            android:text="退换理由"
+            android:textColor="@color/westore_second_gray_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shopping_orders_item_express_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shopping_orders_item_reason_ll"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <TextView
+            android:id="@+id/shopping_orders_item_express_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/PaddingMedium"
+            android:text="快递信息"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <TextView
+            android:id="@+id/shopping_orders_item_express_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/PaddingMedium"
+            android:text="快递单号"
+            android:textColor="@color/westore_second_gray_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/shopping_orders_item_express_ll"
+        android:background="@color/westore_divider_bgcolor" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:gravity="right" >
+
+        <Button
+            android:id="@+id/input_delivery"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/PaddingXMedium"
+            android:layout_marginTop="@dimen/PaddingXMedium"
+            android:background="@drawable/shape_order_action"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/PaddingLarge"
+            android:paddingBottom="@dimen/PaddingMedium"
+            android:paddingTop="@dimen/PaddingMedium"
+            android:text="填写退货信息"
+            android:textColor="@color/westore_red"
+            android:textSize="@dimen/TextSizeBigSmall"
+            android:visibility="gone" />
+        
+        <Button
+            android:id="@+id/shopping_orders_item_action"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/PaddingXMedium"
+            android:layout_marginTop="@dimen/PaddingXMedium"
+            android:background="@null"
+            android:gravity="center"
+            android:paddingBottom="@dimen/PaddingMedium"
+            android:paddingTop="@dimen/PaddingMedium"
+            android:text="@string/orders_pay_but"
+            android:textColor="@color/westore_red"
+            android:textSize="@dimen/TextSizeBigSmall"
+            android:visibility="visible" />
+    </TableRow>
+
+</RelativeLayout>

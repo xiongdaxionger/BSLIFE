@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/fragment_background_color"
+    android:paddingBottom="@dimen/MarginLarge"
+    android:paddingLeft="@dimen/MarginXXLarge"
+    android:paddingRight="@dimen/MarginXXLarge"
+    android:paddingTop="@dimen/MarginLarge" >
+
+    <Button
+        android:id="@+id/coupon_instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_solid_white_stroke_round5_gray"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="优惠券使用说明"
+        android:textColor="@color/westore_gray_textcolor" />
+
+</LinearLayout>

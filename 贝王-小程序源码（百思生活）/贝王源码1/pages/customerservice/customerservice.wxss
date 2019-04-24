@@ -1,0 +1,63 @@
+@import "../../views/network/bad_network.wxss";
+/**客户服务背景**/
+.customer_service_container{
+    background-color: #FFFFFF;
+    font-size: 15px;
+    position: relative;
+}
+/**客户服务类型容器**/
+.service_type_container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px #e5e5e5 solid;
+    border-top:1px #e5e5e5 solid;
+}
+/**客服服务类型视图**/
+.service_type{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33vw;
+    height: 33vw;
+    position: relative;
+}
+/**服务类型图标**/
+.icon{
+    margin-top: 30px;
+    width: 35px;
+    height: 35px;
+}
+/**服务类型文本**/
+.title{
+    color: #000000;
+    text-align: center;
+    margin-top: 5px;
+}
+/**右侧分割线**/
+.service_type.right_separator{
+    border-right: 1px #e5e5e5 solid;
+}
+/**底部分割线**/
+.service_type.bottom_separator{
+    border-bottom: 1px #e5e5e5 solid;
+}
+/**说明视图**/
+.service_info_container{
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/**服务说明标题**/
+.service_info_title{
+    color: #000000;
+    height: 21px;
+    line-height: 21px;
+}
+/**服务说明**/
+.service_info_content{
+    margin-top: 5px;
+    line-height: 25px;
+    color: #A9A9A9
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="WMStoreNoneSelectViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="53.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXX-KZ-mcI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="storeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6n0-3f-f8d">
+                                <rect key="frame" x="8" y="11" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="HHb-yf-GEN"/>
+                                    <constraint firstAttribute="height" constant="22" id="hqS-Ki-duE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择自提门店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrd-2L-UOy">
+                                <rect key="frame" x="38" y="12" width="254" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Pna-7q-xkg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_gray" translatesAutoresizingMaskIntoConstraints="NO" id="wZN-or-e1K">
+                                <rect key="frame" x="300" y="16" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="C7O-x3-e1M"/>
+                                    <constraint firstAttribute="width" constant="12" id="oeJ-Us-wp5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rrd-2L-UOy" firstAttribute="centerY" secondItem="jXX-KZ-mcI" secondAttribute="centerY" id="CKM-is-Ng7"/>
+                            <constraint firstItem="wZN-or-e1K" firstAttribute="leading" secondItem="rrd-2L-UOy" secondAttribute="trailing" constant="8" id="E9e-ny-7Ln"/>
+                            <constraint firstItem="rrd-2L-UOy" firstAttribute="leading" secondItem="6n0-3f-f8d" secondAttribute="trailing" constant="8" id="RZX-O2-dpZ"/>
+                            <constraint firstAttribute="height" constant="44" id="SHd-dq-Np3"/>
+                            <constraint firstItem="wZN-or-e1K" firstAttribute="centerY" secondItem="jXX-KZ-mcI" secondAttribute="centerY" id="Ylv-XN-kFi"/>
+                            <constraint firstItem="6n0-3f-f8d" firstAttribute="leading" secondItem="jXX-KZ-mcI" secondAttribute="leading" constant="8" id="cJy-ZA-2c6"/>
+                            <constraint firstItem="6n0-3f-f8d" firstAttribute="centerY" secondItem="jXX-KZ-mcI" secondAttribute="centerY" id="hpp-bx-66v"/>
+                            <constraint firstAttribute="trailing" secondItem="wZN-or-e1K" secondAttribute="trailing" constant="8" id="lB8-u1-WmW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jXX-KZ-mcI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="33M-Vz-wBz"/>
+                    <constraint firstItem="jXX-KZ-mcI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="j5m-Ma-icg"/>
+                    <constraint firstAttribute="trailing" secondItem="jXX-KZ-mcI" secondAttribute="trailing" id="uos-K8-fU2"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow_gray" width="12" height="12"/>
+        <image name="storeIcon" width="25" height="25"/>
+    </resources>
+</document>

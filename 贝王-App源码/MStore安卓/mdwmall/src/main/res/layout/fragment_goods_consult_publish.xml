@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <include layout="@layout/item_goods_consult_input" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="咨询类型"
+        android:textColor="@color/westore_gray_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <com.qianseit.westore.ui.FlowLayout
+        android:id="@+id/type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/MarginLarge"
+        custom:horizontal_spacing="@dimen/MarginLarge"
+        custom:vertical_spacing="@dimen/MarginLarge" >
+    </com.qianseit.westore.ui.FlowLayout>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left|center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="匿名咨询"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <CheckBox
+            android:id="@+id/anonymous_consult"
+            style="@style/checkbox"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/PaddingXLarge"
+            android:focusableInTouchMode="true" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="left|center" >
+
+        <TextView
+            android:id="@+id/consult_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="如果您有更多问题"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/service_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="38dip"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/app_button_selector"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSizeMedium" />
+
+</LinearLayout>

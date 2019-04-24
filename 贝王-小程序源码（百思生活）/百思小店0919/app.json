@@ -1,0 +1,68 @@
+{
+  "pages":[
+    
+    "pages/login/login",
+    "pages/home/home",
+    "pages/home/mystore",
+    "pages/home/college",
+    "pages/home/video",
+    "pages/home/activepage",
+    "pages/ranking/ranking",
+    "pages/custom/custom",
+    "pages/cash/recash",
+    "pages/cash/verifyphone",
+    "pages/paypassword/paypassword",
+    "pages/members/list",
+    "pages/members/center",
+    "pages/members/detail",
+    "pages/members/detailtow",
+    "pages/members/addmember",
+    "pages/members/codetoinvite",
+    "pages/members/add",
+    "pages/balance/balance_home",
+    "pages/balance/topup_activity",
+    "pages/balance/topup_confirm",
+    "pages/balance/withdraw",
+    "pages/balance/accountlist",
+    "pages/balance/addaccount",
+    "pages/balance/billlist",
+    "pages/user/bind_phone",
+    "pages/user/reset_password",
+    "pages/goods/goods"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "百思小店",
+    "navigationBarTextStyle":"black"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx2f0b7546fdf82ea5"
+  ],
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "color": "#9d9d9d",
+    "selectedColor": "#f18958",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "小店",
+        "iconPath": "/image/009.png",
+        "selectedIconPath": "/image/005.png"
+      },
+      {
+        "pagePath": "pages/members/list",
+        "text": "会员",
+        "iconPath": "/image/006.png",
+        "selectedIconPath": "/image/043.png"
+      },
+      {
+        "pagePath": "pages/members/center",
+        "text": "我的",
+        "iconPath": "/image/007.png",
+        "selectedIconPath": "/image/042.png"
+      }
+    ]
+  }
+}

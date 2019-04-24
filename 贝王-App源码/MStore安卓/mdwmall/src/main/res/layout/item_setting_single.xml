@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:drawableRight="@drawable/base_arrow_right_pink_n"
+    android:gravity="left|center"
+    android:padding="@dimen/PaddingXLarge"
+    android:text="测试"
+    android:textColor="@color/westore_gray_textcolor" >
+
+</TextView>

@@ -1,0 +1,25 @@
+
+<!--充值有礼-->
+<view class="container">
+
+  <!--头部输入框-->
+  <view class="header">
+    <text>充值有礼</text>
+    <input placeholder="请输入充值金额" placeholder-class="placeholder" type="digit" bindinput="inputDidChange" maxlength="10" />
+    <view catchtap="tapTopupInput" class="topup-immediately">立即充值</view>
+  </view>
+
+  <!--充值活动列表-->
+  <block wx:key="{{index}}" wx:for="{{activities}}">
+    <view class="activity-item">
+      <view class="activity-left-container">
+        <view class="activity-title">{{item.name}}</view>
+        <view class="activity-subtitle">{{item.giving}}</view>
+      </view>
+      <view class="activity-right-container">
+        <text>{{item.desc}}</text>
+        <view catchtap="tapTopupActivity" data-index="{{index}}" class="activity-topup-btn">我要充值</view>
+      </view>
+    </view>
+  </block>
+</view>

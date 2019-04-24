@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/fragment_background_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/code_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/qrcode_bg"
+            android:src="@drawable/qr_code_bg"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:id="@+id/user_two_code"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="70dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我是"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/name"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#ff9000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我是贝王育儿合伙人!"
+            android:textSize="14sp"
+            android:layout_alignLeft="@id/name"
+            android:layout_below="@id/name"
+            android:textColor="#a5a5a5"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/PaddingLarge" >
+
+        <TextView
+            android:id="@+id/qrcode_save"
+            style="@style/share_item_view_new"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/save_sd"
+            android:text="@string/save_sd" />
+
+        <TextView
+            android:id="@+id/share_wechat_circle"
+            style="@style/share_item_view_new"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/share_wechat_circle2"
+            android:text="@string/share_wechat_circle" />
+
+        <TextView
+            android:id="@+id/share_wechat"
+            style="@style/share_item_view_new"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/share_wechat2"
+            android:gravity="center_horizontal"
+            android:text="@string/share_wechat_chat" />
+    </LinearLayout>
+
+</LinearLayout>

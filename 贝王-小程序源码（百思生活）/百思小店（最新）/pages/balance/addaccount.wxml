@@ -1,0 +1,74 @@
+<!--背景视图-->
+<form bindsubmit="submitAddAccount">
+<scroll-view class="add_container_view">
+    <view class="bland"></view>
+    <!--选项卡-->
+    <view class="{{selectIndex == 0 ? 'type_view select_view' : 'type_view un_select_view'}}" style="margin-left:20px;border-top-left-radius:4.0px;border-bottom-left-radius:4.0px;border-left:1px solid #f73030" bindtap="selectType" data-index="0">银行卡</view>
+    <view class="{{selectIndex == 1 ? 'type_view select_view' : 'type_view un_select_view'}}" style="position:absolute;right:20px;top:10px;border-top-right-radius:4.0px;border-bottom-right-radius:4.0px;" bindtap="selectType" data-index="1">支付宝</view>
+    <view class="bland"></view>
+    <!--银行卡输入-->
+    <!--银行卡号输入-->
+    <view class="info_view" wx:if="{{selectIndex == 0}}">
+        <view class="title">银行卡号</view>
+        <input id="bank_number" class="input" type="number" placeholder="请输入银行卡号" placeholder-style="color:gray" maxlength="25" bindinput="inputChange" value="{{bank_number}}"/>
+    </view>
+    <!--持卡人-->
+    <view class="info_view" wx:if="{{selectIndex == 0}}">
+        <view class="title">持卡人</view>
+        <input id="bank_person" class="input" placeholder="请输入持卡人姓名" placeholder-style="color:gray" maxlength="25" bindinput="inputChange" value="{{bank_person}}"/>
+    </view>
+    <!--发卡银行-->
+    <view class="info_view" wx:if="{{selectIndex == 0}}" bindtap="selectBank">
+        <view class="title" bindtap="selectBank">发卡银行</view>
+        <view class="sub_title" style="right:38px;color:gray" bindtap="selectBank">{{bank_name.length == 0 ? '请选择发卡银行' : bank_name}}</view>
+        <image class="arrow" src="{{imgURL + '/image/icon/arrow_dark_down.png'}}" mode="aspectFit" bindtap="selectBank"></image>
+    </view>
+
+    <!--支付宝输入-->
+    <!--支付宝账号-->
+    <view class="info_view" wx:if="{{selectIndex == 1}}">
+        <view class="title">支付宝</view>
+        <input id="ali_number" class="input" placeholder="请输入支付宝账号" placeholder-style="color:gray" maxlength="25" bindinput="inputChange" value="{{ali_number}}"/>
+    </view>
+    <!--支付宝名字-->
+    <view class="info_view" wx:if="{{selectIndex == 1}}">
+        <view class="title">账号名字</view>
+        <input id="ali_name" class="input" placeholder="请输入支付宝名字" placeholder-style="color:gray" maxlength="25" bindinput="inputChange" value="{{ali_name}}"/>
+    </view>
+
+    <view class="bland"></view>
+    <!--手机号码-->
+    <view class="info_view">
+        <view class="title">手机号码</view>
+        <view class="sub_title">{{mobile}}</view>
+    </view>
+    <!--验证码-->
+    <view class="info_view">
+        <view class="title">验证码</view>
+        <input id="code" type="number" class="input"style="right:98px" placeholder="请输入验证码" placeholder-style="color:gray" maxlength="6" bindinput="inputChange"/>
+        <view bindtap="getPhoneCode" class="{{isLoadCodeRequest ? 'get_code_button getting' : 'get_code_button can_get'}}">{{isLoadCodeRequest ? second + 's': '获取验证码'}}</view>
+    </view>
+    
+    <view class="bland"></view>
+    <view class="bland"></view>
+    <!--提交按钮-->
+    <button class="submit_button" formType="submit">确认</button>
+</scroll-view>
+
+</form>
+
+<!--物流公司-->
+<view wx:if="{{isShowCompany}}" class="shipping-container">
+  <view animation="{{backgroundOpacityAnimation}}" class="shipping_black_transparent_bg" bindtap="closeBankCompany"></view>
+  <view animation="{{companyTranslateAnimation}}" class="shipping_method_container">
+    <view class="shipping_method_header">
+        <view class="header_title">银行</view>
+        <view class="cancel_title" bindtap="closeBankCompany">取消</view>
+    </view>
+    <scroll-view scroll-y class="shipping_method_scroll_view">
+        <block wx:for="{{bankNamesArr}}" wx:key="{{index}}">
+            <view class="shipping_name_view" bindtap="didSelectBank" data-index="{{item}}">{{item}}</view>
+        </block>
+    </scroll-view>
+  </view>
+</view>

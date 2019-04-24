@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/store_info_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="ss"
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeLarge" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="营业时间"
+                android:textColor="@color/text_goods_9_color"
+                android:textSize="@dimen/TextSizeSmall" />
+
+            <TextView
+                android:id="@+id/store_info_business_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="营业时间"
+                android:textColor="#f53434"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <TextView
+                android:id="@+id/store_info_business_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="营业时间"
+                android:textColor="#f53434"
+                android:textSize="@dimen/TextSizeMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="门店地址"
+                android:textColor="@color/text_goods_9_color"
+                android:textSize="@dimen/TextSizeSmall" />
+
+            <TextView
+                android:id="@+id/store_info_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="营业时间"
+                android:textColor="@color/text_goods_3_color"
+                android:textSize="@dimen/TextSizeMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="门店电话"
+                android:textColor="@color/text_goods_9_color"
+                android:textSize="@dimen/TextSizeSmall" />
+
+            <TextView
+                android:id="@+id/store_info_phone_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="营业时间"
+                android:textColor="@color/text_goods_3_color"
+                android:textSize="@dimen/TextSizeMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="门店提醒"
+                android:textColor="@color/text_goods_9_color"
+                android:textSize="@dimen/TextSizeSmall" />
+
+            <TextView
+                android:id="@+id/store_info_hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="营业时间"
+                android:textColor="@color/text_goods_3_color"
+                android:textSize="@dimen/TextSizeMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你与门店的距离"
+                android:textColor="@color/text_goods_9_color"
+                android:textSize="@dimen/TextSizeSmall" />
+
+            <TextView
+                android:id="@+id/store_info_lenth_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="营业时间"
+                android:textColor="@color/text_goods_3_color"
+                android:textSize="@dimen/TextSizeMedium" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/store_info_mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

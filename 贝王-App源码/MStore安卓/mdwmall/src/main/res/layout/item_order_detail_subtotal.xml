@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/text_goods_e_color" />
+
+    <TextView
+        android:id="@+id/subtotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="@dimen/PaddingXMedium"
+        android:singleLine="false"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <View
+        android:id="@+id/subtotal_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/PaddingXMedium"
+        android:background="@color/westore_divider_bgcolor" />
+
+    <TextView
+        android:id="@+id/prepare_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="@dimen/PaddingXMedium"
+        android:singleLine="false"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <View
+        android:id="@+id/prepare_remark_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/PaddingXMedium"
+        android:background="@color/westore_divider_bgcolor" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="@dimen/PaddingXMedium"
+        android:paddingRight="@dimen/PaddingXMedium"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/order_detail_total_price_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/order_detail_total_price"
+            android:text="@string/orders_orders_total_money"
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeMedium" />
+
+        <TextView
+            android:id="@+id/order_detail_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/fragment_top_bg"
+            android:textSize="@dimen/TextSizeMedium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/order_detail_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeMedium" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/order_detail_calcel_liner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/fragment_background_color" />
+
+        <LinearLayout
+            android:id="@+id/order_detail_pay_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请在   "
+                android:textColor="@color/text_goods_3_color"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <com.qianseit.westore.ui.RushBuyCountOrdersDownTimerView
+                android:id="@+id/order_detail_go_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="-10dp"
+                android:textColor="@color/fragment_top_bg"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分内完成该交易"
+                android:textColor="@color/text_goods_3_color"
+                android:textSize="@dimen/TextSizeMedium" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/MarginXMedium"
+        android:paddingTop="@dimen/MarginXMedium" >
+    </LinearLayout>
+
+</LinearLayout>

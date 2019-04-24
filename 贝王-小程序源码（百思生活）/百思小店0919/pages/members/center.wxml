@@ -1,0 +1,64 @@
+<view>
+  <view class='center-header'>
+    <view>
+      <image src='{{memberData.member.avatar}}' class='head-img'></image>
+    </view>
+    <view class='member-name'>
+      <view>{{memberData.member.login_name_arr.local}}</view>
+      <view class='member-phone'>{{memberData.member.login_name_arr.mobile}}</view>
+    </view>
+  </view>
+  <view class='center-nav'>
+    <view class='center-nav-item'>
+      <view class='black-words'>{{memberData.member.point}}</view>
+      <view class='gray-words'>积分</view>
+    </view>
+    <view class='center-nav-item'>
+      <view class='black-words'>{{memberData.member.advance}}</view>
+      <view class='gray-words'>余额</view>
+    </view>
+    <view class='center-nav-item'>
+      <view class='black-words'>{{memberData.member.un_ship_orders}}</view>
+      <view class='gray-words'>消费次数</view>
+    </view>
+  </view>
+  <view class='center-list'>
+    <view class='center-item' bindtap='myCommision'>
+      <view class='center-item-l'>销售奖励</view>
+      <view class='center-item-c yellow-words'>￥{{commision}}</view>
+      <view class='center-item-r'>
+        <image src='/image/018.png' class='right-img'></image>
+      </view>
+    </view>
+    <view class='center-item' bindtap='myTeam'>
+      <view class='center-item-l'>我的顾客</view>
+      <view class='center-item-c yellow-words'>{{teamTotal}}人</view>
+      <view class='center-item-r'>
+        <image src='/image/018.png' class='right-img'></image>
+      </view>
+    </view>
+    <view wx:if="{{isShowPartner}}" class='center-item' bindtap='recash'>
+      <view class='center-item-l'>退小店权益金</view>
+      <view class='center-item-c yellow-words'></view>
+      <view class='center-item-r'>
+        <image src='/image/018.png' class='right-img'></image>
+      </view>
+    </view>
+    <!-- <view class='center-item' bindtap='ranking'>
+      <view class='center-item-l'>新增会员排名</view>
+      <view class='center-item-c yellow-words'></view>
+      <view class='center-item-r'>
+        <image src='/image/018.png' class='right-img'></image>
+      </view>
+    </view> -->
+  </view>
+  <view class='center-list'>
+    <view class='center-item'>
+      <view class='center-item-l'>成为会员</view>
+      <view class='center-items'>{{regtime}}</view>
+    </view>
+  </view>
+  <view class='login-out-box'>
+    <button class='login-out' bindtap='loginOut'>退出登录</button>
+  </view>
+</view>

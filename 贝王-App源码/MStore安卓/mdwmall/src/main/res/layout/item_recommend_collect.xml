@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_goods_item"
+    android:orientation="vertical" >
+   <RelativeLayout 
+       android:id="@+id/goods_item_rel"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       >
+    <ImageView
+        android:id="@+id/goods_item_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView 
+        android:id="@+id/goods_item_shelf_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:src="@drawable/goods_icon_shelf"
+        />
+ </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/PaddingMedium"
+        android:paddingRight="@dimen/PaddingMedium"
+        android:paddingTop="@dimen/PaddingMedium" >
+
+        <TextView
+            android:id="@+id/goods_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/PaddingMedium"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textSize="@dimen/TextSizeSmall" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/goods_item_time_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/PaddingMedium" >
+
+        <TextView
+            android:id="@+id/goods_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/fragment_top_bg"
+            android:textSize="@dimen/TextSizeSmall" />
+
+        <TextView
+            android:id="@+id/goods_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#999999"
+            android:textSize="@dimen/TextSizeSmall"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <Button
+                android:id="@+id/goods_item_time_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_shoucang" />
+
+            <Button
+                android:id="@+id/goods_item_time_calcel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_quxiao_shoucang" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

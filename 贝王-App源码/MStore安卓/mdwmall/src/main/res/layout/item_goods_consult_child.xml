@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <TextView
+        android:id="@+id/admin_text"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/westore_orange"
+        android:text="A"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSizeBigSmall" />
+    <TextView
+        android:id="@+id/admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/admin_text"
+        android:layout_toEndOf="@id/admin_text"
+        android:layout_toRightOf="@id/admin_text"
+        android:layout_alignBottom="@id/admin_text"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_marginLeft="5dp"
+        android:background="@color/transparent"
+        android:text="A"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <TextView
+        android:id="@+id/replay_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/admin"
+        android:layout_alignLeft="@id/admin"
+        android:background="@color/transparent"
+        android:text="A"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <TextView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/replay_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"
+        android:text="点击查看更多"
+        android:textColor="@android:color/black"
+        android:visibility="gone"/>
+
+</RelativeLayout>

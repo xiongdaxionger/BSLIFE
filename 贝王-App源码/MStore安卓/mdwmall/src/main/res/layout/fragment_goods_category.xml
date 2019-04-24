@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background_color"
+    android:orientation="horizontal" >
+
+    <ListView
+        android:id="@+id/top_category"
+        style="@style/listview"
+        android:layout_width="100dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:divider="@color/westore_divider_bgcolor"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none" />
+
+    <ListView
+        android:id="@+id/other_category"
+        style="@style/listview"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:background="@color/fragment_background_color"
+        android:dividerHeight="0dp"
+        android:groupIndicator="@null" />
+
+</LinearLayout>

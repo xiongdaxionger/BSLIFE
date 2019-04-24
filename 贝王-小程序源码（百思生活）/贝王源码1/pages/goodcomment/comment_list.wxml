@@ -1,0 +1,116 @@
+
+<!--商品评价-->
+
+<!--加载失败-->
+<import src="/views/network/bad_network.wxml" />
+<template wx:if="{{fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+
+<!--评分模板-->
+<template name="star">
+  <view class="star-container">
+    <image style="margin-right:{{index < 4 ? 3 : 0}}px;" wx:for="{{[1,2,3,4,5]}}" wx:key="{{index}}" src="{{index < score ? (imgURL + '/images/icon/star_fill.png') : (imgURL + '/images/icon/star_empty.png')}}" />
+  </view>
+</template>
+<scroll-view scroll-top="{{scroll_top}}" bindscroll="containerScroll" scroll-y class="scroll-view" bindscrolltolower="loadMore" wx:if="{{!fail && filter_infos != null}}">
+  <view class="content-container">
+
+    <!--回到顶部按钮-->
+    <include src="/views/widget/scroll_to_top.wxml" />
+
+    <!--头部-->
+    <view class="header">
+
+      <!--综合评分-->
+      <view class="total-score-container">
+        <text class="total-score-title">综合评分</text>
+        <text class="total-score">{{total_score_float}}</text>
+        <template is="star" data="{{score: total_score, imgURL : imgURL}}" />
+      </view>
+
+      <!--分割线-->
+      <view class="header-score-line" />
+
+      <!--详细评分-->
+      <view class="detail-score-container" wx:if="{{score_infos != null}}">
+        <view class="detail-score-list" wx:for="{{score_infos}}" wx:key="{{index}}">
+          <text class="detail-score-list-name">{{item.type_name}}</text>
+          <template is="star" data="{{score: item.avg, imgURL : imgURL}}" />
+          <text class="detail-score-list-score">{{item.avg}}
+          </text>
+        </view>
+      </view>
+    </view>
+
+    <!--筛选菜单-->
+    <view class="bar">
+      <block wx:if="{{filter_infos != nul}}" wx:for="{{filter_infos}}" wx:key="{{index}}">
+        <view data-index="{{index}}" class="item" catchtap="barItemDidChange">
+          <view class="right_line" wx:if="{{index < filter_infos.length - 1}}"></view>
+          <text class="{{index == selected_filter_index ? 'text select' : 'text'}}" data-index="{{index}}">{{item.name}}\n({{item.count}})</text>
+        </view>
+      </block>
+    </view>
+
+    <!--评价列表-->
+    <block wx:if="{{comment_infos != null}}">
+      <view class="comment-list-item" wx:for="{{comment_infos}}" wx:key="{{index}}">
+
+        <!--头像-->
+        <image mode="aspectFill" class="header-image" src="{{item.img}}" />
+
+        <!--右边容器-->
+        <view class="comment-list-right-container">
+
+          <!--用户信息-->
+          <view class="comment-list-user">
+            <text class="comment-list-name">{{item.name}}</text>
+            <text class="comment-list-level">{{item.level}}</text>
+            <view class="comment-list-time">{{item.time}}</view>
+          </view>
+
+          <!--评价-->
+          <view class="comment-list-score">
+            <template is="star" data="{{score: item.score, imgURL : imgURL}}" />
+            <image wx:if="{{relay_enable}}" class="relpy-icon" src="{{imgURL + '/images/icon/reply_icon.png'}}" mode="aspectFit" catchtap="tapReply" data-index="{{index}}" />
+          </view>
+
+          <!--评价内容-->
+          <text class="comment-list-content">
+            {{item.content}}</text>
+
+          <!--九宫格图组-->
+          <view wx:if="{{item.images != null}}" class="grid-image-container">
+            <image catchtap="tapImage" data-index="{{index}}" data-idx="idx" mode="aspectFill" wx:key="{{index}}" wx:for="{{item.images}}" wx:for-item="img" wx:for-index="idx" src="{{img}}" />
+          </view>
+
+          <!--回复-->
+          <view style="color:{{item.id == 0 ? '#f73030' : 'black'}};" wx:if="{{index < (item.expand ? item.replys.length : 2)}}" class="comment-list-reply" wx:for="{{item.replys}}" wx:key="{{index}}" wx:for-item="reply">
+            {{reply.name}}:
+            <text>{{reply.content}}</text>
+          </view>
+
+          <!--隐藏更多-->
+          <text data-index="{{index}}" catchtap="tapMore" wx:if="{{item.replys.length > 2}}" class="more">{{item.expand ? '隐藏更多评价' : ('更多' + (item.replys.length - 2) + '条评价')}}</text>
+        </view>
+      </view>
+    </block>
+
+    <!--加载更多-->
+    <import src="/views/widget/load_more.wxml" />
+    <template wx:if="{{load_more}}" is="load_more" />
+
+    <!--空-->
+    <view wx:if="{{comment_infos !=null && comment_infos.length==0 && !loading}}" class="empty comment-empty">暂无商品评价</view>
+  </view>
+</scroll-view>
+
+<!--添加评价回复-->
+<view wx:if="{{replying}}" class="reply-add-container">
+  <view class="reply-input-container">
+    <textarea fixed class="reply-input" maxlength="140" auto-height placeholder="请输入回复内容" placeholder-class="placeholder" bindinput="replyInputDidChange" value="{{current_reply}}" />
+    <view class="reply-btn-container">
+      <view class="reply-cancel-btn" catchtap="replyCancel">取消</view>
+      <view class="reply-confirm-btn" catchtap="replyConfirm">发送</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,56 @@
+
+<!--统计-->
+
+<!--加载失败-->
+<import src="/views/network/bad_network.wxml" />
+<template wx:if="{{fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+<view wx:if="{{!fail && !loading}}" class="container">
+
+  <!--菜单-->
+  <view class="bar">
+    <block wx:for="{{barInfo}}" wx:key="{{index}}">
+      <view data-index="{{index}}" class="item" catchtap="barItemDidChange">
+        <view class="right_line" wx:if="{{index < barInfo.length - 1}}"></view>
+        <text class="{{index == selectedIndex ? 'text select' : 'text'}}" data-index="{{index}}">{{item}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!--图表-->
+  <view bindtouchstar="touchStart" bindtouchend="touchEnd" bindtouchmove="touchMove" bindtouchcancel="touchCancel" class="char-container">
+
+    <!--线轴容器-->
+    <view class="axis-container">
+      <view style="background:{{selectedPointIndex == index ? '#f73030' : 'white'}};" class="yAxis-item" wx:for="{{xAxis}}" wx:key="{{index}}" />
+    </view>
+    <view class="canvas-container">
+      <canvas class="chart-canvas" canvas-id="statistical" />
+      <view style="margin-left:{{xAxisWidth / 2 - 10}}px;" class="xAxis-container">
+        <view class="xAxis-item" style="width:{{xAxisWidth - pointRadius}}px;flex: 0 {{index == xAxis.length - 1 ? 1 : 0}} auto;" wx:key="{{index}}" wx:for="{{xAxis}}">{{item.day}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!--总信息-->
+  <view class="bottom-container">
+    <view class="amount">{{amount}}</view>
+    <view class="title-container">
+      <view class="point" />
+      <view class="title">{{title}}</view>
+    </view>
+  </view>
+
+  <!--点击时显示的气泡-->
+  <view wx:if="{{touching}}" class="bubble-container">
+  <!--<canvas class="bubble-canvas" canvas-id="bubble"/>-->
+   <view class="bubble">
+    <view class="bubble-title">{{title}} {{selectedPoint.data}} </view>
+    <view class="bubble-subtitle-container">
+      <view class="bubble-subtitle-date">{{selectedPoint.date}}</view>
+      <view>{{selectedPoint.day}}</view>
+    </view>
+   </view>
+  </view>
+
+  
+</view>

@@ -1,0 +1,36 @@
+<view class='add-item'>
+  <view class='add-item-l'>手机号码</view>
+  <view class='add-item-r'>
+    <input placeholder='请输入手机号码' bindinput='setPhone'></input>
+  </view>
+</view>
+    <!--图形验证码输入框-->
+    <view class="add-item" style='position:relative' wx:if="{{showImageCode}}">
+        <view class='add-item-l'>图形验证码</view>
+        <input class='image_code_input' placeholder-class="placeholder" placeholder="图形验证码" bindinput="imageCodeChange" maxlength='4'></input>
+        <image bindtap="tapImageCode" src="{{imageCodeURL}}" mode="aspectFit" class="image_code" />
+    </view>
+<view class='add-item'>
+  <view class='add-item-l'>验证码</view>
+  <view class='add-item-c'>
+    <input placeholder='请输入验证码' bindinput='setVcode'></input>
+  </view>
+  <view class='add-item-right'>
+    <view class="get-code {{count_down ? 'disable' : 'normal'}}" bindtap='getCode'>{{count_down ? second + 's': '获取验证码'}}</view>
+  </view>
+</view>
+<view class='add-item'>
+  <view class='add-item-l'>昵称</view>
+  <view class='add-item-r'>
+    <input placeholder='请输入昵称' bindinput='setUname'></input>
+  </view>
+</view>
+<view class='add-item'>
+  <view class='add-item-l'>密码</view>
+  <view class='add-item-r'>
+    <input type='password' placeholder='请输入密码'  bindinput='setPass'></input>
+  </view>
+</view>
+<view class='add-bottom'>
+  <button class='add-btn {{confirm ? "normal" : "disabled-btn"}}' bindtap='confirm'>确认添加</button>
+</view>

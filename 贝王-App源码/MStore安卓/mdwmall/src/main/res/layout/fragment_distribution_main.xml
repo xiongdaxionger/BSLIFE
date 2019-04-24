@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.qianseit.westore.ui.pull.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <include layout="@layout/allview_refresh_head" />
+        <!-- 支持所有实现Pullable接口的View -->
+
+        <com.qianseit.westore.ui.pull.PullableScrollView
+            android:id="@+id/item_pull_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/item_top_Linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <com.qianseit.westore.ui.MyListView
+                    android:id="@+id/item_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:listSelector="@color/white"
+                    android:divider="@color/text_goods_e_color"
+                    android:dividerHeight="0.5dp"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </com.qianseit.westore.ui.pull.PullableScrollView>
+
+        <include layout="@layout/allview_load_more" />
+    </com.qianseit.westore.ui.pull.PullToRefreshLayout>
+
+</LinearLayout>

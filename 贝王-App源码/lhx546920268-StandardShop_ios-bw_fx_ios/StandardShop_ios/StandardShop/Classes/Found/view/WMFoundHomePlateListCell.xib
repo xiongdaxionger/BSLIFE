@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WMFoundHomePlateListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfr-I4-oq7" userLabel="title_label">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ge-Iq-XRe" userLabel="subtitle_label">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p07-jx-XCD">
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="p07-jx-XCD" secondAttribute="height" multiplier="1:1" id="g9q-wm-Xoa"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="7ge-Iq-XRe" firstAttribute="leading" secondItem="zfr-I4-oq7" secondAttribute="leading" id="1i9-YB-J3h"/>
+                <constraint firstItem="zfr-I4-oq7" firstAttribute="leading" secondItem="p07-jx-XCD" secondAttribute="trailing" constant="10" id="8V4-rU-UlX"/>
+                <constraint firstAttribute="bottom" secondItem="p07-jx-XCD" secondAttribute="bottom" constant="10" id="Bqd-38-HRD"/>
+                <constraint firstItem="p07-jx-XCD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Dun-I9-imB"/>
+                <constraint firstItem="7ge-Iq-XRe" firstAttribute="width" secondItem="zfr-I4-oq7" secondAttribute="width" id="Ejp-Pj-WSK"/>
+                <constraint firstItem="p07-jx-XCD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HAF-zC-j4f"/>
+                <constraint firstItem="7ge-Iq-XRe" firstAttribute="bottom" secondItem="p07-jx-XCD" secondAttribute="bottom" constant="-5" id="KVD-hg-hDr"/>
+                <constraint firstAttribute="trailing" secondItem="zfr-I4-oq7" secondAttribute="trailing" constant="15" id="Yor-ad-9qY"/>
+                <constraint firstItem="zfr-I4-oq7" firstAttribute="top" secondItem="p07-jx-XCD" secondAttribute="top" constant="5" id="rFt-ao-UrF"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="p07-jx-XCD" id="Ia9-wV-18S"/>
+                <outlet property="subtitle_label" destination="7ge-Iq-XRe" id="tel-qo-Fu5"/>
+                <outlet property="title_label" destination="zfr-I4-oq7" id="5hE-Lf-jAL"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

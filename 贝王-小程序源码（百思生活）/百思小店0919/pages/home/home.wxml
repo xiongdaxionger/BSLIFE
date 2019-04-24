@@ -1,0 +1,20 @@
+<view>
+  <view class='home-header'>
+    <view class='home-header-item' bindtap='myMember'>
+      <image src='/image/008.png' class='my-store-img'></image>
+      <view>我的会员</view>
+    </view>
+    <view class='home-header-item' bindtap='addMember'>
+      <image src='/image/010.png' class='my-store-img'></image>
+      <view>新增会员</view>
+    </view>
+  </view>
+  <view class='home-list'>
+    <block wx:for="{{homeList}}" wx:key="key" wx:for-item="itemName">
+      <view class='home-item' bindtap='chooseItem' data-id='{{itemName.typeid}}'>
+        <image src='{{itemName.image}}' class='home-item-img'></image>
+        <view>{{itemName.name}}</view>
+      </view>
+    </block>
+  </view>
+</view>

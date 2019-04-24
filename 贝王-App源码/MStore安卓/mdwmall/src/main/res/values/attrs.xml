@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 支付宝密码输入框 start -->
+    <declare-styleable name="gridPasswordView">
+        <attr name="textColor" format="color|reference" />
+        <attr name="textSize" format="dimension" />
+        <attr name="lineColor" format="color" />
+        <attr name="gridColor" format="color" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="passwordsLength" format="integer" />
+        <attr name="passwordTransformation" format="string" />
+        <attr name="passwordType" format="enum">
+            <enum name="numberPassword" value="0" />
+            <enum name="textPassword" value="1" />
+            <enum name="textVisiblePassword" value="2" />
+            <enum name="textWebPassword" value="3" />
+        </attr>
+    </declare-styleable>
+    <!-- end -->
+
+
+    <!-- Theme -->
+    <declare-styleable name="Theme">
+        <attr name="goodsDetailBuySpecTextStyle" format="reference|color" />
+    </declare-styleable>
+
+    <!-- ViewPager -->
+    <declare-styleable name="ViewPagerTabs">
+        <attr name="backgroundColor" format="color" />
+        <attr name="backgroundColorPressed" format="color" />
+        <attr name="textColors" format="color" />
+        <attr name="textColorCenter" format="color" />
+        <attr name="lineColorCenter" format="color" />
+        <attr name="lineHeight" format="dimension" />
+        <attr name="tabPaddingLeft" format="dimension" />
+        <attr name="tabPaddingTop" format="dimension" />
+        <attr name="tabPaddingRight" format="dimension" />
+        <attr name="tabPaddingBottom" format="dimension" />
+        <attr name="textSizes" format="dimension" />
+        <attr name="outsideOffset" format="dimension" />
+    </declare-styleable>
+
+    <!-- 自定义对话框的Style -->
+    <declare-styleable name="CustomDialog">
+        <attr name="dialogFullBackground" format="reference|color" />
+        <attr name="dialogTitleTextColor" format="reference|color" />
+        <attr name="dialogTitleShadowColor" format="reference|color" />
+        <attr name="dialogTitleDivider" format="reference" />
+        <attr name="dialogMessageTextColor" format="reference|color" />
+        <attr name="dialogBottomDivider" format="reference" />
+        <attr name="dialogButtonDivider" format="reference|color" />
+        <attr name="dialogSingleButtonBackground" format="reference|color" />
+        <attr name="dialogLeftButtonBackground" format="reference|color" />
+        <attr name="dialogMiddleButtonBackground" format="reference|color" />
+        <attr name="dialogRightButtonBackground" format="reference|color" />
+        <attr name="dialogLeftButtonTextColor" format="reference|color" />
+        <attr name="dialogMiddleButtonTextColor" format="reference|color" />
+        <attr name="dialogRightButtonTextColor" format="reference|color" />
+    </declare-styleable>
+
+    <!-- FlowView -->
+    <declare-styleable name="FlowView">
+        <attr name="pagerMarginWidth" format="dimension" />
+        <attr name="pagerMarginColor" format="reference|color" />
+    </declare-styleable>
+
+    <!-- pull to refresh -->
+    <declare-styleable name="PullToRefresh">
+        <attr name="adapterViewBackground" format="reference|color" />
+        <attr name="headerBackground" format="reference|color" />
+        <attr name="headerTextColor" format="color" />
+        <attr name="refreshMode">
+            <flag name="pullDownFromTop" value="0x1" />
+            <flag name="pullUpFromBottom" value="0x2" />
+            <flag name="both" value="0x3" />
+        </attr>
+    </declare-styleable>
+    <!-- CircleImageView -->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundHeight" format="dimension" />
+    </declare-styleable>
+    
+    <declare-styleable name="SlidingMenu">
+        <attr name="mode">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="viewAbove" format="reference" />
+        <attr name="viewBehind" format="reference" />
+        <attr name="behindOffset" format="dimension" />
+        <attr name="behindWidth" format="dimension" />
+        <attr name="behindScrollScale" format="float" />
+        <attr name="touchModeAbove">
+            <enum name="margin" value="0" />
+            <enum name="fullscreen" value="1" />
+            <enum name="none" value="2" />
+        </attr>
+        <attr name="touchModeBehind">
+            <enum name="margin" value="0" />
+            <enum name="fullscreen" value="1" />
+            <enum name="none" value="2" />
+        </attr>
+        <attr name="shadowDrawable" format="reference" />
+        <attr name="shadowWidth" format="dimension" />
+        <attr name="fadeEnabled" format="boolean" />
+        <attr name="fadeDegree" format="float" />
+        <attr name="selectorEnabled" format="boolean" />
+        <attr name="selectorDrawable" format="reference" />
+    </declare-styleable>
+
+</resources>

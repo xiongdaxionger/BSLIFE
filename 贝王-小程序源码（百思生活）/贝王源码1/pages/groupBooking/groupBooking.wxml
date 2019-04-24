@@ -1,0 +1,46 @@
+
+<view class="groupBooking">
+  <view class="banner">
+    <view class='timeout'>
+      <text>－距离活动结束还剩－</text>
+      <view> 
+          <view>
+            <text>{{time[0][0]}}</text> <text>{{time[0][1]}}</text>天
+            <text>{{time[1][0]}}</text> <text>{{time[1][1]}}</text>时
+            <text>{{time[2][0]}}</text> <text>{{time[2][1]}}</text>分
+            <text>{{time[3][0]}}</text> <text>{{time[3][1]}}</text>秒
+          </view>
+       </view>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='content_title'>
+      <image src='../../images/groupBooking/group_buy_baloons_left.png'></image>
+      <text>
+        <text class="pin">大家都在拼</text>
+      </text>
+      <image src='../../images/groupBooking/group_buy_baloons_right.png'></image>
+       <text class="content_title_drc">邀请好友, 一起拼吧</text>
+    </view >
+    <view class="content_mian">
+    <navigator url="groupBooking_detail/gooddetail?productID=133" hover-class="navigator-hover">
+        <view class='content_item'>
+        <view class='pro_banner'>
+          <view>
+            团长返¥3
+          </view>
+        </view>
+        <view class='pro_drc'>
+          <text class='pro_txt'>
+            <text>1人团</text><text>包邮</text><text>精选输够大家发快乐发飞机大师傅 抽数丝柔</text>
+          </text>
+          <text class='price'>
+            <text class='price_l'>¥12.8 <text>38.00</text></text>
+            <text class='Open_group'>去开团</text>
+          </text>
+        </view>
+      </view>
+    </navigator>
+    </view>
+  </view>
+</view>

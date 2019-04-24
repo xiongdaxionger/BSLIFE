@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="WMLogisticsListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oR7-WG-A52" userLabel="left_top_line">
+                        <color key="backgroundColor" red="0.87999999523162842" green="0.87999999523162842" blue="0.87999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="EQF-AL-cZo"/>
+                            <constraint firstAttribute="height" constant="20" id="MBC-dU-NLP"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVT-p7-xyk" userLabel="left_bottom_line">
+                        <color key="backgroundColor" red="0.87999999523162842" green="0.87999999523162842" blue="0.87999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="so0-a0-0k4"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logistics_gray_icon" highlightedImage="logistics_red_icon" translatesAutoresizingMaskIntoConstraints="NO" id="5Bg-Qv-DDR" userLabel="point_imageView">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="bqg-pQ-Wk2"/>
+                            <constraint firstAttribute="height" constant="15" id="u5N-15-sv9"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="GoV-FW-gt0" userLabel="content_label">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwQ-cq-kAJ" userLabel="time_label">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="ogZ-WB-8wP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="IwQ-cq-kAJ" secondAttribute="trailing" constant="15" id="2Pi-SH-MPc"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="YVT-p7-xyk" secondAttribute="bottom" constant="-10" id="C6Z-4o-vV1"/>
+                    <constraint firstItem="oR7-WG-A52" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Glw-SE-fkY"/>
+                    <constraint firstAttribute="trailing" secondItem="GoV-FW-gt0" secondAttribute="trailing" constant="15" id="Kx7-Tk-GGg"/>
+                    <constraint firstItem="5Bg-Qv-DDR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Lzg-1b-Aqx"/>
+                    <constraint firstItem="5Bg-Qv-DDR" firstAttribute="centerX" secondItem="oR7-WG-A52" secondAttribute="centerX" id="MKn-Il-L6v"/>
+                    <constraint firstItem="IwQ-cq-kAJ" firstAttribute="top" secondItem="GoV-FW-gt0" secondAttribute="bottom" id="SIn-UZ-CF1"/>
+                    <constraint firstItem="oR7-WG-A52" firstAttribute="leading" secondItem="YVT-p7-xyk" secondAttribute="leading" id="SkU-2L-rBz"/>
+                    <constraint firstAttribute="bottom" secondItem="IwQ-cq-kAJ" secondAttribute="bottom" constant="10" id="THQ-tY-8ov"/>
+                    <constraint firstItem="oR7-WG-A52" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="VXL-Zz-Q0w"/>
+                    <constraint firstItem="YVT-p7-xyk" firstAttribute="top" secondItem="5Bg-Qv-DDR" secondAttribute="bottom" id="Xjt-mg-AOB"/>
+                    <constraint firstItem="GoV-FW-gt0" firstAttribute="leading" secondItem="oR7-WG-A52" secondAttribute="trailing" constant="20" id="cFl-US-cdZ"/>
+                    <constraint firstItem="IwQ-cq-kAJ" firstAttribute="leading" secondItem="GoV-FW-gt0" secondAttribute="leading" id="rLk-k2-CGW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="content_label" destination="GoV-FW-gt0" id="KYO-nf-WAg"/>
+                <outlet property="left_bottom_line" destination="YVT-p7-xyk" id="zGS-ut-1ZK"/>
+                <outlet property="left_top_line" destination="oR7-WG-A52" id="85v-qi-eea"/>
+                <outlet property="point_imageView" destination="5Bg-Qv-DDR" id="LRQ-IR-hzC"/>
+                <outlet property="time_label" destination="IwQ-cq-kAJ" id="A1b-PP-sxx"/>
+            </connections>
+            <point key="canvasLocation" x="201" y="166"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="logistics_gray_icon" width="10" height="10"/>
+        <image name="logistics_red_icon" width="13" height="13"/>
+    </resources>
+</document>

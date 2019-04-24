@@ -1,0 +1,35 @@
+<view>
+  <view class='cargo-nav'>
+    <view class='cargo-nav-l' bindtap='showCargo'><text class='{{selected}}'>存货列表</text></view>
+    <view class='cargo-nav-r' bindtap='showRecord'><text class='{{active}}'>存取记录</text></view>
+  </view>
+  <view class='cargo-main' style='display:{{cargo}}'>
+    <block wx:for="{{getinven}}" wx:key="{{index}}">
+      <view class='cargo-list'>
+        <view class='cargo-list-l'>
+          <image src='{{item.goods_img}}' data-productid='{{item.product_id}}' class='goods-img' bindtap="tapGood"></image>
+        </view>
+        <view class='cargo-list-r'>
+          <view>{{item.name}}</view>
+          <view>{{item.local_name}}</view>
+          <view class='sendnum'>存货数量： <text class='cargo-num'>{{item.nums}}</text></view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='cargo-record' style='display:{{record}}'>
+    <block wx:for="{{getpicklog}}">
+      <view class='cargo-list'>
+        <view class='cargo-list-l'>
+          <image src='{{item.goods_img}}' data-productid='{{item.product_id}}' class='goods-img' bindtap="tapGood"></image>
+        </view>
+        <view class='cargo-list-r'>
+          <view>{{item.name}}</view>
+          <view>{{item.local_name}}</view>
+          <view>{{item.create_time}}</view>
+          <view class='sendnum'>取货数量： <text class='cargo-num'>{{item.nums}}</text></view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

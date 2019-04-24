@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/PaddingXLarge" 
+    android:paddingRight="@dimen/PaddingXLarge" 
+    android:paddingBottom="@dimen/PaddingXLarge" >
+
+    <com.qianseit.westore.ui.MyGridView
+        android:id="@+id/nodes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/white"
+        android:dividerHeight="1dip"
+        android:drawSelectorOnTop="false"
+        android:fadingEdgeLength="0sp"
+        android:listSelector="@color/white"
+        android:numColumns="4"
+        android:padding="5dp"
+        android:scrollbars="@null" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/community_newest_publish"
+        android:drawablePadding="5dp"
+        android:text="最新发布"
+        android:textColor="@color/westore_red"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+</LinearLayout>

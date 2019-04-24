@@ -1,0 +1,59 @@
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+
+<view class="use_coupon_list_container" wx:if="{{!showFailNetWork}}">
+    <!--状态栏-->
+    <view class="order_status_bar" style="border-bottom: 1px #F7F7F7 solid">
+        <block wx:for="{{statusBarInfo}}" wx:for-item="statusInfo" wx:key="{{index}}">
+            <view class="order_status_item" style="width:50vw;box-sizing: border-box" bindtap="changeStatus" data-order-status="{{statusInfo.index}}">
+                <view wx:if="{{index < 1}}" class="right_line"></view>
+                <text class="{{index == selectIndex ? 'text select' : 'text'}}" data-order-status="{{statusInfo.index}}">{{statusInfo.title}}</text>
+            </view>
+        </block>
+    </view>
+    <!--添加优惠券-->
+    <view class="add_coupon_view" bindtap="addCouponAction">凭码添加优惠券</view>
+    <view wx:if="{{couponShowInfoArr.length == 0}}" class="empty-container empty_view_color">
+        <text class="empty-container-title">无相关优惠券</text>
+        <text class="empty-container-subtitle">去领券中心看看吧</text>
+    </view>
+    <!--优惠券列表-->
+    <scroll-view scroll-y class="coupon_list_scroll_view" wx:if="{{couponShowInfoArr.length > 0}}">
+        <block wx:for="{{couponShowInfoArr}}" wx:for-item="couponInfo" wx:key="{{index}}">
+            <view class="coupon_view">
+                <view class="{{couponInfo.status == 1 ? 'coupon_header_view' : 'coupon_header_view disable'}}">
+                    <view class="coupon_name">{{couponInfo.couponName}}</view>
+                    <view class="coupon_title">{{couponInfo.subTitle}}</view>
+                    <button wx:if="{{wantSelectCoupon}}" disabled="{{couponInfo.status != 1}}" bindtap="couponAction" data-code="{{couponInfo.couponCode}}" data-is-using="{{couponInfo.isUsing}}" class="coupon_button">{{couponInfo.isUsing ? 
+                    '取消使用' : couponInfo.statusString}}</button>
+                </view>
+                <view wx:if="{{wantSelectCoupon}}" class="{{couponInfo.status == 1 ? 'use_tip' : 'use_tip cant_use'}}">{{couponInfo.statusString}}</view>
+                <view class="{{couponInfo.status == 1 ? 'coupon_time' : 'coupon_time disable'}}">{{couponInfo.time}}</view>
+                <view class="{{couponInfo.status == 1 ? 'coupon_time' : 'coupon_time disable'}}"style="padding-bottom:8px">{{couponInfo.descInfo}}</view>
+            </view>
+        </block>
+    </scroll-view>
+    <!--领券中心-->
+    <view class="get_coupon_view" bindtap="getMoreCoupon">
+        <view class="get_button">更多好券,去领券中心看看吧</view>
+    </view>
+</view>
+
+<!--添加优惠券弹窗-->
+<view wx:if="{{isShowCoupon}}" class="shipping-container">
+
+  <view animation="{{backgroundOpacityAnimation}}" class="shipping_black_transparent_bg" bindtap="closeCouponMethod"></view>
+
+  <view animation="{{translateAnimation}}" class="pay_password_container" style="min-height:135px;max-height:135px">
+    <view class="header" style="border-bottom:0px">
+        <view class="title">添加优惠券</view>
+        <icon class="close" type="clear" bindtap="closeCouponMethod"></icon>
+    </view>
+    <view class="pay_password_input_container">
+        <input class="input" bindinput="couponCodeInput" placeholder="请输入优惠码"></input>
+    </view>
+    <view class="action_button" style="color:blue" bindtap="closeCouponMethod">取消</view>
+    <view class="action_button" style="color:{{inputCouponCode.length == 0 ? 'gray' : 'blue'}}" bindtap="commitAction">确定</view>
+  </view>
+</view>

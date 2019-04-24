@@ -1,0 +1,6 @@
+ <view>
+    <canvas class='canvas-sty' canvas-id="firstCanvas"></canvas>
+    <view class='save-code'>
+      <button class='save-btn' bindtap='saveImgToPhoto'>保存</button>
+    </view>
+ </view>

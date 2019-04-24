@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/divider_top"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor"
+        android:visibility="gone" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/MarginXLarge"
+        android:layout_marginRight="@dimen/MarginXLarge"
+        android:layout_marginTop="@dimen/PaddingLarge"
+        android:gravity="left|center" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textColor="@color/westore_red"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/MarginXLarge"
+        android:layout_marginTop="@dimen/MarginLarge"
+        android:background="@color/westore_divider_bgcolor" />
+
+    <TableRow
+        android:id="@+id/goods_tr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/MarginXLarge"
+        android:layout_marginRight="@dimen/MarginXLarge"
+        android:layout_marginTop="@dimen/PaddingLarge"
+        android:gravity="left|center" >
+
+        <ImageView
+            android:id="@+id/goods_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/goods_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/PaddingLarge"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/base_arrow_right_pink_n"
+            android:gravity="left|center"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/MarginXLarge"
+        android:layout_marginTop="@dimen/MarginLarge"
+        android:background="@color/westore_divider_bgcolor" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/MarginXLarge"
+        android:layout_marginRight="@dimen/MarginXLarge"
+        android:layout_marginTop="@dimen/PaddingLarge" >
+
+        <TextView
+            android:id="@+id/tag"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@color/westore_red"
+            android:gravity="center"
+            android:text="Q"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </TableRow>
+
+</LinearLayout>

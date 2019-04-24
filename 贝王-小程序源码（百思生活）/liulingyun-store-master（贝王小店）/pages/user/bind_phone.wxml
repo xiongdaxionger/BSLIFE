@@ -1,0 +1,30 @@
+
+<!--pages/user/bind_phone.wxml-->
+<view class="container">
+
+<view class="content">
+  <!--手机号-->
+  <view class="section">
+    <view class="title">手机号</view>
+    <input maxlength="11" type="number" id="phoneNumber" bindinput="textDidChange" />
+  </view>
+
+  <!--获取短信验证码-->
+  <view class="section">
+    <view class="title">验证码</view>
+    <input type="number" id="code" bindinput="textDidChange"></input>
+    <view class="count-down-btn {{count_down ? 'disable' : 'normal'}}" catchtap="getCode">{{count_down ? second + 's': '获取验证码'}}</view>
+  </view>
+
+  <!--密码-->
+  <view class="section">
+    <view class="title">密<view class="space"/>码</view>
+    <input id="password" bindinput="textDidChange" password></input>
+  </view>
+  </view>
+
+  <!--提示信息第三方登陆绑定手机号用-->
+  <text wx:if="{{msg != null}}" class="msg">{{msg}}</text>
+<!--确定按钮 disabled="{{!confirmEnable}}" 有bug-->
+  <button class="confirm-btn long-btn {{confirmEnable ? 'normal' : 'disable'}}" catchtap="confirm">确定</button>
+</view>

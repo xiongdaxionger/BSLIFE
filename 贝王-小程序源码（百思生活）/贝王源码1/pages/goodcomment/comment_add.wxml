@@ -1,0 +1,62 @@
+
+<!--添加商品评价-->
+
+<!--加载失败-->
+<import src="/views/network/bad_network.wxml" />
+<template wx:if="{{fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+
+<!--评分模板-->
+<template name="star">
+  <view class="star-container">
+    <image catchtap="tapStar" data-id="{{id}}" data-index="{{index}}" style="margin-right:{{index < 4 ? 3 : 0}}px;" wx:for="{{[1,2,3,4,5]}}" wx:key="{{index}}" src="{{index < score ? (imgURL + '/images/icon/star_fill.png') : (imgURL + '/images/icon/star_empty.png')}}" />
+  </view>
+</template>
+<view wx:if="{{!fail && !loading}}" class="container">
+
+  <!--总评信息-->
+  <view class="overall">
+    <image mode="aspectFit" src="{{imageURL}}" class="good-image" />
+    <text>{{total_scroe_name}}</text>
+    <template is="star" data="{{score: total_score, imgURL : imgURL, id : total_score_id}}" />
+  </view>
+
+  <!--评价内容输入-->
+  <view class="content-input-container">
+    <textarea class="content-input-container-textarea" maxlength="1000" placeholder="{{placeHolder}}" placeholder-class="placeholder" bindinput="contentInput"/>
+  </view>
+
+  <!--晒图-->
+  <view class="img-container">
+    <block wx:for="{{images}}" wx:key="{{index}}">
+      <view class="img">
+        <image class="comment-img" src="{{item.file_url}}" />
+        <image catchtap="deleteImg" data-index="{{index}}" class="delete-img" src="{{imgURL + '/images/comment/comment_img_delete.png'}}" />
+        <image wx:if="{{item.uploading}}" class="img-loading" src="{{imgURL + '/images/loading/loading.gif'}}"/>
+        <view wx:if="{{item.uploadFail}}" class="upload-fail" catchtap="tapUploadFail" data-index="{{index}}">
+        <text>上传\n失败</text>
+        </view>
+      </view>
+    </block>
+    <view catchtap="tapCamera" style="background:#f73030;" wx:if="{{images.length < 6}}" class="img">
+      <image class="comment-add-img" src="{{imgURL + '/images/comment/comment_img_add.png'}}" />
+      
+    </view>
+  </view>
+
+  <!--其他评价-->
+  <view class="other-container">
+    <view wx:for="{{scoreInfos}}" wx:key="{{index}}" class="other-item">
+      <text>{{item.name}}</text>
+      <template is="star" data="{{score: item.score, imgURL : imgURL, id : item.type_id}}" />
+    </view>
+  </view>
+
+  <!--匿名-->
+  <view class="anony-container">
+    <text class="anony-container-text">匿名评价</text>
+    <switch type="switch" checked="{{is_anony}}" bindchange="anonyDidChange" />
+  </view>
+
+  <!--提交按钮-->
+  <view class="submit-btn" catchtap="tapSubmit">提交</view>
+</view>

@@ -1,0 +1,108 @@
+
+<!--容器-->
+<view class="container">
+
+  <!--头部-->
+  <image mode="aspectFill" src="{{imgURL + '/images/me/me_bg.png'}}" class="header">
+
+  <view class="userInfo-container">
+   <!--头像-->
+    <image bindtap="tapAccount" binderror="headImageDidFail" src="{{userInfo.avatar}}" mode="aspectFill" class="headImage"></image>
+
+    <!--登录按钮-->
+    <text bindtap="login" class="login-btn" wx:if="{{!isLogin}}">登录/注册</text>
+    <li class="header-content">
+
+      <!--昵称-->
+      <text class="name" wx:if="{{isLogin}}">{{displayName}}</text>
+
+      <!--等级-->
+      <text class="level" wx:if="{{isLogin}}">{{userInfo.level}}</text>
+    </li>
+  </view>
+   
+
+    <!--账户管理-->
+    <li wx:if="{{isLogin}}" class="account" bindtap="tapAccount">
+      <text class="account-text">账户管理</text>
+      <image class="account-image" src="{{imgURL + '/images/icon/arrow_white.png'}}" mode="aspectFit" />
+    </li>
+
+    <!--设置-->
+    <image class="setting" src="{{imgURL + '/images/me/me_setting.png'}}" bindtap="settingAction"/>
+
+
+    <!--消息-->
+    <!--<image class="message" src="{{imgURL + '/images/icon/message_white.png'}}"></image>-->
+  </image>
+
+  <!--绑定手机号-->
+  <view class="separator section bind-phone" wx:if="{{isBindPhoneNumberEnable}}" catchtap="bindPhoneNumber">
+    <text class="bind-phone-text">点此绑定手机号，确保账户安全</text>
+    <image class="arrow bind-phone-arrow" src="{{imgURL + '/images/icon/arrow_gray.png'}}" mode="aspectFit"></image>
+  </view>
+
+  <!--订单-->
+  <view class="separator section">
+    <ul>
+      <block wx:for="{{orderItems}}" wx:key="{{index}}">
+        <li class="order-item" wx:if="{{index < 4}}" bindtap="orderAction" data-index="{{index}}">
+          <image class="order-icon" src="{{imgURL + item.icon}}" mode="aspectFit" data-index="{{index}}"></image>
+          <text data-index="{{index}}">{{item.name}}</text>
+          <view class="badge-value" wx:if="{{item.num > 0}}">{{item.num}}</view>
+        </li>
+
+        <!--我的订单-->
+        <li class="order-item-me" wx:if="{{index == 4}}" bindtap="orderAction" data-index="{{index}}">
+          <image class="order-item-me-line" src="{{imgURL + '/images/me/me_order_line.png'}}" mode="aspectFit"></image>
+          <image class="order-icon " src="{{imgURL + item.icon}}" mode="aspectFit" data-index="{{index}}"></image>
+          <li>
+            <text data-index="{{index}}">{{item.name}}</text>
+
+            <!--箭头-->
+            <image class="order-item-me-arrow" src="{{imgURL + '/images/icon/arrow_black.png'}}" mode="aspectFit" />
+          </li>
+        </li>
+      </block>
+    </ul>
+  </view>
+
+  <!--余额、优惠券、积分-->
+  <view class="separator section amount-section">
+    <ul>
+      <li class="amount-item" catchtap="tapBalance">
+        <view class="amount-text">{{userInfo.balance}}</view>
+        <view>账户余额</view>
+      </li>
+      <li class="amount-item" catchtap="myCouponAction">
+        <view class="amount-text">{{userInfo.couponCount}}</view>
+        <view>优惠券</view>
+      </li>
+      <li class="amount-item" catchtap="tapIntegral">
+        <view class="amount-text">{{userInfo.integral}}</view>
+        <view>积分</view>
+      </li>
+    </ul>
+  </view>
+
+  <!--收藏等按钮-->
+  <view class="separator section func-section">
+    <ul>
+      <block wx:for="{{funcItems}}" wx:key="{{index}}">
+
+        <!--分割线-->
+        <li wx:if="{{index > 0 && index % 4 == 0}}">
+          <view class="func-line" />
+        </li>
+        <li class="func-item" catchtap="tapFuncItem" data-index="{{item.type}}">
+          <block wx:if="{{item.type != 13}}">
+            <image class="func-icon" src="{{imgURL + item.icon}}" mode="aspectFit" wx:if="{{index > 1}}"></image>
+          </block>
+          <text class="func-item-text" wx:if="{{index < 2}}">{{index == 0 ? userInfo.goodCollectCount : good_browser_history_count}}</text>
+          <text class="func-item-text" wx:if="{{item.type == 13}}">{{item.access}}</text>
+          <text>{{item.name}}</text>
+        </li>
+      </block>
+    </ul>
+  </view>
+</view>

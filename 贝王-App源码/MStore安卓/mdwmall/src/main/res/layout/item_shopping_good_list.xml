@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:padding="2dp">
+
+    <FrameLayout
+        android:id="@+id/icon_item_shopping_good_list_fl"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:padding="0.5dp" >
+
+        <ImageView
+            android:id="@+id/icon_item_shopping_good_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/soldout_icon_item_shopping_good_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/goods_item_sold_out"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/item_goods_tag_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/title_item_shopping_good_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/PaddingMedium"
+        android:layout_marginTop="@dimen/PaddingXMedium"
+        android:layout_toRightOf="@+id/icon_item_shopping_good_list_fl"
+        android:lines="2"
+        android:textColor="@color/text_goods_6_color"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <TextView
+        android:id="@+id/price_item_shopping_good_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/title_item_shopping_good_list"
+        android:layout_below="@+id/title_item_shopping_good_list"
+        android:layout_marginTop="@dimen/MarginLarge"
+        android:layout_toRightOf="@+id/title_item_shopping_good_list"
+        android:singleLine="true"
+        android:textColor="@color/westore_red"
+        android:textSize="@dimen/TextSizeMedium" />
+
+    <TextView
+        android:id="@+id/market_price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/price_item_shopping_good_list"
+        android:layout_below="@+id/price_item_shopping_good_list"
+        android:layout_marginLeft="3dp"
+        android:singleLine="true"
+        android:textColor="@color/text_goods_9_color"
+        android:textSize="@dimen/TextSizeSmall" />
+
+    <TextView
+        android:id="@+id/comment_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/market_price_text"
+        android:layout_below="@+id/market_price_text"
+        android:layout_marginTop="@dimen/MarginLarge"
+        android:singleLine="true"
+        android:textColor="@color/text_goods_9_color"
+        android:textSize="@dimen/TextSizeSmall" />
+
+    <ImageView
+        android:id="@+id/add_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/comment_text"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:padding="3dp"
+        android:src="@drawable/add_car"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+
+<!--我的资料-->
+
+<!--加载失败-->
+<import src="/views/network/bad_network.wxml" />
+<template wx:if="{{fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+
+<!--内容-->
+<scroll-view class="scroll-view" wx:if="{{!fail}}" scroll-y>
+  <view class="container list-container">
+    <block wx:for="{{infos}}" wx:key="{{index}}">
+      <view data-index="{{index}}" bindtap="tapRow" class="list">
+
+        <!--图片-->
+        <block wx:if="{{item.type == info_type.avatar || item.content_type == content_type.img}}">
+          <image class="list-image" src="{{item.content}}" mode="aspectFill" />
+          <view class="list-content">{{item.title}}</view>
+        </block>
+
+        <!--标题 内容 行-->
+        <block wx:if="{{item.type != info_type.avatar && item.content_type != content_type.img}}">
+          <view wx:if="{{item.content_type != content_type.date}}" class="list-title">{{item.title}}</view>
+          <view style="{{item.content_type == content_type.date ? 'flex:1 1 auto' : ''}}" class="list-content">{{item.key == 'contact[name]' && namePrefix != null ? namePrefix + item.content : item.content}}</view>
+
+          <!--时间选择器-->
+          <picker class="datePicker" wx:if="{{item.content_type == content_type.date}}" value="{{item.content}}" end="{{endDate}}" mode="date" id="{{index}}" bindchange="dateDidChange">{{item.title}}</picker>
+        </block>
+        <image wx:if="{{item.editable}}" class="arrow list-arrow" src="{{imgURL + '/images/icon/arrow_gray.png'}}" mode="aspectFit" />
+        <view wx:if="{{index < infos.length - 1}} " class="list-line " />
+      </view>
+    </block>
+  </view>
+</scroll-view>
+
+<!--信息修改 选择-->
+<view wx:if="{{show_options}}" class="options-container">
+
+  <!--黑色半透明背景-->
+  <view animation="{{optionsOpacityAnimation}}" class="options-black-transparent-bg" bindtap="closeoptions"></view>
+  <view animation="{{optionsTranslateAnimation}}" class="options-content-container">
+
+    <!--顶部工具条-->
+    <view class="options-top-container">
+
+      <!--取消按钮-->
+      <view catchtap="closeoptions" class="options-top-cancel">取消</view>
+
+      <!--标题-->
+      <view class="options-title">{{options_title}}</view>
+
+      <!--完成按钮-->
+      <view catchtap="optionsDone" class="options-top-done">确定</view>
+    </view>
+
+    <!--内容滚动视图-->
+    <scroll-view scroll-y class="options-scroll-view">
+
+      <!--内容-->
+      <view class="options-content">
+        <view data-index="{{index}}" catchtap="tapOptionsItem" class="options-list" wx:for="{{options}}" wx:key="{{index}}">
+          <view class="options-list-title">{{item.title}}</view>
+          <icon wx:if="{{item.selected}}" type="success_no_circle" color="#f73030" size="15" />
+          <view wx:if="{{index < options.length - 1}}" class="list-line " />
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+<!--地区选择-->
+<include src="/views/widget/area_selected.wxml"/>

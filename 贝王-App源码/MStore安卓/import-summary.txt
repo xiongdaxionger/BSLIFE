@@ -1,0 +1,165 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Risky Project Location:
+-----------------------
+The tools *should* handle project locations in any directory. However,
+due to bugs, placing projects in directories containing spaces in the
+path, or characters like ", ' and &, have had issues. We're working to
+eliminate these bugs, but to save yourself headaches you may want to
+move your project to a location where this is not a problem.
+D:\android studio area\mdwmall
+          -      -            
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From Cropper:
+* build.gradle
+* proguard-project.txt
+From mdwmall:
+* .gitignore
+* README.md
+* keystore\
+* keystore\keystore
+* keystore\password.txt
+* keystore\申请分享接口所需资料.txt
+* proguard\
+* proguard\dump.txt
+* proguard\mapping.txt
+* proguard\seeds.txt
+From multiImageSelector:
+* ic_launcher-web.png
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:18.+
+gson-2.2.4.jar => com.google.code.gson:gson:2.2.4
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.2.4.jar => version 2.2.4 in com.google.code.gson:gson:2.2.4
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In Cropper:
+* AndroidManifest.xml => cropper\src\main\AndroidManifest.xml
+* lint.xml => cropper\lint.xml
+* res\ => cropper\src\main\res\
+* src\ => cropper\src\main\java\
+In multiImageSelector:
+* AndroidManifest.xml => multiImageSelector\src\main\AndroidManifest.xml
+* assets\ => multiImageSelector\src\main\assets
+* libs\picasso-2.5.2.jar => multiImageSelector\libs\picasso-2.5.2.jar
+* res\ => multiImageSelector\src\main\res\
+* src\ => multiImageSelector\src\main\java\
+In mdwmall:
+* AndroidManifest.xml => mdwmall\src\main\AndroidManifest.xml
+* assets\ => mdwmall\src\main\assets\
+* libs\alipaySDK-20150818.jar => mdwmall\libs\alipaySDK-20150818.jar
+* libs\AMap_3DMap_V3.3.1_20160419.jar => mdwmall\libs\AMap_3DMap_V3.3.1_20160419.jar
+* libs\AMap_Location_V2.4.1_20160414.jar => mdwmall\libs\AMap_Location_V2.4.1_20160414.jar
+* libs\AMap_Search_V3.2.1_20160308.jar => mdwmall\libs\AMap_Search_V3.2.1_20160308.jar
+* libs\armeabi\libDexHelper.so => mdwmall\src\main\jniLibs\armeabi\libDexHelper.so
+* libs\armeabi\libencrypt_utils.so => mdwmall\src\main\jniLibs\armeabi\libencrypt_utils.so
+* libs\armeabi\libentryexpro.so => mdwmall\src\main\jniLibs\armeabi\libentryexpro.so
+* libs\armeabi\libgdinamapv4sdk752.so => mdwmall\src\main\jniLibs\armeabi\libgdinamapv4sdk752.so
+* libs\armeabi\libgdinamapv4sdk752ex.so => mdwmall\src\main\jniLibs\armeabi\libgdinamapv4sdk752ex.so
+* libs\armeabi\libgphoto.so => mdwmall\src\main\jniLibs\armeabi\libgphoto.so
+* libs\armeabi\liblocSDK3.so => mdwmall\src\main\jniLibs\armeabi\liblocSDK3.so
+* libs\armeabi\libPinguoImageSDK.so => mdwmall\src\main\jniLibs\armeabi\libPinguoImageSDK.so
+* libs\armeabi\librichpicture.so => mdwmall\src\main\jniLibs\armeabi\librichpicture.so
+* libs\armeabi\libtpnsSecurity.so => mdwmall\src\main\jniLibs\armeabi\libtpnsSecurity.so
+* libs\armeabi\libtpnsWatchdog.so => mdwmall\src\main\jniLibs\armeabi\libtpnsWatchdog.so
+* libs\armeabi\libuptsmaddon.so => mdwmall\src\main\jniLibs\armeabi\libuptsmaddon.so
+* libs\Bughd_android_sdk_v1.3.7.jar => mdwmall\libs\Bughd_android_sdk_v1.3.7.jar
+* libs\core-3.1.0.jar => mdwmall\libs\core-3.1.0.jar
+* libs\javase-3.1.0.jar => mdwmall\libs\javase-3.1.0.jar
+* libs\jg_filter_sdk_1.1.jar => mdwmall\libs\jg_filter_sdk_1.1.jar
+* libs\libammsdk.jar => mdwmall\libs\libammsdk.jar
+* libs\mid-sdk-2.20.jar => mdwmall\libs\mid-sdk-2.20.jar
+* libs\MobCommons-2016.0816.1507.jar => mdwmall\libs\MobCommons-2016.0816.1507.jar
+* libs\MobTools-2016.0816.1507.jar => mdwmall\libs\MobTools-2016.0816.1507.jar
+* libs\MPChartLib.jar => mdwmall\libs\MPChartLib.jar
+* libs\PG_Edit_Base_SDK.jar => mdwmall\libs\PG_Edit_Base_SDK.jar
+* libs\ShareSDK-Core-2.7.6.jar => mdwmall\libs\ShareSDK-Core-2.7.6.jar
+* libs\ShareSDK-QQ-2.7.6.jar => mdwmall\libs\ShareSDK-QQ-2.7.6.jar
+* libs\ShareSDK-QZone-2.7.6.jar => mdwmall\libs\ShareSDK-QZone-2.7.6.jar
+* libs\ShareSDK-SinaWeibo-2.7.6.jar => mdwmall\libs\ShareSDK-SinaWeibo-2.7.6.jar
+* libs\ShareSDK-Wechat-2.7.6.jar => mdwmall\libs\ShareSDK-Wechat-2.7.6.jar
+* libs\ShareSDK-Wechat-Core-2.7.6.jar => mdwmall\libs\ShareSDK-Wechat-Core-2.7.6.jar
+* libs\ShareSDK-Wechat-Moments-2.7.6.jar => mdwmall\libs\ShareSDK-Wechat-Moments-2.7.6.jar
+* libs\SwipeMenuLib.jar => mdwmall\libs\SwipeMenuLib.jar
+* libs\umeng-analytics-v5.5.3.jar => mdwmall\libs\umeng-analytics-v5.5.3.jar
+* libs\universal-image-loader-1.9.3.jar => mdwmall\libs\universal-image-loader-1.9.3.jar
+* libs\UPPayAssistEx.jar => mdwmall\libs\UPPayAssistEx.jar
+* libs\UPPayPluginExPro.jar => mdwmall\libs\UPPayPluginExPro.jar
+* libs\volley.jar => mdwmall\libs\volley.jar
+* libs\wup-1.0.0.E-SNAPSHOT.jar => mdwmall\libs\wup-1.0.0.E-SNAPSHOT.jar
+* libs\Xg_sdk_v2.42_20160111_1539.jar => mdwmall\libs\Xg_sdk_v2.42_20160111_1539.jar
+* lint.xml => mdwmall\lint.xml
+* proguard-project.txt => mdwmall\proguard-project.txt
+* res\ => mdwmall\src\main\res\
+* src\ => mdwmall\src\main\java\
+* src\android\os\IHardwareService.aidl => mdwmall\src\main\aidl\android\os\IHardwareService.aidl
+
+Missing Android Support Repository:
+-----------------------------------
+Some useful libraries, such as the Android Support Library, are
+installed from a special Maven repository, which should be installed
+via the SDK manager.
+
+It looks like this library is missing from your SDK installation at:
+E:\adt-bundle-windows-x86-20140702\sdk
+
+To install it, open the SDK manager, and in the Extras category,
+select "Android Support Repository". You may also want to install the
+"Google Repository" if you want to use libraries like Google Play
+Services.
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

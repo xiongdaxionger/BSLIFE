@@ -1,0 +1,51 @@
+
+<!--地区选择弹窗-->
+<view wx:if="{{show_area}}" class="area-container">
+
+  <!--黑色半透明背景-->
+  <view animation="{{areaOpacityAnimation}}" class="area-black-transparent-bg" bindtap="areaClose"></view>
+  <view animation="{{areaTranslateAnimation}}" class="area-content-container">
+
+    <!--顶部工具条-->
+    <view class="area-top-container">
+
+      <!--标题-->
+      <view class="area-title">地区</view>
+
+      <!--关闭-->
+      <icon type="cancel" color="#e5e5e5" catchtap="areaClose" class="area-top-close" />
+    </view>
+
+    <!--加载指示器-->
+    <image wx:if="{{is_load_area}}" class="area-loading" src="/image/loading/loading.gif" />
+
+    <!--选中的地区-->
+    <scroll-view scroll-x class="selected-area-scroll-view">
+      <view wx:if="{{!is_load_area}}" class="selected-area-bar">
+        <block wx:for="{{cur_area_infos}}" wx:key="{{index}}">
+          <view data-index="{{index}}" class="selected-area-bar-item" catchtap="areaBarItemDidChange">
+            <text class="{{index == area_selectedIndex ? 'text select' : 'text'}}" data-index="{{index}}">{{item.title}}</text>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+    <!--有bug-->
+    <!--<swiper wx:if="{{!is_load_area}}" class="area-swiper" current="{{area_selectedIndex}}" bindchange="areaPageDidChange">
+      <swiper-item wx:for="{{cur_area_infos}}" wx:for-item="info" wx:for-index="idx" wx:key="{{idx}}">-->
+
+        <!--内容滚动视图-->
+        <scroll-view scroll-y class="area-scroll-view" scroll-top="{{area_scroll_top}}">
+
+          <!--内容-->
+          <view class="area-content">
+            <view data-index="{{index}}" catchtap="tapAreaItem" class="area-list" wx:for="{{cur_area_infos[area_selectedIndex].infos}}" wx:key="{{index}}">
+              <view class="area-list-title">{{item.name}}</view>
+              <icon wx:if="{{item.name == cur_area_infos[area_selectedIndex].title}}" type="success_no_circle" color="#f73030" size="15" />
+              <view wx:if="{{index < cur_area_infos[area_selectedIndex].infos.length - 1}}" class="list-line " />
+            </view>
+          </view>
+        </scroll-view>
+      <!--</swiper-item>
+    </swiper>-->
+  </view>
+</view>

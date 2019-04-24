@@ -1,0 +1,54 @@
+<view>
+  <block wx:if="{{memberList.length == '0'}}">
+    <view class='no-member'>暂无会员信息</view>
+  </block>
+  <view class='search-top'>
+    <input bindconfirm="searchinp" placeholder='请输入手机号码/备注' confirm-type="search"></input>
+  </view>
+  <scroll-view scroll-y class='scroll-height' bindscrolltolower="buttolower">
+    <block wx:for="{{memberList}}" wx:key="key" wx:for-item="itemName">
+      <view class='list-main' bindtap='memberDetail' data-id='{{itemName.member_id}}' data-price='{{itemName.income}}' data-arr='{{itemName}}' data-avatar='{{itemName.avatar}}'>
+        <view class='list-main-item'>
+          <view class='list-main-l'>
+            <image src='{{itemName.avatar ? itemName.avatar :"/image/016.png"}}' class='head-img'></image>
+          </view>
+          <view class='list-main-c'>
+            <view class='black-words'>{{itemName.mobile}}</view>
+            <view catchtap='remoke' data-birthday='{{itemName.mem_birthday}}' data-milk='{{itemName.like_milk}}' data-id='{{itemName.member_id}}' data-remoke='{{itemName.mymember_remark}}'>
+              <text>{{itemName.mymember_remark == null ? "点击备注" : itemName.mymember_remark}}</text>
+              <image src='../../image/044.png' class='write-img'></image>
+            </view>
+            <view>团队{{itemName.nums}}人</view>
+          </view>
+          <view class='list-main-r'>
+            <view class='red-words'>{{itemName.income}}</view>
+            <view>销售奖励</view>
+          </view>
+        </view>
+        <!-- <view class='conceal-list'>
+          <view class='conceal-item'>
+            <image src='/image/019.png' class='remark'></image>
+            <text>备注</text>
+          </view>
+          <view class='conceal-item'>
+            <image src='/image/020.png' class='tail-after'></image>
+            <text>跟踪</text>
+          </view>
+          <view class='conceal-item'>
+            <image src='/image/021.png' class='remark'></image>
+            <text>消息</text>
+          </view>
+        </view>  -->
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<modal hidden="{{hiddenmodalput}}" title="备注信息" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+    <input type='text' placeholder="请输入备注信息" value='{{memberRemoke}}' bindinput='setRemoke' class='remoke-inp'/>
+    <picker mode="date" value="{{mem_birthday}}" bindchange="bindDateChange">
+      <view class="picker">
+       {{mem_birthday == '' ? "宝宝生日" : mem_birthday}}
+      </view>
+    </picker>
+    <textarea placeholder='请输入宝宝喜欢吃的奶粉' class='text-area' value='{{milk}}' bindblur='milkblur'></textarea>
+</modal>  

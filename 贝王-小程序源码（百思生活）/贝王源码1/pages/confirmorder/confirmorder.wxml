@@ -1,0 +1,122 @@
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+<scroll-view scroll-y class="confirm_order_container" wx:if="{{!showFailNetWork}}">
+    <!--<view class="blandView" wx:if="{{isOpenFenXiao || !confirmOrderInfo.isPrepareOrder}}"></view>-->
+    <!--开启代客下单-->
+    <!--<view class="open_select_member" wx:if="{{isOpenFenXiao || !confirmOrderInfo.isPrepareOrder}}">
+        <view class="open_select_member_info">开启代客下单</view>
+        <switch type="switch" class="open_select_member_switch" bindchange="selectMemberChange"/>
+    </view>-->
+    <!--选择会员-->
+    <view class="blandView" wx:if="{{isOpenMember}}"></view>
+    <view class="member_info_view" bindtap="selectMember" wx:if="{{isOpenMember}}">
+        <image class="background_image" mode="aspectFill" src="/images/confirmorder/select_member.png"></image>
+        <view class="member_info" bindtap="selectMember">{{selectMemberName.length == 0 ? '请选择下单会员' : selectMemberName}}</view>
+        <image class="info_arrow" src="{{imgURL + '/images/icon/arrow_black.png'}}" style="top:20px" mode="aspectFit"></image>
+    </view>
+    <!--地址-->
+    <view class="blandView"></view>
+    <view class="unselect_address_container" bindtap="selectAddress" wx:if="{{isOpenMember ? selectMemberAddr == null : confirmOrderInfo.defaultAddress == null}}">
+        <image class="background_image" mode="aspectFill" src="{{imgURL + '/images/order/ship_address.png'}}"></image>
+        <view class="tip_label" bindtap="selectAddress">请选择收货人信息</view>
+        <image class="arrow" src="{{imgURL + '/images/icon/arrow_black.png'}}" mode="aspectFit"></image>
+    </view>
+    <view class="order_address" bindtap="selectAddress" wx:if="{{isOpenMember ? selectMemberAddr != null : confirmOrderInfo.defaultAddress != null}}">
+        <image class="order_address_background" mode="aspectFill" src="{{imgURL + '/images/order/ship_address.png'}}"></image>
+        <image class="order_address_name_image" src="{{imgURL + '/images/order/contact.png'}}" mode="aspectFit"></image>
+        <view class="order_address_name">{{isOpenMember ? selectMemberAddr.name :confirmOrderInfo.defaultAddress.name}}</view>
+        <image class="order_address_phone_image" src="{{imgURL + '/images/order/phone.png'}}" mode="aspectFit"></image>
+        <view class="order_address_phone">{{isOpenMember ? selectMemberAddr.mobile : confirmOrderInfo.defaultAddress.mobile}}</view>
+        <image class="order_address_area_image" src="{{imgURL + '/images/order/order_addr.png'}}" mode="aspectFit"></image>
+        <view class="order_address_area">{{isOpenMember ?selectMemberAddr.addressDetail : confirmOrderInfo.defaultAddress.addressDetail}}</view>
+        <image class="address_arrow" src="{{imgURL + '/images/icon/arrow_black.png'}}" mode="aspectFit"></image>   
+    </view>
+
+    <!--商品-->
+
+    <block wx:for="{{confirmOrderInfo.groupGoodInfosArr}}" wx:for-item="groupGoodInfo" wx:key="{{index}}">
+        <view class="blandView"></view>
+        <block wx:for="{{groupGoodInfo.groupGoodInfosArr}}" wx:for-item="goodInfo" wx:key="{{index}}">
+            <view class="order_list_good" style="border-bottom:1px #f5f5f5 solid">
+            <image mode="aspectFit" class="order_good_image" src="{{goodInfo.thumbnail}}"></image>
+            <view class="order_type_tag" wx:if="{{goodInfo.goodType != 0}}">{{goodInfo.goodTag}}</view>
+            <view class="{{goodInfo.goodType != 0 ? 'order_good_name have_tag' : 'order_good_name'}}">{{goodInfo.goodName}}</view>
+            <view class="order_specInfo">{{goodInfo.specInfo}}</view>
+            <view class="good_price_container" style="left:78px;top:50px">
+                <text class="good_price">{{goodInfo.goodPrice}}</text>
+                <text class="good_market_price" wx:if="{{goodInfo.goodMarketPrice != null && goodInfo.goodMarketPrice.length > 0}}">{{goodInfo.goodMarketPrice}}</text>
+            </view>
+            <view class="order_good_quantity">x{{goodInfo.quantity}}</view>
+            </view>
+        </block>
+    </block>
+
+    <!--配送方式-->
+    <view class="select_info_container order_margin_top" bindtap="tapShippingMethod">
+        <view class="title">配送方式</view>
+        <view class="content" style="color:#f73030">{{confirmOrderInfo.defaultShippingInfo == null ? '请选择配送方式' : (confirmOrderInfo.defaultShippingInfo.isProtectSelect ? confirmOrderInfo.defaultShippingInfo.methodName + '(保价)' : confirmOrderInfo.defaultShippingInfo.methodName)}}</view>
+        <image class="info_arrow" src="{{imgURL + '/images/icon/arrow_gray.png'}}" wx:if="{{confirmOrderInfo.defaultShippingInfo == null}}"></image>
+    </view>
+    <!--配送时间-->
+    <view class="select_info_container" wx:if="{{confirmOrderInfo.isShippingTime}}" style="border-top:0px">
+        <view class="title">配送时间</view>
+        <view class="content">任意日期任意时间段</view>
+        <image class="info_arrow" src="{{imgURL + '/images/icon/arrow_gray.png'}}"></image>
+    </view>
+    <!--订单备注-->
+    <view class="select_info_container order_margin_top">
+        <view class="title">订单备注</view>
+        <input class="memo_input" bindinput="memoInput" placeholder="备注30字以内" maxlength="30"></input>
+    </view>
+    <!--发票信息-->
+    <view class="select_info_container order_margin_top" wx:if="{{confirmOrderInfo.taxInfo != null}}" bindtap="invioceAction">
+        <view class="title">发票信息</view>
+        <view class="content">{{confirmOrderInfo.isOpenInvioce ? confirmOrderInfo.invioceDict.invioceHeader + confirmOrderInfo.invioceDict.invioceContent : '不开发票'}}</view>
+        <image class="info_arrow" src="{{imgURL + '/images/icon/arrow_gray.png'}}"></image>
+    </view>
+    <!--优惠券信息-->
+    <view class="bland" wx:if="{{!isPointOrder && !confirmOrderInfo.isPrepareOrder}}"></view>
+    <view class="select_info_container" bindtap="useCoupon" wx:if="{{!isPointOrder && !confirmOrderInfo.isPrepareOrder}}">
+        <view class="title">优惠券</view>
+        <view class="{{confirmOrderInfo.selectCoupon == null ? 'content' : 'content red_content'}}">{{confirmOrderInfo.selectCoupon == null ? '使用' : confirmOrderInfo.selectCoupon.name}}</view>
+        <image class="info_arrow" src="{{imgURL + '/images/icon/arrow_gray.png'}}"></image>
+    </view>
+    <!--积分-->
+    <view class="point_container order_margin_top" wx:if="{{confirmOrderInfo.showPoint}}">
+        <view class="point_info">可用{{confirmOrderInfo.pointSetting.max_discount_value_point}}, 可抵扣{{confirmOrderInfo.pointSetting.max_discount_value_money}}</view>
+        <switch class="point_switch" checked="{{confirmOrderInfo.isUsePoint}}" type="switch" bindchange="usePointChange" />
+    </view>
+    <!--价格信息-->
+    <view class="order_price_info_content order_padding order_margin_top bottom_line">
+        <text class="order_price_title">{{confirmOrderInfo.priceTitle}}</text>
+        <text class="order_price">{{confirmOrderInfo.priceInfo}}</text>
+    </view>
+
+    <view class="bland"></view>
+</scroll-view>
+
+<view class="confirm_order_bottom_view" wx:if="{{!showFailNetWork}}">
+    <text style="color:gray">实付款</text>
+    <text style="color:#f73030">{{confirmOrderInfo.orderTotal}}</text>
+    <view class="commit_view" bindtap="commitOrderAction">提交订单</view>
+</view>
+
+<view wx:if="{{isShowShippingMethod}}" class="shipping-container">
+
+  <view animation="{{shippingOpacityAnimation}}" class="shipping_black_transparent_bg" bindtap="closeShippingMethod"></view>
+  <view animation="{{shippingTranslateAnimation}}" class="shipping_method_container">
+    <view class="shipping_method_header">
+        <view class="header_title">配送方式</view>
+        <view class="cancel_title" bindtap="closeShippingMethod">取消</view>
+    </view>
+    <scroll-view scroll-y class="shipping_method_scroll_view">
+        <block wx:for="{{confirmOrderInfo.shippingMethodInfoArr}}" wx:key="{{index}}">
+            <view class="shipping_name_view" bindtap="selectShippingMethod" data-value="{{item.value}}" data-is-protect="{{item.isProtect}}" data-is-protect-select="{{item.isProtectSelect}}" data-select-index="{{index}}">{{item.methodName}}</view>
+        </block>
+    </scroll-view>
+
+  </view>
+</view>
+
+

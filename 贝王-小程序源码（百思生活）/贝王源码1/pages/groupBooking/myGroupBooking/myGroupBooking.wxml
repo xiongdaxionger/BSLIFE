@@ -1,0 +1,37 @@
+
+<view class="myGroupBooking">
+  <view class=' title'>
+    <view>
+      <text class='red active'>发起拼团</text>
+    </view>
+    <view>
+      <text>参与拼团</text>
+    </view>
+  </view>
+  <view class='bland'></view>
+  <view class='padding-lr-15 content' style='border-bottom:10px solid #efeff4'>
+    <view class='clean padding-ud-15'>
+      <text style='color:#6b6b6b' class='lf'>开团时间 : 2017-09-10 09:10 </text>    
+      <text style='color:#38dca1' class='rt'>拼团成功</text>
+    </view>
+    <view class='clean detail' >
+      <view class='lf'>
+        <view class='tip'> 团长返¥3 </view>
+      </view>
+      <view class='txt_der'>
+        <view>
+          <text> 精选输够大家发快乐发飞机大师傅 抽数丝柔</text>
+          <text>¥32</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='clean'>
+      <view class='rt txt_border'>邀请好友参加</view>
+    </view>
+
+    <view class='time_out'>
+      离结束时间: <text>{{time[0]}}</text>:<text>{{time[1]}}</text>:<text>{{time[2]}}</text>
+    </view>
+  </view>
+</view>

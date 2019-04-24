@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white" >
+
+    <View
+        android:id="@+id/item_setting_divide_top"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/westore_divider_bgcolor"
+        android:visibility="gone" />
+    
+    <ImageView
+        android:id="@+id/item_setting_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/PaddingMedium"
+        android:paddingRight="@dimen/PaddingXLarge"
+        android:src="@drawable/base_arrow_right_pink_n"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/item_setting_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_setting_divide_top"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/PaddingLarge"
+        android:layout_marginRight="@dimen/PaddingLarge"
+        android:layout_toLeftOf="@+id/item_setting_right"
+        android:layout_toRightOf="@+id/item_setting_title"
+        android:gravity="right"
+        android:singleLine="true"
+        android:text="286"
+        android:textColor="@color/westore_dark_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall" 
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/item_setting_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/PaddingXLarge"
+        android:layout_marginTop="@dimen/PaddingXLarge"
+        android:paddingLeft="@dimen/PaddingXLarge"
+        android:text="关于我们"
+        android:textColor="@color/westore_dark_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <View
+        android:id="@+id/item_setting_divide"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_below="@+id/item_setting_title"
+        android:background="@color/westore_divider_bgcolor" />
+
+</RelativeLayout>

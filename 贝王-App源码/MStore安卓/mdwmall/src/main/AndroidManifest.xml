@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.beiwangfx"
+    android:versionCode="2018011710"
+    android:versionName="@string/app_version_name" >
+
+    <uses-sdk android:minSdkVersion="16" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <!-- Push所需权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 闪光灯权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- <uses-permission android:name="android.permission.HARDWARE_TEST" /> -->
+    <!-- 分享 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" /> -->
+    <!-- 短信验证码 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!-- <uses-permission android:name="android.permission.BROADCAST_SMS" /> -->
+    <!-- 创建快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+
+    <application
+        android:name="com.qianseit.westore.AgentApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/comm_icon_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- camera360 -->
+        <meta-data
+            android:name="BD_APP_ID"
+            android:value="ea8d04692735bc1f" />
+        <meta-data
+            android:name="BD_APP_SECRET"
+            android:value="vCGG9QZ94tcGxTjangCc_b_VuXwmfGd2" />
+        <meta-data
+            android:name="EDIT_SDK_KEY"
+            android:value="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" />
+
+        <activity
+            android:name="us.pinguo.edit.sdk.sample.PGEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="us.pinguo.edit.sdk.sample.SampleActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <service
+            android:name="us.pinguo.bigdata.BDUpService"
+            android:process=":bdupload" >
+        </service>
+
+        <receiver android:name="us.pinguo.bigdata.BDAlarmReceiver" >
+            <intent-filter>
+                <action android:name="bd_alarm" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.qianseit.westore.activity.other.MultiImageSelectorActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.qianseit.westore.activity.common.CommonLauncherActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.qianseit.westore.activity.common.CommonMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|keyboard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.qianseit.westore.activity.AgentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|keyboard"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qianseit.westore.activity.other.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|keyboard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <!-- 微信 -->
+        <activity
+            android:name="com.beiwangfx.wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx8007798dfc384ed9" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.beiwangfx.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 支付宝开始 -->
+        <!-- <activity -->
+        <!-- android:name="com.alipay.sdk.app.H5PayActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|navigation" -->
+        <!-- android:exported="false" -->
+        <!-- android:screenOrientation="behind" > -->
+        <!-- </activity> -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <!-- 支付宝结束 -->
+
+
+        <!-- 【必须】 (2.30及以上版新增)展示通知的activity -->
+        <activity
+            android:name="com.tencent.android.tpush.XGPushActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent" >
+            <intent-filter>
+
+                <!-- 若使用AndroidStudio，请设置android:name="android.intent.action" -->
+                <action android:name="android.intent.action" />
+            </intent-filter>
+        </activity>
+
+        <!-- 【必须】 信鸽receiver广播接收 -->
+        <receiver
+            android:name="com.tencent.android.tpush.XGPushReceiver"
+            android:process=":xg_service_v2" >
+            <intent-filter android:priority="0x7fffffff" >
+
+                <!-- 【必须】 信鸽SDK的内部广播 -->
+                <action android:name="com.tencent.android.tpush.action.SDK" />
+                <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+                <!-- 【必须】 系统广播：网络切换 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <!-- 【可选】 系统广播：开屏 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+
+                <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+            <!-- 【可选】 usb相关的系统广播，增强信鸽service的复活机会，请根据需要添加 -->
+            <intent-filter android:priority="0x7fffffff" >
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+                <action android:name="android.intent.action.MEDIA_CHECKING" />
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+        <!-- 【必须】 信鸽service -->
+        <service
+            android:name="com.tencent.android.tpush.service.XGPushService"
+            android:exported="true"
+            android:persistent="true"
+            android:process=":xg_service_v2" />
+
+        <!-- 【必须】 通知service，其中android:name部分要改为当前包名 -->
+        <service
+            android:name="com.tencent.android.tpush.rpc.XGRemoteService"
+            android:exported="true" >
+            <intent-filter>
+
+                <!-- 【必须】 请修改为当前APP名包.PUSH_ACTION，如demo的包名为：com.qq.xgdemo -->
+                <action android:name="com.beiwangfx.PUSH_ACTION" />
+            </intent-filter>
+        </service>
+
+        <!-- 已废弃，可删除之；若不删除也不会有任何副作用 -->
+        <!--
+            <service
+            android:name="com.tencent.android.tpush.service.XGDaemonService"
+            android:process=":qq_push_daemon" />
+
+
+        -->
+        <!-- 【可选】信鸽拉起其他APP应用，若应用在本地找不到可以自动下载 -->
+        <!--
+              <service
+            android:name="com.tencent.android.tpush.XGDownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+
+        -->
+        <!-- 【可选】APP实现的Receiver，用于接收消息透传和操作结果的回调，请根据需要添加 -->
+        <!-- YOUR_PACKAGE_PATH.CustomPushReceiver需要改为自己的Receiver： -->
+        <receiver
+            android:name="com.qianseit.westore.receiver.MessageReceiver"
+            android:exported="false" >
+            <intent-filter>
+
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 【必须】 请修改为APP的AccessId，“21”开头的10位数字，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_ID"
+            android:value="2100253554" />
+        <!-- 【必须】 请修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_KEY"
+            android:value="A5VNR78Y85MA" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" />
+
+        <activity android:name="com.qianseit.westore.activity.shopping.ShoppingLableActivity" />
+        <activity android:name="com.qianseit.westore.activity.CropperActivity" />
+
+        <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="qianseit999#meiliqiji" />
+
+        <meta-data
+            android:name="BUG_HD_SDK_GENERAL_KEY"
+            android:value="f1fb9840e7a6a86ec469de29eac85a16" />
+        <!-- 高德地图配置 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="454686b48d75321f2f6b0002afdbb340" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <!-- 银联支付配置 -->
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false" />
+
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="AuthorizeAdapter"
+                android:value="cn.sharesdk.demo.MyAuthpageAdapter" />
+        </activity>
+    </application>
+
+</manifest>

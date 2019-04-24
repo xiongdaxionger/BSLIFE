@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fragment_background_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/confirm_order_distribution_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/confimr_order_item_bgimage"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="@dimen/PaddingXMedium"
+        android:paddingRight="@dimen/PaddingXMedium"
+        android:paddingTop="10dp" >
+
+        <ImageView
+            android:id="@+id/my_address_book_item_distribution_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/PaddingLarge"
+            android:src="@drawable/base_arrow_right_pink_n" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/PaddingMedium"
+            android:text="@string/confirm_order_distribution"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeMedium"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/confirm_order_distribution_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/my_address_book_item_distribution_arrow"
+            android:paddingLeft="@dimen/PaddingMedium"
+            android:paddingRight="@dimen/PaddingMedium"
+            android:text="请选择配送方式"
+            android:textColor="@color/westore_red"
+            android:textSize="@dimen/TextSizeMedium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/confirm_order_shipping_time_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/confimr_order_item_bgimage"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/PaddingXMedium"
+        android:paddingRight="@dimen/PaddingXMedium"
+        android:paddingTop="10dp"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/confirm_order_shipping_time_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/base_arrow_bottom_pink_n" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/PaddingMedium"
+            android:text="配送时间"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeMedium"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/confirm_order_shipping_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/confirm_order_shipping_time_arrow"
+            android:paddingLeft="@dimen/PaddingMedium"
+            android:paddingRight="@dimen/PaddingMedium"
+            android:text="请选择配送时间"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeMedium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/confirm_order_takeself_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/confimr_order_item_bgimage"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/PaddingXMedium"
+        android:paddingRight="@dimen/PaddingXMedium"
+        android:paddingTop="10dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/my_address_confirm_order_takeself_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/base_arrow_bottom_pink_n" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/PaddingMedium"
+            android:text="自提时间"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeMedium"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/confirm_order_confirm_order_takeself"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/my_address_confirm_order_takeself_arrow"
+            android:paddingLeft="@dimen/PaddingMedium"
+            android:paddingRight="@dimen/PaddingMedium"
+            android:text="请选择自提时间"
+            android:textColor="@color/westore_red"
+            android:textSize="@dimen/TextSizeMedium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/confirm_order_remark_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/confimr_order_item_bgimage"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="@dimen/PaddingXMedium"
+        android:paddingRight="@dimen/PaddingXMedium"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/confirm_order_remark_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/PaddingMedium"
+            android:text="订单备注"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeMedium"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/confirm_order_remark_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/confirm_order_remark_tv"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="填写备注30字以内"
+            android:maxLength="30"
+            android:paddingLeft="@dimen/PaddingXMedium"
+            android:paddingRight="@dimen/PaddingXMedium"
+            android:textSize="@dimen/TextSizeMedium" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/confirm_order_invoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/confimr_order_item_bgimage"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/PaddingXMedium"
+        android:paddingRight="@dimen/PaddingXMedium"
+        android:layout_marginTop="5dp"
+        android:paddingTop="10dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/confirm_order_invoice_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_order_invoice"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeMedium" />
+
+        <TextView
+            android:id="@+id/confirm_order_invoice_message"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:paddingLeft="@dimen/PaddingMedium"
+            android:paddingRight="@dimen/PaddingMedium"
+            android:text="@string/invoice_type_null"
+            android:textColor="@color/text_goods_6_color"
+            android:textSize="@dimen/TextSizeMedium" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/base_arrow_right_pink_n" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/confirm_order_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/confimr_order_item_bgimage"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/PaddingXMedium"
+        android:paddingRight="@dimen/PaddingXMedium"
+        android:layout_marginTop="5dp"
+        android:paddingTop="10dp" >
+
+        <ImageView
+            android:id="@+id/my_address_book_item_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/PaddingLarge"
+            android:src="@drawable/base_arrow_right_pink_n" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/PaddingMedium"
+            android:text="@string/confirm_order_ticket"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeMedium"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/confirm_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/my_address_book_item_arrow"
+            android:paddingLeft="@dimen/PaddingMedium"
+            android:paddingRight="@dimen/PaddingMedium"
+            android:text="使用"
+            android:textColor="@color/text_goods_6_color"
+            android:textSize="@dimen/TextSizeMedium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/confirm_order_dikou_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/confimr_order_item_bgimage"
+        android:padding="@dimen/PaddingXMedium"
+        android:layout_marginTop="5dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/confirm_order_dikou_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/confirm_order_payyingbang_checkbox"
+            android:textColor="@color/text_textcolor_gray2"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <CheckBox
+            android:id="@+id/confirm_order_payyingbang_checkbox"
+            style="@style/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/PaddingLarge"
+            android:button="@drawable/switch_bg"
+            android:focusableInTouchMode="true" />
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/confirm_order_goods_checkout_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+        
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="18dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="18dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请在"
+            android:textColor="@color/text_textcolor_gray2" />
+
+        <TextView
+            android:id="@+id/confirm_order_bottom_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text=""
+            android:textColor="@color/theme_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="内完成支付该订单"
+            android:textColor="@color/text_textcolor_gray2" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/white" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor" />
+
+</LinearLayout>

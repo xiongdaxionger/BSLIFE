@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fragment_background_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/itemview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/PaddingXMedium" >
+
+        <ImageView
+            android:id="@+id/thumb"
+            android:layout_width="90dip"
+            android:layout_height="90dip"
+            android:layout_marginRight="@dimen/PaddingMedium"
+            android:background="@drawable/shape_solid_white_stroke_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/PaddingMedium"
+            android:orientation="vertical" >
+
+            <TableRow
+                android:id="@+id/title_tr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:lines="2"
+                    android:singleLine="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <TextView
+                    android:id="@+id/qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:singleLine="false"
+                    android:text="x1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/price_tr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_tr"
+                android:layout_marginTop="5dp"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/PaddingSmall" >
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="00.00"
+                    android:textColor="@color/westore_red"
+                    android:textSize="@dimen/TextSizeLarge" />
+
+                <TextView
+                    android:id="@+id/market_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="00.00"
+                    android:textColor="@color/westore_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <TextView
+                    android:id="@+id/goods_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_order_action"
+                    android:paddingBottom="@dimen/PaddingMedium"
+                    android:paddingLeft="@dimen/PaddingXLarge"
+                    android:paddingRight="@dimen/PaddingXLarge"
+                    android:paddingTop="@dimen/PaddingMedium"
+                    android:singleLine="false"
+                    android:text="晒单评价"
+                    android:textColor="@color/westore_red"
+                    android:textSize="@dimen/TextSizeBigSmall"
+                    android:visibility="gone" />
+            </TableRow>
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price_tr"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeSmall"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/westore_divider_bgcolor" />
+
+</LinearLayout>

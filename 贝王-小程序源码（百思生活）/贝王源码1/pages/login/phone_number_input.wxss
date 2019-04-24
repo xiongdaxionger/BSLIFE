@@ -1,0 +1,36 @@
+/* pages/phone_number_input.wxss */
+
+.regiser-container{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 13px;
+}
+
+/*输入框*/
+.phone-input{
+    font-size: 15px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 3px;
+    background: white;
+    margin: 50px 0 0 23px;
+    width: calc(100vw - 76px);
+}
+
+/*下一步*/
+.next-btn{
+    margin: 35px 23px 0 23px;
+}
+
+/*联系客服*/
+.service-container{
+    font-size: 14px;
+    color: rgba(180, 180, 180, 1.0);
+    margin: 20px 0 0 23px;
+}
+
+.service-container text{
+    color: gray;
+    text-decoration: underline;
+}

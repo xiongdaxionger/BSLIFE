@@ -1,0 +1,14 @@
+
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+<view class="activity_list_container" wx:if="{{!showFailNetWork}}">
+    <view class="activity_type_container">
+        <block wx:for="{{activityListArr}}" wx:for-item="activityItem">
+            <view class="{{(index + 1) % 3 == 0 ? 'service_type bottom_separator' : 'service_type bottom_separator right_separator'}}" bindtap="activityAction" data-type="{{activityItem.activityType}}">
+                <image data-type="{{activityItem.activityType}}" class="icon" src="{{activityItem.image}}" mode="aspectFit"></image>
+                <text class="title">{{activityItem.name}}</text>
+            </view>
+        </block>
+    </view>
+</view>

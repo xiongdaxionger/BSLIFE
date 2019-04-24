@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/header_marketing_topbg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/header_marketing_top"
+        android:layout_alignTop="@+id/header_marketing_top"
+        android:scaleType="centerCrop"
+        android:src="@drawable/marketing_signin_top"
+        android:visibility="visible" />
+    
+    <RelativeLayout
+        android:id="@+id/header_marketing_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp" >
+
+        <TextView
+            android:id="@+id/header_marketing_signin_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/header_marketing_signin_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/header_marketing_signin_total"
+            android:drawableLeft="@drawable/marketing_signin_near"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="已连续签到1天"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/header_marketing_signin_near"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:text="连续签到5天 +2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/TextSizeBigSmall" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/header_marketing_signin_adv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_marketing_top"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/marketing_signin_adv"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/header_marketing_mid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_marketing_signin_adv"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/header_marketing_signin_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/header_marketing_signin_rule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="签到送积分规则："
+                android:textColor="@color/westore_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/header_marketing_signin_rule_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="首次签到积分+1"
+                android:textColor="@color/westore_red"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <TextView
+                android:id="@+id/header_marketing_signin_rule_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="连续签到2日+2"
+                android:textColor="@color/westore_red"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <TextView
+                android:id="@+id/header_marketing_signin_rule_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="连续签到3日+4"
+                android:textColor="@color/westore_red"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <TextView
+                android:id="@+id/header_marketing_signin_rule_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="连续签到5日+8"
+                android:textColor="@color/westore_red"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="2dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/marketing_signin_rule" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/header_marketing_signin_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/header_marketing_signin_invite_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/header_marketing_signin_invite_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="邀请注册赚积分"
+                    android:textColor="@color/westore_red"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/header_marketing_signin_invite_title"
+                    android:src="@drawable/marketing_signin_invite" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/header_marketing_signin_invite_my_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/header_marketing_signin_invite_my"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的积分"
+                    android:textColor="@color/westore_red"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/header_marketing_signin_invite_my"
+                    android:src="@drawable/marketing_signin_my" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/header_marketing_mid"
+        android:padding="10dp"
+        android:visibility="visible" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/marketing_signin_new" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="积分换购"
+            android:textColor="@color/westore_red"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@color/westore_divider_bgcolor" />
+    </LinearLayout>
+
+</RelativeLayout>

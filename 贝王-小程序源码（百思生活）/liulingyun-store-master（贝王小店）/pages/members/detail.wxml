@@ -1,0 +1,105 @@
+<view>
+  <view class='meber-bg'>
+    <view class='header-center'>
+      <image src='{{avatar != "null" ? avatar : "/image/016.png"}}' class='head-portrait'></image>
+    </view>
+    <view>{{phone}}</view>
+  </view>
+  <view class='detail-nav'>
+    <view class='detail-nav-l' data-type='1' bindtap='chooseType'>
+      <text class='{{navType == "1" ? "selected-nav" : ""}}'>简介</text>
+    </view>
+    <view class='detail-nav-c' data-type='2' bindtap='chooseType'>
+      <text class='{{navType == "2" ? "selected-nav" : ""}}'>团队</text>
+    </view>
+    <view class='detail-nav-r' data-type='3' bindtap='chooseType'>
+      <text class='{{navType == "3" ? "selected-nav" : ""}}'>订单</text>
+    </view>
+  </view>
+  <view class='detail-list' style='display:{{navType == "1" ? "block" : "none"}}'>
+    <view class='detail-item'>
+      <text class='gray-words'>累积下单：</text>
+      <text class='black-words'>{{orderNum}}</text>
+    </view>
+    <view class='detail-item'>
+      <text class='gray-words'>销售奖励：</text>
+      <text class='black-words'>{{income}}</text>
+    </view>
+    <view class='detail-item'>
+      <text class='gray-words'>联系电话：</text>
+      <text class='black-words'>{{phone}}</text>
+    </view>
+    <view class='detail-item'>
+      <text class='gray-words'>收货地区：</text>
+      <text class='black-words'>{{area}}</text>
+    </view>
+    <view class='detail-item'>
+      <text class='gray-words'>注册时间：</text>
+      <text class='black-words'>{{regtime}}</text>
+    </view>
+  </view>
+  <view class='team-list' style='display:{{navType == "2" ? "block" : "none"}}'>
+    <block wx:for="{{memberList}}" wx:key="key" wx:for-item="itemName">
+      <view class='list-main team' bindtap='memberDetail' data-id='{{itemName.member_id}}' data-price='{{itemName.income}}' data-arr='{{itemName}}'>
+        <view class='list-main-item'>
+          <view class='list-main-l'>
+            <image src='/image/016.png' class='head-img'></image>
+          </view>
+          <view class='list-main-c'>
+            <view class='black-words'>{{itemName.mobile}}</view>
+            <view>团队{{itemName.nums}}人</view>
+          </view>
+          <view class='list-main-r'>
+            <view class='red-words'>{{itemName.income}}</view>
+            <view>销售奖励</view>
+          </view>
+        </view>
+        <!-- <view class='conceal-list'>
+          <view class='conceal-item'>
+            <image src='/image/019.png' class='remark'></image>
+            <text>备注</text>
+          </view>
+          <view class='conceal-item'>
+            <image src='/image/020.png' class='tail-after'></image>
+            <text>跟踪</text>
+          </view>
+          <view class='conceal-item'>
+            <image src='/image/021.png' class='remark'></image>
+            <text>消息</text>
+          </view>
+        </view> -->
+      </view>
+    </block>
+    <block wx:if="{{memberList.length <= 0}}">
+      <view class='no-data'>暂无团队信息</view>
+    </block>
+  </view>
+  <view class='team-list' style='display:{{navType == "3" ? "block" : "none"}}'>
+    <block wx:for="{{orderList}}" wx:key="k" wx:for-item="item">
+      <view class='order-list'>
+        <view class='order-order-id'>
+          <view>订单号：{{item.order_id}}</view>
+          <view>{{item.status_txt[0].name}}</view>
+        </view>
+        <block wx:for="{{item.goods_items}}" wx:key="goodskey" wx:for-item="goodsItem">
+          <view class='order-goods'>
+            <view class='order-goods-l'>
+              <image src='{{goodsItem.thumbnail_pic}}' class='goods-pic'></image>
+            </view>
+            <view class='order-goods-r'>
+              <view class='black-words'>{{goodsItem.name}}</view>
+              <view class='goods-price-colore'>{{goodsItem.amount}}</view>
+            </view>
+          </view>
+        </block>
+        <view class='order-time'>
+          <view>{{item.createtime}}</view>
+          <view>共{{item.itemnum}}件,合计<text class='goods-price-colore'>{{item.cur_amount}}</text> </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{orderList.length <= 0}}">
+      <view class='no-data'>暂无订单</view>
+    </block>
+  </view>
+</view>

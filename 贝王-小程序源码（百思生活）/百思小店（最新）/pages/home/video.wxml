@@ -1,0 +1,59 @@
+<view>
+  <video id="myVideo" src="{{videoSrc}}" controls="true" class='video-width' poster="{{posterSrc}}" autoplay="true"></video>
+</view>
+<view class='head-box'>
+  <view class='head-box-l'>
+    <image src='{{headImg}}' class='head-img'></image>
+  </view>
+  <view class='head-box-r'>
+    <text>{{author}}</text>
+  </view>
+</view>
+<view class='video-title'>{{title}}</view>
+<block wx:if="{{wxprointro.length > 0}}">
+  <view class='image-list'>
+    <block wx:for="{{wxprointro}}" wx:key="{{index}}">
+        <image mode="widthFix" style="width:100%" src="{{item}}"></image>
+    </block>
+  </view>
+</block>
+<view class='comments'>
+  <view class='comments-l'>
+    {{pubtime}}
+  </view>
+  <view class='comments-r'>
+    <view style='padding-left:75rpx;'>
+      <view class='give-like' style='display:{{articleBox == articleId ? "flex" : "none"}}'>
+        <view class='give-like-l' bindtap='givelike' data-id='{{articleId}}'>{{ifpraise ? "取消" : "点赞"}}</view>
+        <view class='give-like-r' bindtap='jumpVideo'>评论</view>
+      </view>
+    </view>
+    <view>
+      <image src='../../image/046.png' class='comments-img' bindtap='givealike' data-id='{{articleId}}'></image>
+    </view>
+  </view>
+</view>
+<view class='comments-text'>
+  <block wx:if="{{praiseList.length > 0 || commentList.length > 0}}">
+    <view class='oval'></view>
+  </block>
+  <block wx:if="{{praiseList.length > 0}}">
+    <view class='ifpraise'>
+      <image src='../../image/047.png' class='zan-img'></image>
+      <block wx:for="{{praiseList}}" wx:key="key" wx:for-item="val">
+        <text class='member-name'>{{val.name}}</text>
+      </block>
+    </view>
+  </block>
+  <block wx:for="{{commentList}}" wx:key="key" wx:for-item="item">
+    <view class='text-list' bindtap='actioncnt' data-id='{{item.comment_id}}' data-mid='{{item.member_id}}'><text class='blue-words'>{{item.name}}：</text>{{item.content}}</view>
+  </block>
+</view>
+<view class='bottom-box'>
+  <view class='bottom-box-l'>
+    <input placeholder='发表评论...' focus="{{inputFocus}}" class='bottom-box-inp' value='{{memberRemoke}}' bindinput='setRemoke'></input>
+  </view>
+  <view class='bottom-box-r'>
+    <view class='published' bindtap='confirm' style='background:#{{bgcolor}}'>发表</view>
+  </view>
+</view>

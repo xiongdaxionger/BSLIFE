@@ -1,0 +1,13 @@
+@import "../addresslist/addresslist.wxss";
+@import "../user/bind_phone.wxss";
+@import "../user/reset_password.wxss";
+
+/**背景视图**/
+.content_view{
+    background-color: white
+}
+/**空白白**/
+.bland{
+    height: 8px;
+    background-color: #F7F7F7
+}

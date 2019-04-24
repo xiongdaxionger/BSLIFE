@@ -1,0 +1,34 @@
+page{
+  font-size: 14px;
+}
+.commision-top{
+  background: #dc4c00;
+  padding: 40rpx 20rpx;
+  color: #fff;
+  font-size: 18px;
+  line-height: 80rpx;
+  display: flex;
+}
+.commision-price{
+  font-size: 22px;
+}
+.commision-total{
+  width: 50%;
+}
+.commision-box{
+  display: flex;
+  padding: 20rpx;
+  line-height: 50rpx;
+  background: #e5e5e5;
+  flex-wrap: wrap;
+}
+.red-words{
+  color: #dc4c00;
+  font-size: 20px;
+}
+.commision-top-item{
+  width: 50%;
+}
+.bill{
+  text-align: right;
+}

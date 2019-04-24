@@ -1,0 +1,28 @@
+
+<!--加载失败-->
+<import src="/views/network/bad_network.wxml" />
+<template wx:if="{{fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+<view wx:if="{{!fail}}" >
+    
+    <image class='top_image' src="{{top_image_url}}"></image>
+
+    <view class='input_container'>
+      <!--姓名-->
+        <view class='input_section'>
+          <span class='title'>姓名</span>
+          <input maxlength="30" id="name" placeholder='请输入您的姓名' bindinput="textDidChange" />
+        </view>
+      <!--手机-->
+        <view class="input_section">
+          <span class="title">手机</span>
+          <input maxlength="11" type="number" placeholder='请输入您的手机号码' id="mobile" value="" bindinput="textDidChange" />
+        </view>
+        <!--城市-->
+        <view class='input_section'>
+          <span class='title'>城市</span>
+          <input maxlength="30" id="city" placeholder='请输入您的所在城市' bindinput="textDidChange" />
+        </view>
+    </view>
+    <button class="submit_button {{confirmEnable ? 'normal_button' : 'disable_button'}}" catchtap="confirm">提交</button>
+    
+</view>

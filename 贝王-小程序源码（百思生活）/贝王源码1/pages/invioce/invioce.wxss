@@ -1,0 +1,101 @@
+/*@import "../../app.wxss";*/
+@import "../addresslist/addresslist.wxss";
+/**发票容器**/
+.invioce_container{
+    background-color: #F7F7F7;
+    font-size: 15px;
+    height: calc(100vh - 49px);
+    color: black;
+}
+/**发票类型**/
+.invioce_type_container{
+    background-color: white;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+/**类型标题**/
+.type_title{
+    line-height: 21px;
+    width: 100%;
+    padding: 8px 8px;
+}
+/**类型选择**/
+.invioce_type_select_container{
+    width: 33%;
+    min-height: 45px;
+    max-height: 45px;
+    display: flex;
+    align-items: center;
+}
+/**类型选择图片**/
+.select_view{
+    width: 22px;
+    min-height: 22px;
+    max-height: 22px;
+    margin-left: 5px;
+}
+/**类型说明**/
+.type_text{
+    overflow: hidden;
+    line-height: 21px;
+}
+/**选中类型说明**/
+.invioce_type_container .type_text.select{
+    color: #f73030;
+}
+/**发票抬头**/
+.invioce_header_container{
+    width: 100%;
+    min-height: 80px;
+    position: relative;
+    background-color: white;
+    margin-top: 10px;
+}
+/**发票抬头标题**/
+.header_title{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    line-height: 21px;
+}
+/**发票抬头输入框**/
+.header_input{
+    position: absolute;
+    top: 40px;
+    left: 8px;
+    right: 8px;
+    min-height: 30px;
+    border: 1px #F7F7F7 solid;
+    border-radius: 3.0px;
+    padding-left: 5px;
+}
+/**发票内容选择容器**/
+.invioce_content_container{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    background-color: white;
+    padding-bottom: 8px;
+}
+/**发票内容标题**/
+.content_title{
+    line-height: 21px;
+    width: 100%;
+    padding: 8px 8px;
+}
+/**内容**/
+.content{
+    margin-left: 8px;
+    margin-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px #F7F7F7 solid;
+    border-radius: 3.0px
+}
+/**选中的内容**/
+.content.select{
+    background-color: #f73030;
+    border: 0px;
+    color: white;
+}

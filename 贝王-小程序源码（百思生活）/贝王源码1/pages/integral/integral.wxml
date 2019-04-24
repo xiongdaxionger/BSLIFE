@@ -1,0 +1,43 @@
+
+<!--pages/integral/integral.wxml-->
+
+<!--我的积分-->
+
+<!--加载失败-->
+<import src="/views/network/bad_network.wxml" />
+<template wx:if="{{fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+
+<!--内容-->
+<scroll-view scroll-top="{{scroll_top}}" bindscroll="containerScroll" scroll-y class="scroll-view" bindscrolltolower="loadMore" wx:if="{{!fail && !loading}}">
+  <view>
+
+    <!--回到顶部按钮-->
+    <include src="/views/widget/scroll_to_top.wxml" />
+
+    <!--积分头部-->
+    <view class="header">
+      <text class="header-title">可用积分</text>
+      <view class="header-integral">{{integral}}</view>
+      <text class="header-integral-detail">{{integral_detail}}</text>
+      <text wx:if="{{use_btn_title != null}}" class="header-use-btn" catchtap="useIntegral">{{use_btn_title}}</text>
+    </view>
+
+    <!--积分记录-->
+    <view class="record-header">积分记录</view>
+    <view wx:if="{{records == null || records.length == 0}}" class="empty record-empty">暂无积分记录</view>
+    <view class="record" wx:for="{{records}}" wx:key="{{index}}">
+
+      <!--积分使用数量-->
+      <view class="record-use-container">
+        <image src="{{imgURL + '/images/integral/integral_use_icon.png'}}" />
+        <text>{{(item.integral > 0 ? '+' : '') + item.integral}}分</text>
+      </view>
+      <text class="record-msg">{{item.msg}}</text>
+      <text class="record-time">{{item.time}}</text>
+    </view>
+
+  <!--加载更多-->
+  <import src="/views/widget/load_more.wxml" />
+  <template wx:if="{{load_more}}" is="load_more" />
+  </view>
+</scroll-view>

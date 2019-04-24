@@ -1,0 +1,21 @@
+
+<!--注册 设置密码-->
+<view class="container regiser-container">
+<text class="msg">请设置登录密码</text>
+<input type="number" class="password-input" bindinput="textDidChange" placeholder="请输6-20位字符" maxlength="20" password="{{!tick}}" placeholder-class="placeholder"/>
+
+<view catchtap="tapTick" class="tick-container">
+<image src="{{imgURL + '/images/shopcart/shop_Car_' + (tick ? 'Select' : 'UnSelect')}}.png"/>
+密码可见
+</view>
+
+<text class="password-msg">密码由6-20位字符组成，区分大小写</text>
+
+<!--完成按钮 disabled="{{!finisnEnable}}" 有bug-->
+<button class="next-btn long-btn {{finisnEnable ? 'normal' : 'disable'}}" catchtap="finsh">完成</button>
+
+<view class="service-container">
+遇到问题？您可以
+<text catchtap="tapService">联系客服</text>
+</view>
+</view>

@@ -1,0 +1,235 @@
+/* .header{
+    height:300px;
+    background-color:pink;
+} */
+body, html{
+    width:1920px;
+    height: 100%;
+}
+body,ul,h1,h2,h3,h4,h5,h6,form,dl,p,li,a,div { padding:0px; margin:0px;}
+
+.topView{
+    height:120px;
+    background-color:#ffffff;
+    /*display: flex;
+    align-items: center;*/
+}
+.logoText1{
+    font-size:18px;
+    width: 200px;
+    text-align:justify; 
+    distribute-all-lines;
+    text-align-last:justify; 
+    text-indent:10px;
+}
+.logoText2{
+    font-size:24px;
+    line-height:120px;
+    margin-left:292px;
+    float: left;
+}
+.logoView{
+    margin-left:240px;
+    margin-top: 24px;
+    height:90px;/*
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;*/
+    width: 200px;
+    float: left;
+    
+}
+.font{
+    font-weight:bold;
+    color:#e60012;
+    letter-spacing:9px;
+}
+.headView{
+    height:50px;
+    background-color:#e60012;
+
+}
+.container{
+    height:796px;
+    position:relative;
+
+    /*position:relative;
+    min-height:100vh;
+    padding-bottom:120px;    //将padding-bottom大小设置为底部内容的高度
+    box-sizing:border-box;*/
+
+}
+.container1{
+    /*height:796px;*/
+
+    position:relative;
+    min-height:100vh;
+    padding-bottom:120px;    //将padding-bottom大小设置为底部内容的高度
+    box-sizing:border-box;
+
+}
+.headUl{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    font-size: 18px;
+    color: #ffffff;
+    letter-spacing: 7px;
+    margin: auto;
+    width: 620px;
+}
+li{
+    list-style-type: none;
+}
+li a{
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headUl li a:hover{
+    color: black;
+}
+.headUl li a:active{
+    color: black;
+}
+.swiperImg{
+    position:relative;
+    overflow-x: hidden;
+}
+div.swiperImg{ position:relative; width:1920px; height:796px; overflow:hidden;z-index: -1;}
+.showImg{
+    position: absolute;
+    opacity: 1;
+}
+
+.designView{
+    position: absolute;
+    z-index: 1;
+    bottom: 25px;
+    right:108px;
+    width: auto;
+    /*margin-right: 108px;*/
+}
+.designView1{
+    right: 30px;
+    width: 300px;
+    height: 300px;
+    background-color: pink;
+   /* float: right;*/
+    position: absolute;
+}
+.design{
+    height: 24px;
+    margin-top: 20px;
+}
+.contact{
+    width: 150px;
+    /*display: none;*/
+    margin: auto;
+    visibility: hidden;
+}
+.copys{
+    font-size: 9px;
+    color: #000;
+    line-height: 24px;
+    /*letter-spacing: 4px;*/
+    padding-right:  26px;
+    border-right: 1px solid #000;
+    float: left;
+}
+.design img{
+    float: left;
+    margin-left: 15px;
+    cursor:pointer;
+}
+.brandImg{
+    position: absolute;
+    z-index: 1;
+}
+.brandText{
+    position: absolute;
+    color: #ffffff;
+    z-index: 5;
+    /*background-color: rgba(0,0,0,.51);*/
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 56px;
+}
+.brandP{
+    padding-top: 172px;
+    padding-left: 490px;
+    padding-right: 510px;
+}
+.brandP p{
+    margin-top: 10px;
+}
+.spanTitle{
+    font-size: 36px; 
+    letter-spacing: 3px; 
+    line-height: 38px; 
+    display: table-cell; 
+    vertical-align: middle;
+    padding-left: 15px;
+    font-weight: bold;
+}
+.contentView{
+    width: 1202px;
+    margin: 20px auto;
+    position:relative;
+    overflow-x: hidden;
+    min-height: 100%;
+}
+.content1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.title1{
+    font-size: 30px;
+    letter-spacing: 12px;
+    color:#000;
+    font-weight: bold;
+    margin-top: 146px;
+}
+.title2{
+    height: 38px;
+    width: 452px;
+    margin-top: 20px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid #e5e5e5;
+}
+.title2 span{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    height: 100%;
+    line-height: 38px;
+    vertical-align: middle;
+    width: 150px;
+}
+.Vline{
+    height: 100%;
+    width: 1px;
+    background-color: #e5e5e5;
+}
+.title3{
+    width: 100%;
+    margin-top: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title3 img{
+    border: 1px solid #b9b9b9;
+}

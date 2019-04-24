@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/fragment_background_color"
+    android:paddingBottom="@dimen/MarginLarge"
+    android:paddingLeft="@dimen/MarginXXLarge"
+    android:paddingRight="@dimen/MarginXXLarge"
+    android:paddingTop="@dimen/MarginLarge" >
+
+    <LinearLayout
+        android:id="@+id/coupon_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_solid_white_stroke_round5_gray"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="更多好劵，去领劵中心看看吧"
+            android:textColor="@color/westore_gray_textcolor" />
+    </LinearLayout>
+
+</LinearLayout>

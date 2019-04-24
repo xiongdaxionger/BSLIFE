@@ -1,0 +1,34 @@
+<!--添加会员-->
+
+<view class="container">
+
+<view class="content">
+  <!--手机号-->
+  <view class="section">
+    <view class="title">手机号</view>
+    <input maxlength="11" type="number" id="phoneNumber" bindinput="textDidChange" />
+  </view>
+
+  <!--获取短信验证码-->
+  <view class="section">
+    <view class="title">验证码</view>
+    <input maxlength="10" type="number" id="code" bindinput="textDidChange"></input>
+    <view class="count-down-btn {{count_down ? 'disable' : 'normal'}}" catchtap="getCode">{{count_down ? second + 's': '获取验证码'}}</view>
+  </view>
+
+    <!--姓名-->
+  <view class="section">
+    <view class="title">姓<view class="space"/>名</view>
+    <input maxlength="20" id="name" bindinput="textDidChange"></input>
+  </view>
+
+  <!--密码-->
+  <view class="section">
+    <view class="title">密<view class="space"/>码</view>
+    <input maxlength="20" id="password" bindinput="textDidChange" password></input>
+  </view>
+  </view>
+
+<!--确定按钮 disabled="{{!confirmEnable}}" 有bug-->
+  <button class="confirm-btn long-btn {{confirmEnable ? 'normal' : 'disable'}}" catchtap="confirm">确定添加</button>
+</view>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TableRow
+        android:id="@+id/spec_title_tr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/spec_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/PaddingMedium"
+            android:layout_marginTop="@dimen/PaddingMedium"
+            android:text="品台分类"
+            android:textColor="@color/text_goods_3_color"
+            android:textSize="@dimen/TextSizeMedium" />
+
+        <TextView
+            android:id="@+id/spec_value"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/PaddingLarge"
+            android:layout_marginRight="@dimen/PaddingLarge"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="未选择"
+            android:textColor="@color/text_goods_6_color"
+            android:textSize="@dimen/TextSizeMedium"
+            android:visibility="gone" />
+
+    </TableRow>
+
+    <com.qianseit.westore.ui.FlowLayout
+        android:id="@+id/spec_values"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/MarginMedium"
+        android:visibility="gone"
+        custom:horizontal_spacing="@dimen/MarginLarge"
+        custom:vertical_spacing="@dimen/MarginLarge" >
+    </com.qianseit.westore.ui.FlowLayout>
+
+</LinearLayout>

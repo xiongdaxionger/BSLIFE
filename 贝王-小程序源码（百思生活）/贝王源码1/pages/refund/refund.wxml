@@ -1,0 +1,124 @@
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+<!--状态栏-->
+<view class="order_status_bar top_zero" wx:if="{{!showFailNetWork}}">
+    <block wx:for="{{statusInfo}}" wx:for-item="statusInfo">
+        <view class="order_status_item" style="width:25%" bindtap="changeIndex" data-status="{{index}}">
+            <view wx:if="{{index < 3}}" class="right_line"></view>
+            <text class="{{index == selectIndex ? 'text select' : 'text'}}" data-status="{{index}}">{{statusInfo}}</text>
+        </view>
+    </block>
+</view>
+
+  <!--订单数据-->
+  <scroll-view  class="order_list margin_content" scroll-top="{{scroll_top}}" scroll-y="true" bindscroll="containerScroll" wx:if="{{infosArr.length != 0 && !showFailNetWork}}">
+      <!--回到顶部按钮-->
+    <include src="/views/widget/scroll_to_top.wxml" />
+    <block wx:for="{{infosArr}}" wx:key="{{index}}">
+        <view class="order_list_view have_margin">
+            <!--订单ID等信息-->
+            <view class="order_list_id bottom_line" bindtap="pustOrderDetail" data-order-id="{{item.orderID}}">
+              <text class="order_id_text" data-order-id="{{item.orderID}}">订单号:{{item.orderID}}</text>
+              <text wx:if="{{selectIndex == 0 || selectIndex == 1}}" class="order_status_text" data-order-id="{{item.orderID}}">{{item.orderStatusTxt}}</text>
+              <image class="order_arrow" src="{{imgURL + '/images/icon/arrow_black.png'}}" mode="aspectFit" />
+            </view>
+            <!--商品-->
+            <block wx:for="{{item.orderGoodInfoArr}}" wx:for-item="good" wx:key="{{index}}">
+              <view class="order_list_good bottom_line">
+                <image class="order_good_image" src="{{good.orderGoodImage}}"></image>
+                <view class="order_type_tag" wx:if="{{good.orderGoodType != 0}}">{{good.orderGoodTypeString}}</view>
+                <text class="{{good.orderGoodType != 0 ? 'order_good_name have_tag' : 'order_good_name'}}">{{good.orderGoodName}}</text>
+                <text class="order_good_quantity">x{{good.orderGoodQuantity}}</text>
+                <text class="order_good_price">{{good.orderGoodPrice}}</text>
+                <text class="order_specInfo">{{good.orderGoodSpecInfo}}</text>
+              </view>
+            </block>
+
+            <!--店家反馈-->
+            <view class="order_list_id bottom_line" wx:if="{{item.comment.length != 0}}">
+              <text class="order_id_text">店家反馈</text>
+            </view>
+            <block wx:if="{{item.comment.length != 0}}" wx:for="{{item.comment}}" wx:for-item="commentInfo" wx:key="{{index}}">
+            <view class="line_info">{{commentInfo}}</view>          
+            </block>
+            <view class="bottom_line" wx:if="{{item.comment.length != 0}}"></view>
+            <!--退款/退货理由-->
+            <view class="order_list_id bottom_line" wx:if="{{selectIndex == 1 || selectIndex == 3}}">
+                <text class="order_id_text">退换理由</text>
+            </view>
+            <view class="line_info" wx:if="{{selectIndex == 1 || selectIndex == 3}}">{{item.reason}}</view>
+            <view wx:if="{{selectIndex == 1 || selectIndex == 3}}" class="bottom_line"></view>
+
+
+            <!--快递信息-->
+            <view class="order_list_id bottom_line" wx:if="{{item.delivery != null && item.delivery.length != 0}}">
+                <text class="order_id_text">快递信息</text>
+            </view>
+            <block wx:if="{{item.delivery != null && item.delivery.length != 0}}" wx:for="{{item.delivery}}" wx:for-item="delivery">
+            <view class="line_info">{{delivery}}</view>
+            </block>
+            <view wx:if="{{(selectIndex == 1 || selectIndex == 3) && item.delivery != null && item.delivery.length != 0}}" class="bottom_line"></view>
+
+            <!--操作按钮//审核状态信息-->
+            <view class="action_view_flex" style="position: relative">
+                <view wx:if="{{(selectIndex == 0 || selectIndex == 2)&&item.canAfterSale}}" class="main_action_button order_button" bindtap="applyAction" data-order-id="{{item.orderID}}">{{selectIndex == 0 ? '申请退款' : '申请售后'}}</view>
+                <text wx:if="{{(selectIndex == 0 || selectIndex == 2) && !item.canAfterSale}}" class="status_text">{{selectIndex == 0 ? '已申请退款' : '已申请售后'}}</text>
+               <view wx:if="{{selectIndex == 1 || selectIndex == 3}}" class="status_text" style="right:{{item.canDelivery ? '105px' : '8px'}}">{{item.status}}</view> 
+                <view wx:if="{{item.canDelivery}}" class="main_action_button order_button" bindtap="expressInfoFill" data-order-id="{{item.refundID}}">填写物流信息</view>
+            </view>
+        </view>
+    </block>
+  </scroll-view>
+
+<!--空视图-->
+<view wx:if="{{infosArr.length == 0 && !showFailNetWork}}" class="empty-container empty_view_color">
+    <text class="empty-container-title">{{emptyTipString}}</text>
+</view>
+
+<!--物流信息-->
+<form bindsubmit="submitLogistics" wx:if="{{isShowLogistics}}">
+
+<view class="shipping-container">
+  <view animation="{{backgroundOpacityAnimation}}" class="shipping_black_transparent_bg" bindtap="closeLogisticsView"></view>
+  <view animation="{{logisticsTranslateAnimation}}" class="pay_password_container">
+    <view class="header">
+        <view class="title">请填写退回货物的快递信息</view>
+    </view>
+    <view class="bland"></view>
+    <view class="pay_password_input_container">
+        <input id="logisticsNum" class="input" type="number" value="{{logisticsNum}}" bindinput="inputChange" placeholder="请输入快递单号"></input>
+        <image class="image" src="{{imgURL + '/images/icon/scan_logo.png'}}" mode="aspectFit" bindtap="scanLogistics"/>
+    </view>
+    <view class="bland"></view>
+    <view class="pay_password_input_container">
+        <input class="input" disabled="true" bindtap="selectCompany" placeholder="请选择物流公司" value="{{companyName}}"></input>
+        <image class="image" bindtap="selectCompany" src="{{imgURL + '/images/icon/triangle_down.png'}}" mode="aspectFit" />
+    </view>
+    <view class="cancel_confirm_view">
+        <view style="background-color:#F73030;height:49px;width:100%;position:absolute;left:0px;bottom:0px;border-bottom-left-radius: 5.0px;border-bottom-right-radius: 5.0px">
+            <view class="cancel_view" bindtap="closeLogisticsView">取消</view>
+            <button class="confirm_view" formType="submit">确认</button>
+        </view>
+    </view>
+  </view>
+</view>
+
+</form>
+
+
+<!--物流公司-->
+<view wx:if="{{isShowCompany}}" class="shipping-container">
+  <view class="shipping_black_transparent_bg" bindtap="closeLogisticsCompany"></view>
+  <view animation="{{companyTranslateAnimation}}" class="shipping_method_container">
+    <view class="shipping_method_header">
+        <view class="header_title">物流公司</view>
+        <view class="cancel_title" bindtap="closeLogisticsCompany">取消</view>
+    </view>
+    <scroll-view scroll-y class="shipping_method_scroll_view">
+        <block wx:for="{{shipCompany}}" wx:key="{{index}}">
+            <view class="shipping_name_view" bindtap="didSelectCompany" data-index="{{item}}">{{item}}</view>
+        </block>
+    </scroll-view>
+  </view>
+</view>

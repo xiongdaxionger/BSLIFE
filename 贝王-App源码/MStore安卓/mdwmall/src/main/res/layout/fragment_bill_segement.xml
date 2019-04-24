@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <RadioGroup
+        android:id="@+id/bill_segement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/segement_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/check_black_bg_left"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingBottom="@dimen/PaddingMedium"
+            android:paddingLeft="@dimen/PaddingXXLarge"
+            android:paddingRight="@dimen/PaddingXXLarge"
+            android:paddingTop="@dimen/PaddingMedium"
+            android:text="余额账单"
+            android:textColor="@drawable/check_mychart_tv_red_white"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <RadioButton
+            android:id="@+id/segement_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-1dp"
+            android:layout_weight="1"
+            android:background="@drawable/check_black_bg_left"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="@dimen/PaddingMedium"
+            android:paddingLeft="@dimen/PaddingXXLarge"
+            android:paddingRight="@dimen/PaddingXXLarge"
+            android:paddingTop="@dimen/PaddingMedium"
+            android:text="佣金账单"
+            android:textColor="@drawable/check_mychart_tv_red_white"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/segement_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

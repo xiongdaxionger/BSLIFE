@@ -1,0 +1,208 @@
+/* 会员详情 */
+
+/*头部*/
+.header{
+    position: fixed;
+}
+
+.header-user-info-container{
+    width: 100vw;
+    height: 120px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.header-user-img{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+.header-user-name{
+    font-size: 16px;
+}
+
+/**菜单条**/
+.bar{
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px #f7f7f7 solid;
+    border-top: 1px #f7f7f7 solid;
+}
+/**状态选择栏选项**/
+.bar .item{
+    font-size: 15px;
+    text-align: center;
+    width: 50%;
+    position: relative;
+}
+/**选项栏的右侧横线**/
+.bar .item .right_line{
+    width: 1px;
+    background-color: #F5F5F5;
+    position: absolute;
+    right: 0px;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    height: 15px;
+}
+/**选择栏文本**/
+.bar .item .text{
+    color: #666666;
+    font-size: 16px;
+}
+/**选择项选中**/
+.bar .item .text.select{
+    line-height: 40px;
+    color: black;
+    border-bottom-width: 2px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    padding-bottom: 7px;
+}
+
+
+/*列表容器*/
+.list-container{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: 10px;
+}
+
+/*列表滚动视图*/
+.scroll-view{
+    width: 100vw;
+    height: 100vh;
+    background: #f7f7f7;
+    margin-top: 160px;
+    position: fixed;
+}
+
+/*简介*/
+.intro-item{
+    width: 100%;
+    background: white;
+    border-bottom: 1px #e5e5e5 solid;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 15px;
+}
+
+.intro-title{
+    color: gray;
+    margin: 10px 0 10px 10px;
+}
+
+.intro-content{
+    margin: 10px 10px 10px 0;
+}
+
+/*团队*/
+.partner-item{
+    height: 90px;
+    border-bottom: 1px #e5e5e5 solid;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    background: white;
+}
+
+/*头像*/
+.partner-head-image{
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin-left: 10px;
+    flex: 0 0 auto;
+}
+
+.partner-right-container{
+    margin: 10px 10px 10px 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/*昵称*/
+.partner-user-name{
+    margin-top: 10px;
+    font-size: 17px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.partner-order-count{
+    font-size: 14px;
+    margin: 3px 0 3px 0;
+}
+
+.partner-amount{
+    font-size: 14px;
+}
+
+/*订单*/
+.order-item{
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+    background: white;
+    border-bottom: 1px #e5e5e5 solid;
+}
+
+.order-top-container{
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 13px;
+    color: gray;
+    margin: 10px 10px 0 10px;
+    align-items: center;
+}
+
+.order-time{
+    flex: 1 1 auto;
+}
+
+.order-status{
+
+}
+
+.order-bottom-container{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 10px;
+}
+
+.order-img{
+    width: 65px;
+    height: 65px;
+    margin-right: 10px;
+    flex: 0 0 auto;
+}
+
+.order-right-container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 65px;
+    margin-right: 10px;
+}
+
+.order-name{
+    font-size: 16px;
+    height: 40px;
+}
+
+.order-amount{
+    font-size: 13px;
+}
+

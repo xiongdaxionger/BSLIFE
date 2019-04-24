@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WMGoodGridCell">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="263"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="263"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kti-ak-lst" userLabel="good_imageView">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="kti-ak-lst" secondAttribute="height" multiplier="1:1" id="EFw-Na-Lx6"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZm-NK-Miu" userLabel="tag_view" customClass="WMGoodTagView">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJh-fR-nkU" userLabel="name_label">
+                        <rect key="frame" x="5" y="165" width="150" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="DJc-AD-7XR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHN-cG-rdH" userLabel="shopcart_btn">
+                        <rect key="frame" x="124" y="189" width="31" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="0Br-Tc-gx0"/>
+                            <constraint firstAttribute="width" constant="31" id="3DL-HB-B8U"/>
+                        </constraints>
+                        <state key="normal" image="shopcart_add_btn"/>
+                        <connections>
+                            <action selector="shopcartAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="d94-jU-jb3"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slK-eZ-bor" userLabel="price_label">
+                        <rect key="frame" x="5" y="191" width="114" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.36542492170000002" blue="0.27247244230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soldout_icon" translatesAutoresizingMaskIntoConstraints="NO" id="2nD-9k-DeB" userLabel="soldout_ImageView">
+                        <rect key="frame" x="40" y="40" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="Coo-pU-AdI"/>
+                            <constraint firstAttribute="height" constant="80" id="cik-ra-53a"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k77-Wg-uvz" userLabel="mark_view" customClass="WMGoodMarkView">
+                        <rect key="frame" x="5" y="236" width="0.0" height="17"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="1kW-k0-Ntt"/>
+                            <constraint firstAttribute="width" id="IwG-7P-pAK"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ai-qr-WWL" userLabel="comment_count_label">
+                        <rect key="frame" x="5" y="236" width="150" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="aHN-cG-rdH" firstAttribute="leading" secondItem="slK-eZ-bor" secondAttribute="trailing" constant="5" id="AY8-KX-TNn"/>
+                <constraint firstItem="kti-ak-lst" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BrF-vc-ebL"/>
+                <constraint firstItem="YZm-NK-Miu" firstAttribute="width" secondItem="kti-ak-lst" secondAttribute="width" id="Ehu-Xz-TQr"/>
+                <constraint firstItem="YZm-NK-Miu" firstAttribute="centerY" secondItem="kti-ak-lst" secondAttribute="centerY" id="Kyt-5J-H9M"/>
+                <constraint firstAttribute="trailing" secondItem="aHN-cG-rdH" secondAttribute="trailing" constant="5" id="LRL-iH-h46"/>
+                <constraint firstItem="slK-eZ-bor" firstAttribute="top" secondItem="EJh-fR-nkU" secondAttribute="bottom" constant="5" id="VAq-I9-wms"/>
+                <constraint firstAttribute="bottom" secondItem="1Ai-qr-WWL" secondAttribute="bottom" constant="10" id="VZC-aq-XL4"/>
+                <constraint firstItem="k77-Wg-uvz" firstAttribute="leading" secondItem="slK-eZ-bor" secondAttribute="leading" id="Ve5-5F-TlN"/>
+                <constraint firstItem="1Ai-qr-WWL" firstAttribute="leading" secondItem="k77-Wg-uvz" secondAttribute="trailing" id="Y9W-kZ-0Q8"/>
+                <constraint firstItem="aHN-cG-rdH" firstAttribute="centerY" secondItem="slK-eZ-bor" secondAttribute="centerY" id="YRx-HJ-kQO"/>
+                <constraint firstAttribute="trailing" secondItem="EJh-fR-nkU" secondAttribute="trailing" constant="5" id="beM-U4-YRn"/>
+                <constraint firstItem="YZm-NK-Miu" firstAttribute="height" secondItem="kti-ak-lst" secondAttribute="height" id="brk-S6-s2e"/>
+                <constraint firstItem="2nD-9k-DeB" firstAttribute="centerY" secondItem="kti-ak-lst" secondAttribute="centerY" id="cv3-0D-g91"/>
+                <constraint firstItem="k77-Wg-uvz" firstAttribute="bottom" secondItem="1Ai-qr-WWL" secondAttribute="bottom" id="eLe-Xy-cnY"/>
+                <constraint firstItem="EJh-fR-nkU" firstAttribute="top" secondItem="kti-ak-lst" secondAttribute="bottom" constant="5" id="fxU-cP-0Ls"/>
+                <constraint firstAttribute="trailing" secondItem="1Ai-qr-WWL" secondAttribute="trailing" constant="5" id="iFC-ee-zzk"/>
+                <constraint firstItem="slK-eZ-bor" firstAttribute="leading" secondItem="EJh-fR-nkU" secondAttribute="leading" id="tAM-hq-jGT"/>
+                <constraint firstAttribute="trailing" secondItem="kti-ak-lst" secondAttribute="trailing" id="tTQ-c1-iHN"/>
+                <constraint firstItem="2nD-9k-DeB" firstAttribute="centerX" secondItem="kti-ak-lst" secondAttribute="centerX" id="vnI-ec-xFL"/>
+                <constraint firstItem="YZm-NK-Miu" firstAttribute="centerX" secondItem="kti-ak-lst" secondAttribute="centerX" id="wi5-1N-od3"/>
+                <constraint firstItem="EJh-fR-nkU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="xvp-yc-plf"/>
+                <constraint firstItem="kti-ak-lst" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="y5l-bQ-LL2"/>
+            </constraints>
+            <size key="customSize" width="160" height="263"/>
+            <connections>
+                <outlet property="comment_count_label" destination="1Ai-qr-WWL" id="UGr-7W-6Ez"/>
+                <outlet property="good_imageView" destination="kti-ak-lst" id="hTW-qN-BIf"/>
+                <outlet property="mark_view" destination="k77-Wg-uvz" id="zg8-dl-B3E"/>
+                <outlet property="name_label" destination="EJh-fR-nkU" id="fXp-Rz-nVd"/>
+                <outlet property="price_label" destination="slK-eZ-bor" id="ROY-N4-SMx"/>
+                <outlet property="shopcart_btn" destination="aHN-cG-rdH" id="qdn-oc-jG6"/>
+                <outlet property="soldout_imageView" destination="2nD-9k-DeB" id="VTl-S2-bFp"/>
+                <outlet property="tag_view" destination="YZm-NK-Miu" id="eqF-ed-0hm"/>
+            </connections>
+            <point key="canvasLocation" x="93" y="262.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="shopcart_add_btn" width="31" height="26"/>
+        <image name="soldout_icon" width="71" height="71"/>
+    </resources>
+</document>

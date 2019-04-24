@@ -1,0 +1,18 @@
+
+
+<import src="../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+<scroll-view scroll-y class="coupon_receive_container" wx:if="{{!showFailNetWork}}">
+    <block wx:for="{{couponListArr}}" wx:for-item="couponInfo" wx:key="{{index}}">
+        <view class="coupon_view">
+            <view class="{{couponInfo.couponEnableReceive ? 'coupon_header_view' : 'coupon_header_view disable'}}">
+                <view class="coupon_name">{{couponInfo.title}}</view>
+                <view class="coupon_title">{{couponInfo.couponSubtitle}}</view>
+                <button disabled="{{!couponInfo.couponEnableReceive}}" bindtap="receiveCouponAction" data-code="{{couponInfo.couponCode}}" class="coupon_button">{{couponInfo.couponButtonString}}</button>
+            </view>
+            <view class="{{couponInfo.couponEnableReceive ? 'coupon_time' : 'coupon_time disable'}}">{{couponInfo.couponTime}}</view>
+            <view class="{{couponInfo.couponEnableReceive ? 'coupon_info' : 'coupon_info disable'}}">{{couponInfo.couponInfo}}</view>
+        </view>
+    </block>
+</scroll-view>

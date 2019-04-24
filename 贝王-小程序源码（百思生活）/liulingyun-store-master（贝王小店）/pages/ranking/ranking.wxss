@@ -1,0 +1,83 @@
+page{
+  background: #f8f8f8;
+}
+.ranking-item{
+  display: flex;
+  padding: 20rpx 20rpx 20rpx 0rpx;
+  line-height: 58rpx;
+  align-items:center;
+  background: #fff;
+  margin-bottom: 10rpx;
+  border-radius: 5px;
+}
+.ranking-item-l{
+  width: 15%;
+  display:flex;
+  align-items:center;
+  border-right: 1px solid #ccc;
+  justify-content: center;
+}
+.ranking-item-c{
+  width: 50%;
+  text-align: left;
+  padding-left: 20rpx;
+}
+.ranking-item-r{
+  width: 35%;
+  text-align: right;
+  font-weight: bold;
+  font-family: "STKaiti";
+  color: #ef8300;
+  font-size: 16px;
+}
+.scroll-height{
+  height: 89vh;
+}
+.lv-img{
+  width: 40rpx;
+  height: 48rpx;
+}
+.rank-top{
+  display: flex;
+  justify-content: center;
+  padding: 20rpx;
+}
+.rank-top-box{
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  border:1px solid #ef8300;
+  border-radius: 5px;
+}
+.rank-box-item{
+  width: 25%;
+  text-align: center;
+  padding: 10rpx 0rpx;
+  color: #ef8300;
+}
+.rank-box-iteml{
+  width: 25%;
+  text-align: center;
+  padding: 10rpx 0rpx;
+  border-right: 1px solid #ef8300;
+  color: #ef8300;
+}
+.selected-item{
+  background: #ef8300;
+  color: #fff;
+}
+.list-box{
+  padding: 20rpx;
+}
+.avatar-img{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align:middle;
+  border-radius:50%;
+  margin-right: 10rpx;
+}
+.rank-remoke{
+  text-align: center;
+  color: #ccc;
+}

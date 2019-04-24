@@ -1,0 +1,70 @@
+
+  <swiper circular  class="banner"  autoplay indicator-dots="true" interval="5000">
+    <block wx:for="{{article_data.slideBox[0].params.pic}}" wx:for-item="info" wx:for-index="idx" wx:key="idx">
+      <swiper-item>
+        <image src="{{info.link}}"  ></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='padding-10 font-size-18'>精选试用</view>
+  <scroll-view scroll-x style="height: 42vh;" class='margin-lr-10 jx'>
+    <view  class="jx-item" bindtap='jump_detail'>
+      <view class='img bg-color'></view>
+      <text class='badge font-size-12'>限量200份,剩余149份</text>
+      <text class='der font-size-14 bold'>TCL L58E6800A-UD 58英寸 高色域4K超高清安卓智能LED液晶电视(黑色）</text>
+      <text style='font-size:14px'>邮费: <text style='color:#f73030'>¥10</text></text>
+    </view>
+    <view  class="jx-item">
+      <view class='img bg-color'></view>
+      <text class='badge font-size-12'>限量200份,剩余149份</text>
+      <text class='der font-size-14 bold'>TCL L58E6800A-UD 58英寸 高色域4K超高清安卓智能LED液晶电视(黑色）</text>
+      <text style='font-size:14px'>邮费:<text style='color:#f73030'>¥10</text></text>
+    </view>
+  </scroll-view>
+  <view class='padding-10 font-size-18'>试用秀 
+    <navigator class='rt font-size-12' style='color:#ccc;margin-top:7px'> 更多 > </navigator> </view>
+    <swiper circular  class="banner"  autoplay indicator-dots="true" interval="5000">
+    <block wx:for="{{article_data.slideBox[0].params.pic}}" wx:for-item="info" wx:for-index="idx" wx:key="idx">
+      <swiper-item>
+        <image src="{{info.link}}"  ></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='padding-lr-10'>
+    <view class='padding-ud-15 flex main font-size-14' >
+      <text bindtap='toggle_type' data-type='0' class="{{type_index==0?'active':''}}">免费试用</text>
+      <text bindtap='toggle_type' data-type='1' class="{{type_index==1?'active':''}}">付邮试用</text>
+    </view>
+  </view>
+  <view class="padding-lr-10">
+    <view class='padding-ud-10 relative' style='border-bottom:1px solid #efeff4'>
+      <view class='clean detail' >
+        <view class='lf'>
+        </view>
+        <view class='txt_der'>
+          <view>
+            <text class='font-size-14'> 精选输够大家发快乐发飞机大师傅 抽数丝柔</text>
+            <text class='red'>¥32</text>
+          </view>
+        </view>
+      </view>
+      <view class='clean'>
+        <view class='rt txt_border absolute sq'>立即申请</view>
+      </view>
+    </view>
+    <view class='padding-ud-10 relative' style='border-bottom:1px solid #efeff4'>
+      <view class='clean detail' >
+        <view class='lf'>
+        </view>
+        <view class='txt_der'>
+          <view>
+            <text class='font-size-14'> 精选输够大家发快乐发飞机大师傅 抽数丝柔</text>
+            <text class='red'>¥32</text>
+          </view>
+        </view>
+      </view>
+      <view class='clean'>
+        <view class='rt txt_border absolute sq'>立即申请</view>
+      </view>
+    </view>
+  </view>

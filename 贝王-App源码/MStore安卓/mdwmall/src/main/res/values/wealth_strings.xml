@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wealth_title">钱包</string>
+    <string name="wealth_advance_withdraw">可提现金额￥%1$s</string>
+</resources>

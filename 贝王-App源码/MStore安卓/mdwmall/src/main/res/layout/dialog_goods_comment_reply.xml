@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fragment_background_color"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_stroke_gray"
+        android:orientation="vertical" >
+
+        <TableRow
+            android:id="@+id/content_tr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginTop="0.5dp"
+            android:background="@color/white"
+            android:gravity="center" >
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/qianseit_bg_enter_view"
+                android:gravity="top|left"
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="false"
+                android:textColor="@color/westore_primary_textcolor"
+                android:textSize="@dimen/TextSizeMedium" >
+            </EditText>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/westore_divider_bgcolor" />
+
+            <TextView
+                android:id="@+id/send"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+        </TableRow>
+
+        <View
+            android:id="@+id/vcode_divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_gray" />
+
+        <TableRow
+            android:id="@+id/vcode_tr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0.5dp"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:background="@color/white"
+            android:gravity="center" >
+
+            <EditText
+                android:id="@+id/vcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/qianseit_bg_enter_view"
+                android:gravity="top|left"
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="false"
+                android:textColor="@color/westore_primary_textcolor"
+                android:textSize="@dimen/TextSizeMedium" />
+
+            <ImageView
+                android:id="@+id/vcode_ib"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter" />
+        </TableRow>
+    </LinearLayout>
+
+</LinearLayout>

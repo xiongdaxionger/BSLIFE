@@ -1,0 +1,27 @@
+/* pages/sms_code_fetch.wxss */
+
+@import "/pages/login/phone_number_input.wxss";
+
+/*提示信息*/
+.msg{
+    margin: 50px 23px 0 23px;
+}
+
+/*输入容器*/
+.input-container{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 10px 23px 0 23px;
+    width: calc(100vw - 46px);
+}
+
+/*验证码输入框*/
+.code-input{
+    font-size: 15px;
+    height: 47px;
+    padding: 0px 15px 0px 15px;
+    border-radius: 3px;
+    background: white;
+    flex: 1 1 auto;
+    margin-right: 10px;
+}

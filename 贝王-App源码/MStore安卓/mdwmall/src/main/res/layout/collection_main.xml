@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_goods_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/PaddingXLarge"
+        android:text="@string/collection_money_name"
+        android:textColor="@color/text_goods_9_color"
+        android:layout_marginTop="1dp"
+        android:textSize="@dimen/TextSizeMedium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/PaddingXXLarge"
+        android:paddingLeft="@dimen/PaddingXLarge"
+        android:paddingRight="@dimen/PaddingLarge"
+        android:paddingTop="@dimen/PaddingMedium" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/collection_money" />
+
+        <EditText
+            android:id="@+id/collection_money"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/PaddingXLarge"
+            android:layout_weight="1"
+            android:numeric="decimal"
+            android:background="@color/white"
+            android:hint="@string/collection_money_name_hint"
+            android:padding="@dimen/PaddingMedium"
+            android:textColor="@color/text_goods_name_color" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/PaddingLarge"
+        android:paddingLeft="@dimen/PaddingXLarge"
+        android:paddingTop="@dimen/PaddingLarge"
+        android:text="@string/collection_money_title"
+        android:textColor="@color/text_goods_9_color"
+        android:textSize="@dimen/TextSizeMedium" />
+
+    <EditText
+        android:id="@+id/collction_money_tit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/PaddingXLarge"
+        android:inputType="text"
+        android:textColor="@color/text_goods_name_color"
+        android:textSize="@dimen/TextSizeMedium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:padding="@dimen/PaddingXLarge" >
+
+        <com.qianseit.westore.ui.CommonCheckBox
+            android:id="@+id/collection_raid"
+            style="@style/collection_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawablePadding="@dimen/PaddingMedium"
+            android:text="@string/collection_address"
+            android:textColor="@color/text_goods_6_color" />
+    </LinearLayout>
+
+    <com.qianseit.westore.ui.CommonButton
+        android:id="@+id/collection_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/PaddingXLarge"
+        android:layout_marginRight="@dimen/PaddingXLarge"
+        android:layout_marginTop="@dimen/PaddingXXLarge"
+        android:padding="@dimen/PaddingLarge"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:background="@drawable/app_button_selector"
+        android:textSize="@dimen/TextSizeMedium" />
+     <TextView
+       android:id="@+id/collection_hint"  
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textColor="@color/text_goods_9_color"
+       android:textSize="@dimen/TextSizeSmall"
+       android:padding="@dimen/PaddingXLarge"
+       android:layout_marginTop="@dimen/PaddingMedium"
+       android:text="@string/collection_hint"
+         />  
+</LinearLayout>

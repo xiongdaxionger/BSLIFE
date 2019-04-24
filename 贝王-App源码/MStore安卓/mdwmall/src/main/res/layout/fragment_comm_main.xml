@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioGroup
+                android:id="@+id/maintab_tab_radiogroup"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/PaddingMedium" >
+
+                <RadioButton
+                    android:id="@+id/tabbar1"
+                    style="@style/tabbar_menu"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@drawable/tabbar_logo1"
+                    android:paddingTop="@dimen/PaddingMedium"
+                    android:text="@string/tabbar_title1" />
+
+                <RadioButton
+                    android:id="@+id/tabbar2"
+                    style="@style/tabbar_menu"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@drawable/tabbar_logo2"
+                    android:paddingTop="@dimen/PaddingMedium"
+                    android:text="@string/tabbar_title2" />
+
+                <RadioButton
+                    android:id="@+id/tabbar3"
+                    style="@style/tabbar_menu"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@drawable/tabbar_logo3"
+                    android:paddingTop="@dimen/PaddingMedium"
+                    android:text="@string/tabbar_title3" />
+
+                <RadioButton
+                    android:id="@+id/tabbar4"
+                    style="@style/tabbar_menu"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@drawable/tabbar_logo4"
+                    android:paddingTop="@dimen/PaddingMedium"
+                    android:text="@string/tabbar_title4" />
+
+                <RadioButton
+                    android:id="@+id/tabbar5"
+                    style="@style/tabbar_menu"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@drawable/tabbar_logo5"
+                    android:paddingTop="@dimen/PaddingMedium"
+                    android:text="@string/tabbar_title5" />
+            </RadioGroup>
+            <TextView 
+                android:id="@+id/main_car_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:minWidth="20dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:background="@drawable/bg_car_num"
+                android:layout_gravity="right"
+                />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="139" id="KGk-i7-Jjw" customClass="ConfirmOrderAddeViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="159.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ship_address" translatesAutoresizingMaskIntoConstraints="NO" id="fc4-W6-bCo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_gray" translatesAutoresizingMaskIntoConstraints="NO" id="suq-oA-jFV">
+                        <rect key="frame" x="300" y="74" width="12" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="3DN-4S-94J"/>
+                            <constraint firstAttribute="height" constant="15" id="KqX-z1-sp1"/>
+                            <constraint firstAttribute="width" constant="16" id="bYQ-Cd-5jc"/>
+                            <constraint firstAttribute="height" constant="12" id="jw7-Jk-r1S"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KqX-z1-sp1"/>
+                                <exclude reference="bYQ-Cd-5jc"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zX-HB-tI4">
+                        <rect key="frame" x="8" y="6" width="170" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="g2V-yV-dMR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="Button" image="contact">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntE-Bu-ab2">
+                        <rect key="frame" x="187" y="5" width="118" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="gXi-wb-kdc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="13709072023" image="phone">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="uSL-bm-FCZ">
+                        <rect key="frame" x="8" y="36" width="284" height="115"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ntE-Bu-ab2" secondAttribute="trailing" constant="15" id="7ja-uy-v9B"/>
+                    <constraint firstItem="fc4-W6-bCo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8Bp-1F-bL4"/>
+                    <constraint firstItem="suq-oA-jFV" firstAttribute="leading" secondItem="uSL-bm-FCZ" secondAttribute="trailing" constant="8" id="9P5-j0-qJx"/>
+                    <constraint firstAttribute="trailing" secondItem="fc4-W6-bCo" secondAttribute="trailing" id="9d7-3D-HoC"/>
+                    <constraint firstAttribute="trailing" secondItem="suq-oA-jFV" secondAttribute="trailing" constant="8" id="A6f-tX-KKR"/>
+                    <constraint firstAttribute="bottom" secondItem="uSL-bm-FCZ" secondAttribute="bottom" constant="8" id="BqT-Gv-5Gi"/>
+                    <constraint firstItem="0zX-HB-tI4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="KWL-0v-0xU"/>
+                    <constraint firstItem="0zX-HB-tI4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="PTj-V1-ddj"/>
+                    <constraint firstItem="uSL-bm-FCZ" firstAttribute="top" secondItem="0zX-HB-tI4" secondAttribute="bottom" constant="8" id="ZEo-X7-h8U"/>
+                    <constraint firstItem="ntE-Bu-ab2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Zv5-FQ-cjX"/>
+                    <constraint firstItem="ntE-Bu-ab2" firstAttribute="leading" secondItem="0zX-HB-tI4" secondAttribute="trailing" constant="9" id="ace-wK-GqG"/>
+                    <constraint firstAttribute="bottom" secondItem="fc4-W6-bCo" secondAttribute="bottom" id="fbl-O2-pAg"/>
+                    <constraint firstItem="uSL-bm-FCZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="k8t-Dm-JS9"/>
+                    <constraint firstItem="fc4-W6-bCo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="seJ-Et-nib"/>
+                    <constraint firstItem="suq-oA-jFV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vW6-hw-Rai"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="arrowImage" destination="suq-oA-jFV" id="wZV-KN-1Lf"/>
+                <outlet property="orderAddrLabel" destination="uSL-bm-FCZ" id="sUd-y3-CTL"/>
+                <outlet property="orderMobileLabel" destination="ntE-Bu-ab2" id="PKd-92-y1P"/>
+                <outlet property="orderNameLabel" destination="0zX-HB-tI4" id="j2f-jh-keN"/>
+            </connections>
+            <point key="canvasLocation" x="331" y="388"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow_gray" width="12" height="12"/>
+        <image name="contact" width="22" height="22"/>
+        <image name="phone" width="22" height="22"/>
+        <image name="ship_address" width="500" height="72"/>
+    </resources>
+</document>

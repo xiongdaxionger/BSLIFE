@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="ShopCarContentViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mUj-cp-UaT">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="75" id="o3a-1l-k86"/>
+                            <constraint firstAttribute="width" constant="75" id="sak-hT-r2x"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apS-rK-8vc">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="0BM-es-pyT"/>
+                            <constraint firstAttribute="height" constant="100" id="B6c-rQ-dE4"/>
+                        </constraints>
+                        <state key="normal" image="shop_Car_UnSelect">
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxq-xB-dHn">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="f4M-vu-DDO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="195" translatesAutoresizingMaskIntoConstraints="NO" id="ovM-ic-F8o">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="SEu-Yr-ylg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥324" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pF-Xc-LUe">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="hDR-VP-euW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.94117647059999998" green="0.27058823529999998" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4I-Jv-FTD">
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctp-r2-ldG">
+                                <frame key="frameInset" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="shop_car_minus">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FT-EI-fvH">
+                                <frame key="frameInset" minX="60" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="shop_car_add">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WcB-2T-AdJ">
+                                <frame key="frameInset" minX="25" width="35" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="TGJ-7l-gJH"/>
+                            <constraint firstAttribute="width" constant="85" id="rTv-Tw-M90"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEv-CM-kyk">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="dx2-RQ-nkw"/>
+                            <constraint firstAttribute="width" constant="85" id="qJk-6X-W2U"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="JEv-CM-kyk" secondAttribute="trailing" constant="8" id="39e-tt-3vb"/>
+                    <constraint firstItem="mUj-cp-UaT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7cN-8f-1Le"/>
+                    <constraint firstItem="8pF-Xc-LUe" firstAttribute="leading" secondItem="mUj-cp-UaT" secondAttribute="trailing" constant="8" id="B1e-2u-ksB"/>
+                    <constraint firstItem="mUj-cp-UaT" firstAttribute="leading" secondItem="apS-rK-8vc" secondAttribute="trailing" constant="2" id="EAP-pV-aJv"/>
+                    <constraint firstItem="bxq-xB-dHn" firstAttribute="leading" secondItem="mUj-cp-UaT" secondAttribute="trailing" constant="8" id="L5x-MK-sLX"/>
+                    <constraint firstItem="8pF-Xc-LUe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="LAa-yO-nrH"/>
+                    <constraint firstAttribute="trailing" secondItem="bxq-xB-dHn" secondAttribute="trailing" constant="8" id="QRD-a2-1QP"/>
+                    <constraint firstItem="apS-rK-8vc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SLB-2f-IrC"/>
+                    <constraint firstItem="8pF-Xc-LUe" firstAttribute="top" secondItem="bxq-xB-dHn" secondAttribute="bottom" constant="3" id="Tgo-r3-pQb"/>
+                    <constraint firstItem="ovM-ic-F8o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="WSX-Wj-oa8"/>
+                    <constraint firstAttribute="bottom" secondItem="C4I-Jv-FTD" secondAttribute="bottom" constant="4" id="ZgT-Kq-W5o"/>
+                    <constraint firstAttribute="bottom" secondItem="JEv-CM-kyk" secondAttribute="bottom" constant="4" id="ayP-XB-PQX"/>
+                    <constraint firstItem="apS-rK-8vc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bbI-WG-px3"/>
+                    <constraint firstAttribute="trailing" secondItem="ovM-ic-F8o" secondAttribute="trailing" constant="8" id="bbJ-9f-hiN"/>
+                    <constraint firstAttribute="trailing" secondItem="C4I-Jv-FTD" secondAttribute="trailing" constant="8" id="gsq-PS-rfd"/>
+                    <constraint firstItem="C4I-Jv-FTD" firstAttribute="leading" secondItem="8pF-Xc-LUe" secondAttribute="trailing" constant="10" id="pRL-pL-DJ2"/>
+                    <constraint firstItem="ovM-ic-F8o" firstAttribute="leading" secondItem="mUj-cp-UaT" secondAttribute="trailing" constant="8" id="v4Y-nL-uM9"/>
+                    <constraint firstItem="bxq-xB-dHn" firstAttribute="top" secondItem="ovM-ic-F8o" secondAttribute="bottom" constant="3" id="yes-Qz-uFc"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="LAa-yO-nrH"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="giftQuantityLabel" destination="JEv-CM-kyk" id="Oqh-XW-cbM"/>
+                <outlet property="goodQuantityView" destination="C4I-Jv-FTD" id="MS6-q7-tNe"/>
+                <outlet property="goodSpecInfoLabel" destination="bxq-xB-dHn" id="MgH-Do-TQe"/>
+                <outlet property="shopAddButton" destination="9FT-EI-fvH" id="2ho-X2-C3h"/>
+                <outlet property="shopCountLabel" destination="WcB-2T-AdJ" id="Ia0-gB-J51"/>
+                <outlet property="shopIconImage" destination="mUj-cp-UaT" id="brH-bJ-eLM"/>
+                <outlet property="shopMinusButton" destination="Ctp-r2-ldG" id="321-1t-nKO"/>
+                <outlet property="shopNameLabel" destination="ovM-ic-F8o" id="JTk-c1-SZS"/>
+                <outlet property="shopPriceLabel" destination="8pF-Xc-LUe" id="UYB-K7-ccA"/>
+                <outlet property="shopSelecteButton" destination="apS-rK-8vc" id="ArS-wB-KWj"/>
+            </connections>
+            <point key="canvasLocation" x="312" y="200"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="shop_Car_UnSelect" width="20" height="20"/>
+        <image name="shop_car_add" width="14" height="14"/>
+        <image name="shop_car_minus" width="14" height="14"/>
+    </resources>
+</document>

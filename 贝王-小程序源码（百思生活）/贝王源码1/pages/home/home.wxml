@@ -1,0 +1,158 @@
+
+<!--首页-->
+
+<!--加载失败-->
+<import src="/views/network/bad_network.wxml" />
+<template wx:if="{{fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+
+  <include src="/pages/goods/good_search.wxml"/>
+<!--搜索栏-->
+<view wx:if="{{!refreshing}}" style="border-bottom:{{opacity < 1.0 ? 0 : 1.0}}px #f7f7f7 solid;" class="search-header">
+
+  <!--二维码扫描-->
+
+  <!--<image class="scan" src="/images/icon/scan_dark.png" />-->
+  <view style="opacity:{{opacity}};" class="search-background"/>
+  <view class="search-content">
+
+    <!--搜索栏-->
+    <view style="background:rgba(247, 247, 247, {{opacity < 1.0 ? 0.5 : 1.0}});" class="search-container" catchtap="searchDidBegin">
+
+      <!--搜索图标-->
+      <image class="search-icon" src="{{imgURL + '/images/icon/search_icon_' + (opacity < 1.0 ? 'white' : 'dark')}}.png" />
+      <view style="color:{{opacity < 1.0 ? 'white' : '#e1dddc'}};" class="search-text">请输入关键字</view>
+    </view>
+
+    <!--拨打电话图标-->
+    <image catchtap="saoyisao" class="phone-icon" src="{{imgURL + '/images/icon/sao_icon_' + (opacity < 1.0 ? 'white' : 'dark')}}.png" />
+    </view>
+  </view>
+  <!--内容-->
+  <scroll-view scroll-top="{{scroll_top}}" wx:if="{{!fail}}" scroll-y class="scroll-view-container" bindscroll="containerScroll">
+    <view class="container">
+      <block wx:for="{{homeDatas}}" wx:key="index">
+
+        <!--轮播广告-->
+        <swiper circular style="height:{{banner_height}}px;" class="banner" wx:if="{{item.type == 0}}" autoplay indicator-dots="{{item.infos.length > 1}}" interval="5000">
+          <block wx:for="{{item.infos}}" wx:for-item="info" wx:for-index="idx" wx:key="idx">
+            <swiper-item>
+              <image src="{{info.img}}" data-type="{{info.type}}" data-id="{{info.id}}" bindtap="tapad"></image>
+            </swiper-item>
+          </block>
+        </swiper>
+        <!--导航-->
+        <view class="navigation" wx:if="{{item.type == 1}}">
+          <ul>
+            <block wx:for="{{item.infos}}" wx:for-item="info" wx:for-index="idx" wx:key="idx">
+              <li data-type="{{info.type}}" data-id="{{info.id}}" bindtap="tapad">
+                <image src="{{info.img}}"></image>
+                <text>{{info.name}}</text>
+              </li>
+            </block>
+          </ul>
+        </view>
+        <!--快报-->
+        <view class="article" wx:if="{{item.type == 2}}">
+          <image src="{{imgURL + '/images/home/article.png'}}"></image>
+          <scroll-view scroll-into-view="{{scrollIntoView}}">
+            <block wx:for="{{item.infos}}" wx:for-item="info" wx:for-index="idx" wx:key="idx">
+              <view data-type="{{info.type}}" data-id="{{info.id}}" bindtap="tapad" id="article-{{idx}}">{{info.name}}</view>
+            </block>
+          </scroll-view>
+        </view>
+
+        <!--图片广告-->
+        <view class="image-ad" wx:if="{{item.type == 3 || item.type == 6 || item.type == 7}}">
+
+          <!--标题-->
+          <view style="background:{{item.backgroundColor}};justify-content:{{item.textAlign}}" class="image-ad-title" wx:if="{{item.displayTitle == '1'}}">
+            <view wx:if="{{item.displayLine == '1'}}" class="image-ad-title-line" style="background:{{item.titleColor}}" />
+            <text style="color:{{item.titleColor}};">{{item.title}}</text>
+            <view wx:if="{{item.displayLine == '1'}}" class="image-ad-title-line" style="background:{{item.titleColor}}" />
+          </view>
+
+          <!--分割线-->
+          <view wx:if="{{item.separator == '1'}}" class="image-ad-line" />
+
+          <!--图片广告-->
+          <block wx:if="{{item.type == 3}}" wx:for="{{item.infos}}" wx:for-item="info" wx:for-index="idx" wx:key="idx">
+            <image style="width:{{info.width}}px;height:{{info.height}}px;border-bottom:{{info.bottom_spacing}}px #f7f7f7 solid;border-right:{{info.right_spacing}}px #f7f7f7 solid;" data-type="{{info.type}}" data-id="{{info.id}}" bindtap="tapad" src="{{info.img}}"></image>
+          </block>
+
+          <!--特殊挂件广告-->
+          <view style="display:inline;" wx:if="{{item.type == 6}}">
+            <block wx:for="{{item.infos}}" wx:for-item="info" wx:for-index="idx" wx:key="idx">
+              <image style="float:left;width:{{info.width}}px;height:{{info.height}}px;border-bottom:{{info.bottom_spacing}}px #f7f7f7 solid;border-right:{{info.right_spacing}}px #f7f7f7 solid;" data-type="{{info.type}}" data-id="{{info.id}}" bindtap="tapad" src="{{info.img}}"></image>
+            </block>
+          </view>
+
+          <!--特殊挂件广告-->
+          <view style="position:relative;" wx:if="{{item.type == 7}}">
+            <block wx:for="{{item.infos}}" wx:for-item="info" wx:for-index="idx" wx:key="idx">
+              <image wx:if="{{idx != 2}}" style="float:left;width:{{info.width}}px;height:{{info.height}}px;border-bottom:{{info.bottom_spacing}}px #f7f7f7 solid;border-right:{{info.right_spacing}}px #f7f7f7 solid;" data-type="{{info.type}}" data-id="{{info.id}}"
+              bindtap="tapad" src="{{info.img}}"></image>
+              <image wx:if="{{idx == 2}}" style="position:absolute;top:{{info.top}}px;left:0;float:left;width:{{info.width}}px;height:{{info.height}}px;border-bottom:{{info.bottom_spacing}}px #f7f7f7 solid;border-right:{{info.right_spacing}}px #f7f7f7 solid;"
+              bindtap="tapad" src="{{info.img}}"></image>
+            </block>
+          </view>
+
+          <!--底部分割线-->
+          <view wx:if="{{item.footer == '1'}}" class="image-ad-line" />
+        </view>
+
+        <!--商品列表-->
+        <view class="goods-list" wx:if="{{item.type == 5}}">
+          <block wx:for="{{item.infos}}" wx:for-item="info" wx:for-index="idx" wx:key="idx">
+            <view style="border-right:{{idx % 2 != 0 ? 10 : 0}}rpx #f7f7f7 solid;" class="good-list-item" data-productid="{{info.productId}}" bindtap="tapGood">
+              <image src="{{info.img}}"></image>
+              <view class="goods-list-name">{{info.goodName}}</view>
+              <view class="price goods-list-price">{{info.price}}</view>
+            </view>
+          </block>
+        </view>
+
+        <!--限时秒杀-->
+        <view class="good-secondKill" wx:if="{{item.type == 4}}">
+          <view class="good-secondKill-header">
+
+            <!--左边图片-->
+            <image class="good-secondKill-icon" mode="aspectFit" src="{{item.leftImg}}" />
+
+            <!--倒计时-->
+            <view class="good-secondKill-timer" wx:if="{{!isSecondKillEnd}}">
+              <view>{{hour}}</view>:
+              <view>{{minutes}}</view>:
+              <view>{{second}}</view>
+            </view>
+            <view class="good-secondKill-end" wx:if="{{isSecondKillEnd}}">
+              活动已结束
+            </view>
+
+            <!--右边标题-->
+            <view bindtap="tapSecondKillRight" class="good-secondKill-text" style="color:{{item.subtitleColor}};">{{item.subtitle}}</view>
+
+            <!--箭头-->
+            <view bindtap="tapSecondKillRight" class="good-secondKill-arrow-bg">
+              <image class="good-secondKill-arrow" mode="aspectFit" src="{{imgURL + '/images/icon/arrow_white.png'}}" />
+            </view>
+          </view>
+
+          <!--商品-->
+          <scroll-view class="od-secondKill-goods" scroll-x>
+            <view class="good-secondKill-goods-view">
+              <block wx:for="{{item.infos}}" wx:for-item="info" wx:for-index="idx" wx:key="idx">
+                <view class="good-secondKill-item" bindtap="tapGood" data-productid="{{info.productId}}">
+                  <image src="{{info.img}}" />
+                  <view class="price good-secondKill-price">{{info.price}}</view>
+                </view>
+              </block>
+            </view>
+          </scroll-view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+<!--回到顶部按钮-->
+  <include src="/views/widget/scroll_to_top.wxml"/>
+

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_solid_white_stroke_gray"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <FrameLayout
+        android:id="@+id/goods_icon_fl"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:padding="0.5dp" >
+
+        <ImageView
+            android:id="@+id/goods_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter" 
+            android:background="@drawable/shape_solid_white_stroke_gray"/>
+
+        <ImageView
+            android:id="@+id/goods_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/goods_item_sold_out"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/goods_tag_lefttop"
+            android:layout_width="30dp"
+            android:layout_height="35.3dp"
+            android:layout_gravity="top|left"
+            android:background="@drawable/goods_tag_lefttop"
+            android:gravity="top|center"
+            android:paddingBottom="13.3dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/goods_tag_righttop"
+            android:layout_width="30dp"
+            android:layout_height="35.3dp"
+            android:layout_gravity="top|right"
+            android:background="@drawable/goods_tag_righttop"
+            android:gravity="top|center"
+            android:paddingBottom="13.3dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:text="热销商品"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/goods_tag_leftbottom"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_gravity="bottom|left"
+            android:background="#9443df"
+            android:gravity="top|center"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:text="热销商品"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/goods_tag_rightbottom"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_gravity="bottom|right"
+            android:background="#9443df"
+            android:gravity="top|center"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:text="热销商品"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/goods_tag_image_lefttop"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="top|left"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/goods_tag_image_righttop"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="top|right"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/goods_tag_image_leftbottom"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|left"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/goods_tag_image_rightbottom"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|right"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/goods_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goods_icon_fl"
+        android:layout_marginTop="@dimen/PaddingXMedium"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textColor="@color/westore_dark_textcolor"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <TableRow
+        android:id="@+id/goods_price_tr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/goods_name"
+        android:layout_below="@+id/goods_name"
+        android:layout_marginTop="@dimen/PaddingXMedium"
+        android:gravity="left|center" >
+
+        <TextView
+            android:id="@+id/goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/westore_red"
+            android:textSize="@dimen/TextSizeLarge" />
+
+        <TextView
+            android:id="@+id/goods_market_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/PaddingMedium"
+            android:singleLine="true"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeSmall" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/goods_commision_tr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/goods_price_tr"
+        android:layout_below="@+id/goods_price_tr"
+        android:layout_marginTop="@dimen/PaddingXMedium"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/goods_commision"
+            android:drawablePadding="3dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:singleLine="true"
+            android:text="当前佣金："
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/goods_commision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+    </TableRow>
+
+    <RelativeLayout
+        android:id="@+id/goods_promation_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/PaddingXMedium"
+        android:layout_below="@+id/goods_commision_tr" >
+
+        <TableRow
+            android:id="@+id/goods_promation_tag_tr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/goods_comments" >
+        </TableRow>
+
+        <TextView
+            android:id="@+id/goods_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:singleLine="true"
+            android:text="2558人评论"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeSmall" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/goods_addcar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/goods_price_tr"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/add_car" />
+
+</RelativeLayout>

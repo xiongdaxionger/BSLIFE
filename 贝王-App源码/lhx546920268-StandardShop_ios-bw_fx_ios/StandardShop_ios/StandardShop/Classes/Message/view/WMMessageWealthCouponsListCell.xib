@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="WMMessageWealthCouponsListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udl-UT-8in" userLabel="title_label">
+                        <rect key="frame" x="10" y="10" width="300" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="mq6-Ml-DmD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_coupons_bg" translatesAutoresizingMaskIntoConstraints="NO" id="K9N-ay-Q74" userLabel="coupons_bg_imageView">
+                        <rect key="frame" x="10" y="41" width="103" height="56"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="103" id="3QP-gB-v8B"/>
+                            <constraint firstAttribute="height" constant="56" id="yoR-Mm-3tz"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="187" translatesAutoresizingMaskIntoConstraints="NO" id="Kvp-6e-28c" userLabel="subtitle_label">
+                        <rect key="frame" x="123" y="41" width="187" height="56"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrs-hk-2TZ" userLabel="amount_label">
+                        <rect key="frame" x="15" y="41" width="93" height="56"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="udl-UT-8in" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="0gn-Us-0UJ"/>
+                    <constraint firstItem="Kvp-6e-28c" firstAttribute="width" secondItem="K9N-ay-Q74" secondAttribute="width" id="5o4-1t-HoU"/>
+                    <constraint firstItem="Vrs-hk-2TZ" firstAttribute="leading" secondItem="K9N-ay-Q74" secondAttribute="leading" constant="5" id="Amz-2x-HMA"/>
+                    <constraint firstItem="K9N-ay-Q74" firstAttribute="top" secondItem="udl-UT-8in" secondAttribute="bottom" constant="10" id="BrN-e1-7nn"/>
+                    <constraint firstItem="Vrs-hk-2TZ" firstAttribute="height" secondItem="K9N-ay-Q74" secondAttribute="height" id="HcZ-dk-4Ht"/>
+                    <constraint firstItem="Vrs-hk-2TZ" firstAttribute="top" secondItem="K9N-ay-Q74" secondAttribute="top" id="Kid-dV-LxT"/>
+                    <constraint firstItem="Vrs-hk-2TZ" firstAttribute="trailing" secondItem="K9N-ay-Q74" secondAttribute="trailing" constant="-5" id="NYn-mx-M1u"/>
+                    <constraint firstItem="Kvp-6e-28c" firstAttribute="leading" secondItem="K9N-ay-Q74" secondAttribute="trailing" constant="10" id="Ohj-RC-Yic"/>
+                    <constraint firstItem="Kvp-6e-28c" firstAttribute="trailing" secondItem="udl-UT-8in" secondAttribute="trailing" constant="10" id="R5S-g8-ZIC"/>
+                    <constraint firstItem="Kvp-6e-28c" firstAttribute="trailing" secondItem="udl-UT-8in" secondAttribute="trailing" id="Skb-sF-J5x"/>
+                    <constraint firstItem="udl-UT-8in" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="aiB-xZ-Jec"/>
+                    <constraint firstAttribute="trailing" secondItem="udl-UT-8in" secondAttribute="trailing" constant="10" id="heY-i8-KpL"/>
+                    <constraint firstItem="Kvp-6e-28c" firstAttribute="height" secondItem="K9N-ay-Q74" secondAttribute="height" id="lTd-KC-1IW"/>
+                    <constraint firstItem="Kvp-6e-28c" firstAttribute="top" secondItem="K9N-ay-Q74" secondAttribute="top" id="sQZ-9l-O5F"/>
+                    <constraint firstItem="K9N-ay-Q74" firstAttribute="leading" secondItem="udl-UT-8in" secondAttribute="leading" id="tly-ou-j2Y"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Kvp-6e-28c" secondAttribute="trailing" constant="63" id="wse-9Y-cDH"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="5o4-1t-HoU"/>
+                        <exclude reference="R5S-g8-ZIC"/>
+                        <exclude reference="wse-9Y-cDH"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="amount_label" destination="Vrs-hk-2TZ" id="BOw-7f-gdX"/>
+                <outlet property="coupons_bg_imageView" destination="K9N-ay-Q74" id="xgh-MP-pqO"/>
+                <outlet property="subtitle_label" destination="Kvp-6e-28c" id="Bqv-ix-KLf"/>
+                <outlet property="title_label" destination="udl-UT-8in" id="LtR-PC-UUC"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="message_coupons_bg" width="103" height="56"/>
+    </resources>
+</document>

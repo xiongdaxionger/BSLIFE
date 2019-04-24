@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/qrcode_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_user_twocode"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp" >
+
+            <ImageView
+                android:id="@+id/two_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/two_image"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/two_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="邀请注册、即可获得积分"
+                    android:textColor="@color/text_goods_3_color"
+                    android:textSize="@dimen/TextSizeMedium" />
+
+                <TextView
+                    android:id="@+id/two_hint_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="保存二维码或直接扫码进入哦~"
+                    android:textColor="@color/text_goods_9_color"
+                    android:textSize="@dimen/TextSizeMedium" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/user_two_code_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/line_dotted" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/MarginXXLarge" >
+
+                <ImageView
+                    android:id="@+id/user_two_code"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/default_img_square" />
+
+                <TextView
+                    android:id="@+id/from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="推广网站:"
+                    android:textColor="@color/text_goods_9_color"
+                    android:textSize="@dimen/TextSizeMedium"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/westore_divider_bgcolor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/PaddingLarge"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/qrcode_save"
+            style="@style/share_item_view_new"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/save_sd"
+            android:text="@string/save_sd" />
+
+        <TextView
+            android:id="@+id/share_wechat_circle"
+            style="@style/share_item_view_new"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/share_wechat_circle"
+            android:text="@string/share_wechat_circle" />
+
+        <TextView
+            android:id="@+id/share_wechat"
+            style="@style/share_item_view_new"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/share_wechat"
+            android:text="@string/share_wechat_chat" />
+    </LinearLayout>
+
+</LinearLayout>

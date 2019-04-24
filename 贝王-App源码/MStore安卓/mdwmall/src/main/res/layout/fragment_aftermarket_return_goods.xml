@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <com.qianseit.westore.ui.MyListView
+            android:id="@+id/aftermarket_return_goods_list"
+            style="@style/listview"
+            android:divider="@color/westore_divider_bgcolor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/aftermarket_return_goods_divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/aftermarket_return_goods_list"
+            android:layout_marginTop="10dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <TextView
+            android:id="@+id/aftermarket_return_goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/aftermarket_return_goods_divider"
+            android:layout_marginTop="20dp"
+            android:text="￥10.00"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/aftermarket_return_goods_price_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/aftermarket_return_goods_price"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/aftermarket_return_goods_price"
+            android:text="合计："
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/aftermarket_return_type_tip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/aftermarket_return_goods_price_tip"
+            android:gravity="left|center"
+            android:text="*"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/aftermarket_return_type_tip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/aftermarket_return_type_tip1"
+            android:layout_alignBottom="@+id/aftermarket_return_type_tip1"
+            android:gravity="left|center"
+            android:text="类型："
+            android:textColor="@color/westore_red"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/aftermarket_return_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aftermarket_return_type_tip1"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/qianse_item_status_selected"
+            android:drawablePadding="5dp"
+            android:gravity="left|center"
+            android:text="退货"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/aftermarket_return_goods_reason_tip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/aftermarket_return_type"
+            android:layout_marginTop="10dp"
+            android:text="*"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/aftermarket_return_goods_reason_tip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/aftermarket_return_goods_reason_tip1"
+            android:layout_toRightOf="@+id/aftermarket_return_goods_reason_tip1"
+            android:text="退换理由："
+            android:textColor="@color/westore_red"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <EditText
+            android:id="@+id/aftermarket_return_goods_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/aftermarket_return_goods_reason_tip1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_common_log"
+            android:gravity="center_vertical"
+            android:hint="请填写退换理由"
+            android:inputType="text"
+            android:maxLength="60"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/aftermarket_return_goods_remark_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/aftermarket_return_goods_reason"
+            android:layout_marginTop="10dp"
+            android:text="详细描述："
+            android:textColor="@color/westore_red"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <EditText
+            android:id="@+id/aftermarket_return_goods_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/aftermarket_return_goods_remark_tip"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_common_log"
+            android:gravity="left|top"
+            android:hint="请描述遇到的问题及详细的退换理由，不超过500字"
+            android:inputType="textMultiLine"
+            android:maxLength="500"
+            android:minHeight="80dp"
+            android:padding="5dp"
+            android:singleLine="false"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <LinearLayout
+            android:id="@+id/aftermarket_return_goods_img_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aftermarket_return_goods_remark"
+            android:gravity="left|center"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上传图片"
+                android:textColor="@color/westore_red"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <com.qianseit.westore.ui.MyGridView
+                android:id="@+id/imgs_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/fragment_background_color"
+                android:numColumns="5"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/aftermarket_return_goods_img_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/aftermarket_return_goods_img_ll"
+            android:text="最多上传3张，每张不超过2M，支持JPG，BMP，PNG"
+            android:textColor="@color/westore_second_gray_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <View
+            android:id="@+id/aftermarket_return_goods_divider2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/aftermarket_return_goods_img_tip"
+            android:layout_marginTop="5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <TextView
+            android:id="@+id/aftermarket_return_goods_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aftermarket_return_goods_divider2"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/qianse_item_status_selected"
+            android:drawablePadding="5dp"
+            android:gravity="left|center"
+            android:text="同意售后服务须知"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <Button
+            android:id="@+id/base_submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="38dip"
+            android:layout_below="@+id/aftermarket_return_goods_notice"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/app_button_selector"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextSizeMedium"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</ScrollView>

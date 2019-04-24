@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="WMSaleStoreCountTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="nbi-sF-Pvr">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="KVP-6z-nSx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="促销" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QM-vI-C0S">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="dGW-7f-d0Z"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nbi-sF-Pvr" firstAttribute="leading" secondItem="6QM-vI-C0S" secondAttribute="trailing" constant="8" id="EAF-NV-gw8"/>
+                    <constraint firstItem="nbi-sF-Pvr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="MT8-UY-mth"/>
+                    <constraint firstItem="6QM-vI-C0S" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XVK-wN-VeU"/>
+                    <constraint firstAttribute="trailing" secondItem="nbi-sF-Pvr" secondAttribute="trailing" constant="8" id="toL-CG-9Dw"/>
+                    <constraint firstItem="6QM-vI-C0S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="xis-5N-KM9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentabel" destination="nbi-sF-Pvr" id="Yrz-ab-dOn"/>
+                <outlet property="titleLabel" destination="6QM-vI-C0S" id="9G2-QY-5S1"/>
+            </connections>
+            <point key="canvasLocation" x="228" y="173"/>
+        </tableViewCell>
+    </objects>
+</document>

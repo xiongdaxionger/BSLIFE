@@ -1,0 +1,329 @@
+<import src="../../../views/network/bad_network.wxml"/>
+<template wx:if="{{showFailNetWork}}" is="fail_to_load" data="{{reloadData:'reloadData'}}"/>
+
+<!--详情顶部标签栏-->
+<view class="order_status_bar" style="justify-content:center;border-bottom:1px solid #F7F7F7" wx:if="{{!showFailNetWork}}">
+    <block wx:for="{{navigateItemInfos}}" wx:key="{{index}}">
+        <view class="order_status_item" bindtap="tapNavigateItem" data-index="{{index}}">
+            <text class="{{index == selectIndex ? 'text good_navigate_select' : 'text'}}" data-index="{{index}}">{{item}}</text>
+        </view>
+    </block>
+</view>
+
+<!--详情的基本信息视图-->
+<scroll-view scroll-y class="good_detail_basic_info_container" hidden="{{showFailNetWork || selectIndex != 0}}">
+    <!--轮播广告-->
+    <swiper class="good_detail_swiper" indicator-dots="{{model.images.length > 1}}">
+        <block wx:for="{{model.images}}" wx:key="{{index}}">
+            <swiper-item>
+                <image style="height:100vw;width:100vw" src="{{item}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!--拼团价格信息-->
+    <view class='group_booking_der'>
+        <!--秒杀倒计时-->
+      <view>
+        <text>距活动结束时间:</text><text>{{time[0]}}天{{time[1]}}时{{time[2]}}分{{time[3]}}秒</text>
+      </view>
+    </view>
+    <!--头部信息视图-->
+    <view class="good_detail_info_header_container">
+      <!--商品名称-->
+      <view class="single_line_info" style="font-size:14px;padding-bottom:10px;">
+        <text class='badge font-size-14'>免费试</text> 
+        <text style='color:#333333;line-height:23px;'> {{model.name}}</text>
+      </view>
+      <!-- 限量 -->
+      <view class='single_line_title'> 
+        <text class='color'>限量: <text  class='font-size-14 red'>10</text>份</text>
+         <text>1920申请</text>       
+      </view>
+
+
+        <!-- 拼团玩法 -->
+        <view class='bland'></view>
+        <view class="title_line_info">
+          <view class="title">拼团玩法</view>
+          <view class="comment_content"style="color:gray">详细规则</view>
+          <image class="arrow"mode="aspectFit"src="/images/icon/arrow_gray.png"></image>
+        </view>
+         <view class="group_flow">
+            <view>
+              <image src='../../../images/groupBooking/initiate.png'></image>
+              <text>发起拼团</text>
+            </view>
+             <image class="group_arrow"mode="aspectFit"src="/images/icon/arrow_gray.png"></image>
+            <view>
+              <image src='../../../images/groupBooking/invite.png'></image>
+              <text>邀请参团</text>
+            </view>
+             <image class="group_arrow"mode="aspectFit"src="/images/icon/arrow_gray.png"></image>
+            <view>
+              <image src='../../../images/groupBooking/sendOut.png'></image>
+              <text>成团发货</text>
+            </view>
+             <image class="group_arrow"mode="aspectFit"src="/images/icon/arrow_gray.png"></image>
+            <view>
+              <image src='../../../images/groupBooking/award.png'></image>
+              <text>团长奖励</text>
+            </view>
+        </view>
+            <view class='bland'></view>
+    </view>
+
+    <!--秒杀限购数量-->
+    <view class="title_line_info" wx:if="{{model.goodType == 3}}">
+        <view class="title">限购</view>
+        <view class="content" style="color:#f73030">{{model.buyLimit}}{{model.unit}}</view>
+    </view>
+    <!--积分商品的限兑-->
+    <view class="title_line_info" wx:if="{{model.goodType == 4}}">
+        <view class="title">限兑</view>
+        <view class="content">{{model.giftInfo.max}}{{model.unit}}</view>
+    </view>
+    <!--积分商品的可兑会员-->
+    <view class="title_line_info" wx:if="{{model.goodType == 4}}">
+        <view class="title">可兑</view>
+        <view class="content">{{model.giftInfo.memberString}}</view>
+    </view>
+    <!--普通商品/秒杀商品的销量-->
+    <view class="title_line_info" wx:if="{{(model.goodType == 1 || model.goodType == 3) && model.buyCount != 0}}">
+        <view class="title">销量</view>
+        <view class="content">{{model.buyCount}}{{model.unit}}</view>
+    </view>
+    <!--普通商品/秒杀商品的库存-->
+    <view class="title_line_info" wx:if="{{(model.goodType == 1 || model.goodType == 3) && model.store != null}}">
+        <view class="title">库存</view>
+        <view class="content">{{model.store}}</view>
+    </view>
+    <!--商品的优惠信息-->
+    <view class="title_line_info" wx:if="{{model.proContentsArr.length != 0}}" bindtap="changePromotionAction">
+        <view class="title">促销</view>
+        <view class="content" style="color:gray;text-align:left" hidden="{{!isPromotionDrop}}">可以享受以下促销</view>
+        <view class="promotion_container" hidden="{{isPromotionDrop}}">
+            <block wx:for="{{model.proTagsArr}}" wx:key="{{index}}">
+                <view class="promotion_tag">{{item}}</view>
+            </block>
+        </view>
+        <image class="arrow" src="{{isPromotionDrop ? imgURL + '/images/icon/arrow_dark_up.png' : imgURL + '/images/icon/arrow_dark_down.png'}}" mode="aspectFit"></image>
+    </view>
+    <!--商品的优惠展开信息-->
+    <view class="promotion_drop_container" hidden="{{!isPromotionDrop}}">
+        <block wx:for="{{model.proContentsArr}}" wx:key="{{index}}">
+            <view class="promotion_drop_content" style="{{model.proContentsArr.length - 1 == index ? 'border-bottom:1px solid #F7F7F7' : ''}}">
+                <view class="promotion_drop_tag">{{item.tag}}</view>
+                <text class="promotion_content">{{item.content}}</text>
+                <!--<image class="arrow" wx:if="{{item.tagID.length != 0}}" src="{{imgURL + '/images/icon/arrow_gray.png'}}" mode="aspectFit"></image>-->
+            </view>
+        </block>
+    </view>
+    <!--商品的评论-->
+    <view class="title_line_info" bindtap="goodCommentTap" wx:if="{{model.setting.showComment}}">
+        <view class="title">评价</view>
+        <view class="comment_content" style="color:gray">{{model.goodPointRate}}</view>
+        <image class="arrow" src="{{imgURL + '/images/icon/arrow_gray.png'}}" mode="aspectFit"></image>
+    </view>
+    <!--商品的咨询-->
+    <view class="title_line_info" bindtap="adviceTap" style="display: flex;justify-content: center;align-items: center" wx:if="{{model.setting.showAdvice}}">点击查看购买咨询</view>
+    <view class="bland"></view>
+
+    <!--商品属性-->
+    <view class="title_line_info" bindtap="tapGoodExtra" wx:if="{{model.propsArr.length != 0}}">
+        <view class="title" style="width:65px;color:black">商品属性</view>
+        <image class="arrow" src="{{imgURL + '/images/icon/arrow_gray.png'}}" mode="aspectFit"></image>
+    </view>
+    <!--商品规格-->
+    <view class="title_line_info" bindtap="popSpecInfo">
+        <view class="title">已选</view>
+        <view class="content">
+            <text>{{model.specInfoString}}</text>
+            {{buyQuantity}}{{model.unit}}
+        </view>
+        <image class="arrow" src="{{imgURL + '/images/icon/arrow_gray.png'}}" mode="aspectFit"></image>
+    </view>
+    <view class="bland" wx:if="{{model.brief.length != 0}}"></view>
+    <!--商品简介-->
+    <view wx:if="{{model.brief.length != 0}}">
+        <view class="brief">{{model.brief}}</view>
+    </view>
+
+    <view class="bland" wx:if="{{model.tagsArr.length != 0}}"></view>
+    <!--标签-->
+    <view class="good_tag_container" wx:if="{{model.tagsArr.length != 0}}">
+        <block wx:for="{{model.tagsArr}}" wx:key="{{index}}">
+            <view class="good_tag_content">
+                <icon type="success_circle" color="white" class="good_tag_select"></icon>
+                <view class="good_tag_text">{{item}}</view>
+            </view>
+        </block>
+    </view>
+
+    <view class="bland" wx:if="{{model.brandInfo != null}}"></view>
+    <!--品牌-->
+    <view class="brand_container" wx:if="{{model.brandInfo != null}}" bindtap="tapBrand" data-brand-id="{{model.brandInfo.brand_id}}">
+        <image class="logo" src="{{model.brandInfo.brand_logo}}" data-brand-id="{{model.brandInfo.brand_id}}"></image>
+        <view class="brand_name" data-brand-id="{{model.brandInfo.brand_id}}">{{model.brandInfo.brand_name}}</view>
+        <image class="arrow" style="top:28px" src="{{imgURL + '/images/icon/arrow_gray.png'}}" mode="aspectFit"></image>
+    </view>
+
+    <!--配件或猜你喜欢-->
+<view class="bland" wx:if="{{tagArr.length != 0}}"></view>
+  <view class="title_line_info" style="display:flex;flex-flow:row nowrap" wx:if="{{tagArr.length != 0}}">
+    <block wx:for="{{tagArr}}" wx:key="{{index}}">
+        <view class="{{tagArr.length == 1 ? 'order_status_item full_width' : 'order_status_item half_width'}}" style="padding-top:11px" bindtap="adjunctSimilarTap" data-type-index="{{item.typeIndex}}">
+            <text class="{{item.typeIndex == tagSelectIndex ? 'text select' : 'text'}}" data-type-index="{{item.typeIndex}}">{{item.name}}</text>
+        </view>
+    </block>
+  </view>
+  <!--配件的组名-->
+  <view class="adjunct_group_name_container" wx:if="{{tagSelectIndex ==0 && model.adjunctNamesArr.length != 0}}">
+    <block wx:for="{{model.adjunctNamesArr}}" wx:key="{{index}}">
+        <view class="{{item.isSelect ? 'promotion_tag' : 'promotion_tag un_select'}}" bindtap="adjGroupNameTap" data-index="{{index}}" style="border-radius:8px;padding: 2px 8px;">{{item.groupName}}           </view>
+    </block>
+  </view>
+  <!--配件或猜你喜欢商品-->
+  <scroll-view scroll-x class="row_good_container" wx:if="{{tagArr.length != 0}}">
+  <view class="row_good_container_content">
+    <block wx:for="{{tagSelectIndex == 0 ? model.adjunctGoodsArr[model.adjSelectIndex] : goodSimilarArr}}" wx:key="{{index}}">
+        <view class="row_good_content">
+            <image class="row_good_image" mode="aspectFit" src="{{item.image}}"></image>
+            <view class="row_good_info">
+                <view class="good_name">{{item.goodName}}</view>
+                <view class="price">{{item.price}}</view>
+                <image class="choose_image" bindtap="adjGoodTap" data-index="{{index}}" wx:if="{{tagSelectIndex == 0}}" src="{{item.isSelect ? imgURL + '/images/shopcart/shop_Car_Select.png' : imgURL + '/images/shopcart/shop_Car_UnSelect.png'}}"></image>
+            </view>
+        </view>
+    </block>
+</view>
+  </scroll-view>
+    <view class="bland"></view>
+    <!--点击查看图文详情-->
+    <view class="title_line_info" style="display: flex;justify-content: center;align-items: center" bindtap="tapGraphic">点击查看图文详情</view>
+
+</scroll-view>
+
+<!--商品的图文详情选项卡-->
+      <view class="order_status_bar" style="top:45px;font-size:14px" hidden="{{model.barInfosArr.length <= 1 || selectIndex != 1}}">
+    <block wx:for="{{model.barInfosArr}}" wx:key="{{index}}">
+        <view class="{{model.barInfosArr.length == 2 ?'order_status_item half_width' : 'order_status_item three_width'}}" style="border-top:0px;border-bottom:1px solid #F7F7F7" bindtap="changeGraphicSelect" data-type="{{item.tabType}}">
+            <view wx:if="{{index < model.barInfosArr.length - 1}}" class="right_line"></view>
+            <text class="{{item.tabType == graphicTypeIndex ? 'text select' : 'text'}}" data-type="{{item.tabType}}">{{item.tabName}}</text>
+        </view>
+    </block>
+      </view>
+<!--商品的图文详情视图-->
+<scroll-view scroll-y class="good_detail_graphic_info_container" wx:if="{{selectIndex == 1}}">
+    <!--图文详情-->
+    <block wx:if="{{graphicTypeIndex == 0}}" wx:for="{{model.graphicInfo}}" wx:key="{{index}}">
+        <image mode="widthFix" style="width:100%" src="{{item}}"></image>
+    </block>
+    <!--规格参数-->
+    <block wx:if="{{graphicTypeIndex == 1}}" wx:for="{{model.paramsInfoArr}}" wx:for-item="paramInfo" wx:key="{{index}}">
+        <view class="specinfo_name" style="height:44px;font-size:15px;border-top:1px solid #F7F7F7">{{paramInfo.paramGroupName}}</view>
+        <block wx:for="{{paramInfo.paramContentArr}}" wx:key="{{index}}">
+            <view class="good_param_container">
+                <view class="good_param_name">{{item.name}}</view>
+                <view class="good_param_content">{{item.content}}</view>
+            </view>
+        </block>
+    </block>
+    <!--销售记录-->
+    <block wx:if="{{graphicTypeIndex == 2 && sellLogInfosArr.length != 0}}" wx:for="{{sellLogInfosArr}}" wx:key="{{index}}" wx:for-item="sellLogInfo">
+        <view class="order_status_bar" style="position:relative;border-top:0px;border-bottom:1px solid #F7F7F7">
+                <block wx:for="{{sellLogInfo}}">
+                    <view class="{{sellLogInfo.length == 3 ?'order_status_item three_width' : 'order_status_item four_width'}}">
+                        <text class="text">{{item}}</text>
+                    </view>
+                </block>
+        </view>
+    </block>
+</scroll-view>
+<!--商品拓展属性视图-->
+<view wx:if="{{isShowGoodExtra}}" class="shipping-container">
+
+  <view animation="{{opacityAnimation}}" class="shipping_black_transparent_bg" bindtap="closePopView"></view>
+  <view animation="{{translateAnimation}}" class="shipping_method_container">
+    <view class="shipping_method_header">
+        <view class="header_title">商品属性</view>
+    </view>
+    <scroll-view scroll-y class="shipping_method_scroll_view">
+        <block wx:for="{{model.propsArr}}" wx:key="{{index}}">
+            <view class="title_line_info" style="background-color:white">
+                <view class="title" style="color:black;width:65px;max-height:21px">{{item.name}}</view>
+                <view class="content" style="margin-left:40px">{{item.value}}</view>
+            </view>
+        </block>
+    </scroll-view>
+  </view>
+</view>
+
+<!--商品的规格视图-->
+<view wx:if="{{isShowGoodSpec}}" class="shipping-container">
+  <view animation="{{opacityAnimation}}" class="shipping_black_transparent_bg" bindtap="closePopView"></view>
+  <view animation="{{translateAnimation}}" class="shipping_method_container">
+    <!--头部-->
+    <view class="good_sepcinfo_header">
+    <view class="good_specinfo_header_back">
+            <image class="good_select_specinfo_image" src="{{model.selectImage}}"></image>
+        <view class="good_specinfo_name">{{model.name}}</view>
+        <view class="good_price_store_info">
+            <text style="color:#f73030">{{model.priceString}}</text>
+            {{model.storeString}}
+        </view>
+        <view class="good_select_specinfo">
+            <text style="color:gray">已选:</text>
+            <text>{{model.specInfoString}}</text>
+            {{buyQuantity}}{{model.unit}}
+        </view>
+        <icon type="clear" class="close_button" bindtap="closePopView"></icon>
+    </view>
+    </view>
+    <!--规格滚动视图-->
+    <scroll-view scroll-y class="good_sepcinfo_scroll">
+        <view class="good_specinfo_content_container">
+        <!--规格-->
+        <block wx:if="{{model.specInfosArr.length != 0}}" wx:for="{{model.specInfosArr}}" wx:key="{{index}}" wx:for-item="group">
+            <view class="specinfo_name">{{group.specName}}</view>
+            <block wx:for="{{group.specValueArr}}" wx:key="{{index}}" wx:for-item="specInfo">
+                <!--图片规格-->
+                <view class="specinfo_image_container" wx:if="{{group.isImageSpec}}" bindtap="selectSpecInfo" data-product-id="{{specInfo.valueProductID}}">
+                <image class="{{specInfo.isSelect ? 'specinfo_image select' : 'specinfo_image'}}" src="{{specInfo.valueImage}}" data-product-id="{{specInfo.valueProductID}}"></image>
+                <view class="specinfo_image_name" data-product-id="{{specInfo.valueProductID}}">{{specInfo.valueName}}</view>
+                </view>
+                <!--文字规格-->
+                <view class="{{specInfo.isSelect ? 'promotion_tag' : 'promotion_tag un_select'}}" style="border-radius:8px;padding: 2px 8px;max-height:26px" wx:if="{{!group.isImageSpec}}" bindtap="selectSpecInfo" data-product-id="{{specInfo.valueProductID}}">{{specInfo.valueName}}</view>
+            </block>
+        </block>
+        <!--数量增减-->
+        <view class="good_add_minus_view">
+            <text style="margin-left:10px">数量</text>
+            <view class="quantity_view" style="top:17px;left:48px">
+                <image mode="aspectFit" bindtap="minusGoodAction" class="minus_image" src="{{imgURL + '/images/shopcart/minus_new.png'}}"></image>
+                <view class="quantity_text">{{buyQuantity}}</view>
+                <image mode="aspectFit" bindtap="addGoodAction" class="add_image" src="{{imgURL + '/images/shopcart/add_new.png'}}"></image>
+            </view>
+        </view>
+        <!--确认按钮-->
+        <button class="good_specinfo_commit" disabled="{{!specInfoButtonCanTap}}" bindtap="commitShopTap">
+            {{specInfoButtonTitle}}
+        </button>
+        </view>
+    </scroll-view>
+  </view>
+</view>
+
+<!--商品详情底部视图-->
+<view class="good_detail_bottom_view" wx:if="{{!showFailNetWork}}">
+    <block wx:for="{{buttonImages}}" wx:key="{{index}}" wx:if="{{index == 0}}">
+        <button open-type="contact" plain="true"  send-message-title="{{model.name}}" send-message-path send-message-img show-message-card>
+         <image class="image_button kf_image_button" mode="aspectFit" src="{{item}}" data-index="{{index}}"></image>
+        </button>
+    </block>
+    <block wx:for="{{buttonImages}}" wx:key="{{index}}" wx:if="{{index != 0}}">
+        <image class="image_button" mode="aspectFit" src="{{item}}" bindtap="imageButtonTap" data-index="{{index}}"></image>
+        <view wx:if="{{index == 2}}" class="badge-value" wx:if="{{shopcartCount > 0}}">{{shopcartCount}}</view>
+    </block>
+     <navigator wx:for="{{buttonImages}}" wx:if="{{index == 1}}" url="../groupBooking_state/groupBooking_state" class="text_button" style="background-color:#F73030;"  hover-class="navigator-hover"> 我要开团</navigator>
+
+</view>

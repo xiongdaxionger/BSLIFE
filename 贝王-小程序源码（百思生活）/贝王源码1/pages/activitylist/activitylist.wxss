@@ -1,0 +1,18 @@
+@import "../../views/network/bad_network.wxss";
+@import "../customerservice/customerservice.wxss";
+/**活动容器**/
+.activity_list_container{
+    background-color: white;
+    font-size: 15px;
+    color: black;
+    min-height: 100vh;
+}
+/**活动类型容器**/
+.activity_type_container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-top:1px #e5e5e5 solid;
+    flex-wrap: wrap;
+}
+

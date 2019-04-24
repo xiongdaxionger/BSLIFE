@@ -1,0 +1,55 @@
+<view>
+  <view>
+    <image src='/image/022.png' class='bannar-img'></image>
+  </view>
+  <view class='mystore-nav'>
+    <view class='mystore-item'>
+      <image src='/image/023.png' class='store-img'></image>
+    </view>
+    <view class='mystore-item'>
+      <view>13</view>
+      <view>全部宝贝</view>
+    </view>
+    <view class='mystore-item'>
+      <view>
+        <image src='/image/024.png' class='code-img'></image>
+      </view>
+      <view>联系本店</view>
+    </view>
+    <view class='mystore-items'>
+      <view>
+        <image src='/image/025.png' class='code-img'></image>
+      </view>
+      <view>二维码</view>
+    </view>
+  </view>
+  <view class='seach-goods'>
+    <input class='seach-inp' placeholder='输入关键字...'></input>
+  </view>
+  <view class='recommend'>
+    <image src='/image/027.png' class='store-recom'></image>
+    <text>小店推荐</text>
+  </view>
+  <view class='goods-list'>
+    <view class='goods-item'>
+      <image src='/image/026.png' class='goods-img'></image>
+      <view class='goods-name'>小电视小电视小电视小电视小电视</view>
+      <view class='goods-price'>
+        <view>￥398.00</view>
+        <view>
+          <image src='/image/029.png' class='add-cart'></image>
+        </view>
+      </view>
+    </view>
+    <view class='goods-item'>
+      <image src='/image/028.png' class='goods-img'></image>
+      <view class='goods-name'>小电视</view>
+      <view class='goods-price'>
+        <view>￥398.00</view>
+        <view>
+          <image src='/image/029.png' class='add-cart'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,155 @@
+
+/*搜索头部*/
+.search-page-header{
+    background: white;
+    height: 40px;
+    display: flex;
+    flex-flow: row nowrap;   
+    align-items: center;
+    position: fixed;
+    width:100vw;
+}
+
+/*搜索容器*/
+.search-page-container{
+    background: #f7f7f7;
+    border-radius: 3px;
+    height: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+/*返回*/
+.search-back{
+    width: 15px;
+    height: 20px;
+    padding: 10px 10px 10px 10px;
+}
+
+/*搜索图标*/
+.search{
+    width: 15px;
+    height: 15px;
+    margin: 0 8px 0 8px;
+}
+
+/*搜索输入框*/
+.search-input{
+    font-size: 14px;
+    flex: 1 1 auto;
+}
+
+/*搜索*/
+.do-search{
+    color: #666666;
+    font-size: 15px;
+    padding: 10px;
+    flex: 0 0 auto;
+}
+
+/*搜索容器*/
+.search-hot-history-associate-container{
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    height: 100vh;
+    background: white;
+}
+
+/*滚动视图*/
+.search-hot-history-associate-scroll-view{
+    margin-top: 40px;
+    width: 100%;
+    height: calc(100vh - 40px);
+}
+
+/*热门搜索容器*/
+.search-history-hot-container{
+    display: flex;
+    flex-flow: row wrap;
+    width: calc(100vw - 20px);
+    margin-left: 10px;
+}
+
+/*头部*/
+.search-history-hot-header{
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/*图标*/
+.search-history-hot-header-icon{
+    margin-left: 0;
+    padding: 5px;
+    width: 12px;
+    height: 12px;
+}
+
+/*标题*/
+.search-history-hot-header text{
+    color: #666666;
+    font-size: 13px;
+    flex: 1 1 auto;
+}
+
+/*删除按钮*/
+.search-history-header-delete{
+    margin-left: 10px;
+    padding: 10px 0 10px 10px;
+    width: 15px;
+    height: 15px;
+}
+
+/*item*/
+.search-history-item{
+    color: #666666;
+    font-size: 13px;
+    padding: 5px 10px 5px 10px;
+    border: 1px #f7f7f7 solid;
+    border-radius: 3px;
+    margin: 10px 0 0 10px;
+}
+
+/*无搜索历史*/
+.search-history-none{
+    width: 100%;
+    margin: 15px 0 15px 0;
+    text-align: center;
+    font-size: 17px;
+}
+
+/*搜索联想容器*/
+.search-associate-container{
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+}
+
+/*标题*/
+.search-associate-title{
+    font-size: 16px;
+    margin-left: 15px;
+    padding: 12px 10px 12px 0;
+    width: calc(100vw - 15px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/*分割线*/
+.search-associate-line{
+    height: 1px;
+    margin-left: 15px;
+    width: calc(100vw - 15px);
+    background: #f7f7f7;
+}
+
+
+
+

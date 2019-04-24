@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <com.qianseit.westore.ui.MyListView
+            android:id="@+id/aftermarket_refund_list"
+            style="@style/listview"
+            android:divider="@color/westore_divider_bgcolor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/aftermarket_refund_divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/aftermarket_refund_list"
+            android:layout_marginTop="10dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+        <TextView
+            android:id="@+id/aftermarket_refund_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/aftermarket_refund_divider"
+            android:layout_marginTop="20dp"
+            android:text="￥10.00"
+            android:textColor="@color/westore_red"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/aftermarket_refund_price_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/aftermarket_refund_price"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/aftermarket_refund_price"
+            android:text="预计退款总计："
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/aftermarket_refund_price_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/aftermarket_refund_price"
+            android:layout_marginTop="3dp"
+            android:text="（实际退款金额以与商家协商一致及实际到账为准）"
+            android:textColor="@color/westore_gray_textcolor"
+            android:textSize="@dimen/TextSizeSmaller" />
+        
+        <TextView
+            android:id="@+id/aftermarket_refund_reason_tip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/aftermarket_refund_price_remark"
+            android:layout_marginTop="20dp"
+            android:text="*"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/aftermarket_refund_reason_tip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/aftermarket_refund_reason_tip1"
+            android:layout_toRightOf="@+id/aftermarket_refund_reason_tip1"
+            android:text="退款理由："
+            android:textColor="@color/westore_red"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <EditText
+            android:id="@+id/aftermarket_refund_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/aftermarket_refund_reason_tip1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_common_log"
+            android:gravity="center_vertical"
+            android:hint="请填写退款理由"
+            android:inputType="text"
+            android:maxLength="60"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <TextView
+            android:id="@+id/aftermarket_refund_remark_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/aftermarket_refund_reason"
+            android:layout_marginTop="10dp"
+            android:text="详细描述："
+            android:textColor="@color/westore_red"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <EditText
+            android:id="@+id/aftermarket_refund_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/aftermarket_refund_remark_tip"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_common_log"
+            android:gravity="left|top"
+            android:hint="请描述遇到的问题及详细的退款理由，不超过500字"
+            android:inputType="textMultiLine"
+            android:maxLength="500"
+            android:minHeight="80dp"
+            android:padding="5dp"
+            android:singleLine="false"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="@dimen/TextSizeBigSmall" />
+
+        <Button
+            android:id="@+id/base_submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="38dip"
+            android:layout_below="@+id/aftermarket_refund_remark"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/app_button_selector"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextSizeMedium"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</ScrollView>

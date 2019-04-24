@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fragment_background_color"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/bank_icon_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/bank_icon_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/bank_icon" />
+
+            <TextView
+                android:id="@+id/bank_money_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:text="0.00元"
+                android:textColor="@color/white"
+                android:textSize="@dimen/TextSizeLarge"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="30dp"
+                android:gravity="right"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="储值卡号"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/TextSizeMedium" />
+
+                <TextView
+                    android:id="@+id/bank_number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="8888888"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/TextSizeMedium" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/bank_receive_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/bank_receive_but"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/but_bank_pay"
+                    android:padding="10dp"
+                    android:text="立即领卡"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/TextSizeMedium"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/bank_binding_but"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/but_two_click"
+                    android:padding="10dp"
+                    android:text="绑定已有储值卡"
+                    android:textColor="@color/text_goods_3_color"
+                    android:textSize="@dimen/TextSizeMedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bank_formal_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:id="@+id/bank_card_courier_rel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:id="@+id/bank_card_status_linear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="卡片状态："
+                            android:textColor="@color/text_goods_6_color"
+                            android:textSize="@dimen/TextSizeMedium" />
+
+                        <TextView
+                            android:id="@+id/bank_card_status_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#f25353"
+                            android:textSize="@dimen/TextSizeMedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bank_card_express_linear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="快递公司："
+                            android:textColor="@color/text_goods_6_color"
+                            android:textSize="@dimen/TextSizeMedium" />
+
+                        <TextView
+                            android:id="@+id/bank_card_express_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#f25353"
+                            android:textSize="@dimen/TextSizeMedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bank_card_courier_num_linear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bank_card_status_linear"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="快递单号："
+                            android:textColor="@color/text_goods_6_color"
+                            android:textSize="@dimen/TextSizeMedium" />
+
+                        <TextView
+                            android:id="@+id/bank_card_courier_num_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#f25353"
+                            android:textSize="@dimen/TextSizeMedium" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/bank_confirm_rec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/bank_card_express_linear"
+                        android:layout_alignTop="@+id/bank_card_courier_num_linear"
+                        android:background="@drawable/but_bank_pay"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        android:text="确认收卡"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/TextSizeMedium" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@+id/bank_pay_but"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/but_bank_pay"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="立即充值"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/TextSizeMedium" />
+
+                    <Button
+                        android:id="@+id/bank_mail_but"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/but_two_click"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="申请邮寄"
+                        android:textColor="@color/text_goods_3_color"
+                        android:textSize="@dimen/TextSizeMedium" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bank_change_but"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/but_bank_pay"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="修改卡密码"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/TextSizeMedium" />
+
+                <Button
+                    android:id="@+id/bank_changebinding_but"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/but_two_click"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="更换卡绑定"
+                    android:textColor="@color/text_goods_3_color"
+                    android:textSize="@dimen/TextSizeMedium" />
+
+                <TextView
+                    android:id="@+id/bank_hint_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/text_goods_6_color"
+                    android:textSize="@dimen/TextSizeBigSmall"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bank_mail_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/fragment_background_color"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:text="请输入你的收货地址:"
+                        android:textColor="@color/text_goods_3_color"
+                        android:textSize="@dimen/TextSizeMedium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <EditText
+                        android:id="@+id/mail_name_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:hint="收货人姓名"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/text_goods_3_color"
+                        android:textSize="@dimen/TextSizeBigSmall" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/text_goods_e_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <EditText
+                        android:id="@+id/mail_phone_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:hint="手机号码"
+                        android:inputType="number"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/text_goods_3_color"
+                        android:textSize="@dimen/TextSizeBigSmall" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/text_goods_e_color" />
+
+                <LinearLayout
+                    android:id="@+id/mail_address_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:id="@+id/mail_address_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:hint="所在地区"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/text_goods_3_color"
+                        android:textSize="@dimen/TextSizeBigSmall" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/shopping_home_secill_right" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/text_goods_e_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <EditText
+                        android:id="@+id/mail_street_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:hint="街道地址"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/text_goods_3_color"
+                        android:textSize="@dimen/TextSizeBigSmall" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/mail_confirm_but"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/but_two_click"
+                    android:padding="10dp"
+                    android:text="确定"
+                    android:textColor="@color/text_goods_3_color"
+                    android:textSize="@dimen/TextSizeMedium" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</ScrollView>

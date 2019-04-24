@@ -1,0 +1,58 @@
+/* pages/user/bind_phone.wxss */
+
+/*内容*/
+.content{
+    margin-top: 20px;
+    border-bottom:1px #e5e5e5 solid;
+    background: white;
+}
+
+/*行*/
+.section{
+    display: flex;
+    width: calc(100vw - 30px);
+    flex-flow: row nowrap;
+    height: 45px;
+    align-items: center;
+    margin-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px #f7f7f7 solid;
+}
+
+/*标题*/
+.title{
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 16px;
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+.space{
+    width: 16px;
+}
+
+/*输入框*/
+.section input{
+    font-size: 16px;
+    flex: 1 1 auto;
+}
+
+/*图形验证码*/
+.image-code{
+    width: 64px;
+    height: 20px;
+}
+
+/*提示信息*/
+.msg{
+    color: #f73030;
+    font-size: 14px;
+    line-height: 15px;
+    margin: 15px 23px 15px 23px;
+}
+
+/*确定按钮*/
+.confirm-btn{
+    margin-top: 20px;
+}

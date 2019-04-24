@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.qianseit.westore.ui.ImageCycleView
+            android:id="@+id/goods_detail_images"
+            android:layout_width="match_parent"
+            android:layout_height="320dip" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.0dp"
+            android:background="@color/fragment_background_color" />
+
+        <TextView
+            android:id="@+id/goods_detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:padding="@dimen/MarginLarge"
+            android:textColor="@color/westore_dark_textcolor"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:id="@+id/goods_detail_price_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/goods_detail_price_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/MarginMedium"
+                android:paddingLeft="@dimen/MarginLarge"
+                android:paddingRight="@dimen/MarginLarge"
+                android:paddingTop="@dimen/MarginMedium" >
+
+                <TextView
+                    android:id="@+id/goods_detail_price_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/westore_red"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <TextView
+                    android:id="@+id/goods_detail_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/westore_red"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goods_detail_mktprice_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/MarginMedium"
+                android:paddingLeft="@dimen/MarginLarge"
+                android:paddingRight="@dimen/MarginLarge"
+                android:paddingTop="@dimen/MarginMedium" >
+
+                <TextView
+                    android:id="@+id/goods_detail_mktprice_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/westore_second_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <TextView
+                    android:id="@+id/goods_detail_mktprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/westore_second_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <TextView
+                    android:id="@+id/goods_detail_fxprice_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/westore_second_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <TextView
+                    android:id="@+id/goods_detail_fxprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/westore_second_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goods_detail_minprice_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/MarginMedium"
+                android:paddingLeft="@dimen/MarginLarge"
+                android:paddingRight="@dimen/MarginLarge"
+                android:paddingTop="@dimen/MarginMedium" >
+
+                <TextView
+                    android:id="@+id/goods_detail_minprice_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="会员价低至"
+                    android:textColor="@color/westore_red"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <TextView
+                    android:id="@+id/goods_detail_minprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/westore_second_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goods_detail_time_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/MarginMedium"
+                android:layout_marginBottom="@dimen/MarginLarge"
+                android:paddingLeft="@dimen/MarginLarge"
+                android:paddingRight="@dimen/MarginLarge"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/goods_detail_time_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/goods_item_time"
+                    android:drawablePadding="5dp"
+                    android:text="距结束"
+                    android:textColor="@color/westore_dark_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <com.qianseit.westore.ui.RushBuyCountDownTimerView
+                    android:id="@+id/goods_detail_time"
+                    android:layout_marginLeft="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goods_detail_prepare_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/MarginLarge"
+                android:background="@color/fragment_background_color" />
+
+            <TableRow
+                android:id="@+id/goods_detail_prepare_status_tr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/MarginLarge" >
+
+                <TextView
+                    android:id="@+id/goods_detail_prepare_status_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="预售状态："
+                    android:textColor="@color/westore_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <TextView
+                    android:id="@+id/goods_detail_prepare_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="预售状态"
+                    android:textColor="@color/westore_red"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/MarginLarge"
+                android:background="@color/fragment_background_color" />
+
+            <TableRow
+                android:id="@+id/goods_detail_prepare_remark_tr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/MarginLarge" >
+
+                <TextView
+                    android:id="@+id/goods_detail_prepare_remark_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="预售描述："
+                    android:textColor="@color/westore_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <TextView
+                    android:id="@+id/goods_detail_prepare_remark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="预售描述"
+                    android:textColor="@color/westore_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/MarginLarge"
+                android:background="@color/fragment_background_color" />
+
+            <TableRow
+                android:id="@+id/goods_detail_prepare_rule_tr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/MarginLarge" >
+
+                <TextView
+                    android:id="@+id/goods_detail_prepare_rule_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="预售规则："
+                    android:textColor="@color/westore_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <TextView
+                    android:id="@+id/goods_detail_prepare_rule"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="预售规则"
+                    android:textColor="@color/westore_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goods_detail_brief_tr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/goods_detail_quota_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="@dimen/MarginLarge"
+                    android:background="@color/fragment_background_color" />
+
+                <TextView
+                    android:id="@+id/goods_detail_quota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="@dimen/MarginLarge"
+                    android:text="限购：128件"
+                    android:textColor="@color/westore_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goods_detail_volume_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="@dimen/MarginLarge"
+                    android:background="@color/fragment_background_color" />
+
+                <TextView
+                    android:id="@+id/goods_detail_volume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="@dimen/MarginLarge"
+                    android:text="月销：128件"
+                    android:textColor="@color/westore_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goods_detail_store_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="@dimen/MarginLarge"
+                    android:background="@color/fragment_background_color" />
+
+                <TextView
+                    android:id="@+id/goods_detail_store"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="@dimen/MarginLarge"
+                    android:text="月销：128件"
+                    android:textColor="@color/westore_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TableRow
+            android:id="@+id/goods_detail_gift_tr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/MarginLarge"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/goods_detail_gift_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="限兑：2瓶"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+
+            <TextView
+                android:id="@+id/goods_detail_gift_remark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="可兑换会员：超级VIP"
+                android:textColor="@color/westore_gray_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+        </TableRow>
+
+        <RelativeLayout
+            android:id="@+id/goods_detail_marketing_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/MarginLarge"
+            android:paddingRight="@dimen/MarginLarge"
+            android:visibility="gone" >
+
+            <View
+                android:id="@+id/goods_detail_marketing_space"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/fragment_background_color" />
+
+            <TableRow
+                android:id="@+id/goods_detail_marketing_top_tr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goods_detail_marketing_space"
+                android:layout_marginTop="@dimen/MarginLarge"
+                android:paddingBottom="@dimen/MarginLarge" >
+
+                <com.qianseit.westore.ui.FlowLayout
+                    android:id="@+id/goods_detail_marketing_flowlayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    custom:horizontal_spacing="@dimen/MarginLarge"
+                    custom:vertical_spacing="@dimen/MarginLarge" >
+
+                    <TextView
+                        android:id="@+id/goods_detail_marketing_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="促销："
+                        android:textColor="@color/westore_gray_textcolor"
+                        android:textSize="@dimen/TextSizeBigSmall" />
+
+                    <TextView
+                        android:id="@+id/goods_detail_marketing_remark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="可以享受以下促销"
+                        android:textColor="@color/westore_gray_textcolor"
+                        android:textSize="@dimen/TextSizeBigSmall" />
+                </com.qianseit.westore.ui.FlowLayout>
+
+                <ImageView
+                    android:id="@+id/goods_detail_marketing_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="@dimen/PaddingMedium"
+                    android:src="@drawable/base_arrow_bottom_pink_n"
+                    android:visibility="visible" />
+            </TableRow>
+
+            <View
+                android:id="@+id/goods_detail_marketing_header_space"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/goods_detail_marketing_top_tr"
+                android:background="@color/fragment_background_color" />
+
+            <com.qianseit.westore.ui.MyListView
+                android:id="@+id/goods_detail_marketing_list"
+                style="@style/listview"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goods_detail_marketing_header_space"
+                android:layout_marginLeft="50dp"
+                android:divider="@color/fragment_background_color"
+                android:dividerHeight="0.5dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/goods_detail_delivery_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/MarginLarge"
+            android:paddingLeft="@dimen/MarginLarge"
+            android:paddingRight="@dimen/MarginLarge"
+            android:visibility="gone" >
+
+            <View
+                android:id="@+id/goods_detail_delivery_space"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/fragment_background_color" />
+
+            <TableRow
+                android:id="@+id/goods_detail_delivery_top_tr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goods_detail_delivery_space"
+                android:layout_marginTop="@dimen/MarginLarge"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/goods_detail_delivery_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="配送："
+                    android:textColor="@color/westore_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/goods_detail_delivery_addr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="广东省 广州市 白云区"
+                        android:textColor="@color/westore_gray_textcolor"
+                        android:textSize="@dimen/TextSizeBigSmall" />
+
+                    <TextView
+                        android:id="@+id/goods_detail_delivery_breif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6月2日、6月3日发货"
+                        android:textColor="@color/text_textcolor_gray2"
+                        android:textSize="@dimen/TextSizeBigSmall" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/goods_detail_delivery_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="@dimen/PaddingMedium"
+                    android:src="@drawable/base_arrow_right_pink_n"
+                    android:visibility="visible" />
+            </TableRow>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/goods_detail_comment_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/MarginLarge"
+            android:paddingLeft="@dimen/MarginLarge"
+            android:paddingRight="@dimen/MarginLarge"
+            android:visibility="visible" >
+
+            <View
+                android:id="@+id/goods_detail_comment_space"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/fragment_background_color" />
+
+            <TableRow
+                android:id="@+id/goods_detail_comment_top_tr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goods_detail_comment_space"
+                android:layout_marginTop="@dimen/MarginLarge"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/goods_detail_comment_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品评价："
+                    android:textColor="@color/westore_gray_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <LinearLayout
+                    android:id="@+id/goods_detail_comment_points_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/goods_detail_comment_breif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_textcolor_gray2"
+                        android:textSize="@dimen/TextSizeBigSmall" />
+
+                    <RatingBar
+                        android:id="@+id/goods_detail_comment_rat"
+                        style="@style/RatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/MarginLarge"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="4"
+                        android:stepSize="0.1"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/goods_detail_comment_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="@dimen/PaddingMedium"
+                    android:src="@drawable/base_arrow_right_pink_n"
+                    android:visibility="visible" />
+            </TableRow>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/goods_detail_consult_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/MarginLarge"
+            android:visibility="gone" >
+
+            <View
+                android:id="@+id/goods_detail_consult_space"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/fragment_background_color" />
+
+            <TextView
+                android:id="@+id/goods_detail_consult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/MarginLarge"
+                android:gravity="right"
+                android:text="点击查看购买咨询（38）"
+                android:textColor="@color/westore_dark_textcolor"
+                android:textSize="@dimen/TextSizeBigSmall" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/goods_detail_prop_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/MarginLarge" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/fragment_background_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/MarginLarge" >
+
+                <TextView
+                    android:id="@+id/goods_detail_prop_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/MarginLarge"
+                    android:lineSpacingExtra="5dp"
+                    android:paddingLeft="@dimen/MarginLarge"
+                    android:paddingRight="@dimen/MarginLarge"
+                    android:text="商品属性"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <ImageView
+                    android:id="@+id/goods_detail_prop_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/goods_detail_prop_tip"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/goods_detail_prop_tip"
+                    android:paddingLeft="@dimen/PaddingMedium"
+                    android:src="@drawable/prop"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goods_detail_spec_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/fragment_background_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/MarginLarge"
+                android:paddingBottom="@dimen/MarginLarge"
+                android:paddingRight="@dimen/MarginLarge" >
+
+                <TextView
+                    android:id="@+id/goods_detail_spec_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="5dp"
+                    android:paddingLeft="@dimen/MarginLarge"
+                    android:paddingRight="@dimen/MarginLarge"
+                    android:text="已选"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <TextView
+                    android:id="@+id/goods_detail_spec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/goods_detail_spec_tip"
+                    android:layout_toLeftOf="@+id/goods_detail_spec_action"
+                    android:layout_toRightOf="@+id/goods_detail_spec_tip"
+                    android:maxLines="2"
+                    android:text="颜色分类  套餐类型"
+                    android:textColor="@color/westore_dark_textcolor"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <ImageView
+                    android:id="@+id/goods_detail_spec_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/goods_detail_spec_tip"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/goods_detail_spec_tip"
+                    android:paddingLeft="@dimen/PaddingMedium"
+                    android:src="@drawable/prop"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goods_detail_breif_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/MarginLarge" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/fragment_background_color" />
+
+            <TextView
+                android:id="@+id/goods_detail_brief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/MarginLarge"
+                android:lineSpacingExtra="5dp"
+                android:paddingLeft="@dimen/MarginLarge"
+                android:paddingRight="@dimen/MarginLarge"
+                android:textColor="#666666"
+                android:textSize="@dimen/TextSizeMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goods_detail_tag_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/MarginLarge"
+            android:visibility="gone" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/fragment_background_color" />
+
+            <com.qianseit.westore.ui.FlowLayout
+                android:id="@+id/goods_detail_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/MarginLarge"
+                android:paddingLeft="@dimen/MarginLarge"
+                android:paddingRight="@dimen/MarginLarge"
+                custom:horizontal_spacing="@dimen/MarginLarge"
+                custom:vertical_spacing="@dimen/MarginLarge" >
+            </com.qianseit.westore.ui.FlowLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goods_detail_brand_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/MarginLarge" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/fragment_background_color" />
+
+            <RelativeLayout
+                android:id="@+id/rel_brand_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/MarginLarge"
+                android:paddingLeft="@dimen/MarginLarge"
+                android:paddingRight="@dimen/MarginLarge" >
+
+                <ImageView
+                    android:id="@+id/img_brand_logo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/circle_solid_white_stroke_gray"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/detail_brand_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/img_brand_logo"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/TextSizeBigSmall" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/base_arrow_right_pink_n" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/fragment_background_color" />
+
+        <LinearLayout
+            android:id="@+id/goods_detail_recommend_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <com.qianseit.westore.ui.HorizontalListView
+                android:id="@+id/goods_detail_recommend_bar_list"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:cacheColorHint="@color/white"
+                android:divider="@null"
+                android:dividerHeight="0.5dip"
+                android:drawSelectorOnTop="false"
+                android:fadingEdgeLength="0sp"
+                android:groupIndicator="@null"
+                android:listSelector="@color/white"
+                android:scrollbars="none" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/fragment_background_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <HorizontalScrollView
+                    android:id="@+id/goods_detail_combo_bar_hs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" >
+
+                    <LinearLayout
+                        android:id="@+id/goods_detail_combo_bar_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:visibility="visible" />
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:id="@+id/goods_detail_combo_goods_hs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/goods_detail_combo_bar_hs"
+                    android:visibility="visible" >
+
+                    <LinearLayout
+                        android:id="@+id/goods_detail_combo_goods_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:visibility="visible" />
+                </HorizontalScrollView>
+
+                <com.qianseit.westore.activity.goods.GoodsCycleView
+                    android:id="@+id/goods_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/fragment_background_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_drag_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/PaddingMedium" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/base_arrow_up_pink_n"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="上拉查看图文详情"
+                android:textColor="@color/westore_dark_textcolor" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

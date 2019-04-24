@@ -1,0 +1,60 @@
+page{
+  font-size: 14px;
+}
+.add-item{
+  border-bottom: 1px solid #ccc;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.add-item-l{
+  width: 20%;
+}
+.add-item-r{
+  width: 80%;
+}
+.add-bottom{
+  padding: 20rpx;
+  margin-top: 20rpx;
+}
+.add-btn{
+  color: #fff;
+}
+.add-item-c{
+  width: 55%;
+}
+.add-item-right{
+  width: 25%;
+}
+.get-code{
+  color: #fff;
+  background: #dc4c00;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  text-align: center;
+}
+
+.disabled-btn{
+  background: #ccc;
+}
+.disable{
+  background-color: #DCDCDC;
+  color: gray;
+}
+.normal{
+  background-color: #dc4c00;
+  color: white;
+}
+.image_code_input {
+  position: absolute;
+  left: 85px;
+  right: 100px
+}
+/**图形验证码**/
+.image_code{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 100px;
+    height: 34px;
+}

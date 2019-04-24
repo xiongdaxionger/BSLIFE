@@ -1,0 +1,130 @@
+/* pages/goods/good_collect.wxss */
+
+/*商品列表滚动视图*/
+.scroll-view{
+    height: 100vh;
+    background: #f7f7f7;
+}
+
+/*内容*/
+.content-container{
+    width: 100vw;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*商品列表 row item*/
+.good-list-item{
+    margin-bottom: 10px;
+    border-bottom: 1px #e5e5e5 solid;
+    border-top: 1px #e5e5e5 solid;
+    display: flex;
+    flex-flow: row nowrap;
+    background: white;
+}
+
+/*商品图片*/
+.good-image{
+    margin: 10px 10px 10px 10px;
+    width: 125px;
+    height: 125px;
+    border: 1px #f7f7f7 solid;
+    flex-shrink: 0;
+}
+
+/*右边容器*/
+.good-list-right-container{
+    width: calc(100vw - 125px - 30px);
+    margin: 10px 10px 10px 0px;
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+}
+
+/*商品名称*/
+.good-name{
+    width: 100%;
+    word-spacing: 1px;
+    line-height: 18px;
+    height: 36px;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+/*列表价格容器*/
+.good-price-container{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 10px 0 10px 0;
+}
+
+/*价格*/
+.good-price{
+    font-size: 17px;
+    color: #E54646;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+}
+
+/*市场价格*/
+.good-market-price{
+    margin-left: 5px;
+    font-size: 12px;
+    color: gray;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: line-through;
+}
+
+/*删除*/
+.delete-btn{
+    color: lightgray;
+    right: 0px;
+    font-size: 14px;
+    bottom: 40px;
+    position: absolute;
+}
+
+/*状态*/
+.good-status{
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 2px 5px 2px 5px;
+}
+
+/*底部容器*/
+.good-list-bottom-container{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*到货通知按钮*/
+.notice-btn{
+    line-height: 30px;
+    margin-left: 20px;
+    background: #f73030;
+    color: white;
+    font-size: 15px;
+    border-radius: 3px;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+/*购物车按钮*/
+.shopcart-image{
+    width: 32px;
+    height: 26px;
+    margin-left: 10px;
+}

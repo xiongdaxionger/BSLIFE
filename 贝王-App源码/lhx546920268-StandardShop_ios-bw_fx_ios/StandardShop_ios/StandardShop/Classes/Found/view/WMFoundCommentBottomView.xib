@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WMFoundCommentBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVv-y2-ZVS" userLabel="line">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="mBY-hp-6EB"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLy-yK-8pG" userLabel="praise_btn">
+                    <rect key="frame" x="5" y="1" width="100" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="3" image="found_praise_n">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="found_praise_s">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="praiseAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="WzK-Yl-ynX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMN-VI-00M" userLabel="comment_btn">
+                    <rect key="frame" x="110" y="1" width="100" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="3" image="found_comment_n">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="commentAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ggn-LL-OwN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZs-RM-YXo" userLabel="share_btn">
+                    <rect key="frame" x="215" y="1" width="100" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" image="found_share"/>
+                    <connections>
+                        <action selector="shareAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="wbg-pn-WTL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="NZs-RM-YXo" firstAttribute="width" secondItem="XLy-yK-8pG" secondAttribute="width" id="1Cg-qX-xpH"/>
+                <constraint firstItem="NZs-RM-YXo" firstAttribute="height" secondItem="XLy-yK-8pG" secondAttribute="height" id="4KL-nM-Jo1"/>
+                <constraint firstAttribute="trailing" secondItem="NZs-RM-YXo" secondAttribute="trailing" constant="5" id="8XM-Q4-K4P"/>
+                <constraint firstItem="CMN-VI-00M" firstAttribute="width" secondItem="XLy-yK-8pG" secondAttribute="width" id="AKp-qk-M71"/>
+                <constraint firstItem="CMN-VI-00M" firstAttribute="height" secondItem="XLy-yK-8pG" secondAttribute="height" id="AmG-uR-mKc"/>
+                <constraint firstAttribute="trailing" secondItem="fVv-y2-ZVS" secondAttribute="trailing" id="Coa-C9-Keg"/>
+                <constraint firstItem="XLy-yK-8pG" firstAttribute="top" secondItem="fVv-y2-ZVS" secondAttribute="bottom" id="Hm7-OJ-7oX"/>
+                <constraint firstAttribute="bottom" secondItem="XLy-yK-8pG" secondAttribute="bottom" id="VCn-8Z-l6k"/>
+                <constraint firstItem="NZs-RM-YXo" firstAttribute="top" secondItem="CMN-VI-00M" secondAttribute="top" id="VfH-8R-vM8"/>
+                <constraint firstItem="CMN-VI-00M" firstAttribute="leading" secondItem="XLy-yK-8pG" secondAttribute="trailing" constant="5" id="Wc4-HJ-8fT"/>
+                <constraint firstItem="fVv-y2-ZVS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="by6-9r-18p"/>
+                <constraint firstItem="NZs-RM-YXo" firstAttribute="leading" secondItem="CMN-VI-00M" secondAttribute="trailing" constant="5" id="dSv-Tl-Geo"/>
+                <constraint firstItem="fVv-y2-ZVS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kxj-Ie-gKo"/>
+                <constraint firstItem="XLy-yK-8pG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="li7-ed-Jsr"/>
+                <constraint firstItem="CMN-VI-00M" firstAttribute="top" secondItem="XLy-yK-8pG" secondAttribute="top" id="rag-NY-9ja"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="comment_btn" destination="CMN-VI-00M" id="ErS-yk-kwN"/>
+                <outlet property="line" destination="fVv-y2-ZVS" id="DsK-ja-Ifi"/>
+                <outlet property="praise_btn" destination="XLy-yK-8pG" id="Cbq-gO-roD"/>
+                <outlet property="share_btn" destination="NZs-RM-YXo" id="Q6j-jK-6Zt"/>
+            </connections>
+            <point key="canvasLocation" x="350" y="335.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="found_comment_n" width="14" height="14"/>
+        <image name="found_praise_n" width="14" height="14"/>
+        <image name="found_praise_s" width="14" height="14"/>
+        <image name="found_share" width="17" height="17"/>
+    </resources>
+</document>

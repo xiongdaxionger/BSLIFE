@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fragment_background_color"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/MarginMedium"
+    android:paddingRight="@dimen/MarginMedium"
+    android:paddingBottom="@dimen/MarginMedium">
+
+    <include
+        android:id="@+id/goods_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        layout="@layout/item_home_brand_goods" />
+
+    <View
+        android:id="@+id/goods_divider"
+        android:layout_width="@dimen/MarginMedium"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/goods_left"
+        android:layout_alignTop="@+id/goods_left"
+        android:layout_toRightOf="@+id/goods_left"
+        android:background="@color/fragment_background_color" />
+
+    <include
+        android:id="@+id/goods_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/goods_left"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/goods_divider"
+        layout="@layout/item_home_brand_goods" />
+
+</RelativeLayout>

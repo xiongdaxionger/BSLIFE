@@ -1,0 +1,93 @@
+
+<!--搜索栏-->
+<view class="search-header">
+
+  <!--搜索栏-->
+  <view class="search-container" catchtap="searchDidBegin">
+    <!--搜索图标-->
+    <image class="search-icon" src="{{imgURL + '/images/icon/search_icon_dark.png'}}" />
+    <view class="search-text">请输入关键字</view>
+  </view>
+
+  <!--拨打电话图标-->
+    <image catchtap="saoyisao" class="phone-icon" src="{{imgURL + '/images/icon/sao_icon_dark.png'}}"/>
+</view>
+
+<!--分类品牌栏-->
+<view class="bar">
+  <block wx:for="{{barInfo}}" wx:key="{{index}}">
+    <view data-index="{{index}}" class="item" catchtap="barItemDidChange">
+      <view class="right_line" wx:if="{{index < barInfo.length - 1}}"></view>
+      <text class="{{index == selectedIndex ? 'text select' : 'text'}}" data-index="{{index}}">{{item}}</text>
+    </view>
+  </block>
+</view>
+
+<!--分类-->
+<view class="container cat-container" wx:if="{{selectedIndex == 0}}">
+
+  <!--加载失败-->
+  <import src="/views/network/bad_network.wxml" />
+  <template wx:if="{{cat_fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+
+  <!--一级分类-->
+  <scroll-view scroll-top="0" wx:if="{{!cat_fail && cat_infos != null}}" scroll-y class="left-scroll-view">
+    <block wx:for="{{cat_infos}}" wx:key="{{item.id}}">
+
+      <!--分类名称-->
+      <view catchtap="tapLeftCat" data-index="{{index}}" style="border-right: 1px {{index == cat_selectedIndex ? 'transparent' : '#e5e5e5'}} solid;background-color:{{index == cat_selectedIndex ? 'transparent' : 'white'}};" class="left-cat-item">{{item.name}}</view>
+    </block>
+  </scroll-view>
+
+  <!--右边分类-->
+  <scroll-view wx:if="{{!cat_fail && secondary_cat_infos != null}}" scroll-y class="right-scroll-view">
+    <block wx:if="{{existThreeCat}}" wx:for="{{secondary_cat_infos}}" wx:key="{{item.id}}">
+      <view class="exist-three-cat-container">
+
+        <!--二级分类名称-->
+        <view class="right-cat-header">{{item.name}}</view>
+        <ul wx:if="{{item.infos != null && item.infos.length > 0}}" class="three-cat-container">
+          <li wx:for="{{item.infos}}" wx:key="{{item.id}}" data-cat_id="{{item.id}}" data-is_virtual_cat="{{item.is_virtual_cat}}" catchtap="tapRightCat">
+            <image src="{{item.img}}" mode="aspectFit" />
+            <view>{{item.name}}</view>
+          </li>
+        </ul>
+        <image data-cat_id="{{item.id}}" data-is_virtual_cat="{{item.is_virtual_cat}}" catchtap="tapRightCat" class="exist-three-cat-container-image" wx:if="{{item.infos == null || item.infos.length == 0}}" mode="aspectFit" src="{{item.img}}" />
+      </view>
+    </block>
+
+    <!--都不存在3级分类-->
+    <ul wx:if="{{!existThreeCat}}" class="two-cat-container">
+      <li wx:for="{{secondary_cat_infos}}" wx:key="{{item.id}}" data-cat_id="{{item.id}}" data-is_virtual_cat="{{item.is_virtual_cat}}" catchtap="tapRightCat">
+        <image src="{{item.img}}" mode="aspectFit" />
+        <view>{{item.name}}</view>
+      </li>
+    </ul>
+  </scroll-view>
+</view>
+
+<!--品牌-->
+<view class="container brand-container" wx:if="{{selectedIndex == 1}}">
+
+   <!--回到顶部按钮-->
+  <include src="/views/widget/scroll_to_top.wxml"/>
+  <!--加载失败-->
+  <import src="/views/network/bad_network.wxml" />
+  <template wx:if="{{brand_fail}}" is="fail_to_load" data="{{reloadData:'reloadData'}}" />
+
+  <!--品牌信息-->
+  <scroll-view scroll-y scroll-top="{{scroll_top}}" bindscroll="brandContainerScroll" class="brand-scroll-view" bindscrolltolower="loadMoreBrand" wx:if="{{!brand_fail}}">
+  
+    <view class="brand-list-container">
+      <block wx:for="{{brand_infos}}" wx:key="{{index}}">
+        <image style="margin-top:{{index < 3 ? 8 : 0}}px;" catchtap="tapBrand" data-index="{{index}}" class="brand-image" src="{{item.brand_logo}}" mode="aspectFit" />
+      </block>
+
+      <!--品牌加载更多-->
+      <import src="/views/widget/load_more.wxml" />
+      <template wx:if="{{brand_load_more}}" is="load_more" />
+    </view>
+  </scroll-view>
+</view>
+
+<include src="/pages/goods/good_search.wxml"/>

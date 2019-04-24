@@ -1,0 +1,248 @@
+/* pages/goodcat/good_cat.wxss */
+
+@import "/views/network/bad_network.wxss";
+@import "/pages/goods/good_search.wxss";
+
+/*搜索头部*/
+.search-header{
+    background: white;
+    height: 40px;
+    display: flex;
+    flex-flow: row nowrap;   
+    align-items: center;
+    position: fixed;
+    width:100vw;
+}
+
+/*搜索容器*/
+.search-container{
+    margin: 0 0 0 10px;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    height: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+/*搜索图标*/
+.search-icon{
+    width: 15px;
+    height: 15px;
+    margin: 0 8px 0 8px;
+}
+
+/*搜索文字*/
+.search-text{
+    color: #e1dddc;
+    font-size: 14px;
+    flex: 1 1 auto;
+}
+
+/*拨打电话图标*/
+.phone-icon{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+
+/**菜单条**/
+.bar{
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px #f7f7f7 solid;
+    position: fixed;
+    top: 40px;
+    border-top: 1px #f7f7f7 solid;
+}
+/**状态选择栏选项**/
+.bar .item{
+    font-size: 15px;
+    text-align: center;
+    width: 50%;
+    position: relative;
+}
+/**选项栏的右侧横线**/
+.bar .item .right_line{
+    width: 1px;
+    background-color: #F5F5F5;
+    position: absolute;
+    right: 0px;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    height: 15px;
+}
+/**选择栏文本**/
+.bar .item .text{
+    color: #666666;
+    font-size: 16px;
+}
+/**选择项选中**/
+.bar .item .text.select{
+    line-height: 40px;
+    color: #f73030;
+    border-bottom-width: 2px;
+    border-bottom-color: #f73030;
+    border-bottom-style: solid;
+    padding-bottom: 7px;
+}
+
+/*分类容器*/
+.cat-container{
+    width: 100%;
+    margin-top: 82px;
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+}
+/*左边分类*/
+.left-scroll-view{
+    width: 91px;
+    height: calc(100vh - 82px);
+}
+
+/*左边分类item*/
+.left-cat-item{
+    color: black;
+    font-size: 13px;
+    width: 80px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 56px;
+    line-height: 56px;
+    border-bottom: 1px #e5e5e5 solid;
+}
+
+/*右边滚动栏*/
+.right-scroll-view{
+    width: calc(100vw - 91px);
+    height: calc(100vh - 82px);
+}
+
+/*存在3级分类的容器*/
+.exist-three-cat-container{
+    width: calc(100vw - 111px);
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*二级分类头部*/
+.right-cat-header{
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/*3级分类容器*/
+.three-cat-container{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: white;
+}
+
+/*纯2级分类容器*/
+.two-cat-container{
+    margin-top: 10px;
+    width: calc(100vw - 111px);
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: white;
+}
+
+/*2、3级分类item*/
+.right-scroll-view li{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+}
+
+/*当2、3级分类混合显示时，某个分类不存在3级分类的图片*/
+.exist-three-cat-container-image{
+    width: 100%;
+    height: 310rpx;
+    background-color: white;
+}
+
+/*分类item图片*/
+.right-scroll-view li  image{
+    width: 100%;
+    height: 155rpx;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*分类item 名字*/
+.right-scroll-view li view{
+    color: #666666;
+    align-content: center;
+    width: 100%;
+    padding-left: 5px;
+    line-height: 30px;
+    padding-right: 5px;
+    text-align: center;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*品牌容器*/
+.brand-container{
+    width: 100%;
+    margin-top: 82px;
+    position: fixed;
+}
+
+/*品牌滚动视图*/
+.brand-scroll-view{
+    width: 100vw;
+    height: calc(100vh - 82px);
+}
+
+/*品牌列表容器*/
+.brand-list-container{
+    display: flex;
+    width: calc(100vw - 8px);
+    flex-flow: row wrap;
+    padding-left: 8px;
+}
+
+/*品牌图片*/
+.brand-image{
+    width: calc((100vw - 32px) / 3);
+    height: calc((100vw - 32px) / 3);
+    background-color: white;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+.load-more{
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    width: 100vw;
+    line-height: 50px;
+}

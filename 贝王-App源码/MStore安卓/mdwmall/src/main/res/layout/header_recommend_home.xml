@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/personal_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/recommend_personal_avatar"
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/PaddingXXLarge"
+            android:src="@drawable/shopping_null_car" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/PaddingLarge"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/recommend_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/PaddingSmall"
+                android:textColor="@color/black"
+                android:textSize="@dimen/TextSizeLarge" />
+
+            <ImageView
+                android:id="@+id/recommend_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/PaddingMedium" />
+
+            <TextView
+                android:id="@+id/recommend_personal_lv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_semicircle_norm"
+                android:gravity="bottom"
+                android:paddingBottom="1dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="1dp"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recommend_attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/PaddingXMedium"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/account_click_but"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_recommend_fans_status1"
+                android:paddingBottom="4dp"
+                android:paddingTop="3dp"
+                android:text="已关注"
+                android:textColor="@color/white"
+                android:textSize="@dimen/TextSizeSmall"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/account_attention_linear"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/icon_add_guanzhu"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="@dimen/PaddingXLarge"
+            android:layout_marginTop="@dimen/PaddingXXLarge"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/recommend_recommend_linear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recommend_recommend"
+                    android:textColor="@color/goods_list_primary_textcolor"
+                    android:textSize="@dimen/TextSizeSmall" />
+
+                <TextView
+                    android:id="@+id/personal_recommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/PaddingSmall"
+                    android:textColor="@color/goods_list_primary_textcolor"
+                    android:textSize="@dimen/TextSizeSmall" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/fragment_top_bg" />
+
+            <LinearLayout
+                android:id="@+id/recommend_like_linear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recommend_liked"
+                    android:textColor="@color/goods_list_primary_textcolor"
+                    android:textSize="@dimen/TextSizeSmall" />
+
+                <TextView
+                    android:id="@+id/personal_liked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/PaddingSmall"
+                    android:textColor="@color/goods_list_primary_textcolor"
+                    android:textSize="@dimen/TextSizeSmall" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/fragment_top_bg" />
+
+            <LinearLayout
+                android:id="@+id/recommend_attention_linear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recommend_attention"
+                    android:textColor="@color/goods_list_primary_textcolor"
+                    android:textSize="@dimen/TextSizeSmall" />
+
+                <TextView
+                    android:id="@+id/personal_attention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/PaddingSmall"
+                    android:textColor="@color/goods_list_primary_textcolor"
+                    android:textSize="@dimen/TextSizeSmall" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/fragment_top_bg" />
+
+            <LinearLayout
+                android:id="@+id/recommend_fans_linear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recommend_fans"
+                    android:textColor="@color/goods_list_primary_textcolor"
+                    android:textSize="@dimen/TextSizeSmall" />
+
+                <TextView
+                    android:id="@+id/personal_fans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/PaddingSmall"
+                    android:textColor="@color/goods_list_primary_textcolor"
+                    android:textSize="@dimen/TextSizeSmall" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/personal_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginBottom="@dimen/PaddingXMedium"
+            android:layout_marginLeft="@dimen/PaddingXLarge"
+            android:layout_marginRight="@dimen/PaddingXLarge"
+            android:singleLine="true"
+            android:text="美在于发现,在于邂逅,是机缘."
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/westore_divider_bgcolor" />
+
+    </LinearLayout>
+
+</LinearLayout>

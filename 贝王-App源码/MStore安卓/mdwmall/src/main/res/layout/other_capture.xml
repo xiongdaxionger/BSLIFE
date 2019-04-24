@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/default_scanner_bgcolor" >
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.google.zxing.view.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/scan_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <View
+            android:id="@+id/scan_line"
+            android:layout_width="wrap_content"
+            android:layout_height="1.5dp"
+            android:layout_margin="2dp"
+            android:background="@color/viewfinder_laser" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/capture_scanner_code_buy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/PaddingMedium"
+        android:gravity="center"
+        android:textColor="#3f5e81"
+        android:textSize="@dimen/TextSizeMedium" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/capture_scanner_code_buy"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/PaddingLarge"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/TextSizeBigSmall" />
+
+    <TextView
+        android:id="@+id/capture_status_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scan_area"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/action_titlebar_button_width"
+        android:layout_marginRight="@dimen/action_titlebar_button_width"
+        android:layout_marginTop="@dimen/PaddingXMedium"
+        android:background="@null"
+        android:gravity="center"
+        android:minLines="2"
+        android:text="将条码放入框内，即可自动扫描"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/TextSizeMedium" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@drawable/action_bar_bg" >
+
+        <ImageButton
+            android:id="@+id/scanner_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:src="@drawable/comm_button_back"
+            android:tint="@color/westore_dark_textcolor" />
+
+        <TextView
+            style="@style/actionbar_titlebar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="扫码"
+            android:textColor="@color/westore_dark_textcolor" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/scanner_flashlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dip"
+            android:paddingBottom="7dip"
+            android:paddingLeft="30dip"
+            android:text="@string/close"
+            android:textSize="@dimen/TextSizeMedium"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>

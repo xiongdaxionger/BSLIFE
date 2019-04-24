@@ -1,0 +1,21 @@
+<!--注册 输入短信验证码-->
+
+<view class="container regiser-container">
+
+<text class="msg">请输入{{phoneNumber}}收到的短信验证码</text>
+<view class="input-container">
+  
+    <!--验证码输入框-->
+<input type="number" class="code-input" bindinput="textDidChange" placeholder="请输入验证码" placeholder-class="placeholder"/>
+<!--获取短信验证码-->
+    <view style="width:110px;line-height:47px;font-size:15px;" class="count-down-btn {{count_down ? 'disable' : 'normal'}}" catchtap="getCode">重新获取{{count_down ? second + 's': ''}}</view>
+</view>
+
+<!--下一步按钮 disabled="{{!nextEnable}}" 有bug-->
+<button class="next-btn long-btn {{nextEnable ? 'normal' : 'disable'}}" catchtap="next">下一步</button>
+
+<view class="service-container">
+遇到问题？您可以
+<text catchtap="tapService">联系客服</text>
+</view>
+</view>
